@@ -1,0 +1,646 @@
+sample_id,source_template_id,problem_type,code,error_label,mutation_type,mutation_description,expected_behavior,validation_status,split
+S0001,factorial_1,factorial,"def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result",correct,none,Original correct implementation,passes_all_tests,validated,test
+S0002,factorial_2,factorial,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0003,factorial_3,factorial,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",correct,none,Original correct implementation,passes_all_tests,validated,val
+S0004,fibonacci_1,fibonacci,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b",correct,none,Original correct implementation,passes_all_tests,validated,test
+S0005,fibonacci_2,fibonacci,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0006,is_prime_1,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0007,is_prime_2,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0008,palindrome_1,palindrome,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",correct,none,Original correct implementation,passes_all_tests,validated,val
+S0009,palindrome_2,palindrome,"def is_palindrome(s):
+    return s == s[::-1]",correct,none,Original correct implementation,passes_all_tests,validated,test
+S0010,max_element_1,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0011,max_element_2,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0012,sum_list_1,sum_list,"def sum_list(lst):
+    total = 0
+    for item in lst:
+        total += item
+    return total",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0013,sum_list_2,sum_list,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0014,linear_search_1,linear_search,"def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0015,linear_search_2,linear_search,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0016,reverse_string_1,reverse_string,"def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0017,reverse_string_2,reverse_string,"def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",correct,none,Original correct implementation,passes_all_tests,validated,val
+S0018,bubble_sort_1,sorting,"def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0019,count_vowels_1,count_vowels,"def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0020,power_1,power,"def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",correct,none,Original correct implementation,passes_all_tests,validated,train
+S0021,gcd_1,gcd,"def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",correct,none,Original correct implementation,passes_all_tests,validated,test
+S0022,factorial_1,factorial,"def factorial(n):
+    result = 0
+    for i in range(1, n + 1):
+        result = result * i
+    return result",wrong_initialization,accumulator_init,Changed multiplication accumulator from 1 to 0,fails_tests,validated,test
+S0023,factorial_1,factorial,"def factorial(n):
+    result = 1
+    for i in range(1, n):
+        result = result * i
+    return result",off_by_one_loop,range_endpoint,"Changed range(1, n+1) to range(1, n) - misses last iteration",fails_tests,validated,test
+S0024,factorial_1,factorial,"def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result + i
+    return result",wrong_operator,arithmetic_op,Changed multiplication to addition in accumulator,fails_tests,validated,test
+S0025,factorial_2,factorial,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n + factorial(n - 1)",wrong_operator,arithmetic_op,Changed * to + in recursive factorial,fails_tests,validated,train
+S0026,factorial_3,factorial,"def factorial(n):
+    result = 0
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",wrong_initialization,accumulator_init,Changed multiplication accumulator from 1 to 0,fails_tests,validated,val
+S0027,factorial_3,factorial,"def factorial(n):
+    result = 1
+    i = 2
+    while i < n:
+        result *= i
+        i += 1
+    return result",off_by_one_loop,loop_boundary,"Changed while i <= n to while i < n, missing last iteration",fails_tests,validated,val
+S0028,factorial_3,factorial,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result += i
+        i += 1
+    return result",wrong_operator,arithmetic_op,Changed *= to += in accumulator,fails_tests,validated,val
+S0029,fibonacci_1,fibonacci,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 1
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b",wrong_initialization,variable_init,Changed fibonacci initial value a from 0 to 1,fails_tests,validated,test
+S0030,fibonacci_1,fibonacci,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n):
+        a, b = b, a + b
+    return b",off_by_one_loop,range_endpoint,"Changed range(2, n+1) to range(2, n) - misses last iteration",fails_tests,validated,test
+S0031,fibonacci_1,fibonacci,"def fibonacci(n):
+    if n < 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b",wrong_condition,boundary_condition,"Changed n <= 0 to n < 0, fails for fib(0)",fails_tests,validated,test
+S0032,fibonacci_2,fibonacci,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 0:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",wrong_condition,boundary_condition,Changed fibonacci base case from n==1 to n==0,fails_tests,validated,train
+S0033,is_prime_1,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5)):
+        if n % i == 0:
+            return False
+    return True",off_by_one_loop,range_endpoint,"Removed +1 from sqrt boundary, misses perfect square divisors",fails_tests,validated,train
+S0034,is_prime_1,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n // i == 0:
+            return False
+    return True",wrong_operator,arithmetic_op,Changed modulo (%) to integer division (//) in divisibility check,fails_tests,validated,train
+S0035,is_prime_1,prime,"def is_prime(n):
+    if n < 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",wrong_condition,boundary_condition,"Changed n < 2 to n < 1, incorrectly treating 1 as prime",fails_tests,validated,train
+S0036,is_prime_2,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n // i == 0:
+            return False
+        i += 2
+    return True",wrong_operator,arithmetic_op,Changed modulo (%) to integer division (//) in divisibility check,fails_tests,validated,train
+S0037,is_prime_2,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 != 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",wrong_condition,logic_inversion,"Inverted even number check, skips odd numbers instead of even",fails_tests,validated,train
+S0038,is_prime_2,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 3:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",wrong_condition,boundary_condition,Changed special case from n==2 to n==3,fails_tests,validated,train
+S0039,palindrome_1,palindrome,"def is_palindrome(s):
+    left = 1
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",wrong_initialization,pointer_init,Changed left pointer initial value from 0 to 1,fails_tests,validated,val
+S0040,palindrome_1,palindrome,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left -= 1
+        right -= 1
+    return True",wrong_operator,increment_op,Changed left pointer increment to decrement,fails_tests,validated,val
+S0041,palindrome_1,palindrome,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] == s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",wrong_condition,logic_inversion,Inverted palindrome comparison from != to ==,fails_tests,validated,val
+S0042,max_element_1,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = 0
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",wrong_initialization,variable_init,Changed max initialization from lst[0] to 0 (fails for negative lists),fails_tests,validated,train
+S0043,max_element_1,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst) - 1):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",off_by_one_loop,range_endpoint,"Shortened range by 1, missing last comparison",fails_tests,validated,train
+S0044,max_element_1,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] < max_val:
+            max_val = lst[i]
+    return max_val",wrong_operator,comparison_op,Changed > to < in max comparison (finds minimum instead),fails_tests,validated,train
+S0045,max_element_1,max_element,"def find_max(lst):
+    if lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",wrong_condition,logic_inversion,Inverted empty list check from 'not lst' to 'lst',fails_tests,validated,train
+S0046,max_element_2,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = 0
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",wrong_initialization,variable_init,Changed max initialization from lst[0] to 0 (fails for negative lists),fails_tests,validated,train
+S0047,max_element_2,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item < max_val:
+            max_val = item
+    return max_val",wrong_operator,comparison_op,Changed > to < in max comparison (finds minimum instead),fails_tests,validated,train
+S0048,max_element_2,max_element,"def find_max(lst):
+    if lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",wrong_condition,logic_inversion,Inverted empty list check from 'not lst' to 'lst',fails_tests,validated,train
+S0049,sum_list_1,sum_list,"def sum_list(lst):
+    total = 1
+    for item in lst:
+        total += item
+    return total",wrong_initialization,accumulator_init,Changed addition accumulator from 0 to 1,fails_tests,validated,train
+S0050,sum_list_1,sum_list,"def sum_list(lst):
+    total = 0
+    for item in lst:
+        total -= item
+    return total",wrong_operator,arithmetic_op,Changed += to -= in sum accumulator,fails_tests,validated,train
+S0051,sum_list_2,sum_list,"def sum_list(lst):
+    total = 1
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",wrong_initialization,accumulator_init,Changed addition accumulator from 0 to 1,fails_tests,validated,train
+S0052,sum_list_2,sum_list,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst) - 1):
+        total = total + lst[i]
+    return total",off_by_one_loop,range_endpoint,"Shortened range by 1, missing last element",fails_tests,validated,train
+S0053,sum_list_2,sum_list,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total - lst[i]
+    return total",wrong_operator,arithmetic_op,Changed + to - in sum accumulator,fails_tests,validated,train
+S0054,linear_search_1,linear_search,"def linear_search(lst, target):
+    for i in range(len(lst) - 1):
+        if lst[i] == target:
+            return i
+    return -1",off_by_one_loop,range_endpoint,"Shortened range by 1, missing last element",fails_tests,validated,train
+S0055,linear_search_1,linear_search,"def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] != target:
+            return i
+    return -1",wrong_condition,logic_inversion,Inverted search comparison from == to !=,fails_tests,validated,train
+S0056,linear_search_2,linear_search,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 2
+    return -1",wrong_operator,step_op,"Changed step size from 1 to 2, skipping elements",fails_tests,validated,train
+S0057,linear_search_2,linear_search,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] != target:
+            return index
+        index += 1
+    return -1",wrong_condition,logic_inversion,Inverted search comparison from == to !=,fails_tests,validated,train
+S0058,reverse_string_1,reverse_string,"def reverse_string(s):
+    result = "" ""
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",wrong_initialization,string_init,Changed empty string initialization to space character,fails_tests,validated,train
+S0059,reverse_string_1,reverse_string,"def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 2, -1, -1):
+        result += s[i]
+    return result",off_by_one_loop,range_start,"Changed reverse loop start, skipping last character",fails_tests,validated,train
+S0060,reverse_string_2,reverse_string,"def reverse_string(s):
+    chars = list(s)
+    left = 1
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",wrong_initialization,pointer_init,Changed left pointer initial value from 0 to 1,fails_tests,validated,val
+S0061,reverse_string_2,reverse_string,"def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left -= 1
+        right -= 1
+    return """".join(chars)",wrong_operator,increment_op,Changed left pointer increment to decrement,fails_tests,validated,val
+S0062,bubble_sort_1,sorting,"def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",off_by_one_loop,range_endpoint,"Changed bubble sort inner loop boundary, causes index out of range",fails_tests,validated,train
+S0063,bubble_sort_1,sorting,"def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] < arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",wrong_operator,comparison_op,Changed > to < in bubble sort comparison (sorts descending),fails_tests,validated,train
+S0064,count_vowels_1,count_vowels,"def count_vowels(s):
+    count = 1
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",wrong_initialization,counter_init,Changed counter initial value from 0 to 1,fails_tests,validated,train
+S0065,count_vowels_1,count_vowels,"def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count -= 1
+    return count",wrong_operator,arithmetic_op,Changed counter increment to decrement,fails_tests,validated,train
+S0066,count_vowels_1,count_vowels,"def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() not in ""aeiou"":
+            count += 1
+    return count",wrong_condition,logic_inversion,"Inverted vowel check, counts consonants instead",fails_tests,validated,train
+S0067,power_1,power,"def power(base, exp):
+    result = 0
+    for i in range(exp):
+        result *= base
+    return result",wrong_initialization,accumulator_init,Changed multiplication accumulator from 1 to 0,fails_tests,validated,train
+S0068,power_1,power,"def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result += base
+    return result",wrong_operator,arithmetic_op,Changed *= to += in power calculation,fails_tests,validated,train
+S0069,gcd_1,gcd,"def gcd(a, b):
+    while b != 0:
+        a, b = b, a // b
+    return a",wrong_operator,arithmetic_op,Changed modulo to integer division in GCD,fails_tests,validated,test
+S0070,gcd_1,gcd,"def gcd(a, b):
+    while b == 0:
+        a, b = b, a % b
+    return a",wrong_condition,logic_inversion,Inverted GCD loop condition from != to ==,fails_tests,validated,test
+S0071,factorial_1,factorial,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result",correct,style_variant,Added docstring to function,passes_all_tests,validated,test
+S0072,factorial_2,factorial,"def factorial(n):
+    """"""Compute the result.""""""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0073,factorial_3,factorial,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",correct,style_variant,Added docstring to function,passes_all_tests,validated,val
+S0074,fibonacci_1,fibonacci,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b",correct,style_variant,Added docstring to function,passes_all_tests,validated,test
+S0075,fibonacci_2,fibonacci,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0076,is_prime_1,prime,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0077,is_prime_2,prime,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0078,palindrome_1,palindrome,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",correct,style_variant,Added docstring to function,passes_all_tests,validated,val
+S0079,palindrome_2,palindrome,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    return s == s[::-1]",correct,style_variant,Added docstring to function,passes_all_tests,validated,test
+S0080,max_element_1,max_element,"def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0081,max_element_2,max_element,"def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0082,sum_list_1,sum_list,"def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for item in lst:
+        total += item
+    return total",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0083,sum_list_2,sum_list,"def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0084,linear_search_1,linear_search,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0085,linear_search_2,linear_search,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0086,reverse_string_1,reverse_string,"def reverse_string(s):
+    """"""Compute the result.""""""
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0087,reverse_string_2,reverse_string,"def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",correct,style_variant,Added docstring to function,passes_all_tests,validated,val
+S0088,bubble_sort_1,sorting,"def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0089,count_vowels_1,count_vowels,"def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0090,power_1,power,"def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",correct,style_variant,Added docstring to function,passes_all_tests,validated,train
+S0091,gcd_1,gcd,"def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",correct,style_variant,Added docstring to function,passes_all_tests,validated,test

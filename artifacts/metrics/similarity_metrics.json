@@ -1,0 +1,10 @@
+{
+  "tfidf_accuracy": 0.9275,
+  "tfidf_precision": 0.8507,
+  "tfidf_recall": 0.9344,
+  "tfidf_f1": 0.8906,
+  "tfidf_threshold": 0.3,
+  "total_pairs": 193,
+  "similar_pairs": 61,
+  "dissimilar_pairs": 132
+}

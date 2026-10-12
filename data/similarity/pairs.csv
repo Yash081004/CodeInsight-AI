@@ -1,0 +1,2555 @@
+pair_id,code_a,code_b,label,source,split
+P0001,"def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)",1,factorial_1+factorial_2,test
+P0002,"def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",1,factorial_1+factorial_3,test
+P0003,"def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result",1,factorial_1+factorial_1,test
+P0004,"def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def factorial(n):
+    """"""Compute the result.""""""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)",1,factorial_1+factorial_2,test
+P0005,"def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",1,factorial_1+factorial_3,test
+P0006,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",1,factorial_2+factorial_3,train
+P0007,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result",1,factorial_2+factorial_1,train
+P0008,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def factorial(n):
+    """"""Compute the result.""""""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)",1,factorial_2+factorial_2,train
+P0009,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",1,factorial_2+factorial_3,train
+P0010,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result",1,factorial_3+factorial_1,val
+P0011,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def factorial(n):
+    """"""Compute the result.""""""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)",1,factorial_3+factorial_2,val
+P0012,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",1,factorial_3+factorial_3,val
+P0013,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def factorial(n):
+    """"""Compute the result.""""""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)",1,factorial_1+factorial_2,test
+P0014,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",1,factorial_1+factorial_3,test
+P0015,"def factorial(n):
+    """"""Compute the result.""""""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",1,factorial_2+factorial_3,train
+P0016,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",1,fibonacci_1+fibonacci_2,test
+P0017,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b",1,fibonacci_1+fibonacci_1,test
+P0018,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",1,fibonacci_1+fibonacci_2,test
+P0019,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b",1,fibonacci_2+fibonacci_1,train
+P0020,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",1,fibonacci_2+fibonacci_2,train
+P0021,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",1,fibonacci_1+fibonacci_2,test
+P0022,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",1,is_prime_1+is_prime_2,train
+P0023,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",1,is_prime_1+is_prime_1,train
+P0024,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",1,is_prime_1+is_prime_2,train
+P0025,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",1,is_prime_2+is_prime_1,train
+P0026,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",1,is_prime_2+is_prime_2,train
+P0027,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",1,is_prime_1+is_prime_2,train
+P0028,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def is_palindrome(s):
+    return s == s[::-1]",1,palindrome_1+palindrome_2,val
+P0029,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",1,palindrome_1+palindrome_1,val
+P0030,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def is_palindrome(s):
+    """"""Compute the result.""""""
+    return s == s[::-1]",1,palindrome_1+palindrome_2,val
+P0031,"def is_palindrome(s):
+    return s == s[::-1]","def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",1,palindrome_2+palindrome_1,test
+P0032,"def is_palindrome(s):
+    return s == s[::-1]","def is_palindrome(s):
+    """"""Compute the result.""""""
+    return s == s[::-1]",1,palindrome_2+palindrome_2,test
+P0033,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def is_palindrome(s):
+    """"""Compute the result.""""""
+    return s == s[::-1]",1,palindrome_1+palindrome_2,val
+P0034,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",1,max_element_1+max_element_2,train
+P0035,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",1,max_element_1+max_element_1,train
+P0036,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",1,max_element_1+max_element_2,train
+P0037,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val","def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",1,max_element_2+max_element_1,train
+P0038,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val","def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",1,max_element_2+max_element_2,train
+P0039,"def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",1,max_element_1+max_element_2,train
+P0040,"def sum_list(lst):
+    total = 0
+    for item in lst:
+        total += item
+    return total","def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",1,sum_list_1+sum_list_2,train
+P0041,"def sum_list(lst):
+    total = 0
+    for item in lst:
+        total += item
+    return total","def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for item in lst:
+        total += item
+    return total",1,sum_list_1+sum_list_1,train
+P0042,"def sum_list(lst):
+    total = 0
+    for item in lst:
+        total += item
+    return total","def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",1,sum_list_1+sum_list_2,train
+P0043,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total","def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for item in lst:
+        total += item
+    return total",1,sum_list_2+sum_list_1,train
+P0044,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total","def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",1,sum_list_2+sum_list_2,train
+P0045,"def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for item in lst:
+        total += item
+    return total","def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",1,sum_list_1+sum_list_2,train
+P0046,"def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1","def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",1,linear_search_1+linear_search_2,train
+P0047,"def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",1,linear_search_1+linear_search_1,train
+P0048,"def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",1,linear_search_1+linear_search_2,train
+P0049,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",1,linear_search_2+linear_search_1,train
+P0050,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",1,linear_search_2+linear_search_2,train
+P0051,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",1,linear_search_1+linear_search_2,train
+P0052,"def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result","def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",1,reverse_string_1+reverse_string_2,train
+P0053,"def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result","def reverse_string(s):
+    """"""Compute the result.""""""
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",1,reverse_string_1+reverse_string_1,train
+P0054,"def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result","def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",1,reverse_string_1+reverse_string_2,train
+P0055,"def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)","def reverse_string(s):
+    """"""Compute the result.""""""
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",1,reverse_string_2+reverse_string_1,val
+P0056,"def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)","def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",1,reverse_string_2+reverse_string_2,val
+P0057,"def reverse_string(s):
+    """"""Compute the result.""""""
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result","def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",1,reverse_string_1+reverse_string_2,train
+P0058,"def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr","def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",1,bubble_sort_1+bubble_sort_1,train
+P0059,"def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count","def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",1,count_vowels_1+count_vowels_1,train
+P0060,"def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result","def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",1,power_1+power_1,train
+P0061,"def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",1,gcd_1+gcd_1,test
+P0062,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",0,factorial_1+fibonacci_2,test
+P0063,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",0,factorial_2+fibonacci_2,train
+P0064,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",0,factorial_3+is_prime_2,val
+P0065,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",0,factorial_3+is_prime_2,val
+P0066,"def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",0,factorial_1+palindrome_1,test
+P0067,"def factorial(n):
+    """"""Compute the result.""""""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",0,factorial_2+palindrome_1,train
+P0068,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",0,factorial_1+max_element_1,test
+P0069,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",0,factorial_3+max_element_2,val
+P0070,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",0,factorial_3+sum_list_2,val
+P0071,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",0,factorial_2+sum_list_2,train
+P0072,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",0,factorial_3+linear_search_2,val
+P0073,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",0,factorial_2+linear_search_2,train
+P0074,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def reverse_string(s):
+    """"""Compute the result.""""""
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",0,factorial_3+reverse_string_1,val
+P0075,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",0,factorial_1+reverse_string_1,test
+P0076,"def factorial(n):
+    """"""Compute the result.""""""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,factorial_2+bubble_sort_1,train
+P0077,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,factorial_1+bubble_sort_1,test
+P0078,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,factorial_3+count_vowels_1,val
+P0079,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,factorial_1+count_vowels_1,test
+P0080,"def factorial(n):
+    """"""Compute the result.""""""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,factorial_2+power_1,train
+P0081,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,factorial_2+power_1,train
+P0082,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",0,factorial_3+gcd_1,val
+P0083,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",0,factorial_1+gcd_1,test
+P0084,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",0,fibonacci_1+is_prime_1,test
+P0085,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",0,fibonacci_2+is_prime_1,train
+P0086,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",0,fibonacci_1+palindrome_1,test
+P0087,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",0,fibonacci_2+palindrome_1,train
+P0088,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",0,fibonacci_2+max_element_2,train
+P0089,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",0,fibonacci_1+max_element_1,test
+P0090,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",0,fibonacci_1+sum_list_2,test
+P0091,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",0,fibonacci_2+sum_list_2,train
+P0092,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",0,fibonacci_1+linear_search_2,test
+P0093,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",0,fibonacci_1+linear_search_2,test
+P0094,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",0,fibonacci_1+reverse_string_2,test
+P0095,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",0,fibonacci_2+reverse_string_2,train
+P0096,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,fibonacci_2+bubble_sort_1,train
+P0097,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,fibonacci_2+bubble_sort_1,train
+P0098,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,fibonacci_2+count_vowels_1,train
+P0099,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,fibonacci_1+count_vowels_1,test
+P0100,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,fibonacci_2+power_1,train
+P0101,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,fibonacci_1+power_1,test
+P0102,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,fibonacci_1+gcd_1,test
+P0103,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,fibonacci_1+gcd_1,test
+P0104,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def is_palindrome(s):
+    """"""Compute the result.""""""
+    return s == s[::-1]",0,is_prime_1+palindrome_2,train
+P0105,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def is_palindrome(s):
+    """"""Compute the result.""""""
+    return s == s[::-1]",0,is_prime_2+palindrome_2,train
+P0106,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",0,is_prime_2+max_element_2,train
+P0107,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",0,is_prime_1+max_element_2,train
+P0108,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",0,is_prime_2+sum_list_2,train
+P0109,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",0,is_prime_2+sum_list_2,train
+P0110,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",0,is_prime_1+linear_search_2,train
+P0111,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",0,is_prime_1+linear_search_1,train
+P0112,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",0,is_prime_2+reverse_string_2,train
+P0113,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def reverse_string(s):
+    """"""Compute the result.""""""
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",0,is_prime_1+reverse_string_1,train
+P0114,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,is_prime_2+bubble_sort_1,train
+P0115,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,is_prime_1+bubble_sort_1,train
+P0116,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,is_prime_1+count_vowels_1,train
+P0117,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,is_prime_2+count_vowels_1,train
+P0118,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,is_prime_2+power_1,train
+P0119,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True","def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,is_prime_1+power_1,train
+P0120,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,is_prime_2+gcd_1,train
+P0121,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,is_prime_2+gcd_1,train
+P0122,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",0,palindrome_1+max_element_1,val
+P0123,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    return s == s[::-1]","def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",0,palindrome_2+max_element_1,test
+P0124,"def is_palindrome(s):
+    return s == s[::-1]","def sum_list(lst):
+    total = 0
+    for item in lst:
+        total += item
+    return total",0,palindrome_2+sum_list_1,test
+P0125,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",0,palindrome_1+sum_list_2,val
+P0126,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",0,palindrome_1+linear_search_1,val
+P0127,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    return s == s[::-1]","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",0,palindrome_2+linear_search_2,test
+P0128,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",0,palindrome_1+reverse_string_2,val
+P0129,"def is_palindrome(s):
+    return s == s[::-1]","def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",0,palindrome_2+reverse_string_2,test
+P0130,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,palindrome_1+bubble_sort_1,val
+P0131,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    return s == s[::-1]","def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,palindrome_2+bubble_sort_1,test
+P0132,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,palindrome_1+count_vowels_1,val
+P0133,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,palindrome_1+count_vowels_1,val
+P0134,"def is_palindrome(s):
+    return s == s[::-1]","def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,palindrome_2+power_1,test
+P0135,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,palindrome_1+power_1,val
+P0136,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,palindrome_1+gcd_1,val
+P0137,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,palindrome_1+gcd_1,val
+P0138,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",0,max_element_1+sum_list_2,train
+P0139,"def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val","def sum_list(lst):
+    total = 0
+    for item in lst:
+        total += item
+    return total",0,max_element_2+sum_list_1,train
+P0140,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",0,max_element_1+linear_search_1,train
+P0141,"def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val","def linear_search(lst, target):
+    """"""Compute the result.""""""
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",0,max_element_2+linear_search_1,train
+P0142,"def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",0,max_element_1+reverse_string_1,train
+P0143,"def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",0,max_element_1+reverse_string_2,train
+P0144,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,max_element_1+bubble_sort_1,train
+P0145,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val","def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,max_element_2+bubble_sort_1,train
+P0146,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,max_element_2+count_vowels_1,train
+P0147,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,max_element_1+count_vowels_1,train
+P0148,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,max_element_1+power_1,train
+P0149,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,max_element_2+power_1,train
+P0150,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,max_element_1+gcd_1,train
+P0151,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",0,max_element_2+gcd_1,train
+P0152,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total","def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",0,sum_list_2+linear_search_2,train
+P0153,"def sum_list(lst):
+    total = 0
+    for item in lst:
+        total += item
+    return total","def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",0,sum_list_1+linear_search_1,train
+P0154,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total","def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",0,sum_list_2+reverse_string_1,train
+P0155,"def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for item in lst:
+        total += item
+    return total","def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",0,sum_list_1+reverse_string_1,train
+P0156,"def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for item in lst:
+        total += item
+    return total","def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,sum_list_1+bubble_sort_1,train
+P0157,"def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total","def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,sum_list_2+bubble_sort_1,train
+P0158,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,sum_list_2+count_vowels_1,train
+P0159,"def sum_list(lst):
+    total = 0
+    for item in lst:
+        total += item
+    return total","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,sum_list_1+count_vowels_1,train
+P0160,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,sum_list_2+power_1,train
+P0161,"def sum_list(lst):
+    total = 0
+    for item in lst:
+        total += item
+    return total","def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,sum_list_1+power_1,train
+P0162,"def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for item in lst:
+        total += item
+    return total","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",0,sum_list_1+gcd_1,train
+P0163,"def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",0,sum_list_2+gcd_1,train
+P0164,"def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1","def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",0,linear_search_1+reverse_string_2,train
+P0165,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",0,linear_search_2+reverse_string_2,train
+P0166,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,linear_search_2+bubble_sort_1,train
+P0167,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,linear_search_2+bubble_sort_1,train
+P0168,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,linear_search_2+count_vowels_1,train
+P0169,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,linear_search_2+count_vowels_1,train
+P0170,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,linear_search_2+power_1,train
+P0171,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,linear_search_2+power_1,train
+P0172,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,linear_search_2+gcd_1,train
+P0173,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,linear_search_2+gcd_1,train
+P0174,"def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)","def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,reverse_string_2+bubble_sort_1,val
+P0175,"def reverse_string(s):
+    """"""Compute the result.""""""
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result","def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",0,reverse_string_1+bubble_sort_1,train
+P0176,"def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)","def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,reverse_string_2+count_vowels_1,val
+P0177,"def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,reverse_string_2+count_vowels_1,val
+P0178,"def reverse_string(s):
+    """"""Compute the result.""""""
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result","def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,reverse_string_1+power_1,train
+P0179,"def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)","def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,reverse_string_2+power_1,val
+P0180,"def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",0,reverse_string_2+gcd_1,val
+P0181,"def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",0,reverse_string_2+gcd_1,val
+P0182,"def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr","def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,bubble_sort_1+count_vowels_1,train
+P0183,"def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr","def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",0,bubble_sort_1+count_vowels_1,train
+P0184,"def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr","def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,bubble_sort_1+power_1,train
+P0185,"def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,bubble_sort_1+power_1,train
+P0186,"def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,bubble_sort_1+gcd_1,train
+P0187,"def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",0,bubble_sort_1+gcd_1,train
+P0188,"def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,count_vowels_1+power_1,train
+P0189,"def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count","def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",0,count_vowels_1+power_1,train
+P0190,"def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",0,count_vowels_1+gcd_1,train
+P0191,"def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,count_vowels_1+gcd_1,train
+P0192,"def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result","def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",0,power_1+gcd_1,train
+P0193,"def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result","def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",0,power_1+gcd_1,train

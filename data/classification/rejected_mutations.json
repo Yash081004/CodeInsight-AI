@@ -1,0 +1,47 @@
+[
+  {
+    "template_id": "factorial_2",
+    "mutation_type": "base_case",
+    "reason": "Mutation does not change test behavior - no observable error"
+  },
+  {
+    "template_id": "fibonacci_1",
+    "mutation_type": "arithmetic_op",
+    "reason": "Mutation does not change test behavior - no observable error"
+  },
+  {
+    "template_id": "fibonacci_1",
+    "mutation_type": "boundary_condition",
+    "reason": "Mutation does not change test behavior - no observable error"
+  },
+  {
+    "template_id": "fibonacci_2",
+    "mutation_type": "boundary_condition",
+    "reason": "Mutation does not change test behavior - no observable error"
+  },
+  {
+    "template_id": "is_prime_2",
+    "mutation_type": "boundary_condition",
+    "reason": "Mutation does not change test behavior - no observable error"
+  },
+  {
+    "template_id": "palindrome_1",
+    "mutation_type": "loop_boundary",
+    "reason": "Mutation does not change test behavior - no observable error"
+  },
+  {
+    "template_id": "linear_search_2",
+    "mutation_type": "index_init",
+    "reason": "Mutation does not change test behavior - no observable error"
+  },
+  {
+    "template_id": "linear_search_2",
+    "mutation_type": "loop_boundary",
+    "reason": "Mutation does not change test behavior - no observable error"
+  },
+  {
+    "template_id": "bubble_sort_1",
+    "mutation_type": "range_endpoint",
+    "reason": "Mutation does not change test behavior - no observable error"
+  }
+]

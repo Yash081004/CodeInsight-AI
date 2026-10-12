@@ -1,0 +1,47 @@
+{
+  "labels": [
+    "correct",
+    "wrong_initialization",
+    "off_by_one_loop",
+    "wrong_operator",
+    "wrong_condition"
+  ],
+  "matrix": [
+    [
+      5,
+      1,
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1
+    ]
+  ],
+  "model_type": "baseline"
+}

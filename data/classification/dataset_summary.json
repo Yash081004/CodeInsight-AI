@@ -1,0 +1,12 @@
+{
+  "total_samples": 91,
+  "class_distribution": {
+    "correct": 42,
+    "wrong_initialization": 12,
+    "off_by_one_loop": 9,
+    "wrong_operator": 16,
+    "wrong_condition": 12
+  },
+  "rejected_count": 9,
+  "templates_used": 21
+}

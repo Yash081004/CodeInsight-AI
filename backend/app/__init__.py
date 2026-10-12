@@ -1,0 +1,3 @@
+"""
+CodeInsight AI - Init files
+"""
