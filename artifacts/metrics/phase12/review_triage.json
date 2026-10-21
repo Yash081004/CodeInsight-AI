@@ -1,0 +1,620 @@
+{
+  "generated_at": "2026-10-21T09:31:46.716033+00:00",
+  "human_reviewed": false,
+  "grouped_by_template": {
+    "fibonacci_1": [
+      {
+        "queue_item": {
+          "template_id": "fibonacci_1",
+          "intended_label": "wrong_condition",
+          "reason": "mutation_still_passes_tests",
+          "mutation_type": "boundary_condition"
+        },
+        "matched_sample_ids": [
+          "S0014"
+        ],
+        "matched_count": 1,
+        "has_registry_problem_statement": false,
+        "mechanical_checks": [
+          {
+            "sample_id": "S0014",
+            "split": "test",
+            "template_test_run": {
+              "template_id": "fibonacci_1",
+              "executed": true,
+              "exit_code": 1,
+              "passed_all": false,
+              "stderr_preview": "Traceback (most recent call last):\n  File \"<string>\", line 12, in <module>\n    assert fibonacci(0) == 0\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+              "note": "Bundled generator tests only \u2014 passing does not prove label correct."
+            }
+          }
+        ],
+        "recommended_next_action": "requires_reviewer_intended_behavior",
+        "rationale": "Template tests fail on fault sample \u2014 queue reason may be stale; reviewer compare to spec.",
+        "evidence_needed_for_human": [
+          "Intended behavior in natural language (not problem_type slug)",
+          "Whether mutation matches assigned fault class",
+          "Whether finite tests are adequate or label should be rejected/relabeled"
+        ],
+        "related_pending_review_ids": [],
+        "human_reviewed": false
+      },
+      {
+        "queue_item": {
+          "template_id": "fibonacci_1",
+          "intended_label": "wrong_operator",
+          "reason": "mutation_still_passes_tests",
+          "mutation_type": "arithmetic_op"
+        },
+        "matched_sample_ids": [],
+        "matched_count": 0,
+        "has_registry_problem_statement": false,
+        "mechanical_checks": [],
+        "recommended_next_action": "insufficient_evidence",
+        "rationale": "No CSV rows match template_id + intended_label (+ mutation_type).",
+        "evidence_needed_for_human": [
+          "Intended behavior in natural language (not problem_type slug)",
+          "Whether mutation matches assigned fault class",
+          "Whether finite tests are adequate or label should be rejected/relabeled"
+        ],
+        "related_pending_review_ids": [],
+        "human_reviewed": false
+      }
+    ],
+    "fibonacci_2": [
+      {
+        "queue_item": {
+          "template_id": "fibonacci_2",
+          "intended_label": "wrong_condition",
+          "reason": "mutation_still_passes_tests",
+          "mutation_type": "boundary_condition"
+        },
+        "matched_sample_ids": [
+          "S0016"
+        ],
+        "matched_count": 1,
+        "has_registry_problem_statement": false,
+        "mechanical_checks": [
+          {
+            "sample_id": "S0016",
+            "split": "test",
+            "template_test_run": {
+              "template_id": "fibonacci_2",
+              "executed": true,
+              "exit_code": 1,
+              "passed_all": false,
+              "stderr_preview": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\n    assert fibonacci(1) == 1\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+              "note": "Bundled generator tests only \u2014 passing does not prove label correct."
+            }
+          }
+        ],
+        "recommended_next_action": "requires_reviewer_intended_behavior",
+        "rationale": "Template tests fail on fault sample \u2014 queue reason may be stale; reviewer compare to spec.",
+        "evidence_needed_for_human": [
+          "Intended behavior in natural language (not problem_type slug)",
+          "Whether mutation matches assigned fault class",
+          "Whether finite tests are adequate or label should be rejected/relabeled"
+        ],
+        "related_pending_review_ids": [],
+        "human_reviewed": false
+      }
+    ],
+    "is_prime_2": [
+      {
+        "queue_item": {
+          "template_id": "is_prime_2",
+          "intended_label": "wrong_condition",
+          "reason": "mutation_still_passes_tests",
+          "mutation_type": "boundary_condition"
+        },
+        "matched_sample_ids": [
+          "S0024"
+        ],
+        "matched_count": 1,
+        "has_registry_problem_statement": false,
+        "mechanical_checks": [
+          {
+            "sample_id": "S0024",
+            "split": "test",
+            "template_test_run": {
+              "template_id": "is_prime_2",
+              "executed": true,
+              "exit_code": 1,
+              "passed_all": false,
+              "stderr_preview": "Traceback (most recent call last):\n  File \"<string>\", line 15, in <module>\n    assert is_prime(2) == True\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+              "note": "Bundled generator tests only \u2014 passing does not prove label correct."
+            }
+          }
+        ],
+        "recommended_next_action": "requires_reviewer_intended_behavior",
+        "rationale": "Template tests fail on fault sample \u2014 queue reason may be stale; reviewer compare to spec.",
+        "evidence_needed_for_human": [
+          "Intended behavior in natural language (not problem_type slug)",
+          "Whether mutation matches assigned fault class",
+          "Whether finite tests are adequate or label should be rejected/relabeled"
+        ],
+        "related_pending_review_ids": [],
+        "human_reviewed": false
+      }
+    ],
+    "bubble_sort_1": [
+      {
+        "queue_item": {
+          "template_id": "bubble_sort_1",
+          "intended_label": "off_by_one_loop",
+          "reason": "mutation_still_passes_tests",
+          "mutation_type": "range_endpoint"
+        },
+        "matched_sample_ids": [
+          "S0059"
+        ],
+        "matched_count": 1,
+        "has_registry_problem_statement": false,
+        "mechanical_checks": [
+          {
+            "sample_id": "S0059",
+            "split": "test",
+            "template_test_run": {
+              "template_id": "bubble_sort_1",
+              "executed": true,
+              "exit_code": 1,
+              "passed_all": false,
+              "stderr_preview": "Traceback (most recent call last):\n  File \"<string>\", line 10, in <module>\n    assert bubble_sort([3, 1, 2]) == [1, 2, 3]\n           ~~~~~~~~~~~^^^^^^^^^^^\n  File \"<string>\", line 6, in bubble_sort\n    if arr[j] > arr[j + 1]:\n                ~~~^^^^^^^\nIndexError: list index out of range\n",
+              "note": "Bundled generator tests only \u2014 passing does not prove label correct."
+            }
+          }
+        ],
+        "recommended_next_action": "requires_reviewer_intended_behavior",
+        "rationale": "Template tests fail on fault sample \u2014 queue reason may be stale; reviewer compare to spec.",
+        "evidence_needed_for_human": [
+          "Intended behavior in natural language (not problem_type slug)",
+          "Whether mutation matches assigned fault class",
+          "Whether finite tests are adequate or label should be rejected/relabeled"
+        ],
+        "related_pending_review_ids": [],
+        "human_reviewed": false
+      }
+    ],
+    "linear_search_1": [
+      {
+        "queue_item": {
+          "template_id": "linear_search_1",
+          "intended_label": "off_by_one_loop",
+          "reason": "mutation_still_passes_tests",
+          "mutation_type": "range_endpoint"
+        },
+        "matched_sample_ids": [
+          "S0047"
+        ],
+        "matched_count": 1,
+        "has_registry_problem_statement": false,
+        "mechanical_checks": [
+          {
+            "sample_id": "S0047",
+            "split": "train",
+            "template_test_run": {
+              "template_id": "linear_search_1",
+              "executed": true,
+              "exit_code": 1,
+              "passed_all": false,
+              "stderr_preview": "Traceback (most recent call last):\n  File \"<string>\", line 10, in <module>\n    assert linear_search([10], 10) == 0\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+              "note": "Bundled generator tests only \u2014 passing does not prove label correct."
+            }
+          }
+        ],
+        "recommended_next_action": "requires_reviewer_intended_behavior",
+        "rationale": "Template tests fail on fault sample \u2014 queue reason may be stale; reviewer compare to spec.",
+        "evidence_needed_for_human": [
+          "Intended behavior in natural language (not problem_type slug)",
+          "Whether mutation matches assigned fault class",
+          "Whether finite tests are adequate or label should be rejected/relabeled"
+        ],
+        "related_pending_review_ids": [],
+        "human_reviewed": false
+      }
+    ],
+    "factorial_2": [
+      {
+        "queue_item": {
+          "template_id": "factorial_2",
+          "intended_label": "wrong_condition",
+          "reason": "mutation_still_passes_tests",
+          "mutation_type": "base_case"
+        },
+        "matched_sample_ids": [],
+        "matched_count": 0,
+        "has_registry_problem_statement": false,
+        "mechanical_checks": [],
+        "recommended_next_action": "insufficient_evidence",
+        "rationale": "No CSV rows match template_id + intended_label (+ mutation_type).",
+        "evidence_needed_for_human": [
+          "Intended behavior in natural language (not problem_type slug)",
+          "Whether mutation matches assigned fault class",
+          "Whether finite tests are adequate or label should be rejected/relabeled"
+        ],
+        "related_pending_review_ids": [
+          "V3RQ005",
+          "V3RQ008",
+          "V3RQ015"
+        ],
+        "human_reviewed": false
+      }
+    ],
+    "palindrome_1": [
+      {
+        "queue_item": {
+          "template_id": "palindrome_1",
+          "intended_label": "off_by_one_loop",
+          "reason": "mutation_still_passes_tests",
+          "mutation_type": "loop_boundary"
+        },
+        "matched_sample_ids": [],
+        "matched_count": 0,
+        "has_registry_problem_statement": true,
+        "mechanical_checks": [],
+        "recommended_next_action": "insufficient_evidence",
+        "rationale": "No CSV rows match template_id + intended_label (+ mutation_type).",
+        "evidence_needed_for_human": [
+          "Intended behavior in natural language (not problem_type slug)",
+          "Whether mutation matches assigned fault class",
+          "Whether finite tests are adequate or label should be rejected/relabeled"
+        ],
+        "related_pending_review_ids": [
+          "V3RQ001",
+          "V3RQ002",
+          "V3RQ009",
+          "V3RQ016",
+          "V3RQ023"
+        ],
+        "human_reviewed": false
+      }
+    ],
+    "linear_search_2": [
+      {
+        "queue_item": {
+          "template_id": "linear_search_2",
+          "intended_label": "wrong_initialization",
+          "reason": "mutation_still_passes_tests",
+          "mutation_type": "index_init"
+        },
+        "matched_sample_ids": [],
+        "matched_count": 0,
+        "has_registry_problem_statement": false,
+        "mechanical_checks": [],
+        "recommended_next_action": "insufficient_evidence",
+        "rationale": "No CSV rows match template_id + intended_label (+ mutation_type).",
+        "evidence_needed_for_human": [
+          "Intended behavior in natural language (not problem_type slug)",
+          "Whether mutation matches assigned fault class",
+          "Whether finite tests are adequate or label should be rejected/relabeled"
+        ],
+        "related_pending_review_ids": [],
+        "human_reviewed": false
+      },
+      {
+        "queue_item": {
+          "template_id": "linear_search_2",
+          "intended_label": "off_by_one_loop",
+          "reason": "mutation_still_passes_tests",
+          "mutation_type": "loop_boundary"
+        },
+        "matched_sample_ids": [],
+        "matched_count": 0,
+        "has_registry_problem_statement": false,
+        "mechanical_checks": [],
+        "recommended_next_action": "insufficient_evidence",
+        "rationale": "No CSV rows match template_id + intended_label (+ mutation_type).",
+        "evidence_needed_for_human": [
+          "Intended behavior in natural language (not problem_type slug)",
+          "Whether mutation matches assigned fault class",
+          "Whether finite tests are adequate or label should be rejected/relabeled"
+        ],
+        "related_pending_review_ids": [],
+        "human_reviewed": false
+      }
+    ]
+  },
+  "items": [
+    {
+      "queue_item": {
+        "template_id": "fibonacci_1",
+        "intended_label": "wrong_condition",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "boundary_condition"
+      },
+      "matched_sample_ids": [
+        "S0014"
+      ],
+      "matched_count": 1,
+      "has_registry_problem_statement": false,
+      "mechanical_checks": [
+        {
+          "sample_id": "S0014",
+          "split": "test",
+          "template_test_run": {
+            "template_id": "fibonacci_1",
+            "executed": true,
+            "exit_code": 1,
+            "passed_all": false,
+            "stderr_preview": "Traceback (most recent call last):\n  File \"<string>\", line 12, in <module>\n    assert fibonacci(0) == 0\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+            "note": "Bundled generator tests only \u2014 passing does not prove label correct."
+          }
+        }
+      ],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "rationale": "Template tests fail on fault sample \u2014 queue reason may be stale; reviewer compare to spec.",
+      "evidence_needed_for_human": [
+        "Intended behavior in natural language (not problem_type slug)",
+        "Whether mutation matches assigned fault class",
+        "Whether finite tests are adequate or label should be rejected/relabeled"
+      ],
+      "related_pending_review_ids": [],
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "fibonacci_2",
+        "intended_label": "wrong_condition",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "boundary_condition"
+      },
+      "matched_sample_ids": [
+        "S0016"
+      ],
+      "matched_count": 1,
+      "has_registry_problem_statement": false,
+      "mechanical_checks": [
+        {
+          "sample_id": "S0016",
+          "split": "test",
+          "template_test_run": {
+            "template_id": "fibonacci_2",
+            "executed": true,
+            "exit_code": 1,
+            "passed_all": false,
+            "stderr_preview": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\n    assert fibonacci(1) == 1\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+            "note": "Bundled generator tests only \u2014 passing does not prove label correct."
+          }
+        }
+      ],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "rationale": "Template tests fail on fault sample \u2014 queue reason may be stale; reviewer compare to spec.",
+      "evidence_needed_for_human": [
+        "Intended behavior in natural language (not problem_type slug)",
+        "Whether mutation matches assigned fault class",
+        "Whether finite tests are adequate or label should be rejected/relabeled"
+      ],
+      "related_pending_review_ids": [],
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "is_prime_2",
+        "intended_label": "wrong_condition",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "boundary_condition"
+      },
+      "matched_sample_ids": [
+        "S0024"
+      ],
+      "matched_count": 1,
+      "has_registry_problem_statement": false,
+      "mechanical_checks": [
+        {
+          "sample_id": "S0024",
+          "split": "test",
+          "template_test_run": {
+            "template_id": "is_prime_2",
+            "executed": true,
+            "exit_code": 1,
+            "passed_all": false,
+            "stderr_preview": "Traceback (most recent call last):\n  File \"<string>\", line 15, in <module>\n    assert is_prime(2) == True\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+            "note": "Bundled generator tests only \u2014 passing does not prove label correct."
+          }
+        }
+      ],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "rationale": "Template tests fail on fault sample \u2014 queue reason may be stale; reviewer compare to spec.",
+      "evidence_needed_for_human": [
+        "Intended behavior in natural language (not problem_type slug)",
+        "Whether mutation matches assigned fault class",
+        "Whether finite tests are adequate or label should be rejected/relabeled"
+      ],
+      "related_pending_review_ids": [],
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "bubble_sort_1",
+        "intended_label": "off_by_one_loop",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "range_endpoint"
+      },
+      "matched_sample_ids": [
+        "S0059"
+      ],
+      "matched_count": 1,
+      "has_registry_problem_statement": false,
+      "mechanical_checks": [
+        {
+          "sample_id": "S0059",
+          "split": "test",
+          "template_test_run": {
+            "template_id": "bubble_sort_1",
+            "executed": true,
+            "exit_code": 1,
+            "passed_all": false,
+            "stderr_preview": "Traceback (most recent call last):\n  File \"<string>\", line 10, in <module>\n    assert bubble_sort([3, 1, 2]) == [1, 2, 3]\n           ~~~~~~~~~~~^^^^^^^^^^^\n  File \"<string>\", line 6, in bubble_sort\n    if arr[j] > arr[j + 1]:\n                ~~~^^^^^^^\nIndexError: list index out of range\n",
+            "note": "Bundled generator tests only \u2014 passing does not prove label correct."
+          }
+        }
+      ],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "rationale": "Template tests fail on fault sample \u2014 queue reason may be stale; reviewer compare to spec.",
+      "evidence_needed_for_human": [
+        "Intended behavior in natural language (not problem_type slug)",
+        "Whether mutation matches assigned fault class",
+        "Whether finite tests are adequate or label should be rejected/relabeled"
+      ],
+      "related_pending_review_ids": [],
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "linear_search_1",
+        "intended_label": "off_by_one_loop",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "range_endpoint"
+      },
+      "matched_sample_ids": [
+        "S0047"
+      ],
+      "matched_count": 1,
+      "has_registry_problem_statement": false,
+      "mechanical_checks": [
+        {
+          "sample_id": "S0047",
+          "split": "train",
+          "template_test_run": {
+            "template_id": "linear_search_1",
+            "executed": true,
+            "exit_code": 1,
+            "passed_all": false,
+            "stderr_preview": "Traceback (most recent call last):\n  File \"<string>\", line 10, in <module>\n    assert linear_search([10], 10) == 0\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+            "note": "Bundled generator tests only \u2014 passing does not prove label correct."
+          }
+        }
+      ],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "rationale": "Template tests fail on fault sample \u2014 queue reason may be stale; reviewer compare to spec.",
+      "evidence_needed_for_human": [
+        "Intended behavior in natural language (not problem_type slug)",
+        "Whether mutation matches assigned fault class",
+        "Whether finite tests are adequate or label should be rejected/relabeled"
+      ],
+      "related_pending_review_ids": [],
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "factorial_2",
+        "intended_label": "wrong_condition",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "base_case"
+      },
+      "matched_sample_ids": [],
+      "matched_count": 0,
+      "has_registry_problem_statement": false,
+      "mechanical_checks": [],
+      "recommended_next_action": "insufficient_evidence",
+      "rationale": "No CSV rows match template_id + intended_label (+ mutation_type).",
+      "evidence_needed_for_human": [
+        "Intended behavior in natural language (not problem_type slug)",
+        "Whether mutation matches assigned fault class",
+        "Whether finite tests are adequate or label should be rejected/relabeled"
+      ],
+      "related_pending_review_ids": [
+        "V3RQ005",
+        "V3RQ008",
+        "V3RQ015"
+      ],
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "fibonacci_1",
+        "intended_label": "wrong_operator",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "arithmetic_op"
+      },
+      "matched_sample_ids": [],
+      "matched_count": 0,
+      "has_registry_problem_statement": false,
+      "mechanical_checks": [],
+      "recommended_next_action": "insufficient_evidence",
+      "rationale": "No CSV rows match template_id + intended_label (+ mutation_type).",
+      "evidence_needed_for_human": [
+        "Intended behavior in natural language (not problem_type slug)",
+        "Whether mutation matches assigned fault class",
+        "Whether finite tests are adequate or label should be rejected/relabeled"
+      ],
+      "related_pending_review_ids": [],
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "palindrome_1",
+        "intended_label": "off_by_one_loop",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "loop_boundary"
+      },
+      "matched_sample_ids": [],
+      "matched_count": 0,
+      "has_registry_problem_statement": true,
+      "mechanical_checks": [],
+      "recommended_next_action": "insufficient_evidence",
+      "rationale": "No CSV rows match template_id + intended_label (+ mutation_type).",
+      "evidence_needed_for_human": [
+        "Intended behavior in natural language (not problem_type slug)",
+        "Whether mutation matches assigned fault class",
+        "Whether finite tests are adequate or label should be rejected/relabeled"
+      ],
+      "related_pending_review_ids": [
+        "V3RQ001",
+        "V3RQ002",
+        "V3RQ009",
+        "V3RQ016",
+        "V3RQ023"
+      ],
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "linear_search_2",
+        "intended_label": "wrong_initialization",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "index_init"
+      },
+      "matched_sample_ids": [],
+      "matched_count": 0,
+      "has_registry_problem_statement": false,
+      "mechanical_checks": [],
+      "recommended_next_action": "insufficient_evidence",
+      "rationale": "No CSV rows match template_id + intended_label (+ mutation_type).",
+      "evidence_needed_for_human": [
+        "Intended behavior in natural language (not problem_type slug)",
+        "Whether mutation matches assigned fault class",
+        "Whether finite tests are adequate or label should be rejected/relabeled"
+      ],
+      "related_pending_review_ids": [],
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "linear_search_2",
+        "intended_label": "off_by_one_loop",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "loop_boundary"
+      },
+      "matched_sample_ids": [],
+      "matched_count": 0,
+      "has_registry_problem_statement": false,
+      "mechanical_checks": [],
+      "recommended_next_action": "insufficient_evidence",
+      "rationale": "No CSV rows match template_id + intended_label (+ mutation_type).",
+      "evidence_needed_for_human": [
+        "Intended behavior in natural language (not problem_type slug)",
+        "Whether mutation matches assigned fault class",
+        "Whether finite tests are adequate or label should be rejected/relabeled"
+      ],
+      "related_pending_review_ids": [],
+      "human_reviewed": false
+    }
+  ],
+  "summary": {
+    "mechanically_verifiable": 0,
+    "requires_reviewer_intended_behavior": 5,
+    "requires_expert_decision": 0,
+    "insufficient_evidence": 5
+  }
+}

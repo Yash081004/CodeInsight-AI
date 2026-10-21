@@ -1,0 +1,22 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 1.6412,
+    "train_accuracy": 0.2703,
+    "val_accuracy": 0.625,
+    "val_macro_precision": 0.1562,
+    "val_macro_recall": 0.25,
+    "val_macro_f1": 0.1923,
+    "val_loss": 1.5672
+  },
+  {
+    "epoch": 2,
+    "train_loss": 1.6111,
+    "train_accuracy": 0.4324,
+    "val_accuracy": 0.625,
+    "val_macro_precision": 0.1562,
+    "val_macro_recall": 0.25,
+    "val_macro_f1": 0.1923,
+    "val_loss": 1.4949
+  }
+]

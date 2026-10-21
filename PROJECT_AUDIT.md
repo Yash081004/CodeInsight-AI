@@ -220,3 +220,70 @@ npm run build
 ### Priority P3 (Enhancements)
 1. **FastAPI Lifespan Events**: Migrate `@app.on_event("startup")` in [backend/app/main.py](file:///c:/Users/msuja/OneDrive/Desktop/CodeInsight-AI/backend/app/main.py) to FastAPI's modern `lifespan` context manager to eliminate deprecation warnings.
 2. **Export Evaluation Visualizations**: Generate static PNG confusion matrices and ROC curves into `artifacts/figures/` for academic presentations and reports.
+
+---
+
+## 14. Dataset Validation & Evaluation Follow-Up (October 19, 2026)
+
+This section is separate from the October 12 audit: it records **dataset validation**, **evaluation pipeline repair**, and **re-measured metrics** — not new model training claims.
+
+### 14.1 Classification dataset
+
+- **Verified:** 91 samples, 21 templates, five labels, zero syntax/behavioral mismatches under `training.validate_dataset` (subprocess behavioral checks against registered template tests).
+- **Splits:** Grouped by `source_template_id`, seed 42; template leakage check passed.
+- **Limitation:** No class-stratified grouped split (documented; sample size too small).
+
+### 14.2 Similarity pairs — defect found and repaired
+
+- **Defect:** Shipped `pairs.csv` (193 rows) had **91** pairs where endpoints belonged to **different** classification splits but the pair was tagged as `train`/`val`/`test` (legacy single-endpoint tagging). Validation flagged **91** endpoint/split errors.
+- **Fix:** Regenerated pairs with current `generate_dataset._generate_similarity_pairs` logic (`cross_split` when endpoints differ). Backup: `backups/pairs_20261019_110004.csv`.
+- **After repair:** 193 total pairs; **91** `cross_split` (held out of metrics); **102** evaluable; **7** test pairs / **4** val pairs for threshold tuning.
+- **Implication:** Earlier similarity metrics citing test **N=38** or **N=193** as evaluation sets were **methodologically invalid** for leakage-safe benchmarking.
+
+### 14.3 Evaluation methodology (implemented)
+
+- `training/dataset_validation.py`, `training/validate_dataset.py`, `training/regenerate_similarity_pairs.py`
+- `training/similarity_evaluation.py`: validation-only threshold; test metrics; ROC-AUC on similarity scores (not probabilities)
+- `training/evaluate_similarity.py`: JSON reports + `similarity_threshold_config.json`
+- Baseline classification: TF-IDF fit on train only; test metrics + report JSON + confusion figure
+
+### 14.4 Re-measured results (honest, post-repair)
+
+| Task | Test N | Best model on macro F1 / F1 |
+|------|--------|-----------------------------|
+| Classification | 16 | **TF-IDF + LogReg** (macro F1 27.17%) vs CodeBERT 13.33% |
+| Similarity | **7** | TF-IDF test F1 80.0% vs CodeBERT 72.73% (small-N; smoke test only) |
+
+### 14.5 Tests
+
+- **56** backend tests passing (`py -3.13 -m pytest backend/tests`), including dataset validation tests.
+
+See **`PROJECT_STATUS.md`** for living counts, checksums, and commands.
+
+---
+
+## 15. Release Readiness (October 19, 2026)
+
+### Integration verified
+
+- **Classification:** React `ClassifierTab` → `POST /api/classification/analyze` → AST validation → `get_classifier(settings.classifier_model_path)` → **`models/codebert_classifier/`** (production).
+- **Similarity:** React `SimilarityTab` → `POST /api/similarity/analyze` → CodeBERT encoder + TF-IDF; UI verdict text clarifies similarity ≠ logical equivalence.
+- **Tests:** 57 backend tests passing under Python 3.13.
+- **Frontend:** `npm run build` succeeds.
+
+### Classifier comparison (report exactly)
+
+| Model | Test N | Accuracy | Macro F1 |
+|-------|--------|---------:|---------:|
+| TF-IDF + Logistic Regression | 16 | 43.75% | 27.17% |
+| Experimental CodeBERT (epoch 4, val macro F1 selection) | 16 | 43.75% | 28.00% |
+
+0.83 pp macro F1 gain is **inconclusive** on N=16. **Production checkpoint not replaced.**
+
+### Similarity
+
+Evaluable test set: **7 pairs** — results are **preliminary**, not a robust benchmark.
+
+### Documentation
+
+Root **`README.md`**, **`scripts/DEMO.ps1`**, updated **`PROJECT_STATUS.md`**.

@@ -1,0 +1,99 @@
+{
+  "dataset_version": "benchmark_v3",
+  "generated_at": "2026-10-19T09:11:44.961699+00:00",
+  "seed": 42,
+  "checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+  "grouping_key": "family_id (problem_type)",
+  "independent_families": 53,
+  "families_per_split": {
+    "val": [
+      "ends_with",
+      "factorial",
+      "palindrome",
+      "second_largest",
+      "string_len",
+      "tuple_sum",
+      "zip_sum"
+    ],
+    "test": [
+      "clamp",
+      "col_sum",
+      "count_evens",
+      "count_positive",
+      "count_vowels",
+      "count_words",
+      "fibonacci",
+      "find_min",
+      "gcd",
+      "max_element",
+      "prime",
+      "reverse_list",
+      "running_max",
+      "sorting",
+      "strip_spaces"
+    ],
+    "train": [
+      "binary_search",
+      "copy_matrix",
+      "count_char",
+      "cumulative_sum",
+      "digit_count",
+      "double_list",
+      "flatten_once",
+      "insertion_sort",
+      "is_ascending",
+      "is_even",
+      "is_palindrome_num",
+      "is_sorted",
+      "last_index",
+      "linear_search",
+      "list_max_index",
+      "matrix_trace",
+      "mean_list",
+      "merge_sorted_lists",
+      "mod_list",
+      "pair_sum_target",
+      "power",
+      "remove_negatives",
+      "replace_char",
+      "reverse_string",
+      "rotate_left",
+      "sign_list",
+      "stack_ops",
+      "starts_with",
+      "sum_digits",
+      "sum_list",
+      "unique_count"
+    ]
+  },
+  "note": "v1 test set was used in prior dev; this benchmark uses fresh family-level holdout.",
+  "split_coverage_notes": [],
+  "class_coverage_by_split": {
+    "train": {
+      "correct": 72,
+      "wrong_initialization": 7,
+      "wrong_operator": 6,
+      "off_by_one_loop": 4,
+      "wrong_condition": 5
+    },
+    "val": {
+      "correct": 20,
+      "wrong_initialization": 3,
+      "off_by_one_loop": 2,
+      "wrong_operator": 4,
+      "wrong_condition": 1
+    },
+    "test": {
+      "correct": 40,
+      "wrong_initialization": 4,
+      "off_by_one_loop": 4,
+      "wrong_condition": 10,
+      "wrong_operator": 8
+    }
+  },
+  "families_per_split_counts": {
+    "train": 31,
+    "val": 7,
+    "test": 15
+  }
+}

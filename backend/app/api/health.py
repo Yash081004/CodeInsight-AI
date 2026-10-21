@@ -14,6 +14,29 @@ from backend.app.models.error_classifier import get_classifier
 router = APIRouter(tags=["health"])
 
 
+@router.get("/ready")
+async def readiness_check():
+    """
+    Readiness: data and at least one inference path (classifier or baseline) available.
+    Does not load heavy models.
+    """
+    settings = get_settings()
+    dataset_ok = (settings.classification_data_path / "dataset.csv").exists()
+    baseline_ok = (
+        (settings.baselines_model_path / "classification_logreg.joblib").exists()
+        and (settings.baselines_model_path / "classification_tfidf_vectorizer.joblib").exists()
+    )
+    classifier = get_classifier(settings.classifier_model_path, settings.device)
+    classifier_ok = classifier.is_trained
+    ready = dataset_ok and (baseline_ok or classifier_ok)
+    return {
+        "ready": ready,
+        "dataset_available": dataset_ok,
+        "classifier_checkpoint": classifier_ok,
+        "baseline_models": baseline_ok,
+    }
+
+
 @router.get("/health", response_model=HealthResponse)
 async def health_check():
     """

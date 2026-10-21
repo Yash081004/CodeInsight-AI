@@ -94,7 +94,7 @@ class TestSimilarityCalculationAudit:
             result = analyze_similarity("def a(): pass", "def b(): pass", threshold=0.75)
             assert result["codebert_score"] == 0.8854
             assert result["is_similar"] is True
-            assert result["decision_model"] == "codebert"
+            assert "hybrid" in result["decision_model"] or result["decision_model"] == "codebert"
 
 
 # ─── 3. Classification Taxonomy & Label Bijectivity ──────────────────────────

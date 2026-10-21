@@ -1,0 +1,6 @@
+{
+  "eval_split": "val",
+  "best_epoch": 1,
+  "macro_f1": 0.1923,
+  "imported": true
+}

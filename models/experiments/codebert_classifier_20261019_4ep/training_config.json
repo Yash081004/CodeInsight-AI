@@ -1,0 +1,16 @@
+{
+  "model_name": "microsoft/codebert-base",
+  "num_labels": 5,
+  "epochs": 4,
+  "batch_size": 8,
+  "learning_rate": 2e-05,
+  "max_length": 128,
+  "seed": 42,
+  "best_epoch": 4,
+  "best_val_macro_f1": 0.2705,
+  "dataset_checksum_sha256": "c7ae7a8d836b64c9aa139e9c1fe77724329840a5629f87a08b3a2d1e993aff37",
+  "train_samples": 61,
+  "val_samples": 14,
+  "test_samples": 16,
+  "checkpoint_selection": "validation_macro_f1"
+}

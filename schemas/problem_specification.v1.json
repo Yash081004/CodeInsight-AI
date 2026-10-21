@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codeinsight.ai/schemas/problem_specification.v1.json",
+  "title": "CodeInsight problem specification catalog (v1)",
+  "type": "object",
+  "required": ["spec_catalog_version", "entries"],
+  "properties": {
+    "spec_catalog_version": { "type": "string", "pattern": "^v1\\." },
+    "generated_at": { "type": "string" },
+    "human_reviewed": { "type": "boolean", "const": false },
+    "note": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/spec_entry" }
+    }
+  },
+  "$defs": {
+    "review_status": {
+      "type": "string",
+      "enum": ["missing", "draft", "machine_suggested", "human_reviewed"]
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["source", "review_status"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": [
+            "human_reviewer",
+            "generator_registry",
+            "machine_suggested",
+            "imported"
+          ]
+        },
+        "author": { "type": ["string", "null"] },
+        "created_at": { "type": "string" },
+        "review_status": { "$ref": "#/$defs/review_status" },
+        "reviewer_id": { "type": ["string", "null"] },
+        "notes": { "type": "string" }
+      }
+    },
+    "spec_entry": {
+      "type": "object",
+      "required": ["spec_id", "family_id", "problem_statement", "provenance"],
+      "properties": {
+        "spec_id": { "type": "string", "minLength": 3 },
+        "family_id": { "type": "string" },
+        "source_template_ids": { "type": "array", "items": { "type": "string" } },
+        "problem_statement": { "type": "string", "minLength": 10 },
+        "input_assumptions": { "type": "array", "items": { "type": "string" } },
+        "expected_output_summary": { "type": "string" },
+        "boundary_cases": { "type": "array", "items": { "type": "string" } },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "associated_sample_ids": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "dataset_version": "benchmark_v2",
+  "dataset_checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+  "split_manifest": {
+    "test": [
+      "clamp",
+      "factorial",
+      "is_sorted",
+      "linear_search",
+      "sorting"
+    ],
+    "train": [
+      "fibonacci",
+      "find_min",
+      "gcd",
+      "max_element",
+      "mean_list",
+      "power",
+      "prime",
+      "reverse_list",
+      "reverse_string",
+      "stack_ops",
+      "sum_digits",
+      "sum_list"
+    ],
+    "val": [
+      "count_evens",
+      "count_vowels",
+      "palindrome"
+    ]
+  },
+  "baseline_run_id": "20261019_062841",
+  "codebert_run_id": "codebert_20261019_082413",
+  "test_sample_count": 31,
+  "test_family_count": 5,
+  "test_family_ids": [
+    "clamp",
+    "factorial",
+    "is_sorted",
+    "linear_search",
+    "sorting"
+  ],
+  "matched_test_sample_ids": [
+    "S0001",
+    "S0002",
+    "S0003",
+    "S0004",
+    "S0005",
+    "S0006",
+    "S0007",
+    "S0008",
+    "S0009",
+    "S0010",
+    "S0046",
+    "S0047",
+    "S0048",
+    "S0049",
+    "S0050",
+    "S0051",
+    "S0058",
+    "S0059",
+    "S0060",
+    "S0077",
+    "S0083",
+    "S0088",
+    "S0089",
+    "S0090",
+    "S0091",
+    "S0102",
+    "S0103",
+    "S0106",
+    "S0114",
+    "S0117",
+    "S0121"
+  ],
+  "baseline": {
+    "macro_f1": 0.3399,
+    "accuracy": 0.3871,
+    "weighted_f1": 0.3932
+  },
+  "codebert": {
+    "macro_f1": 0.1469,
+    "accuracy": 0.5806,
+    "weighted_f1": 0.4266,
+    "best_epoch": 1,
+    "best_val_macro_f1": 0.1923
+  },
+  "codebert_beats_baseline_macro_f1": false,
+  "note": "Comparison uses identical test sample IDs from benchmark_v2 test split only.",
+  "generated_at": "2026-10-19T08:34:02.724587+00:00",
+  "failure_analysis": {
+    "baseline": {
+      "observed_facts": {
+        "model_id": "tfidf_logreg_baseline",
+        "test_errors": 19,
+        "errors_by_true_label": {
+          "off_by_one_loop": 2,
+          "wrong_operator": 5,
+          "correct": 10,
+          "wrong_initialization": 1,
+          "wrong_condition": 1
+        },
+        "errors_by_predicted_label": {
+          "correct": 5,
+          "wrong_condition": 5,
+          "off_by_one_loop": 9
+        },
+        "errors_by_category": {
+          "missed_fault": 5,
+          "false_positive_fault": 10,
+          "other_misclassification": 3,
+          "confusion_off_by_one_loop_vs_wrong_condition": 1
+        },
+        "families_with_most_errors": [
+          [
+            "factorial",
+            7
+          ],
+          [
+            "linear_search",
+            7
+          ],
+          [
+            "sorting",
+            2
+          ],
+          [
+            "is_sorted",
+            2
+          ],
+          [
+            "clamp",
+            1
+          ]
+        ]
+      },
+      "hypotheses_not_proven": [
+        {
+          "pattern": "off_by_one_loop misclassification",
+          "evidence": "2 errors with true label off_by_one_loop",
+          "hypothesis": "Loop-boundary mutations may be lexically similar to correct code",
+          "smallest_test": "Add explicit range() token features or 1-epoch LR sweep on val only"
+        }
+      ]
+    },
+    "codebert": {
+      "observed_facts": {
+        "model_id": "codebert_finetuned",
+        "test_errors": 13,
+        "errors_by_true_label": {
+          "wrong_initialization": 2,
+          "off_by_one_loop": 4,
+          "wrong_operator": 5,
+          "wrong_condition": 2
+        },
+        "errors_by_predicted_label": {
+          "correct": 13
+        },
+        "errors_by_category": {
+          "missed_fault": 13
+        },
+        "families_with_most_errors": [
+          [
+            "factorial",
+            7
+          ],
+          [
+            "linear_search",
+            4
+          ],
+          [
+            "sorting",
+            2
+          ]
+        ]
+      },
+      "hypotheses_not_proven": [
+        {
+          "pattern": "off_by_one_loop misclassification",
+          "evidence": "4 errors with true label off_by_one_loop",
+          "hypothesis": "Loop-boundary mutations may be lexically similar to correct code",
+          "smallest_test": "Add explicit range() token features or 1-epoch LR sweep on val only"
+        },
+        {
+          "pattern": "predicted_as_correct",
+          "evidence": "13 fault samples predicted as correct",
+          "hypothesis": "Class imbalance toward correct may bias the head",
+          "smallest_test": "Compare val macro-F1 with stronger class weights (val-only)"
+        }
+      ]
+    }
+  }
+}

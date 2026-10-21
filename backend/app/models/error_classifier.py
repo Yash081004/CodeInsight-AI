@@ -90,7 +90,19 @@ class ErrorClassifier:
             return True
         return False
     
-    def predict(self, code: str, max_length: int = 512) -> Optional[Dict]:
+    def _training_max_length(self, default: int = 512) -> int:
+        if not self.model_path:
+            return default
+        cfg_path = self.model_path / "training_config.json"
+        if cfg_path.exists():
+            try:
+                data = json.loads(cfg_path.read_text(encoding="utf-8"))
+                return int(data.get("max_length", default))
+            except (json.JSONDecodeError, TypeError, ValueError):
+                pass
+        return default
+
+    def predict(self, code: str, max_length: Optional[int] = None) -> Optional[Dict]:
         """
         Predict the error class for a code snippet.
         
@@ -103,6 +115,9 @@ class ErrorClassifier:
         """
         if not self.load():
             return None
+
+        if max_length is None:
+            max_length = self._training_max_length()
         
         try:
             inputs = self.tokenizer(
@@ -132,6 +147,8 @@ class ErrorClassifier:
                 "predicted_label": predicted_label,
                 "probabilities": probabilities,
                 "confidence": float(probs[predicted_id]),
+                "logits": {ID_TO_LABEL[i]: float(logits.cpu().numpy().flatten()[i]) for i in range(len(ERROR_LABELS))},
+                "max_length_used": max_length,
             }
         except Exception as e:
             logger.error(f"Classification error: {e}")

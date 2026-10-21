@@ -1,0 +1,15 @@
+{
+  "sample_id": "S0003",
+  "spec_source": "training/generate_dataset.py factorial_1",
+  "review_only_tests": [
+    {"id": "T1", "description": "Standard factorial", "code": "assert factorial(5) == 120"},
+    {"id": "T2", "description": "Small n", "code": "assert factorial(3) == 6"},
+    {"id": "T3", "description": "Boundary n=1", "code": "assert factorial(1) == 1"},
+    {"id": "T4", "description": "Boundary n=0", "code": "assert factorial(0) == 1"}
+  ],
+  "limitations": [
+    "Tests cover only listed inputs; they do not prove universal correctness of fault taxonomy.",
+    "Off-by-one vs wrong_operator distinction is semantic — tests alone may not adjudicate taxonomy."
+  ],
+  "execution_note": "Subprocess runner with 2s timeout; no network; allowlisted sample IDs only."
+}

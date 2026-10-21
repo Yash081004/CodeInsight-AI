@@ -1,0 +1,18 @@
+{
+  "methodology": "threshold_tuned_on_val_evaluated_on_test",
+  "grid": {
+    "start": 0.1,
+    "stop": 0.95,
+    "step": 0.05,
+    "objective": "f1"
+  },
+  "tfidf": {
+    "validation_threshold": 0.5500000000000002,
+    "validation_f1": 1.0
+  },
+  "codebert": {
+    "validation_threshold": 0.1,
+    "validation_f1": 0.8571428571428571
+  },
+  "evaluated_at": "2026-10-19T05:49:45.353772+00:00"
+}

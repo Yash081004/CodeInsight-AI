@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-10-19T09:11:51.038990+00:00",
+  "benchmark_v3_dataset_present": true,
+  "phase5_audit_present": true,
+  "selection_metric": "validation_macro_f1",
+  "measured_cpu_ms_per_sample_phase3": 374.62,
+  "estimated_gpu_note": "Multiply CPU epoch time by ~0.05\u20130.2 if GPU available; measure locally \u2014 not fabricated.",
+  "proposed_matrix": [
+    {
+      "id": "gpu_1_baseline",
+      "lr": "2e-5",
+      "epochs": 4,
+      "class_weights": true,
+      "balanced_sampler": false
+    },
+    {
+      "id": "gpu_2_lr3e5",
+      "lr": "3e-5",
+      "epochs": 4,
+      "class_weights": true,
+      "balanced_sampler": false
+    },
+    {
+      "id": "gpu_3_balanced",
+      "lr": "2e-5",
+      "epochs": 4,
+      "class_weights": false,
+      "balanced_sampler": true
+    }
+  ],
+  "do_not_run_automatically": true
+}

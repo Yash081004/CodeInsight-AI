@@ -4,21 +4,49 @@ CodeInsight AI - Similarity Service
 Orchestrates similarity analysis using CodeBERT embeddings and TF-IDF baseline.
 """
 
-import numpy as np
-from typing import Optional, Dict, Any
-from pathlib import Path
-import joblib
+import json
 import logging
+from pathlib import Path
+from typing import Any, Dict, Optional, Tuple
 
+import joblib
+
+from backend.app.config import get_settings
 from backend.app.models.codebert_encoder import get_encoder
 from backend.app.services.code_validator import validate_python_code
-from backend.app.config import get_settings
+from backend.app.services.similarity_policy import (
+    DEFAULT_TF_CONFIRM,
+    DEFAULT_TF_LOW,
+    decide_from_scores,
+)
 
 logger = logging.getLogger(__name__)
 
 # Module-level TF-IDF components
 _tfidf_vectorizer = None
 _tfidf_loaded = False
+_hybrid_params_cache: Optional[Tuple[float, float]] = None
+
+
+def _load_hybrid_params() -> Tuple[float, float]:
+    """Load val-tuned mid-band params from artifacts when present."""
+    global _hybrid_params_cache
+    if _hybrid_params_cache is not None:
+        return _hybrid_params_cache
+    settings = get_settings()
+    path = settings.artifacts_path / "metrics" / "similarity_hybrid_policy.json"
+    if path.exists():
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            _hybrid_params_cache = (
+                float(data.get("tf_low", DEFAULT_TF_LOW)),
+                float(data.get("tf_confirm", DEFAULT_TF_CONFIRM)),
+            )
+            return _hybrid_params_cache
+        except (json.JSONDecodeError, TypeError, ValueError) as e:
+            logger.warning("Could not load hybrid policy params: %s", e)
+    _hybrid_params_cache = (DEFAULT_TF_LOW, DEFAULT_TF_CONFIRM)
+    return _hybrid_params_cache
 
 
 def _load_tfidf_vectorizer() -> bool:
@@ -129,27 +157,35 @@ def analyze_similarity(
         if codebert_score is not None:
             result["codebert_score"] = round(codebert_score, 4)
     
-    # Decision logic
-    primary_score = result["codebert_score"] if result["codebert_score"] is not None else result["tfidf_score"]
-    
+    tf_low, tf_confirm = _load_hybrid_params()
+    decision, policy_meta = decide_from_scores(
+        codebert_score=result["codebert_score"],
+        tfidf_score=result["tfidf_score"],
+        threshold=threshold,
+        tf_low=tf_low,
+        tf_confirm=tf_confirm,
+    )
+
+    primary_score = (
+        result["codebert_score"] if result["codebert_score"] is not None else result["tfidf_score"]
+    )
+    result["decision_score"] = primary_score
+    result["decision_policy"] = policy_meta.get("decision_policy")
+    result["review_recommended"] = decision.review_recommended
+    result["score_gap"] = policy_meta.get("score_gap")
+
     if primary_score is not None:
-        result["is_similar"] = primary_score >= threshold
-        result["decision_model"] = "codebert" if result["codebert_score"] is not None else "tfidf"
-        
-        # Generate cautious explanation
-        if result["is_similar"]:
-            result["explanation"] = (
-                f"The code representations show high similarity (score: {primary_score:.4f}, "
-                f"threshold: {threshold}). This may indicate shared functionality, but the result "
-                "alone does not establish plagiarism or prove that both programs are semantically equivalent."
-            )
-        else:
-            result["explanation"] = (
-                f"The code representations show lower similarity (score: {primary_score:.4f}, "
-                f"threshold: {threshold}). The programs may implement different logic, but structural "
-                "differences (variable names, formatting) can also affect this score."
-            )
+        result["is_similar"] = decision.is_similar
+        result["decision_model"] = decision.decision_model
+        result["explanation"] = (
+            f"{decision.reason} "
+            f"CodeBERT={result['codebert_score']}, TF-IDF={result['tfidf_score']}, "
+            f"user threshold={threshold:.2f}. "
+            "Cosine similarity does not prove identical runtime behavior on all inputs."
+        )
     else:
+        result["is_similar"] = None
+        result["decision_model"] = "none"
         result["explanation"] = (
             "Unable to compute similarity. Please check that the models are available "
             "and the code snippets are valid."

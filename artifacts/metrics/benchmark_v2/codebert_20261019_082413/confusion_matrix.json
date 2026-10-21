@@ -1,0 +1,47 @@
+{
+  "labels": [
+    "correct",
+    "wrong_initialization",
+    "off_by_one_loop",
+    "wrong_operator",
+    "wrong_condition"
+  ],
+  "matrix": [
+    [
+      18,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      4,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "model_type": "codebert"
+}

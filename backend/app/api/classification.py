@@ -28,6 +28,10 @@ async def analyze(request: ClassificationRequest):
         result = analyze_code(
             code=request.code,
             max_code_length=settings.max_code_length,
+            problem_statement=request.problem_statement,
+            function_context=request.function_context,
+            test_cases=[tc.model_dump() for tc in request.test_cases] if request.test_cases else None,
+            run_tests=request.run_tests,
         )
         
         # Record in history

@@ -1,0 +1,207 @@
+{
+  "experiment_id": "E0_tfidf_v3",
+  "model_type": "tfidf_logreg_baseline",
+  "dataset_path": "data\\benchmark_v3\\classification\\dataset.csv",
+  "dataset_checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+  "manifest_checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+  "hyperparameter_selection": {
+    "split": "val",
+    "C_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selected_C": 10.0,
+    "selected_val_macro_f1": 0.3267
+  },
+  "random_state": 42,
+  "validation": {
+    "eval_split": "val",
+    "accuracy": 0.7333,
+    "macro_precision": 0.3429,
+    "macro_recall": 0.3333,
+    "macro_f1": 0.3267,
+    "per_class_metrics": {
+      "correct": {
+        "precision": 0.7143,
+        "recall": 1.0,
+        "f1": 0.8333,
+        "support": 20
+      },
+      "wrong_initialization": {
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "support": 3
+      },
+      "off_by_one_loop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      },
+      "wrong_operator": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "wrong_condition": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "predicted_label_distribution": {
+      "correct": 28,
+      "wrong_initialization": 2
+    },
+    "max_predicted_class_fraction": 0.9333,
+    "collapse_toward_correct": true,
+    "sample_count": 30,
+    "confusion_matrix": [
+      [
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "test": {
+    "eval_split": "test",
+    "accuracy": 0.6515,
+    "macro_precision": 0.527,
+    "macro_recall": 0.29,
+    "macro_f1": 0.302,
+    "per_class_metrics": {
+      "correct": {
+        "precision": 0.6349,
+        "recall": 1.0,
+        "f1": 0.7767,
+        "support": 40
+      },
+      "wrong_initialization": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "off_by_one_loop": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "support": 4
+      },
+      "wrong_operator": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 8
+      },
+      "wrong_condition": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1": 0.3333,
+        "support": 10
+      }
+    },
+    "predicted_label_distribution": {
+      "correct": 63,
+      "off_by_one_loop": 1,
+      "wrong_condition": 2
+    },
+    "max_predicted_class_fraction": 0.9545,
+    "collapse_toward_correct": true,
+    "sample_count": 66,
+    "confusion_matrix": [
+      [
+        40,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0,
+        2
+      ]
+    ]
+  },
+  "runtime_seconds": 0.11,
+  "evaluated_at": "2026-10-20T05:52:06.798476+00:00",
+  "acceptance_gate": {
+    "passed": false,
+    "checks": {
+      "macro_f1": false,
+      "correct_recall": true,
+      "max_class_fraction": false,
+      "review_queue_excluded_from_train_val": false,
+      "recall_wrong_initialization": true,
+      "recall_off_by_one_loop": false,
+      "recall_wrong_operator": false,
+      "recall_wrong_condition": false
+    },
+    "thresholds": {
+      "macro_f1_min": 0.35,
+      "fault_recall_min": 0.25,
+      "correct_recall_min": 0.5,
+      "max_single_class_pred_fraction": 0.7
+    }
+  }
+}

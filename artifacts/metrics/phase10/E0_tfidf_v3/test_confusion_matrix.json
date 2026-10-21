@@ -1,0 +1,46 @@
+{
+  "labels": [
+    "correct",
+    "wrong_initialization",
+    "off_by_one_loop",
+    "wrong_operator",
+    "wrong_condition"
+  ],
+  "matrix": [
+    [
+      40,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      4,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      8,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      8,
+      0,
+      0,
+      0,
+      2
+    ]
+  ]
+}

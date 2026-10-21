@@ -1,0 +1,1269 @@
+sample_id,source_template_id,family_id,problem_type,code,error_label,mutation_type,mutation_description,expected_behavior,validation_status,split,dataset_version
+S0001,factorial_1,factorial,factorial,"def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result",correct,none,Original correct implementation,passes_all_tests,validated,val,benchmark_v3
+S0002,factorial_1,factorial,factorial,"def factorial(n):
+    result = 0
+    for i in range(1, n + 1):
+        result = result * i
+    return result",wrong_initialization,accumulator_init,Changed multiplication accumulator from 1 to 0,fails_tests,validated,val,benchmark_v3
+S0003,factorial_1,factorial,factorial,"def factorial(n):
+    result = 1
+    for i in range(1, n):
+        result = result * i
+    return result",off_by_one_loop,range_endpoint,"Changed range(1, n+1) to range(1, n) - misses last iteration",fails_tests,validated,val,benchmark_v3
+S0004,factorial_1,factorial,factorial,"def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result = result + i
+    return result",wrong_operator,arithmetic_op,Changed multiplication to addition in accumulator,fails_tests,validated,val,benchmark_v3
+S0005,factorial_2,factorial,factorial,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)",correct,none,Original correct implementation,passes_all_tests,validated,val,benchmark_v3
+S0006,factorial_2,factorial,factorial,"def factorial(n):
+    if n <= 1:
+        return 1
+    return n + factorial(n - 1)",wrong_operator,arithmetic_op,Changed * to + in recursive factorial,fails_tests,validated,val,benchmark_v3
+S0007,factorial_3,factorial,factorial,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",correct,none,Original correct implementation,passes_all_tests,validated,val,benchmark_v3
+S0008,factorial_3,factorial,factorial,"def factorial(n):
+    result = 0
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",wrong_initialization,accumulator_init,Changed multiplication accumulator from 1 to 0,fails_tests,validated,val,benchmark_v3
+S0009,factorial_3,factorial,factorial,"def factorial(n):
+    result = 1
+    i = 2
+    while i < n:
+        result *= i
+        i += 1
+    return result",off_by_one_loop,loop_boundary,"Changed while i <= n to while i < n, missing last iteration",fails_tests,validated,val,benchmark_v3
+S0010,factorial_3,factorial,factorial,"def factorial(n):
+    result = 1
+    i = 2
+    while i <= n:
+        result += i
+        i += 1
+    return result",wrong_operator,arithmetic_op,Changed *= to += in accumulator,fails_tests,validated,val,benchmark_v3
+S0011,fibonacci_1,fibonacci,fibonacci,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0012,fibonacci_1,fibonacci,fibonacci,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 1
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b",wrong_initialization,variable_init,Changed fibonacci initial value a from 0 to 1,fails_tests,validated,test,benchmark_v3
+S0013,fibonacci_1,fibonacci,fibonacci,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n):
+        a, b = b, a + b
+    return b",off_by_one_loop,range_endpoint,"Changed range(2, n+1) to range(2, n) - misses last iteration",fails_tests,validated,test,benchmark_v3
+S0014,fibonacci_1,fibonacci,fibonacci,"def fibonacci(n):
+    if n < 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b",wrong_condition,boundary_condition,"Changed n <= 0 to n < 0, fails for fib(0)",fails_tests,validated,test,benchmark_v3
+S0015,fibonacci_2,fibonacci,fibonacci,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0016,fibonacci_2,fibonacci,fibonacci,"def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 0:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",wrong_condition,boundary_condition,Changed fibonacci base case from n==1 to n==0,fails_tests,validated,test,benchmark_v3
+S0017,is_prime_1,prime,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0018,is_prime_1,prime,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5)):
+        if n % i == 0:
+            return False
+    return True",off_by_one_loop,range_endpoint,"Removed +1 from sqrt boundary, misses perfect square divisors",fails_tests,validated,test,benchmark_v3
+S0019,is_prime_1,prime,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n // i == 0:
+            return False
+    return True",wrong_operator,arithmetic_op,Changed modulo (%) to integer division (//) in divisibility check,fails_tests,validated,test,benchmark_v3
+S0020,is_prime_1,prime,prime,"def is_prime(n):
+    if n < 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",wrong_condition,boundary_condition,"Changed n < 2 to n < 1, incorrectly treating 1 as prime",fails_tests,validated,test,benchmark_v3
+S0021,is_prime_2,prime,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0022,is_prime_2,prime,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n // i == 0:
+            return False
+        i += 2
+    return True",wrong_operator,arithmetic_op,Changed modulo (%) to integer division (//) in divisibility check,fails_tests,validated,test,benchmark_v3
+S0023,is_prime_2,prime,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 != 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",wrong_condition,logic_inversion,"Inverted even number check, skips odd numbers instead of even",fails_tests,validated,test,benchmark_v3
+S0024,is_prime_2,prime,prime,"def is_prime(n):
+    if n < 2:
+        return False
+    if n == 3:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",wrong_condition,boundary_condition,Changed special case from n==2 to n==3,fails_tests,validated,test,benchmark_v3
+S0025,palindrome_1,palindrome,palindrome,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",correct,none,Original correct implementation,passes_all_tests,validated,val,benchmark_v3
+S0026,palindrome_1,palindrome,palindrome,"def is_palindrome(s):
+    left = 1
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",wrong_initialization,pointer_init,Changed left pointer initial value from 0 to 1,fails_tests,validated,val,benchmark_v3
+S0027,palindrome_1,palindrome,palindrome,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left -= 1
+        right -= 1
+    return True",wrong_operator,increment_op,Changed left pointer increment to decrement,fails_tests,validated,val,benchmark_v3
+S0028,palindrome_1,palindrome,palindrome,"def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] == s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",wrong_condition,logic_inversion,Inverted palindrome comparison from != to ==,fails_tests,validated,val,benchmark_v3
+S0029,palindrome_2,palindrome,palindrome,"def is_palindrome(s):
+    return s == s[::-1]",correct,none,Original correct implementation,passes_all_tests,validated,val,benchmark_v3
+S0030,max_element_1,max_element,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0031,max_element_1,max_element,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = 0
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",wrong_initialization,variable_init,Changed max initialization from lst[0] to 0 (fails for negative lists),fails_tests,validated,test,benchmark_v3
+S0032,max_element_1,max_element,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst) - 1):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",off_by_one_loop,range_endpoint,"Shortened range by 1, missing last comparison",fails_tests,validated,test,benchmark_v3
+S0033,max_element_1,max_element,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] < max_val:
+            max_val = lst[i]
+    return max_val",wrong_operator,comparison_op,Changed > to < in max comparison (finds minimum instead),fails_tests,validated,test,benchmark_v3
+S0034,max_element_1,max_element,max_element,"def find_max(lst):
+    if lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",wrong_condition,logic_inversion,Inverted empty list check from 'not lst' to 'lst',fails_tests,validated,test,benchmark_v3
+S0035,max_element_2,max_element,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0036,max_element_2,max_element,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = 0
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",wrong_initialization,variable_init,Changed max initialization from lst[0] to 0 (fails for negative lists),fails_tests,validated,test,benchmark_v3
+S0037,max_element_2,max_element,max_element,"def find_max(lst):
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item < max_val:
+            max_val = item
+    return max_val",wrong_operator,comparison_op,Changed > to < in max comparison (finds minimum instead),fails_tests,validated,test,benchmark_v3
+S0038,max_element_2,max_element,max_element,"def find_max(lst):
+    if lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",wrong_condition,logic_inversion,Inverted empty list check from 'not lst' to 'lst',fails_tests,validated,test,benchmark_v3
+S0039,sum_list_1,sum_list,sum_list,"def sum_list(lst):
+    total = 0
+    for item in lst:
+        total += item
+    return total",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0040,sum_list_1,sum_list,sum_list,"def sum_list(lst):
+    total = 1
+    for item in lst:
+        total += item
+    return total",wrong_initialization,accumulator_init,Changed addition accumulator from 0 to 1,fails_tests,validated,train,benchmark_v3
+S0041,sum_list_1,sum_list,sum_list,"def sum_list(lst):
+    total = 0
+    for item in lst:
+        total -= item
+    return total",wrong_operator,arithmetic_op,Changed += to -= in sum accumulator,fails_tests,validated,train,benchmark_v3
+S0042,sum_list_2,sum_list,sum_list,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0043,sum_list_2,sum_list,sum_list,"def sum_list(lst):
+    total = 1
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",wrong_initialization,accumulator_init,Changed addition accumulator from 0 to 1,fails_tests,validated,train,benchmark_v3
+S0044,sum_list_2,sum_list,sum_list,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst) - 1):
+        total = total + lst[i]
+    return total",off_by_one_loop,range_endpoint,"Shortened range by 1, missing last element",fails_tests,validated,train,benchmark_v3
+S0045,sum_list_2,sum_list,sum_list,"def sum_list(lst):
+    total = 0
+    for i in range(len(lst)):
+        total = total - lst[i]
+    return total",wrong_operator,arithmetic_op,Changed + to - in sum accumulator,fails_tests,validated,train,benchmark_v3
+S0046,linear_search_1,linear_search,linear_search,"def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0047,linear_search_1,linear_search,linear_search,"def linear_search(lst, target):
+    for i in range(len(lst) - 1):
+        if lst[i] == target:
+            return i
+    return -1",off_by_one_loop,range_endpoint,"Shortened range by 1, missing last element",fails_tests,validated,train,benchmark_v3
+S0048,linear_search_1,linear_search,linear_search,"def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] != target:
+            return i
+    return -1",wrong_condition,logic_inversion,Inverted search comparison from == to !=,fails_tests,validated,train,benchmark_v3
+S0049,linear_search_2,linear_search,linear_search,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0050,linear_search_2,linear_search,linear_search,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 2
+    return -1",wrong_operator,step_op,"Changed step size from 1 to 2, skipping elements",fails_tests,validated,train,benchmark_v3
+S0051,linear_search_2,linear_search,linear_search,"def linear_search(lst, target):
+    index = 0
+    while index < len(lst):
+        if lst[index] != target:
+            return index
+        index += 1
+    return -1",wrong_condition,logic_inversion,Inverted search comparison from == to !=,fails_tests,validated,train,benchmark_v3
+S0052,reverse_string_1,reverse_string,reverse_string,"def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0053,reverse_string_1,reverse_string,reverse_string,"def reverse_string(s):
+    result = "" ""
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",wrong_initialization,string_init,Changed empty string initialization to space character,fails_tests,validated,train,benchmark_v3
+S0054,reverse_string_1,reverse_string,reverse_string,"def reverse_string(s):
+    result = """"
+    for i in range(len(s) - 2, -1, -1):
+        result += s[i]
+    return result",off_by_one_loop,range_start,"Changed reverse loop start, skipping last character",fails_tests,validated,train,benchmark_v3
+S0055,reverse_string_2,reverse_string,reverse_string,"def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0056,reverse_string_2,reverse_string,reverse_string,"def reverse_string(s):
+    chars = list(s)
+    left = 1
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",wrong_initialization,pointer_init,Changed left pointer initial value from 0 to 1,fails_tests,validated,train,benchmark_v3
+S0057,reverse_string_2,reverse_string,reverse_string,"def reverse_string(s):
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left -= 1
+        right -= 1
+    return """".join(chars)",wrong_operator,increment_op,Changed left pointer increment to decrement,fails_tests,validated,train,benchmark_v3
+S0058,bubble_sort_1,sorting,sorting,"def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0059,bubble_sort_1,sorting,sorting,"def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",off_by_one_loop,range_endpoint,"Changed bubble sort inner loop boundary, causes index out of range",fails_tests,validated,test,benchmark_v3
+S0060,bubble_sort_1,sorting,sorting,"def bubble_sort(lst):
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] < arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",wrong_operator,comparison_op,Changed > to < in bubble sort comparison (sorts descending),fails_tests,validated,test,benchmark_v3
+S0061,count_vowels_1,count_vowels,count_vowels,"def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0062,count_vowels_1,count_vowels,count_vowels,"def count_vowels(s):
+    count = 1
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",wrong_initialization,counter_init,Changed counter initial value from 0 to 1,fails_tests,validated,test,benchmark_v3
+S0063,count_vowels_1,count_vowels,count_vowels,"def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count -= 1
+    return count",wrong_operator,arithmetic_op,Changed counter increment to decrement,fails_tests,validated,test,benchmark_v3
+S0064,count_vowels_1,count_vowels,count_vowels,"def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() not in ""aeiou"":
+            count += 1
+    return count",wrong_condition,logic_inversion,"Inverted vowel check, counts consonants instead",fails_tests,validated,test,benchmark_v3
+S0065,power_1,power,power,"def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0066,power_1,power,power,"def power(base, exp):
+    result = 0
+    for i in range(exp):
+        result *= base
+    return result",wrong_initialization,accumulator_init,Changed multiplication accumulator from 1 to 0,fails_tests,validated,train,benchmark_v3
+S0067,power_1,power,power,"def power(base, exp):
+    result = 1
+    for i in range(exp):
+        result += base
+    return result",wrong_operator,arithmetic_op,Changed *= to += in power calculation,fails_tests,validated,train,benchmark_v3
+S0068,gcd_1,gcd,gcd,"def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0069,gcd_1,gcd,gcd,"def gcd(a, b):
+    while b != 0:
+        a, b = b, a // b
+    return a",wrong_operator,arithmetic_op,Changed modulo to integer division in GCD,fails_tests,validated,test,benchmark_v3
+S0070,gcd_1,gcd,gcd,"def gcd(a, b):
+    while b == 0:
+        a, b = b, a % b
+    return a",wrong_condition,logic_inversion,Inverted GCD loop condition from != to ==,fails_tests,validated,test,benchmark_v3
+S0071,gcd_iter,gcd,gcd,"def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0072,gcd_iter,gcd,gcd,"def gcd(a, b):
+    while b:
+        a, b = b, a // b
+    return a",wrong_operator,arithmetic_op,Changed modulo to integer division in GCD,fails_tests,validated,test,benchmark_v3
+S0073,reverse_list_1,reverse_list,reverse_list,"def reverse_list(lst):
+    out = []
+    for i in range(len(lst) - 1, -1, -1):
+        out.append(lst[i])
+    return out",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0074,count_vowels_1,count_vowels,count_vowels,"def count_vowels(s):
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0075,sum_digits_1,sum_digits,sum_digits,"def sum_digits(n):
+    total = 0
+    n = abs(n)
+    while n > 0:
+        total += n % 10
+        n //= 10
+    return total",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0076,sum_digits_1,sum_digits,sum_digits,"def sum_digits(n):
+    total = 1
+    n = abs(n)
+    while n > 0:
+        total += n % 10
+        n //= 10
+    return total",wrong_initialization,accumulator_init,Changed addition accumulator from 0 to 1,fails_tests,validated,train,benchmark_v3
+S0077,is_sorted_1,is_sorted,is_sorted,"def is_sorted(lst):
+    for i in range(len(lst) - 1):
+        if lst[i] > lst[i + 1]:
+            return False
+    return True",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0078,find_min_1,find_min,find_min,"def find_min(lst):
+    if not lst:
+        return None
+    m = lst[0]
+    for x in lst[1:]:
+        if x < m:
+            m = x
+    return m",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0079,find_min_1,find_min,find_min,"def find_min(lst):
+    if lst:
+        return None
+    m = lst[0]
+    for x in lst[1:]:
+        if x < m:
+            m = x
+    return m",wrong_condition,logic_inversion,Inverted empty list check from 'not lst' to 'lst',fails_tests,validated,test,benchmark_v3
+S0080,power_iter,power,power,"def power(base, exp):
+    result = 1
+    for _ in range(exp):
+        result *= base
+    return result",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0081,power_iter,power,power,"def power(base, exp):
+    result = 0
+    for _ in range(exp):
+        result *= base
+    return result",wrong_initialization,accumulator_init,Changed multiplication accumulator from 1 to 0,fails_tests,validated,train,benchmark_v3
+S0082,power_iter,power,power,"def power(base, exp):
+    result = 1
+    for _ in range(exp):
+        result += base
+    return result",wrong_operator,arithmetic_op,Changed *= to += in power calculation,fails_tests,validated,train,benchmark_v3
+S0083,linear_search_1,linear_search,linear_search,"def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0084,stack_push_pop,stack_ops,stack_ops,"def stack_height(ops):
+    height = 0
+    for op in ops:
+        if op == ""push"":
+            height += 1
+        elif op == ""pop"" and height > 0:
+            height -= 1
+    return height",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0085,mean_list_1,mean_list,mean_list,"def mean_list(lst):
+    if not lst:
+        return 0
+    return sum(lst) / len(lst)",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0086,mean_list_1,mean_list,mean_list,"def mean_list(lst):
+    if lst:
+        return 0
+    return sum(lst) / len(lst)",wrong_condition,logic_inversion,Inverted empty list check from 'not lst' to 'lst',fails_tests,validated,train,benchmark_v3
+S0087,count_evens_1,count_evens,count_evens,"def count_evens(nums):
+    c = 0
+    for n in nums:
+        if n % 2 == 0:
+            c += 1
+    return c",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0088,clamp_1,clamp,clamp,"def clamp(x, lo, hi):
+    if x < lo:
+        return lo
+    if x > hi:
+        return hi
+    return x",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0089,binary_search_v3,binary_search,binary_search,"def binary_search(arr, target):
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0090,insertion_sort_v3,insertion_sort,insertion_sort,"def insertion_sort(a):
+    for i in range(1, len(a)):
+        key = a[i]
+        j = i - 1
+        while j >= 0 and a[j] > key:
+            a[j + 1] = a[j]
+            j -= 1
+        a[j + 1] = key
+    return a",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0091,merge_lists_v3,merge_sorted_lists,merge_sorted_lists,"def merge(a, b):
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i])
+            i += 1
+        else:
+            out.append(b[j])
+            j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0092,count_chars_v3,count_char,count_char,"def count_char(s, ch):
+    c = 0
+    for x in s:
+        if x == ch:
+            c += 1
+    return c",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0093,strip_spaces_v3,strip_spaces,strip_spaces,"def strip_spaces(s):
+    return """".join(ch for ch in s if ch != "" "")",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0094,last_index_v3,last_index,last_index,"def last_index(lst, value):
+    for i in range(len(lst) - 1, -1, -1):
+        if lst[i] == value:
+            return i
+    return -1",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0095,tuple_sum_v3,tuple_sum,tuple_sum,"def tuple_sum(t):
+    s = 0
+    for x in t:
+        s += x
+    return s",correct,none,Original correct implementation,passes_all_tests,validated,val,benchmark_v3
+S0096,is_even_v3,is_even,is_even,"def is_even(n):
+    return n % 2 == 0",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0097,double_list_v3,double_list,double_list,"def double_list(lst):
+    return [x * 2 for x in lst]",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0098,list_max_idx_v3,list_max_index,list_max_index,"def max_index(lst):
+    if not lst:
+        return -1
+    best_i = 0
+    for i in range(1, len(lst)):
+        if lst[i] > lst[best_i]:
+            best_i = i
+    return best_i",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0099,list_max_idx_v3,list_max_index,list_max_index,"def max_index(lst):
+    if not lst:
+        return -1
+    best_i = 0
+    for i in range(1, len(lst) - 1):
+        if lst[i] > lst[best_i]:
+            best_i = i
+    return best_i",off_by_one_loop,range_endpoint,"Shortened range by 1, missing last comparison",fails_tests,validated,train,benchmark_v3
+S0100,list_max_idx_v3,list_max_index,list_max_index,"def max_index(lst):
+    if lst:
+        return -1
+    best_i = 0
+    for i in range(1, len(lst)):
+        if lst[i] > lst[best_i]:
+            best_i = i
+    return best_i",wrong_condition,logic_inversion,Inverted empty list check from 'not lst' to 'lst',fails_tests,validated,train,benchmark_v3
+S0101,remove_neg_v3,remove_negatives,remove_negatives,"def remove_negatives(lst):
+    out = []
+    for x in lst:
+        if x >= 0:
+            out.append(x)
+    return out",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0102,cumulative_sum_v3,cumulative_sum,cumulative_sum,"def cumulative_sum(lst):
+    out = []
+    t = 0
+    for x in lst:
+        t += x
+        out.append(t)
+    return out",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0103,count_pos_v3,count_positive,count_positive,"def count_positive(lst):
+    c = 0
+    for x in lst:
+        if x > 0:
+            c += 1
+    return c",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0104,string_len_v3,string_len,string_len,"def string_len(s):
+    n = 0
+    for _ in s:
+        n += 1
+    return n",correct,none,Original correct implementation,passes_all_tests,validated,val,benchmark_v3
+S0105,starts_with_v3,starts_with,starts_with,"def starts_with(s, prefix):
+    if len(prefix) > len(s):
+        return False
+    for i in range(len(prefix)):
+        if s[i] != prefix[i]:
+            return False
+    return True",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0106,ends_with_v3,ends_with,ends_with,"def ends_with(s, suffix):
+    if len(suffix) > len(s):
+        return False
+    start = len(s) - len(suffix)
+    for i in range(len(suffix)):
+        if s[start + i] != suffix[i]:
+            return False
+    return True",correct,none,Original correct implementation,passes_all_tests,validated,val,benchmark_v3
+S0107,rotate_left_v3,rotate_left,rotate_left,"def rotate_left(lst, k):
+    if not lst:
+        return lst
+    k = k % len(lst)
+    return lst[k:] + lst[:k]",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0108,rotate_left_v3,rotate_left,rotate_left,"def rotate_left(lst, k):
+    if lst:
+        return lst
+    k = k % len(lst)
+    return lst[k:] + lst[:k]",wrong_condition,logic_inversion,Inverted empty list check from 'not lst' to 'lst',fails_tests,validated,train,benchmark_v3
+S0109,unique_count_v3,unique_count,unique_count,"def unique_count(lst):
+    seen = set()
+    for x in lst:
+        seen.add(x)
+    return len(seen)",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0110,second_largest_v3,second_largest,second_largest,"def second_largest(lst):
+    if len(lst) < 2:
+        return None
+    a = max(lst)
+    rest = [x for x in lst if x != a]
+    if not rest:
+        return None
+    return max(rest)",correct,none,Original correct implementation,passes_all_tests,validated,val,benchmark_v3
+S0111,digit_count_v3,digit_count,digit_count,"def digit_count(n):
+    n = abs(n)
+    if n == 0:
+        return 1
+    c = 0
+    while n:
+        c += 1
+        n //= 10
+    return c",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0112,is_ascending_v3,is_ascending,is_ascending,"def is_ascending(lst):
+    for i in range(len(lst) - 1):
+        if lst[i] > lst[i + 1]:
+            return False
+    return True",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0113,pair_sum_target_v3,pair_sum_target,pair_sum_target,"def has_pair_sum(arr, target):
+    seen = set()
+    for x in arr:
+        if target - x in seen:
+            return True
+        seen.add(x)
+    return False",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0114,matrix_trace_v3,matrix_trace,matrix_trace,"def matrix_trace(m):
+    t = 0
+    for i in range(len(m)):
+        t += m[i][i]
+    return t",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0115,flatten_once_v3,flatten_once,flatten_once,"def flatten_once(nested):
+    out = []
+    for sub in nested:
+        for x in sub:
+            out.append(x)
+    return out",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0116,running_max_v3,running_max,running_max,"def running_max(lst):
+    out = []
+    cur = None
+    for x in lst:
+        if cur is None or x > cur:
+            cur = x
+        out.append(cur)
+    return out",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0117,count_words_v3,count_words,count_words,"def count_words(s):
+    parts = s.split()
+    return len(parts)",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0118,replace_char_v3,replace_char,replace_char,"def replace_char(s, old, new):
+    out = []
+    for ch in s:
+        out.append(new if ch == old else ch)
+    return """".join(out)",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0119,zip_sum_v3,zip_sum,zip_sum,"def zip_sum(a, b):
+    n = min(len(a), len(b))
+    return sum(a[i] + b[i] for i in range(n))",correct,none,Original correct implementation,passes_all_tests,validated,val,benchmark_v3
+S0120,mod_list_v3,mod_list,mod_list,"def mod_list(lst, m):
+    return [x % m for x in lst]",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0121,sign_list_v3,sign_list,sign_list,"def sign_list(lst):
+    out = []
+    for x in lst:
+        if x > 0:
+            out.append(1)
+        elif x < 0:
+            out.append(-1)
+        else:
+            out.append(0)
+    return out",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0122,copy_matrix_v3,copy_matrix,copy_matrix,"def copy_matrix(m):
+    return [row[:] for row in m]",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0123,col_sum_v3,col_sum,col_sum,"def col_sum(m, j):
+    s = 0
+    for row in m:
+        s += row[j]
+    return s",correct,none,Original correct implementation,passes_all_tests,validated,test,benchmark_v3
+S0124,is_pal_num_v3,is_palindrome_num,is_palindrome_num,"def is_palindrome_num(n):
+    s = str(n)
+    return s == s[::-1]",correct,none,Original correct implementation,passes_all_tests,validated,train,benchmark_v3
+S0125,factorial_1,factorial,factorial,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(1, n + 1):
+        result = result * i
+    return result",correct,style_variant,Added docstring to function,passes_all_tests,validated,val,benchmark_v3
+S0126,factorial_2,factorial,factorial,"def factorial(n):
+    """"""Compute the result.""""""
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)",correct,style_variant,Added docstring to function,passes_all_tests,validated,val,benchmark_v3
+S0127,factorial_3,factorial,factorial,"def factorial(n):
+    """"""Compute the result.""""""
+    result = 1
+    i = 2
+    while i <= n:
+        result *= i
+        i += 1
+    return result",correct,style_variant,Added docstring to function,passes_all_tests,validated,val,benchmark_v3
+S0128,fibonacci_1,fibonacci,fibonacci,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    a = 0
+    b = 1
+    for i in range(2, n + 1):
+        a, b = b, a + b
+    return b",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0129,fibonacci_2,fibonacci,fibonacci,"def fibonacci(n):
+    """"""Compute the result.""""""
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0130,is_prime_1,prime,prime,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0131,is_prime_2,prime,prime,"def is_prime(n):
+    """"""Compute the result.""""""
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    i = 3
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += 2
+    return True",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0132,palindrome_1,palindrome,palindrome,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True",correct,style_variant,Added docstring to function,passes_all_tests,validated,val,benchmark_v3
+S0133,palindrome_2,palindrome,palindrome,"def is_palindrome(s):
+    """"""Compute the result.""""""
+    return s == s[::-1]",correct,style_variant,Added docstring to function,passes_all_tests,validated,val,benchmark_v3
+S0134,max_element_1,max_element,max_element,"def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        if lst[i] > max_val:
+            max_val = lst[i]
+    return max_val",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0135,max_element_2,max_element,max_element,"def find_max(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    max_val = lst[0]
+    for item in lst:
+        if item > max_val:
+            max_val = item
+    return max_val",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0136,sum_list_1,sum_list,sum_list,"def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for item in lst:
+        total += item
+    return total",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0137,sum_list_2,sum_list,sum_list,"def sum_list(lst):
+    """"""Compute the result.""""""
+    total = 0
+    for i in range(len(lst)):
+        total = total + lst[i]
+    return total",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0138,linear_search_1,linear_search,linear_search,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0139,linear_search_2,linear_search,linear_search,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    index = 0
+    while index < len(lst):
+        if lst[index] == target:
+            return index
+        index += 1
+    return -1",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0140,reverse_string_1,reverse_string,reverse_string,"def reverse_string(s):
+    """"""Compute the result.""""""
+    result = """"
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0141,reverse_string_2,reverse_string,reverse_string,"def reverse_string(s):
+    """"""Compute the result.""""""
+    chars = list(s)
+    left = 0
+    right = len(chars) - 1
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+    return """".join(chars)",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0142,bubble_sort_1,sorting,sorting,"def bubble_sort(lst):
+    """"""Compute the result.""""""
+    arr = lst[:]
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0143,count_vowels_1,count_vowels,count_vowels,"def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0144,power_1,power,power,"def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for i in range(exp):
+        result *= base
+    return result",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0145,gcd_1,gcd,gcd,"def gcd(a, b):
+    """"""Compute the result.""""""
+    while b != 0:
+        a, b = b, a % b
+    return a",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0146,gcd_iter,gcd,gcd,"def gcd(a, b):
+    """"""Compute the result.""""""
+    while b:
+        a, b = b, a % b
+    return a",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0147,reverse_list_1,reverse_list,reverse_list,"def reverse_list(lst):
+    """"""Compute the result.""""""
+    out = []
+    for i in range(len(lst) - 1, -1, -1):
+        out.append(lst[i])
+    return out",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0148,count_vowels_1,count_vowels,count_vowels,"def count_vowels(s):
+    """"""Compute the result.""""""
+    count = 0
+    for char in s:
+        if char.lower() in ""aeiou"":
+            count += 1
+    return count",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0149,sum_digits_1,sum_digits,sum_digits,"def sum_digits(n):
+    """"""Compute the result.""""""
+    total = 0
+    n = abs(n)
+    while n > 0:
+        total += n % 10
+        n //= 10
+    return total",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0150,is_sorted_1,is_sorted,is_sorted,"def is_sorted(lst):
+    """"""Compute the result.""""""
+    for i in range(len(lst) - 1):
+        if lst[i] > lst[i + 1]:
+            return False
+    return True",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0151,find_min_1,find_min,find_min,"def find_min(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return None
+    m = lst[0]
+    for x in lst[1:]:
+        if x < m:
+            m = x
+    return m",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0152,power_iter,power,power,"def power(base, exp):
+    """"""Compute the result.""""""
+    result = 1
+    for _ in range(exp):
+        result *= base
+    return result",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0153,linear_search_1,linear_search,linear_search,"def linear_search(lst, target):
+    """"""Compute the result.""""""
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return -1",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0154,stack_push_pop,stack_ops,stack_ops,"def stack_height(ops):
+    """"""Compute the result.""""""
+    height = 0
+    for op in ops:
+        if op == ""push"":
+            height += 1
+        elif op == ""pop"" and height > 0:
+            height -= 1
+    return height",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0155,mean_list_1,mean_list,mean_list,"def mean_list(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return 0
+    return sum(lst) / len(lst)",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0156,count_evens_1,count_evens,count_evens,"def count_evens(nums):
+    """"""Compute the result.""""""
+    c = 0
+    for n in nums:
+        if n % 2 == 0:
+            c += 1
+    return c",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0157,clamp_1,clamp,clamp,"def clamp(x, lo, hi):
+    """"""Compute the result.""""""
+    if x < lo:
+        return lo
+    if x > hi:
+        return hi
+    return x",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0158,binary_search_v3,binary_search,binary_search,"def binary_search(arr, target):
+    """"""Compute the result.""""""
+    lo, hi = 0, len(arr) - 1
+    while lo <= hi:
+        mid = (lo + hi) // 2
+        if arr[mid] == target:
+            return mid
+        if arr[mid] < target:
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return -1",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0159,insertion_sort_v3,insertion_sort,insertion_sort,"def insertion_sort(a):
+    """"""Compute the result.""""""
+    for i in range(1, len(a)):
+        key = a[i]
+        j = i - 1
+        while j >= 0 and a[j] > key:
+            a[j + 1] = a[j]
+            j -= 1
+        a[j + 1] = key
+    return a",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0160,merge_lists_v3,merge_sorted_lists,merge_sorted_lists,"def merge(a, b):
+    """"""Compute the result.""""""
+    i = j = 0
+    out = []
+    while i < len(a) and j < len(b):
+        if a[i] <= b[j]:
+            out.append(a[i])
+            i += 1
+        else:
+            out.append(b[j])
+            j += 1
+    out.extend(a[i:])
+    out.extend(b[j:])
+    return out",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0161,count_chars_v3,count_char,count_char,"def count_char(s, ch):
+    """"""Compute the result.""""""
+    c = 0
+    for x in s:
+        if x == ch:
+            c += 1
+    return c",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0162,strip_spaces_v3,strip_spaces,strip_spaces,"def strip_spaces(s):
+    """"""Compute the result.""""""
+    return """".join(ch for ch in s if ch != "" "")",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0163,last_index_v3,last_index,last_index,"def last_index(lst, value):
+    """"""Compute the result.""""""
+    for i in range(len(lst) - 1, -1, -1):
+        if lst[i] == value:
+            return i
+    return -1",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0164,tuple_sum_v3,tuple_sum,tuple_sum,"def tuple_sum(t):
+    """"""Compute the result.""""""
+    s = 0
+    for x in t:
+        s += x
+    return s",correct,style_variant,Added docstring to function,passes_all_tests,validated,val,benchmark_v3
+S0165,is_even_v3,is_even,is_even,"def is_even(n):
+    """"""Compute the result.""""""
+    return n % 2 == 0",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0166,double_list_v3,double_list,double_list,"def double_list(lst):
+    """"""Compute the result.""""""
+    return [x * 2 for x in lst]",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0167,list_max_idx_v3,list_max_index,list_max_index,"def max_index(lst):
+    """"""Compute the result.""""""
+    if not lst:
+        return -1
+    best_i = 0
+    for i in range(1, len(lst)):
+        if lst[i] > lst[best_i]:
+            best_i = i
+    return best_i",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0168,remove_neg_v3,remove_negatives,remove_negatives,"def remove_negatives(lst):
+    """"""Compute the result.""""""
+    out = []
+    for x in lst:
+        if x >= 0:
+            out.append(x)
+    return out",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0169,cumulative_sum_v3,cumulative_sum,cumulative_sum,"def cumulative_sum(lst):
+    """"""Compute the result.""""""
+    out = []
+    t = 0
+    for x in lst:
+        t += x
+        out.append(t)
+    return out",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0170,count_pos_v3,count_positive,count_positive,"def count_positive(lst):
+    """"""Compute the result.""""""
+    c = 0
+    for x in lst:
+        if x > 0:
+            c += 1
+    return c",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0171,string_len_v3,string_len,string_len,"def string_len(s):
+    """"""Compute the result.""""""
+    n = 0
+    for _ in s:
+        n += 1
+    return n",correct,style_variant,Added docstring to function,passes_all_tests,validated,val,benchmark_v3
+S0172,starts_with_v3,starts_with,starts_with,"def starts_with(s, prefix):
+    """"""Compute the result.""""""
+    if len(prefix) > len(s):
+        return False
+    for i in range(len(prefix)):
+        if s[i] != prefix[i]:
+            return False
+    return True",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0173,ends_with_v3,ends_with,ends_with,"def ends_with(s, suffix):
+    """"""Compute the result.""""""
+    if len(suffix) > len(s):
+        return False
+    start = len(s) - len(suffix)
+    for i in range(len(suffix)):
+        if s[start + i] != suffix[i]:
+            return False
+    return True",correct,style_variant,Added docstring to function,passes_all_tests,validated,val,benchmark_v3
+S0174,rotate_left_v3,rotate_left,rotate_left,"def rotate_left(lst, k):
+    """"""Compute the result.""""""
+    if not lst:
+        return lst
+    k = k % len(lst)
+    return lst[k:] + lst[:k]",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0175,unique_count_v3,unique_count,unique_count,"def unique_count(lst):
+    """"""Compute the result.""""""
+    seen = set()
+    for x in lst:
+        seen.add(x)
+    return len(seen)",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0176,second_largest_v3,second_largest,second_largest,"def second_largest(lst):
+    """"""Compute the result.""""""
+    if len(lst) < 2:
+        return None
+    a = max(lst)
+    rest = [x for x in lst if x != a]
+    if not rest:
+        return None
+    return max(rest)",correct,style_variant,Added docstring to function,passes_all_tests,validated,val,benchmark_v3
+S0177,digit_count_v3,digit_count,digit_count,"def digit_count(n):
+    """"""Compute the result.""""""
+    n = abs(n)
+    if n == 0:
+        return 1
+    c = 0
+    while n:
+        c += 1
+        n //= 10
+    return c",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0178,is_ascending_v3,is_ascending,is_ascending,"def is_ascending(lst):
+    """"""Compute the result.""""""
+    for i in range(len(lst) - 1):
+        if lst[i] > lst[i + 1]:
+            return False
+    return True",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0179,pair_sum_target_v3,pair_sum_target,pair_sum_target,"def has_pair_sum(arr, target):
+    """"""Compute the result.""""""
+    seen = set()
+    for x in arr:
+        if target - x in seen:
+            return True
+        seen.add(x)
+    return False",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0180,matrix_trace_v3,matrix_trace,matrix_trace,"def matrix_trace(m):
+    """"""Compute the result.""""""
+    t = 0
+    for i in range(len(m)):
+        t += m[i][i]
+    return t",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0181,flatten_once_v3,flatten_once,flatten_once,"def flatten_once(nested):
+    """"""Compute the result.""""""
+    out = []
+    for sub in nested:
+        for x in sub:
+            out.append(x)
+    return out",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0182,running_max_v3,running_max,running_max,"def running_max(lst):
+    """"""Compute the result.""""""
+    out = []
+    cur = None
+    for x in lst:
+        if cur is None or x > cur:
+            cur = x
+        out.append(cur)
+    return out",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0183,count_words_v3,count_words,count_words,"def count_words(s):
+    """"""Compute the result.""""""
+    parts = s.split()
+    return len(parts)",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0184,replace_char_v3,replace_char,replace_char,"def replace_char(s, old, new):
+    """"""Compute the result.""""""
+    out = []
+    for ch in s:
+        out.append(new if ch == old else ch)
+    return """".join(out)",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0185,zip_sum_v3,zip_sum,zip_sum,"def zip_sum(a, b):
+    """"""Compute the result.""""""
+    n = min(len(a), len(b))
+    return sum(a[i] + b[i] for i in range(n))",correct,style_variant,Added docstring to function,passes_all_tests,validated,val,benchmark_v3
+S0186,mod_list_v3,mod_list,mod_list,"def mod_list(lst, m):
+    """"""Compute the result.""""""
+    return [x % m for x in lst]",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0187,sign_list_v3,sign_list,sign_list,"def sign_list(lst):
+    """"""Compute the result.""""""
+    out = []
+    for x in lst:
+        if x > 0:
+            out.append(1)
+        elif x < 0:
+            out.append(-1)
+        else:
+            out.append(0)
+    return out",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0188,copy_matrix_v3,copy_matrix,copy_matrix,"def copy_matrix(m):
+    """"""Compute the result.""""""
+    return [row[:] for row in m]",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3
+S0189,col_sum_v3,col_sum,col_sum,"def col_sum(m, j):
+    """"""Compute the result.""""""
+    s = 0
+    for row in m:
+        s += row[j]
+    return s",correct,style_variant,Added docstring to function,passes_all_tests,validated,test,benchmark_v3
+S0190,is_pal_num_v3,is_palindrome_num,is_palindrome_num,"def is_palindrome_num(n):
+    """"""Compute the result.""""""
+    s = str(n)
+    return s == s[::-1]",correct,style_variant,Added docstring to function,passes_all_tests,validated,train,benchmark_v3

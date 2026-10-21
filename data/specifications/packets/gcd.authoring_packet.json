@@ -1,0 +1,29 @@
+{
+  "packet_version": "v1",
+  "family_id": "gcd",
+  "source_template_ids": ["gcd_1", "gcd_iter"],
+  "status": "draft_requires_human_review",
+  "problem_statement": "Given two integers a and b, return their greatest common divisor (GCD) using the usual mathematical definition for integers (typically non-negative inputs in beginner templates).",
+  "input_assumptions": [
+    "Inputs are integers; templates may assume a,b ≥ 0 unless stated otherwise",
+    "gcd(0, b) and gcd(a, 0) follow template conventions (reviewer to confirm against bundled tests)",
+    "Return type is int"
+  ],
+  "expected_output_summary": "Return gcd(a, b).",
+  "boundary_cases": [
+    "One argument zero",
+    "Equal positive integers",
+    "Coprime pair",
+    "Euclidean vs iterative subtraction variants must match template tests"
+  ],
+  "provenance": {
+    "source": "machine_suggested",
+    "author": "phase13_authoring_packet",
+    "created_at": "2026-10-21T09:00:00+00:00",
+    "review_status": "draft",
+    "reviewer_id": null,
+    "notes": "Standard GCD family description; reviewer must read each template's tests for zero-handling and sign policy."
+  },
+  "associated_sample_ids": [],
+  "human_reviewed": false
+}

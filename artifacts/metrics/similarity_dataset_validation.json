@@ -1,0 +1,23 @@
+{
+  "valid": true,
+  "validated_at": "2026-10-20T05:34:07.192995+00:00",
+  "pairs_path": "C:\\Users\\tarun\\Downloads\\CodeInsight-AI\\CodeInsight-AI\\data\\similarity\\pairs.csv",
+  "checksum_sha256": "920f5abb101cf241396c1bfabd56960418c3adec8b6c8911cfc0eb839acc6767",
+  "total_pairs": 193,
+  "cross_split_pairs": 91,
+  "evaluable_pairs_excluding_cross_split": 102,
+  "label_distribution": {
+    "similar": 61,
+    "dissimilar": 132
+  },
+  "samples_per_split": {
+    "cross_split": 91,
+    "test": 7,
+    "train": 91,
+    "val": 4
+  },
+  "duplicate_pair_count": 0,
+  "endpoint_split_mismatch_count": 0,
+  "pair_leakage_check_method": "pair.split must equal both endpoint splits when codes match classification corpus",
+  "issues": []
+}

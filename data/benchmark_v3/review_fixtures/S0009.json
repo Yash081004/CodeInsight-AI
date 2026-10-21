@@ -1,0 +1,15 @@
+{
+  "sample_id": "S0009",
+  "spec_source": "training/generate_dataset.py factorial_3",
+  "review_only_tests": [
+    {"id": "T1", "description": "n=5 factorial", "code": "assert factorial(5) == 120"},
+    {"id": "T2", "description": "n=4 factorial", "code": "assert factorial(4) == 24"},
+    {"id": "T3", "description": "n=1", "code": "assert factorial(1) == 1"},
+    {"id": "T4", "description": "n=0", "code": "assert factorial(0) == 1"}
+  ],
+  "limitations": [
+    "While-loop boundary bug should fail at least one assert when n>=2.",
+    "CSV label is off_by_one_loop (not wrong_condition); reviewer confirms taxonomy."
+  ],
+  "execution_note": "Subprocess runner with 2s timeout; allowlisted sample IDs only."
+}

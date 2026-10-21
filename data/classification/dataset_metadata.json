@@ -1,0 +1,84 @@
+{
+  "version": "c7ae7a8d836b",
+  "generated_at": "2026-10-20T05:34:07.195886+00:00",
+  "classification": {
+    "valid": true,
+    "validated_at": "2026-10-20T05:34:07.160161+00:00",
+    "dataset_path": "C:\\Users\\tarun\\Downloads\\CodeInsight-AI\\CodeInsight-AI\\data\\classification\\dataset.csv",
+    "checksum_sha256": "c7ae7a8d836b64c9aa139e9c1fe77724329840a5629f87a08b3a2d1e993aff37",
+    "total_samples": 91,
+    "unique_source_templates": 21,
+    "class_distribution": {
+      "correct": 42,
+      "wrong_initialization": 12,
+      "off_by_one_loop": 9,
+      "wrong_operator": 16,
+      "wrong_condition": 12
+    },
+    "samples_per_split": {
+      "test": 16,
+      "train": 61,
+      "val": 14
+    },
+    "class_counts_per_split": {
+      "test": {
+        "correct": 8,
+        "wrong_initialization": 2,
+        "off_by_one_loop": 2,
+        "wrong_operator": 2,
+        "wrong_condition": 2
+      },
+      "train": {
+        "correct": 28,
+        "wrong_operator": 11,
+        "wrong_condition": 9,
+        "off_by_one_loop": 6,
+        "wrong_initialization": 7
+      },
+      "val": {
+        "correct": 6,
+        "wrong_initialization": 3,
+        "off_by_one_loop": 1,
+        "wrong_operator": 3,
+        "wrong_condition": 1
+      }
+    },
+    "duplicate_sample_ids": [],
+    "duplicate_code_bodies": 0,
+    "invalid_label_count": 0,
+    "syntax_invalid_count": 0,
+    "behavioral_mismatch_count": 0,
+    "missing_field_violations": 0,
+    "unknown_template_count": 0,
+    "flagged_invalid_sample_count": 0,
+    "split_method": "grouped_by_source_template_id",
+    "split_seed": 42,
+    "stratification_limitation": "Splits are grouped by source_template_id (seed=42 in generator). Per-class stratification is not applied because all variants of a template share one split; with 91 samples and 5 classes, grouped stratification is not statistically meaningful.",
+    "template_split_leakage_checked": true,
+    "template_split_leakage_detected": false,
+    "issues": []
+  },
+  "similarity": {
+    "valid": true,
+    "validated_at": "2026-10-20T05:34:07.192995+00:00",
+    "pairs_path": "C:\\Users\\tarun\\Downloads\\CodeInsight-AI\\CodeInsight-AI\\data\\similarity\\pairs.csv",
+    "checksum_sha256": "920f5abb101cf241396c1bfabd56960418c3adec8b6c8911cfc0eb839acc6767",
+    "total_pairs": 193,
+    "cross_split_pairs": 91,
+    "evaluable_pairs_excluding_cross_split": 102,
+    "label_distribution": {
+      "similar": 61,
+      "dissimilar": 132
+    },
+    "samples_per_split": {
+      "cross_split": 91,
+      "test": 7,
+      "train": 91,
+      "val": 4
+    },
+    "duplicate_pair_count": 0,
+    "endpoint_split_mismatch_count": 0,
+    "pair_leakage_check_method": "pair.split must equal both endpoint splits when codes match classification corpus",
+    "issues": []
+  }
+}

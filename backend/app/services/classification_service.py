@@ -5,7 +5,7 @@ Orchestrates error classification using CodeBERT classifier and baseline.
 """
 
 import numpy as np
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 from pathlib import Path
 import joblib
 import logging
@@ -13,6 +13,10 @@ import logging
 from backend.app.models.error_classifier import get_classifier
 from backend.app.services.code_validator import validate_python_code
 from backend.app.services.feedback_service import get_feedback, get_friendly_label
+from backend.app.services.explainability_service import build_classification_diagnostics
+from backend.app.services.task_context_service import assess_task_context
+from backend.app.services.inference_policy import route_classification
+from backend.app.services.spec_hint_service import assess_spec, infer_spec_hint
 from backend.app.config import (
     get_settings, ERROR_LABELS, LABEL_TO_ID, ID_TO_LABEL, FRIENDLY_LABELS
 )
@@ -76,7 +80,15 @@ def _predict_baseline(code: str) -> Optional[Dict]:
         return None
 
 
-def analyze_code(code: str, max_code_length: int = 512) -> Dict[str, Any]:
+def analyze_code(
+    code: str,
+    max_code_length: int = 512,
+    *,
+    problem_statement: Optional[str] = None,
+    function_context: Optional[str] = None,
+    test_cases: Optional[List[dict]] = None,
+    run_tests: bool = False,
+) -> Dict[str, Any]:
     """
     Full classification analysis pipeline.
     
@@ -100,30 +112,41 @@ def analyze_code(code: str, max_code_length: int = 512) -> Dict[str, Any]:
             "code_error": error_msg,
         }
     
-    # Try CodeBERT fine-tuned classifier first
     classifier = get_classifier(
         model_path=settings.classifier_model_path,
         device=settings.device,
     )
-    
+
+    codebert_raw = None
+    if classifier.is_loaded or classifier.load():
+        # Prefer training max_length from checkpoint; cap by settings
+        train_max = classifier._training_max_length(settings.max_code_length)
+        effective_max = min(train_max, max_code_length)
+        codebert_raw = classifier.predict(code, max_length=effective_max)
+
+    baseline_raw = _predict_baseline(code)
+    spec_assessment = assess_spec(code, problem_statement)
+    spec_hint = infer_spec_hint(code, problem_statement)
+
     result = None
     model_type = "none"
     model_info = "No model available"
-    
-    if classifier.is_loaded or classifier.load():
-        result = classifier.predict(code, max_length=max_code_length)
-        if result:
-            model_type = "codebert_finetuned"
-            model_info = f"Fine-tuned CodeBERT ({settings.codebert_model_name})"
-    
-    # Fall back to baseline
-    if result is None:
-        result = _predict_baseline(code)
-        if result:
-            model_type = "baseline"
-            model_info = "TF-IDF + Logistic Regression Baseline"
-    
-    # If no model is available
+    routing_meta = None
+
+    if codebert_raw or baseline_raw:
+        try:
+            routed, model_type, model_info = route_classification(
+                codebert=codebert_raw,
+                baseline=baseline_raw,
+                spec_hint=spec_hint,
+                spec_assessment=spec_assessment,
+                has_problem_statement=bool(problem_statement and problem_statement.strip()),
+            )
+            result = routed
+            routing_meta = routed.get("routing")
+        except ValueError:
+            result = None
+
     if result is None:
         return {
             "predicted_label": "unknown",
@@ -142,7 +165,43 @@ def analyze_code(code: str, max_code_length: int = 512) -> Dict[str, Any]:
         }
     
     label = result["predicted_label"]
-    
+    task_ctx = assess_task_context(
+        label,
+        code=code,
+        expected_behavior=problem_statement,
+        problem_statement=problem_statement,
+        problem_type=function_context,
+        test_cases=test_cases,
+    )
+
+    test_results: Optional[List[dict]] = None
+    tests_executed = False
+    if run_tests and test_cases:
+        test_results = [
+            {
+                "status": "not_executed",
+                "reason": "Sandboxed test execution is not enabled in this deployment.",
+                "input": tc.get("input"),
+            }
+            for tc in test_cases
+        ]
+    elif test_cases:
+        test_results = [{"status": "skipped", "reason": "run_tests was false"} for _ in test_cases]
+
+    diagnostics = build_classification_diagnostics(
+        code,
+        label,
+        result["probabilities"],
+        task_context=task_ctx,
+        tests_executed=tests_executed,
+        test_results=test_results,
+        routing=routing_meta,
+        codebert_snapshot=codebert_raw,
+        baseline_snapshot=baseline_raw,
+        spec_hint=spec_hint,
+        spec_assessment=spec_assessment,
+    )
+
     return {
         "predicted_label": label,
         "friendly_label": get_friendly_label(label),
@@ -153,4 +212,8 @@ def analyze_code(code: str, max_code_length: int = 512) -> Dict[str, Any]:
         "model_info": model_info,
         "code_valid": True,
         "code_error": None,
+        "diagnostics": diagnostics,
+        "task_context": task_ctx,
+        "tests_executed": tests_executed,
+        "test_results": test_results,
     }

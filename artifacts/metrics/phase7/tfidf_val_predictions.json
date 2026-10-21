@@ -1,0 +1,482 @@
+[
+  {
+    "sample_id": "S0001",
+    "family_id": "factorial",
+    "source_template_id": "factorial_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2948,
+      "wrong_initialization": 0.265,
+      "off_by_one_loop": 0.235,
+      "wrong_operator": 0.1405,
+      "wrong_condition": 0.0647
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0002",
+    "family_id": "factorial",
+    "source_template_id": "factorial_1",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2948,
+      "wrong_initialization": 0.265,
+      "off_by_one_loop": 0.235,
+      "wrong_operator": 0.1405,
+      "wrong_condition": 0.0647
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0003",
+    "family_id": "factorial",
+    "source_template_id": "factorial_1",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2948,
+      "wrong_initialization": 0.265,
+      "off_by_one_loop": 0.235,
+      "wrong_operator": 0.1405,
+      "wrong_condition": 0.0647
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0004",
+    "family_id": "factorial",
+    "source_template_id": "factorial_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2948,
+      "wrong_initialization": 0.265,
+      "off_by_one_loop": 0.235,
+      "wrong_operator": 0.1405,
+      "wrong_condition": 0.0647
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0005",
+    "family_id": "factorial",
+    "source_template_id": "factorial_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4057,
+      "wrong_initialization": 0.144,
+      "off_by_one_loop": 0.1404,
+      "wrong_operator": 0.1349,
+      "wrong_condition": 0.175
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0006",
+    "family_id": "factorial",
+    "source_template_id": "factorial_2",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4057,
+      "wrong_initialization": 0.144,
+      "off_by_one_loop": 0.1404,
+      "wrong_operator": 0.1349,
+      "wrong_condition": 0.175
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0007",
+    "family_id": "factorial",
+    "source_template_id": "factorial_3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.295,
+      "wrong_initialization": 0.2884,
+      "off_by_one_loop": 0.1829,
+      "wrong_operator": 0.1558,
+      "wrong_condition": 0.0779
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0008",
+    "family_id": "factorial",
+    "source_template_id": "factorial_3",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.295,
+      "wrong_initialization": 0.2884,
+      "off_by_one_loop": 0.1829,
+      "wrong_operator": 0.1558,
+      "wrong_condition": 0.0779
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0009",
+    "family_id": "factorial",
+    "source_template_id": "factorial_3",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.295,
+      "wrong_initialization": 0.2884,
+      "off_by_one_loop": 0.1829,
+      "wrong_operator": 0.1558,
+      "wrong_condition": 0.0779
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0010",
+    "family_id": "factorial",
+    "source_template_id": "factorial_3",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.295,
+      "wrong_initialization": 0.2884,
+      "off_by_one_loop": 0.1829,
+      "wrong_operator": 0.1558,
+      "wrong_condition": 0.0779
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0025",
+    "family_id": "palindrome",
+    "source_template_id": "palindrome_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2847,
+      "wrong_initialization": 0.2563,
+      "off_by_one_loop": 0.0876,
+      "wrong_operator": 0.2777,
+      "wrong_condition": 0.0938
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0026",
+    "family_id": "palindrome",
+    "source_template_id": "palindrome_1",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2847,
+      "wrong_initialization": 0.2563,
+      "off_by_one_loop": 0.0876,
+      "wrong_operator": 0.2777,
+      "wrong_condition": 0.0938
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0027",
+    "family_id": "palindrome",
+    "source_template_id": "palindrome_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2847,
+      "wrong_initialization": 0.2563,
+      "off_by_one_loop": 0.0876,
+      "wrong_operator": 0.2777,
+      "wrong_condition": 0.0938
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0028",
+    "family_id": "palindrome",
+    "source_template_id": "palindrome_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2847,
+      "wrong_initialization": 0.2563,
+      "off_by_one_loop": 0.0876,
+      "wrong_operator": 0.2777,
+      "wrong_condition": 0.0938
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0029",
+    "family_id": "palindrome",
+    "source_template_id": "palindrome_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4047,
+      "wrong_initialization": 0.1667,
+      "off_by_one_loop": 0.1344,
+      "wrong_operator": 0.1479,
+      "wrong_condition": 0.1464
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0095",
+    "family_id": "tuple_sum",
+    "source_template_id": "tuple_sum_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4096,
+      "wrong_initialization": 0.1669,
+      "off_by_one_loop": 0.1884,
+      "wrong_operator": 0.1367,
+      "wrong_condition": 0.0983
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0104",
+    "family_id": "string_len",
+    "source_template_id": "string_len_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4096,
+      "wrong_initialization": 0.1669,
+      "off_by_one_loop": 0.1884,
+      "wrong_operator": 0.1367,
+      "wrong_condition": 0.0983
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0106",
+    "family_id": "ends_with",
+    "source_template_id": "ends_with_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4642,
+      "wrong_initialization": 0.1347,
+      "off_by_one_loop": 0.1669,
+      "wrong_operator": 0.117,
+      "wrong_condition": 0.1171
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0110",
+    "family_id": "second_largest",
+    "source_template_id": "second_largest_v3",
+    "true_label": "correct",
+    "predicted_label": "wrong_condition",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2927,
+      "wrong_initialization": 0.078,
+      "off_by_one_loop": 0.2179,
+      "wrong_operator": 0.0942,
+      "wrong_condition": 0.3172
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0119",
+    "family_id": "zip_sum",
+    "source_template_id": "zip_sum_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3547,
+      "wrong_initialization": 0.1622,
+      "off_by_one_loop": 0.1785,
+      "wrong_operator": 0.1359,
+      "wrong_condition": 0.1687
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0125",
+    "family_id": "factorial",
+    "source_template_id": "factorial_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4202,
+      "wrong_initialization": 0.2137,
+      "off_by_one_loop": 0.1744,
+      "wrong_operator": 0.1281,
+      "wrong_condition": 0.0635
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0126",
+    "family_id": "factorial",
+    "source_template_id": "factorial_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5746,
+      "wrong_initialization": 0.1183,
+      "off_by_one_loop": 0.1008,
+      "wrong_operator": 0.1042,
+      "wrong_condition": 0.102
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0127",
+    "family_id": "factorial",
+    "source_template_id": "factorial_3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4564,
+      "wrong_initialization": 0.2125,
+      "off_by_one_loop": 0.1358,
+      "wrong_operator": 0.1285,
+      "wrong_condition": 0.0668
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0132",
+    "family_id": "palindrome",
+    "source_template_id": "palindrome_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3209,
+      "wrong_initialization": 0.2464,
+      "off_by_one_loop": 0.0843,
+      "wrong_operator": 0.2617,
+      "wrong_condition": 0.0866
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0133",
+    "family_id": "palindrome",
+    "source_template_id": "palindrome_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5989,
+      "wrong_initialization": 0.1355,
+      "off_by_one_loop": 0.108,
+      "wrong_operator": 0.0923,
+      "wrong_condition": 0.0653
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0164",
+    "family_id": "tuple_sum",
+    "source_template_id": "tuple_sum_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.6051,
+      "wrong_initialization": 0.1341,
+      "off_by_one_loop": 0.1079,
+      "wrong_operator": 0.0984,
+      "wrong_condition": 0.0544
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0171",
+    "family_id": "string_len",
+    "source_template_id": "string_len_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.6051,
+      "wrong_initialization": 0.1341,
+      "off_by_one_loop": 0.1079,
+      "wrong_operator": 0.0984,
+      "wrong_condition": 0.0544
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0173",
+    "family_id": "ends_with",
+    "source_template_id": "ends_with_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5433,
+      "wrong_initialization": 0.1199,
+      "off_by_one_loop": 0.1414,
+      "wrong_operator": 0.1014,
+      "wrong_condition": 0.0939
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0176",
+    "family_id": "second_largest",
+    "source_template_id": "second_largest_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.437,
+      "wrong_initialization": 0.0785,
+      "off_by_one_loop": 0.1784,
+      "wrong_operator": 0.0884,
+      "wrong_condition": 0.2177
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0185",
+    "family_id": "zip_sum",
+    "source_template_id": "zip_sum_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4886,
+      "wrong_initialization": 0.1385,
+      "off_by_one_loop": 0.1425,
+      "wrong_operator": 0.111,
+      "wrong_condition": 0.1195
+    },
+    "model": "tfidf_logreg"
+  }
+]

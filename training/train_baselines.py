@@ -82,7 +82,6 @@ def train_classification_baseline(
         max_iter=1000,
         class_weight="balanced",
         random_state=42,
-        multi_class="multinomial",
         solver="lbfgs",
     )
     clf.fit(X_train, y_train)
@@ -125,8 +124,12 @@ def train_classification_baseline(
                 }
         
         # Save metrics
+        from training.dataset_validation import sha256_file
+
         metrics = {
             "model_type": "baseline_logreg",
+            "eval_split": eval_name,
+            "preprocessing_fit_split": "train",
             "accuracy": round(acc, 4),
             "macro_precision": round(macro_p, 4),
             "macro_recall": round(macro_r, 4),
@@ -134,12 +137,27 @@ def train_classification_baseline(
             "per_class_metrics": per_class,
             "sample_count": len(eval_y),
             "evaluated_at": pd.Timestamp.now().isoformat(),
+            "dataset_checksum_sha256": sha256_file(data_path) if data_path.exists() else None,
         }
         
         metrics_dir.mkdir(parents=True, exist_ok=True)
         with open(metrics_dir / "baseline_classification_metrics.json", "w") as f:
             json.dump(metrics, f, indent=2)
-        
+
+        with open(metrics_dir / "baseline_classification_report.json", "w") as f:
+            json.dump(report, f, indent=2)
+
+        eval_config = {
+            "model": "tfidf_logistic_regression",
+            "vectorizer_fit": "train_only",
+            "classifier_fit": "train_only",
+            "evaluation_split": eval_name,
+            "random_state": 42,
+            "class_weight": "balanced",
+        }
+        with open(metrics_dir / "baseline_eval_config.json", "w") as f:
+            json.dump(eval_config, f, indent=2)
+
         # Save confusion matrix
         cm = confusion_matrix(eval_y, y_pred)
         cm_data = {
@@ -149,6 +167,18 @@ def train_classification_baseline(
         }
         with open(metrics_dir / "baseline_confusion_matrix.json", "w") as f:
             json.dump(cm_data, f, indent=2)
+
+        try:
+            from training.evaluation_artifacts import save_confusion_matrix_figure
+
+            save_confusion_matrix_figure(
+                cm.tolist(),
+                ERROR_LABELS,
+                f"Baseline classification ({eval_name}, n={len(eval_y)})",
+                metrics_dir.parent / "figures" / "baseline_classification_confusion.png",
+            )
+        except Exception as fig_err:
+            print(f"  (figure save skipped: {fig_err})")
         
         print(f"\n  Classification Report:")
         print(classification_report(eval_y, y_pred, target_names=ERROR_LABELS, zero_division=0))
@@ -212,60 +242,58 @@ def train_similarity_baseline(
     
     print(f"[OK] TF-IDF vectorizer saved ({len(corpus)} documents, {len(vectorizer.vocabulary_)} features)")
     
-    # Evaluate on similarity pairs if available
+    # Evaluate on similarity pairs if available (val threshold, test metrics)
     if pairs_path.exists():
-        from sklearn.metrics.pairwise import cosine_similarity
-        
-        pairs_df = pd.read_csv(pairs_path)
-        
-        codes_a = pairs_df["code_a"].tolist()
-        codes_b = pairs_df["code_b"].tolist()
-        labels = pairs_df["label"].tolist()
-        
-        vecs_a = vectorizer.transform(codes_a)
-        vecs_b = vectorizer.transform(codes_b)
-        
-        sims = []
-        for i in range(len(codes_a)):
-            sim = cosine_similarity(vecs_a[i:i+1], vecs_b[i:i+1])[0][0]
-            sims.append(sim)
-        
-        # Find best threshold on this data
-        best_f1 = 0
-        best_threshold = 0.5
-        for t in np.arange(0.1, 0.95, 0.05):
-            preds = [1 if s >= t else 0 for s in sims]
-            f = f1_score(labels, preds, zero_division=0)
-            if f > best_f1:
-                best_f1 = f
-                best_threshold = t
-        
-        preds = [1 if s >= best_threshold else 0 for s in sims]
-        acc = accuracy_score(labels, preds)
-        p = precision_score(labels, preds, zero_division=0)
-        r = recall_score(labels, preds, zero_division=0)
-        f1 = f1_score(labels, preds, zero_division=0)
-        
-        sim_metrics = {
-            "tfidf_accuracy": round(acc, 4),
-            "tfidf_precision": round(p, 4),
-            "tfidf_recall": round(r, 4),
-            "tfidf_f1": round(f1, 4),
-            "tfidf_threshold": round(best_threshold, 2),
-            "total_pairs": len(labels),
-            "similar_pairs": sum(labels),
-            "dissimilar_pairs": len(labels) - sum(labels),
-        }
-        
-        metrics_dir.mkdir(parents=True, exist_ok=True)
-        with open(metrics_dir / "similarity_metrics.json", "w") as f:
-            json.dump(sim_metrics, f, indent=2)
-        
-        print(f"\n  Similarity Metrics (threshold={best_threshold:.2f}):")
-        print(f"  Accuracy:  {acc:.4f}")
-        print(f"  Precision: {p:.4f}")
-        print(f"  Recall:    {r:.4f}")
-        print(f"  F1:        {f1:.4f}")
+        from training.similarity_evaluation import (
+            build_similarity_metrics_payload,
+            find_best_threshold,
+            load_similarity_pairs,
+            metrics_at_threshold,
+            save_similarity_metrics,
+            split_frame,
+            tfidf_pair_similarities,
+        )
+
+        pairs_df = load_similarity_pairs(pairs_path)
+        val_df, test_df = split_frame(pairs_df)
+
+        if len(val_df) == 0 or len(test_df) == 0:
+            print("WARNING: Skipping similarity metrics — need val and test splits.")
+        else:
+            val_sims = tfidf_pair_similarities(
+                vectorizer,
+                val_df["code_a"].tolist(),
+                val_df["code_b"].tolist(),
+            )
+            test_sims = tfidf_pair_similarities(
+                vectorizer,
+                test_df["code_a"].tolist(),
+                test_df["code_b"].tolist(),
+            )
+            best_threshold, _ = find_best_threshold(val_sims, val_df["label"].tolist())
+            test_metrics = metrics_at_threshold(
+                test_sims, test_df["label"].tolist(), best_threshold
+            )
+
+            sim_metrics = build_similarity_metrics_payload(
+                pairs_df,
+                test_metrics,
+                best_threshold,
+            )
+
+            save_similarity_metrics(metrics_dir, sim_metrics)
+
+            acc = test_metrics["accuracy"]
+            p = test_metrics["precision"]
+            r = test_metrics["recall"]
+            f1 = test_metrics["f1"]
+
+            print(f"\n  Similarity Metrics (threshold={best_threshold:.2f} from val, test n={len(test_df)}):")
+            print(f"  Accuracy:  {acc:.4f}")
+            print(f"  Precision: {p:.4f}")
+            print(f"  Recall:    {r:.4f}")
+            print(f"  F1:        {f1:.4f}")
+            print("  Run `py -3.13 -m training.evaluate_similarity` for CodeBERT pair metrics.")
     
     return None
 

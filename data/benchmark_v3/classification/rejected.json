@@ -1,0 +1,18 @@
+[
+  {
+    "template_id": "count_vowels_1",
+    "reason": "normalized_duplicate_of_S0061"
+  },
+  {
+    "template_id": "count_vowels_1",
+    "reason": "normalized_duplicate_of_S0062"
+  },
+  {
+    "template_id": "count_vowels_1",
+    "reason": "normalized_duplicate_of_S0063"
+  },
+  {
+    "template_id": "linear_search_1",
+    "reason": "normalized_duplicate_of_S0047"
+  }
+]

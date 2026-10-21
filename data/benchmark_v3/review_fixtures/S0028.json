@@ -1,0 +1,14 @@
+{
+  "sample_id": "S0028",
+  "spec_source": "training/generate_dataset.py palindrome_1",
+  "review_only_tests": [
+    {"id": "T1", "description": "Palindrome true", "code": "assert is_palindrome('aba') == True"},
+    {"id": "T2", "description": "Non-palindrome", "code": "assert is_palindrome('hello') == False"},
+    {"id": "T3", "description": "Empty", "code": "assert is_palindrome('') == True"}
+  ],
+  "limitations": [
+    "Inverted comparison is a wrong_condition mutation; confirm against specification.",
+    "Passing a subset of tests would not automatically invalidate the intended label."
+  ],
+  "execution_note": "Subprocess runner with 2s timeout; allowlisted sample IDs only."
+}

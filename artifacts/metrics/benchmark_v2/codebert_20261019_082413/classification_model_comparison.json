@@ -1,0 +1,7 @@
+{
+  "test_sample_count": 31,
+  "dataset_checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+  "codebert_test_macro_f1": 0.1469,
+  "baseline_test_macro_f1": 0.3399,
+  "codebert_beats_baseline_macro_f1": false
+}

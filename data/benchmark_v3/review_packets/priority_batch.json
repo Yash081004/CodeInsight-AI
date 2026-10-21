@@ -1,0 +1,339 @@
+{
+  "batch_name": "phase8_priority",
+  "human_adjudicated": false,
+  "all_status_pending": true,
+  "note": "Model predictions omitted by default; use build_review_packet(include_model_hints=True) for optional section.",
+  "packets": [
+    {
+      "review_id": "V3RQ001",
+      "sample_id": "S0027",
+      "family_id": "palindrome",
+      "source_template_id": "palindrome_1",
+      "dataset_split": "val",
+      "original_label": "wrong_operator",
+      "current_label_in_csv": "wrong_operator",
+      "status": "pending",
+      "problem_specification": {
+        "problem_statement": "Return True iff string s reads the same forward and backward.",
+        "template_tests": [
+          "assert is_palindrome(\"racecar\") == True",
+          "assert is_palindrome(\"hello\") == False",
+          "assert is_palindrome(\"aba\") == True",
+          "assert is_palindrome(\"a\") == True",
+          "assert is_palindrome(\"\") == True"
+        ],
+        "spec_source": "training/generate_dataset.py template palindrome_1"
+      },
+      "source_code": "def is_palindrome(s):\n    left = 0\n    right = len(s) - 1\n    while left < right:\n        if s[left] != s[right]:\n            return False\n        left -= 1\n        right -= 1\n    return True",
+      "mutation_type": "increment_op",
+      "mutation_rationale": "Changed left pointer increment to decrement",
+      "dataset_validation_status": "validated",
+      "expected_behavior_field": "fails_tests",
+      "behavioral_tests": {
+        "template_tests": [
+          "assert is_palindrome(\"racecar\") == True",
+          "assert is_palindrome(\"hello\") == False",
+          "assert is_palindrome(\"aba\") == True",
+          "assert is_palindrome(\"a\") == True",
+          "assert is_palindrome(\"\") == True"
+        ],
+        "review_only_tests": [
+          {
+            "id": "T1",
+            "description": "Palindrome true",
+            "code": "assert is_palindrome('racecar') == True"
+          },
+          {
+            "id": "T2",
+            "description": "Non-palindrome",
+            "code": "assert is_palindrome('hello') == False"
+          },
+          {
+            "id": "T3",
+            "description": "Single char",
+            "code": "assert is_palindrome('a') == True"
+          },
+          {
+            "id": "T4",
+            "description": "Empty string",
+            "code": "assert is_palindrome('') == True"
+          }
+        ],
+        "limitations": [
+          "Label wrong_operator vs off_by_one_loop may be debatable for pointer update bug; reviewer assesses taxonomy.",
+          "Finite string tests do not cover Unicode or case sensitivity."
+        ],
+        "execution_note": "Subprocess runner with 2s timeout; allowlisted sample IDs only."
+      },
+      "reviewer_checklist": [
+        "Does the code match the stated problem specification?",
+        "Does the assigned fault type describe the actual bug (not merely a symptom)?",
+        "Do template tests fail on this snippet? (Passing tests do not prove the label wrong.)",
+        "Are review-only tests sufficient, or is expert judgment required?",
+        "Is this sample suitable for a human-adjudicated benchmark export?"
+      ],
+      "decision_fields": {
+        "allowed_statuses": [
+          "accepted",
+          "needs_expert_review",
+          "pending",
+          "rejected",
+          "relabeled"
+        ],
+        "rationale_required_for": [
+          "rejected",
+          "relabeled",
+          "needs_expert_review"
+        ],
+        "reviewer_identity": "Set --reviewer or --anonymous-review on CLI; not auto-filled."
+      },
+      "audit_note": "Recording a decision appends audit_history; dataset.csv is not modified."
+    },
+    {
+      "review_id": "V3RQ002",
+      "sample_id": "S0028",
+      "family_id": "palindrome",
+      "source_template_id": "palindrome_1",
+      "dataset_split": "val",
+      "original_label": "wrong_condition",
+      "current_label_in_csv": "wrong_condition",
+      "status": "pending",
+      "problem_specification": {
+        "problem_statement": "Return True iff string s reads the same forward and backward.",
+        "template_tests": [
+          "assert is_palindrome(\"racecar\") == True",
+          "assert is_palindrome(\"hello\") == False",
+          "assert is_palindrome(\"aba\") == True",
+          "assert is_palindrome(\"a\") == True",
+          "assert is_palindrome(\"\") == True"
+        ],
+        "spec_source": "training/generate_dataset.py template palindrome_1"
+      },
+      "source_code": "def is_palindrome(s):\n    left = 0\n    right = len(s) - 1\n    while left < right:\n        if s[left] == s[right]:\n            return False\n        left += 1\n        right -= 1\n    return True",
+      "mutation_type": "logic_inversion",
+      "mutation_rationale": "Inverted palindrome comparison from != to ==",
+      "dataset_validation_status": "validated",
+      "expected_behavior_field": "fails_tests",
+      "behavioral_tests": {
+        "template_tests": [
+          "assert is_palindrome(\"racecar\") == True",
+          "assert is_palindrome(\"hello\") == False",
+          "assert is_palindrome(\"aba\") == True",
+          "assert is_palindrome(\"a\") == True",
+          "assert is_palindrome(\"\") == True"
+        ],
+        "review_only_tests": [
+          {
+            "id": "T1",
+            "description": "Palindrome true",
+            "code": "assert is_palindrome('aba') == True"
+          },
+          {
+            "id": "T2",
+            "description": "Non-palindrome",
+            "code": "assert is_palindrome('hello') == False"
+          },
+          {
+            "id": "T3",
+            "description": "Empty",
+            "code": "assert is_palindrome('') == True"
+          }
+        ],
+        "limitations": [
+          "Inverted comparison is a wrong_condition mutation; confirm against specification.",
+          "Passing a subset of tests would not automatically invalidate the intended label."
+        ],
+        "execution_note": "Subprocess runner with 2s timeout; allowlisted sample IDs only."
+      },
+      "reviewer_checklist": [
+        "Does the code match the stated problem specification?",
+        "Does the assigned fault type describe the actual bug (not merely a symptom)?",
+        "Do template tests fail on this snippet? (Passing tests do not prove the label wrong.)",
+        "Are review-only tests sufficient, or is expert judgment required?",
+        "Is this sample suitable for a human-adjudicated benchmark export?"
+      ],
+      "decision_fields": {
+        "allowed_statuses": [
+          "accepted",
+          "needs_expert_review",
+          "pending",
+          "rejected",
+          "relabeled"
+        ],
+        "rationale_required_for": [
+          "rejected",
+          "relabeled",
+          "needs_expert_review"
+        ],
+        "reviewer_identity": "Set --reviewer or --anonymous-review on CLI; not auto-filled."
+      },
+      "audit_note": "Recording a decision appends audit_history; dataset.csv is not modified."
+    },
+    {
+      "review_id": "V3RQ003",
+      "sample_id": "S0003",
+      "family_id": "factorial",
+      "source_template_id": "factorial_1",
+      "dataset_split": "val",
+      "original_label": "off_by_one_loop",
+      "current_label_in_csv": "off_by_one_loop",
+      "status": "pending",
+      "problem_specification": {
+        "problem_statement": "Compute factorial(n) for non-negative n; 0! = 1.",
+        "template_tests": [
+          "assert factorial(0) == 1",
+          "assert factorial(1) == 1",
+          "assert factorial(5) == 120",
+          "assert factorial(3) == 6"
+        ],
+        "spec_source": "training/generate_dataset.py template factorial_1"
+      },
+      "source_code": "def factorial(n):\n    result = 1\n    for i in range(1, n):\n        result = result * i\n    return result",
+      "mutation_type": "range_endpoint",
+      "mutation_rationale": "Changed range(1, n+1) to range(1, n) - misses last iteration",
+      "dataset_validation_status": "validated",
+      "expected_behavior_field": "fails_tests",
+      "behavioral_tests": {
+        "template_tests": [
+          "assert factorial(0) == 1",
+          "assert factorial(1) == 1",
+          "assert factorial(5) == 120",
+          "assert factorial(3) == 6"
+        ],
+        "review_only_tests": [
+          {
+            "id": "T1",
+            "description": "Standard factorial",
+            "code": "assert factorial(5) == 120"
+          },
+          {
+            "id": "T2",
+            "description": "Small n",
+            "code": "assert factorial(3) == 6"
+          },
+          {
+            "id": "T3",
+            "description": "Boundary n=1",
+            "code": "assert factorial(1) == 1"
+          },
+          {
+            "id": "T4",
+            "description": "Boundary n=0",
+            "code": "assert factorial(0) == 1"
+          }
+        ],
+        "limitations": [
+          "Tests cover only listed inputs; they do not prove universal correctness of fault taxonomy.",
+          "Off-by-one vs wrong_operator distinction is semantic \u2014 tests alone may not adjudicate taxonomy."
+        ],
+        "execution_note": "Subprocess runner with 2s timeout; no network; allowlisted sample IDs only."
+      },
+      "reviewer_checklist": [
+        "Does the code match the stated problem specification?",
+        "Does the assigned fault type describe the actual bug (not merely a symptom)?",
+        "Do template tests fail on this snippet? (Passing tests do not prove the label wrong.)",
+        "Are review-only tests sufficient, or is expert judgment required?",
+        "Is this sample suitable for a human-adjudicated benchmark export?"
+      ],
+      "decision_fields": {
+        "allowed_statuses": [
+          "accepted",
+          "needs_expert_review",
+          "pending",
+          "rejected",
+          "relabeled"
+        ],
+        "rationale_required_for": [
+          "rejected",
+          "relabeled",
+          "needs_expert_review"
+        ],
+        "reviewer_identity": "Set --reviewer or --anonymous-review on CLI; not auto-filled."
+      },
+      "audit_note": "Recording a decision appends audit_history; dataset.csv is not modified."
+    },
+    {
+      "review_id": "V3RQ004",
+      "sample_id": "S0009",
+      "family_id": "factorial",
+      "source_template_id": "factorial_3",
+      "dataset_split": "val",
+      "original_label": "off_by_one_loop",
+      "current_label_in_csv": "off_by_one_loop",
+      "status": "pending",
+      "problem_specification": {
+        "problem_statement": "Compute factorial(n) using iterative multiplication from 2..n.",
+        "template_tests": [
+          "assert factorial(0) == 1",
+          "assert factorial(1) == 1",
+          "assert factorial(5) == 120",
+          "assert factorial(4) == 24"
+        ],
+        "spec_source": "training/generate_dataset.py template factorial_3"
+      },
+      "source_code": "def factorial(n):\n    result = 1\n    i = 2\n    while i < n:\n        result *= i\n        i += 1\n    return result",
+      "mutation_type": "loop_boundary",
+      "mutation_rationale": "Changed while i <= n to while i < n, missing last iteration",
+      "dataset_validation_status": "validated",
+      "expected_behavior_field": "fails_tests",
+      "behavioral_tests": {
+        "template_tests": [
+          "assert factorial(0) == 1",
+          "assert factorial(1) == 1",
+          "assert factorial(5) == 120",
+          "assert factorial(4) == 24"
+        ],
+        "review_only_tests": [
+          {
+            "id": "T1",
+            "description": "n=5 factorial",
+            "code": "assert factorial(5) == 120"
+          },
+          {
+            "id": "T2",
+            "description": "n=4 factorial",
+            "code": "assert factorial(4) == 24"
+          },
+          {
+            "id": "T3",
+            "description": "n=1",
+            "code": "assert factorial(1) == 1"
+          },
+          {
+            "id": "T4",
+            "description": "n=0",
+            "code": "assert factorial(0) == 1"
+          }
+        ],
+        "limitations": [
+          "While-loop boundary bug should fail at least one assert when n>=2.",
+          "CSV label is off_by_one_loop (not wrong_condition); reviewer confirms taxonomy."
+        ],
+        "execution_note": "Subprocess runner with 2s timeout; allowlisted sample IDs only."
+      },
+      "reviewer_checklist": [
+        "Does the code match the stated problem specification?",
+        "Does the assigned fault type describe the actual bug (not merely a symptom)?",
+        "Do template tests fail on this snippet? (Passing tests do not prove the label wrong.)",
+        "Are review-only tests sufficient, or is expert judgment required?",
+        "Is this sample suitable for a human-adjudicated benchmark export?"
+      ],
+      "decision_fields": {
+        "allowed_statuses": [
+          "accepted",
+          "needs_expert_review",
+          "pending",
+          "rejected",
+          "relabeled"
+        ],
+        "rationale_required_for": [
+          "rejected",
+          "relabeled",
+          "needs_expert_review"
+        ],
+        "reviewer_identity": "Set --reviewer or --anonymous-review on CLI; not auto-filled."
+      },
+      "audit_note": "Recording a decision appends audit_history; dataset.csv is not modified."
+    }
+  ]
+}

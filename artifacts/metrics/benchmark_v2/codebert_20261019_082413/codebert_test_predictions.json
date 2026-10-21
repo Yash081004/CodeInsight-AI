@@ -1,0 +1,436 @@
+[
+  {
+    "sample_id": "S0001",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2525,
+      "wrong_initialization": 0.1644,
+      "off_by_one_loop": 0.1893,
+      "wrong_operator": 0.1969,
+      "wrong_condition": 0.1969
+    }
+  },
+  {
+    "sample_id": "S0002",
+    "family_id": "factorial",
+    "true_label": "wrong_initialization",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2514,
+      "wrong_initialization": 0.1648,
+      "off_by_one_loop": 0.1895,
+      "wrong_operator": 0.1968,
+      "wrong_condition": 0.1974
+    }
+  },
+  {
+    "sample_id": "S0003",
+    "family_id": "factorial",
+    "true_label": "off_by_one_loop",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2515,
+      "wrong_initialization": 0.1639,
+      "off_by_one_loop": 0.1899,
+      "wrong_operator": 0.1966,
+      "wrong_condition": 0.1982
+    }
+  },
+  {
+    "sample_id": "S0004",
+    "family_id": "factorial",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2518,
+      "wrong_initialization": 0.1646,
+      "off_by_one_loop": 0.1892,
+      "wrong_operator": 0.1969,
+      "wrong_condition": 0.1975
+    }
+  },
+  {
+    "sample_id": "S0005",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2446,
+      "wrong_initialization": 0.1594,
+      "off_by_one_loop": 0.1873,
+      "wrong_operator": 0.1977,
+      "wrong_condition": 0.211
+    }
+  },
+  {
+    "sample_id": "S0006",
+    "family_id": "factorial",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.244,
+      "wrong_initialization": 0.1593,
+      "off_by_one_loop": 0.1877,
+      "wrong_operator": 0.1985,
+      "wrong_condition": 0.2105
+    }
+  },
+  {
+    "sample_id": "S0007",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2441,
+      "wrong_initialization": 0.1645,
+      "off_by_one_loop": 0.1838,
+      "wrong_operator": 0.1993,
+      "wrong_condition": 0.2083
+    }
+  },
+  {
+    "sample_id": "S0008",
+    "family_id": "factorial",
+    "true_label": "wrong_initialization",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2434,
+      "wrong_initialization": 0.1647,
+      "off_by_one_loop": 0.1835,
+      "wrong_operator": 0.1995,
+      "wrong_condition": 0.2089
+    }
+  },
+  {
+    "sample_id": "S0009",
+    "family_id": "factorial",
+    "true_label": "off_by_one_loop",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2443,
+      "wrong_initialization": 0.1646,
+      "off_by_one_loop": 0.1841,
+      "wrong_operator": 0.1994,
+      "wrong_condition": 0.2077
+    }
+  },
+  {
+    "sample_id": "S0010",
+    "family_id": "factorial",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2422,
+      "wrong_initialization": 0.1641,
+      "off_by_one_loop": 0.1833,
+      "wrong_operator": 0.1999,
+      "wrong_condition": 0.2104
+    }
+  },
+  {
+    "sample_id": "S0046",
+    "family_id": "linear_search",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2453,
+      "wrong_initialization": 0.1651,
+      "off_by_one_loop": 0.1921,
+      "wrong_operator": 0.1942,
+      "wrong_condition": 0.2033
+    }
+  },
+  {
+    "sample_id": "S0047",
+    "family_id": "linear_search",
+    "true_label": "off_by_one_loop",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2455,
+      "wrong_initialization": 0.1652,
+      "off_by_one_loop": 0.1929,
+      "wrong_operator": 0.1939,
+      "wrong_condition": 0.2026
+    }
+  },
+  {
+    "sample_id": "S0048",
+    "family_id": "linear_search",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2462,
+      "wrong_initialization": 0.1646,
+      "off_by_one_loop": 0.1919,
+      "wrong_operator": 0.1936,
+      "wrong_condition": 0.2037
+    }
+  },
+  {
+    "sample_id": "S0049",
+    "family_id": "linear_search",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2403,
+      "wrong_initialization": 0.1655,
+      "off_by_one_loop": 0.1867,
+      "wrong_operator": 0.1995,
+      "wrong_condition": 0.208
+    }
+  },
+  {
+    "sample_id": "S0050",
+    "family_id": "linear_search",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.24,
+      "wrong_initialization": 0.1655,
+      "off_by_one_loop": 0.1866,
+      "wrong_operator": 0.1995,
+      "wrong_condition": 0.2083
+    }
+  },
+  {
+    "sample_id": "S0051",
+    "family_id": "linear_search",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2406,
+      "wrong_initialization": 0.1654,
+      "off_by_one_loop": 0.1867,
+      "wrong_operator": 0.1991,
+      "wrong_condition": 0.2082
+    }
+  },
+  {
+    "sample_id": "S0058",
+    "family_id": "sorting",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.253,
+      "wrong_initialization": 0.1666,
+      "off_by_one_loop": 0.1891,
+      "wrong_operator": 0.1889,
+      "wrong_condition": 0.2024
+    }
+  },
+  {
+    "sample_id": "S0059",
+    "family_id": "sorting",
+    "true_label": "off_by_one_loop",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2524,
+      "wrong_initialization": 0.167,
+      "off_by_one_loop": 0.1889,
+      "wrong_operator": 0.1892,
+      "wrong_condition": 0.2026
+    }
+  },
+  {
+    "sample_id": "S0060",
+    "family_id": "sorting",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2531,
+      "wrong_initialization": 0.1665,
+      "off_by_one_loop": 0.1893,
+      "wrong_operator": 0.1891,
+      "wrong_condition": 0.202
+    }
+  },
+  {
+    "sample_id": "S0077",
+    "family_id": "is_sorted",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2454,
+      "wrong_initialization": 0.1664,
+      "off_by_one_loop": 0.1931,
+      "wrong_operator": 0.1939,
+      "wrong_condition": 0.2013
+    }
+  },
+  {
+    "sample_id": "S0083",
+    "family_id": "linear_search",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2453,
+      "wrong_initialization": 0.1651,
+      "off_by_one_loop": 0.1921,
+      "wrong_operator": 0.1942,
+      "wrong_condition": 0.2033
+    }
+  },
+  {
+    "sample_id": "S0088",
+    "family_id": "clamp",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2469,
+      "wrong_initialization": 0.1629,
+      "off_by_one_loop": 0.1829,
+      "wrong_operator": 0.1926,
+      "wrong_condition": 0.2147
+    }
+  },
+  {
+    "sample_id": "S0089",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2615,
+      "wrong_initialization": 0.1647,
+      "off_by_one_loop": 0.1898,
+      "wrong_operator": 0.191,
+      "wrong_condition": 0.193
+    }
+  },
+  {
+    "sample_id": "S0090",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2542,
+      "wrong_initialization": 0.1611,
+      "off_by_one_loop": 0.1851,
+      "wrong_operator": 0.1939,
+      "wrong_condition": 0.2056
+    }
+  },
+  {
+    "sample_id": "S0091",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2528,
+      "wrong_initialization": 0.1654,
+      "off_by_one_loop": 0.1833,
+      "wrong_operator": 0.1949,
+      "wrong_condition": 0.2036
+    }
+  },
+  {
+    "sample_id": "S0102",
+    "family_id": "linear_search",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2497,
+      "wrong_initialization": 0.1656,
+      "off_by_one_loop": 0.1942,
+      "wrong_operator": 0.1933,
+      "wrong_condition": 0.1972
+    }
+  },
+  {
+    "sample_id": "S0103",
+    "family_id": "linear_search",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2485,
+      "wrong_initialization": 0.1661,
+      "off_by_one_loop": 0.1857,
+      "wrong_operator": 0.1954,
+      "wrong_condition": 0.2042
+    }
+  },
+  {
+    "sample_id": "S0106",
+    "family_id": "sorting",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2558,
+      "wrong_initialization": 0.1665,
+      "off_by_one_loop": 0.1901,
+      "wrong_operator": 0.1885,
+      "wrong_condition": 0.199
+    }
+  },
+  {
+    "sample_id": "S0114",
+    "family_id": "is_sorted",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2535,
+      "wrong_initialization": 0.1673,
+      "off_by_one_loop": 0.1918,
+      "wrong_operator": 0.191,
+      "wrong_condition": 0.1963
+    }
+  },
+  {
+    "sample_id": "S0117",
+    "family_id": "linear_search",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2497,
+      "wrong_initialization": 0.1656,
+      "off_by_one_loop": 0.1942,
+      "wrong_operator": 0.1933,
+      "wrong_condition": 0.1972
+    }
+  },
+  {
+    "sample_id": "S0121",
+    "family_id": "clamp",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.2523,
+      "wrong_initialization": 0.1636,
+      "off_by_one_loop": 0.1831,
+      "wrong_operator": 0.1924,
+      "wrong_condition": 0.2085
+    }
+  }
+]

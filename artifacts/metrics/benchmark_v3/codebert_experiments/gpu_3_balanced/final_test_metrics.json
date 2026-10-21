@@ -1,0 +1,54 @@
+{
+  "eval_split": "test",
+  "dataset_version": "benchmark_v3",
+  "label_quality": "synthetic_unreviewed_not_human_verified",
+  "experiment_id": "gpu_3_balanced",
+  "policy": "single_post_selection_historical_style_eval_do_not_retune",
+  "macro_f1": 0.2713,
+  "accuracy": 0.4848,
+  "per_class_metrics": {
+    "correct": {
+      "precision": 0.6842,
+      "recall": 0.65,
+      "f1": 0.6667,
+      "support": 40
+    },
+    "wrong_initialization": {
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25,
+      "support": 4
+    },
+    "off_by_one_loop": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "wrong_operator": {
+      "precision": 0.1739,
+      "recall": 0.5,
+      "f1": 0.2581,
+      "support": 8
+    },
+    "wrong_condition": {
+      "precision": 1.0,
+      "recall": 0.1,
+      "f1": 0.1818,
+      "support": 10
+    }
+  },
+  "collapse": {
+    "predicted_label_counts": {
+      "wrong_initialization": 4,
+      "wrong_operator": 23,
+      "correct": 38,
+      "wrong_condition": 1
+    },
+    "dominant_class": "correct",
+    "dominant_fraction": 0.5758,
+    "collapsed": false,
+    "fault_classes_predicted": 3
+  },
+  "evaluated_at": "2026-10-19T09:45:39.516599+00:00"
+}

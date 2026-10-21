@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Database, Filter, ChevronLeft, ChevronRight, Eye, RefreshCw, CheckCircle2, AlertCircle, Code } from 'lucide-react';
 import { fetchDatasetSummary, fetchDatasetSamples, triggerGenerateDataset } from '../api';
+import PageHeader from './ui/PageHeader';
+import AlertBanner from './ui/AlertBanner';
 
 const LABEL_BADGES = {
   correct: 'badge-emerald',
@@ -74,27 +76,26 @@ export default function DatasetTab() {
   const totalPages = Math.max(1, Math.ceil(totalSamples / pageSize));
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-      
-      {/* Top Banner & Generation Button */}
-      <div className="glass-panel" style={{ padding: '20px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
-        <div>
-          <h2 style={{ fontSize: '1.3rem', fontWeight: 800 }}>Dataset Explorer & Synthetic Mutation Pipeline</h2>
-          <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '2px' }}>
-            Inspect programmatically generated code samples, ground-truth error labels, and functional test validations
-          </p>
-        </div>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      <PageHeader
+        title="Datasets"
+        subtitle="Browse synthetic mutation samples and splits from the backend dataset API. Labels are programmatic—not a substitute for human adjudication."
+        actions={
+          <button
+            type="button"
+            onClick={handleRegenerate}
+            disabled={generating}
+            className="btn btn-secondary btn-sm"
+          >
+            <RefreshCw size={14} className={generating ? 'animate-spin' : ''} aria-hidden />
+            {generating ? 'Regenerating…' : 'Regenerate dataset'}
+          </button>
+        }
+      />
 
-        <button
-          onClick={handleRegenerate}
-          disabled={generating}
-          className="btn btn-secondary btn-sm"
-          style={{ padding: '8px 16px' }}
-        >
-          <RefreshCw size={14} className={generating ? 'animate-spin' : ''} />
-          {generating ? 'Mutating & Validating...' : 'Regenerate Dataset'}
-        </button>
-      </div>
+      <AlertBanner variant="warning" title="Synthetic data">
+        Samples are generated and AST-validated; human review of benchmark v3 is incomplete and the reviewed eval slice remains blocked.
+      </AlertBanner>
 
       {/* Notification */}
       {notification && (

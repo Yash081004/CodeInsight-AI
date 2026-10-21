@@ -1,0 +1,12 @@
+{
+  "model": "hybrid_tfidf_static",
+  "eval_split": "test",
+  "test_n": 31,
+  "static_overrides": 12,
+  "margin_threshold": 0.22,
+  "accuracy": 0.2903,
+  "macro_precision": 0.1936,
+  "macro_recall": 0.3056,
+  "macro_f1": 0.1841,
+  "note": "Separate system; static rules are heuristics not ground truth."
+}

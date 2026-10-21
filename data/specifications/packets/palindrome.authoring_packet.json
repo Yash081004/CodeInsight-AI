@@ -1,0 +1,29 @@
+{
+  "packet_version": "v1",
+  "family_id": "palindrome",
+  "source_template_ids": ["palindrome_1", "palindrome_2", "palindrome_3"],
+  "status": "draft_requires_human_review",
+  "problem_statement": "Given a string s, determine whether s reads the same forward and backward (a palindrome). Comparison is case-sensitive unless a problem variant explicitly states otherwise.",
+  "input_assumptions": [
+    "s is a Python str (Unicode code points compared in order)",
+    "For this benchmark family, empty string is treated as a palindrome",
+    "Single-character strings are palindromes"
+  ],
+  "expected_output_summary": "Return True if s is a palindrome, else False.",
+  "boundary_cases": [
+    "Empty string \"\"",
+    "Single character",
+    "Even-length vs odd-length strings",
+    "Non-palindrome with shared prefix/suffix (e.g. aba vs abba)"
+  ],
+  "provenance": {
+    "source": "machine_suggested",
+    "author": "phase13_authoring_packet",
+    "created_at": "2026-10-21T09:00:00+00:00",
+    "review_status": "draft",
+    "reviewer_id": null,
+    "notes": "Authored from standard palindrome definition for human review. Not derived from faulty student mutations or generator pass/fail outcomes."
+  },
+  "associated_sample_ids": [],
+  "human_reviewed": false
+}

@@ -1,0 +1,422 @@
+[
+  {
+    "sample_id": "S0001",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3563,
+      "wrong_initialization": 0.1947,
+      "off_by_one_loop": 0.1395,
+      "wrong_operator": 0.1758,
+      "wrong_condition": 0.1337
+    }
+  },
+  {
+    "sample_id": "S0002",
+    "family_id": "factorial",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3565,
+      "wrong_initialization": 0.1945,
+      "off_by_one_loop": 0.1394,
+      "wrong_operator": 0.1757,
+      "wrong_condition": 0.1338
+    }
+  },
+  {
+    "sample_id": "S0003",
+    "family_id": "factorial",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3514,
+      "wrong_initialization": 0.195,
+      "off_by_one_loop": 0.1403,
+      "wrong_operator": 0.1796,
+      "wrong_condition": 0.1338
+    }
+  },
+  {
+    "sample_id": "S0004",
+    "family_id": "factorial",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3559,
+      "wrong_initialization": 0.1948,
+      "off_by_one_loop": 0.1398,
+      "wrong_operator": 0.1758,
+      "wrong_condition": 0.1337
+    }
+  },
+  {
+    "sample_id": "S0005",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3731,
+      "wrong_initialization": 0.1869,
+      "off_by_one_loop": 0.1361,
+      "wrong_operator": 0.1738,
+      "wrong_condition": 0.1301
+    }
+  },
+  {
+    "sample_id": "S0006",
+    "family_id": "factorial",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3719,
+      "wrong_initialization": 0.1864,
+      "off_by_one_loop": 0.1371,
+      "wrong_operator": 0.1746,
+      "wrong_condition": 0.13
+    }
+  },
+  {
+    "sample_id": "S0007",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3708,
+      "wrong_initialization": 0.1915,
+      "off_by_one_loop": 0.1352,
+      "wrong_operator": 0.1767,
+      "wrong_condition": 0.1257
+    }
+  },
+  {
+    "sample_id": "S0008",
+    "family_id": "factorial",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3707,
+      "wrong_initialization": 0.1917,
+      "off_by_one_loop": 0.1352,
+      "wrong_operator": 0.1765,
+      "wrong_condition": 0.1259
+    }
+  },
+  {
+    "sample_id": "S0009",
+    "family_id": "factorial",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3712,
+      "wrong_initialization": 0.1912,
+      "off_by_one_loop": 0.1355,
+      "wrong_operator": 0.1766,
+      "wrong_condition": 0.1255
+    }
+  },
+  {
+    "sample_id": "S0010",
+    "family_id": "factorial",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.369,
+      "wrong_initialization": 0.1914,
+      "off_by_one_loop": 0.1356,
+      "wrong_operator": 0.1777,
+      "wrong_condition": 0.1262
+    }
+  },
+  {
+    "sample_id": "S0025",
+    "family_id": "palindrome",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4192,
+      "wrong_initialization": 0.1817,
+      "off_by_one_loop": 0.1228,
+      "wrong_operator": 0.1597,
+      "wrong_condition": 0.1166
+    }
+  },
+  {
+    "sample_id": "S0026",
+    "family_id": "palindrome",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4186,
+      "wrong_initialization": 0.1818,
+      "off_by_one_loop": 0.1229,
+      "wrong_operator": 0.1601,
+      "wrong_condition": 0.1167
+    }
+  },
+  {
+    "sample_id": "S0027",
+    "family_id": "palindrome",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4194,
+      "wrong_initialization": 0.1814,
+      "off_by_one_loop": 0.1227,
+      "wrong_operator": 0.16,
+      "wrong_condition": 0.1165
+    }
+  },
+  {
+    "sample_id": "S0028",
+    "family_id": "palindrome",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4165,
+      "wrong_initialization": 0.1824,
+      "off_by_one_loop": 0.123,
+      "wrong_operator": 0.1606,
+      "wrong_condition": 0.1174
+    }
+  },
+  {
+    "sample_id": "S0029",
+    "family_id": "palindrome",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3777,
+      "wrong_initialization": 0.1843,
+      "off_by_one_loop": 0.137,
+      "wrong_operator": 0.1728,
+      "wrong_condition": 0.1282
+    }
+  },
+  {
+    "sample_id": "S0095",
+    "family_id": "tuple_sum",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3636,
+      "wrong_initialization": 0.1895,
+      "off_by_one_loop": 0.1402,
+      "wrong_operator": 0.1756,
+      "wrong_condition": 0.1311
+    }
+  },
+  {
+    "sample_id": "S0104",
+    "family_id": "string_len",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3624,
+      "wrong_initialization": 0.1892,
+      "off_by_one_loop": 0.141,
+      "wrong_operator": 0.1783,
+      "wrong_condition": 0.1292
+    }
+  },
+  {
+    "sample_id": "S0106",
+    "family_id": "ends_with",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3947,
+      "wrong_initialization": 0.1878,
+      "off_by_one_loop": 0.1291,
+      "wrong_operator": 0.1676,
+      "wrong_condition": 0.1208
+    }
+  },
+  {
+    "sample_id": "S0110",
+    "family_id": "second_largest",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4085,
+      "wrong_initialization": 0.1794,
+      "off_by_one_loop": 0.1302,
+      "wrong_operator": 0.1639,
+      "wrong_condition": 0.1179
+    }
+  },
+  {
+    "sample_id": "S0119",
+    "family_id": "zip_sum",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3713,
+      "wrong_initialization": 0.1919,
+      "off_by_one_loop": 0.1365,
+      "wrong_operator": 0.1732,
+      "wrong_condition": 0.1272
+    }
+  },
+  {
+    "sample_id": "S0125",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3863,
+      "wrong_initialization": 0.1911,
+      "off_by_one_loop": 0.1292,
+      "wrong_operator": 0.1691,
+      "wrong_condition": 0.1243
+    }
+  },
+  {
+    "sample_id": "S0126",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4204,
+      "wrong_initialization": 0.1785,
+      "off_by_one_loop": 0.1226,
+      "wrong_operator": 0.163,
+      "wrong_condition": 0.1155
+    }
+  },
+  {
+    "sample_id": "S0127",
+    "family_id": "factorial",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4164,
+      "wrong_initialization": 0.1837,
+      "off_by_one_loop": 0.1218,
+      "wrong_operator": 0.1656,
+      "wrong_condition": 0.1124
+    }
+  },
+  {
+    "sample_id": "S0132",
+    "family_id": "palindrome",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4481,
+      "wrong_initialization": 0.1773,
+      "off_by_one_loop": 0.1134,
+      "wrong_operator": 0.153,
+      "wrong_condition": 0.1081
+    }
+  },
+  {
+    "sample_id": "S0133",
+    "family_id": "palindrome",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4345,
+      "wrong_initialization": 0.1734,
+      "off_by_one_loop": 0.1216,
+      "wrong_operator": 0.1587,
+      "wrong_condition": 0.1118
+    }
+  },
+  {
+    "sample_id": "S0164",
+    "family_id": "tuple_sum",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4161,
+      "wrong_initialization": 0.1812,
+      "off_by_one_loop": 0.1245,
+      "wrong_operator": 0.1626,
+      "wrong_condition": 0.1156
+    }
+  },
+  {
+    "sample_id": "S0171",
+    "family_id": "string_len",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4105,
+      "wrong_initialization": 0.1812,
+      "off_by_one_loop": 0.1268,
+      "wrong_operator": 0.1668,
+      "wrong_condition": 0.1147
+    }
+  },
+  {
+    "sample_id": "S0173",
+    "family_id": "ends_with",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4204,
+      "wrong_initialization": 0.1839,
+      "off_by_one_loop": 0.1204,
+      "wrong_operator": 0.1618,
+      "wrong_condition": 0.1135
+    }
+  },
+  {
+    "sample_id": "S0176",
+    "family_id": "second_largest",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.447,
+      "wrong_initialization": 0.1729,
+      "off_by_one_loop": 0.1184,
+      "wrong_operator": 0.1548,
+      "wrong_condition": 0.1068
+    }
+  },
+  {
+    "sample_id": "S0185",
+    "family_id": "zip_sum",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4163,
+      "wrong_initialization": 0.1868,
+      "off_by_one_loop": 0.1215,
+      "wrong_operator": 0.161,
+      "wrong_condition": 0.1144
+    }
+  }
+]

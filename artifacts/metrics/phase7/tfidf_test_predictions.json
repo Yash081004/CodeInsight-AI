@@ -1,0 +1,1058 @@
+[
+  {
+    "sample_id": "S0011",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4232,
+      "wrong_initialization": 0.1531,
+      "off_by_one_loop": 0.1603,
+      "wrong_operator": 0.1385,
+      "wrong_condition": 0.1249
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0012",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_1",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4232,
+      "wrong_initialization": 0.1531,
+      "off_by_one_loop": 0.1603,
+      "wrong_operator": 0.1385,
+      "wrong_condition": 0.1249
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0013",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_1",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4232,
+      "wrong_initialization": 0.1531,
+      "off_by_one_loop": 0.1603,
+      "wrong_operator": 0.1385,
+      "wrong_condition": 0.1249
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0014",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4232,
+      "wrong_initialization": 0.1531,
+      "off_by_one_loop": 0.1603,
+      "wrong_operator": 0.1385,
+      "wrong_condition": 0.1249
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0015",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4157,
+      "wrong_initialization": 0.1469,
+      "off_by_one_loop": 0.1337,
+      "wrong_operator": 0.1405,
+      "wrong_condition": 0.1632
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0016",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_2",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4157,
+      "wrong_initialization": 0.1469,
+      "off_by_one_loop": 0.1337,
+      "wrong_operator": 0.1405,
+      "wrong_condition": 0.1632
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0017",
+    "family_id": "prime",
+    "source_template_id": "is_prime_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5003,
+      "wrong_initialization": 0.1406,
+      "off_by_one_loop": 0.1252,
+      "wrong_operator": 0.1293,
+      "wrong_condition": 0.1046
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0018",
+    "family_id": "prime",
+    "source_template_id": "is_prime_1",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.5003,
+      "wrong_initialization": 0.1406,
+      "off_by_one_loop": 0.1252,
+      "wrong_operator": 0.1293,
+      "wrong_condition": 0.1046
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0019",
+    "family_id": "prime",
+    "source_template_id": "is_prime_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.5003,
+      "wrong_initialization": 0.1406,
+      "off_by_one_loop": 0.1252,
+      "wrong_operator": 0.1293,
+      "wrong_condition": 0.1046
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0020",
+    "family_id": "prime",
+    "source_template_id": "is_prime_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.5003,
+      "wrong_initialization": 0.1406,
+      "off_by_one_loop": 0.1252,
+      "wrong_operator": 0.1293,
+      "wrong_condition": 0.1046
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0021",
+    "family_id": "prime",
+    "source_template_id": "is_prime_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5091,
+      "wrong_initialization": 0.1387,
+      "off_by_one_loop": 0.1021,
+      "wrong_operator": 0.1341,
+      "wrong_condition": 0.116
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0022",
+    "family_id": "prime",
+    "source_template_id": "is_prime_2",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.5091,
+      "wrong_initialization": 0.1387,
+      "off_by_one_loop": 0.1021,
+      "wrong_operator": 0.1341,
+      "wrong_condition": 0.116
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0023",
+    "family_id": "prime",
+    "source_template_id": "is_prime_2",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.5091,
+      "wrong_initialization": 0.1387,
+      "off_by_one_loop": 0.1021,
+      "wrong_operator": 0.1341,
+      "wrong_condition": 0.116
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0024",
+    "family_id": "prime",
+    "source_template_id": "is_prime_2",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.5091,
+      "wrong_initialization": 0.1387,
+      "off_by_one_loop": 0.1021,
+      "wrong_operator": 0.1341,
+      "wrong_condition": 0.116
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0030",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "correct",
+    "predicted_label": "wrong_condition",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2305,
+      "wrong_initialization": 0.0673,
+      "off_by_one_loop": 0.2703,
+      "wrong_operator": 0.0804,
+      "wrong_condition": 0.3514
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0031",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "wrong_initialization",
+    "predicted_label": "wrong_condition",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2216,
+      "wrong_initialization": 0.066,
+      "off_by_one_loop": 0.2894,
+      "wrong_operator": 0.0777,
+      "wrong_condition": 0.3453
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0032",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "wrong_condition",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2305,
+      "wrong_initialization": 0.0673,
+      "off_by_one_loop": 0.2703,
+      "wrong_operator": 0.0804,
+      "wrong_condition": 0.3514
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0033",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "wrong_condition",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2305,
+      "wrong_initialization": 0.0673,
+      "off_by_one_loop": 0.2703,
+      "wrong_operator": 0.0804,
+      "wrong_condition": 0.3514
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0034",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "wrong_condition",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.183,
+      "wrong_initialization": 0.0593,
+      "off_by_one_loop": 0.2045,
+      "wrong_operator": 0.0728,
+      "wrong_condition": 0.4805
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0035",
+    "family_id": "max_element",
+    "source_template_id": "max_element_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3217,
+      "wrong_initialization": 0.1548,
+      "off_by_one_loop": 0.1384,
+      "wrong_operator": 0.1907,
+      "wrong_condition": 0.1944
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0036",
+    "family_id": "max_element",
+    "source_template_id": "max_element_2",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3223,
+      "wrong_initialization": 0.1654,
+      "off_by_one_loop": 0.1354,
+      "wrong_operator": 0.2,
+      "wrong_condition": 0.1769
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0037",
+    "family_id": "max_element",
+    "source_template_id": "max_element_2",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3217,
+      "wrong_initialization": 0.1548,
+      "off_by_one_loop": 0.1384,
+      "wrong_operator": 0.1907,
+      "wrong_condition": 0.1944
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0038",
+    "family_id": "max_element",
+    "source_template_id": "max_element_2",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2811,
+      "wrong_initialization": 0.1506,
+      "off_by_one_loop": 0.1126,
+      "wrong_operator": 0.1908,
+      "wrong_condition": 0.2649
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0058",
+    "family_id": "sorting",
+    "source_template_id": "bubble_sort_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4189,
+      "wrong_initialization": 0.1563,
+      "off_by_one_loop": 0.1408,
+      "wrong_operator": 0.1473,
+      "wrong_condition": 0.1367
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0059",
+    "family_id": "sorting",
+    "source_template_id": "bubble_sort_1",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4189,
+      "wrong_initialization": 0.1563,
+      "off_by_one_loop": 0.1408,
+      "wrong_operator": 0.1473,
+      "wrong_condition": 0.1367
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0060",
+    "family_id": "sorting",
+    "source_template_id": "bubble_sort_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4189,
+      "wrong_initialization": 0.1563,
+      "off_by_one_loop": 0.1408,
+      "wrong_operator": 0.1473,
+      "wrong_condition": 0.1367
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0061",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4304,
+      "wrong_initialization": 0.1573,
+      "off_by_one_loop": 0.146,
+      "wrong_operator": 0.144,
+      "wrong_condition": 0.1224
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0062",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4304,
+      "wrong_initialization": 0.1573,
+      "off_by_one_loop": 0.146,
+      "wrong_operator": 0.144,
+      "wrong_condition": 0.1224
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0063",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4304,
+      "wrong_initialization": 0.1573,
+      "off_by_one_loop": 0.146,
+      "wrong_operator": 0.144,
+      "wrong_condition": 0.1224
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0064",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.4411,
+      "wrong_initialization": 0.1522,
+      "off_by_one_loop": 0.1649,
+      "wrong_operator": 0.1399,
+      "wrong_condition": 0.1019
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0068",
+    "family_id": "gcd",
+    "source_template_id": "gcd_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3956,
+      "wrong_initialization": 0.1907,
+      "off_by_one_loop": 0.1099,
+      "wrong_operator": 0.1689,
+      "wrong_condition": 0.1349
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0069",
+    "family_id": "gcd",
+    "source_template_id": "gcd_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3956,
+      "wrong_initialization": 0.1907,
+      "off_by_one_loop": 0.1099,
+      "wrong_operator": 0.1689,
+      "wrong_condition": 0.1349
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0070",
+    "family_id": "gcd",
+    "source_template_id": "gcd_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3956,
+      "wrong_initialization": 0.1907,
+      "off_by_one_loop": 0.1099,
+      "wrong_operator": 0.1689,
+      "wrong_condition": 0.1349
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0071",
+    "family_id": "gcd",
+    "source_template_id": "gcd_iter",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3956,
+      "wrong_initialization": 0.1907,
+      "off_by_one_loop": 0.1099,
+      "wrong_operator": 0.1689,
+      "wrong_condition": 0.1349
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0072",
+    "family_id": "gcd",
+    "source_template_id": "gcd_iter",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.3956,
+      "wrong_initialization": 0.1907,
+      "off_by_one_loop": 0.1099,
+      "wrong_operator": 0.1689,
+      "wrong_condition": 0.1349
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0073",
+    "family_id": "reverse_list",
+    "source_template_id": "reverse_list_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4829,
+      "wrong_initialization": 0.0989,
+      "off_by_one_loop": 0.1574,
+      "wrong_operator": 0.1,
+      "wrong_condition": 0.1608
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0074",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4304,
+      "wrong_initialization": 0.1573,
+      "off_by_one_loop": 0.146,
+      "wrong_operator": 0.144,
+      "wrong_condition": 0.1224
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0078",
+    "family_id": "find_min",
+    "source_template_id": "find_min_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3423,
+      "wrong_initialization": 0.088,
+      "off_by_one_loop": 0.2154,
+      "wrong_operator": 0.1037,
+      "wrong_condition": 0.2506
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0079",
+    "family_id": "find_min",
+    "source_template_id": "find_min_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "wrong_condition",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2716,
+      "wrong_initialization": 0.0769,
+      "off_by_one_loop": 0.1617,
+      "wrong_operator": 0.0946,
+      "wrong_condition": 0.3951
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0087",
+    "family_id": "count_evens",
+    "source_template_id": "count_evens_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4304,
+      "wrong_initialization": 0.154,
+      "off_by_one_loop": 0.1532,
+      "wrong_operator": 0.1402,
+      "wrong_condition": 0.1221
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0088",
+    "family_id": "clamp",
+    "source_template_id": "clamp_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4448,
+      "wrong_initialization": 0.158,
+      "off_by_one_loop": 0.1168,
+      "wrong_operator": 0.1515,
+      "wrong_condition": 0.1289
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0093",
+    "family_id": "strip_spaces",
+    "source_template_id": "strip_spaces_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4712,
+      "wrong_initialization": 0.156,
+      "off_by_one_loop": 0.1115,
+      "wrong_operator": 0.1494,
+      "wrong_condition": 0.1119
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0103",
+    "family_id": "count_positive",
+    "source_template_id": "count_pos_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3744,
+      "wrong_initialization": 0.1127,
+      "off_by_one_loop": 0.1607,
+      "wrong_operator": 0.1241,
+      "wrong_condition": 0.2281
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0116",
+    "family_id": "running_max",
+    "source_template_id": "running_max_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.56,
+      "wrong_initialization": 0.0941,
+      "off_by_one_loop": 0.1082,
+      "wrong_operator": 0.0992,
+      "wrong_condition": 0.1385
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0117",
+    "family_id": "count_words",
+    "source_template_id": "count_words_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4005,
+      "wrong_initialization": 0.1683,
+      "off_by_one_loop": 0.1383,
+      "wrong_operator": 0.1546,
+      "wrong_condition": 0.1383
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0123",
+    "family_id": "col_sum",
+    "source_template_id": "col_sum_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.456,
+      "wrong_initialization": 0.1623,
+      "off_by_one_loop": 0.1181,
+      "wrong_operator": 0.1519,
+      "wrong_condition": 0.1116
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0128",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5319,
+      "wrong_initialization": 0.1316,
+      "off_by_one_loop": 0.1287,
+      "wrong_operator": 0.1146,
+      "wrong_condition": 0.0932
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0129",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5334,
+      "wrong_initialization": 0.1265,
+      "off_by_one_loop": 0.1085,
+      "wrong_operator": 0.1154,
+      "wrong_condition": 0.1161
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0130",
+    "family_id": "prime",
+    "source_template_id": "is_prime_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5769,
+      "wrong_initialization": 0.1233,
+      "off_by_one_loop": 0.1065,
+      "wrong_operator": 0.11,
+      "wrong_condition": 0.0833
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0131",
+    "family_id": "prime",
+    "source_template_id": "is_prime_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5592,
+      "wrong_initialization": 0.1273,
+      "off_by_one_loop": 0.0928,
+      "wrong_operator": 0.1206,
+      "wrong_condition": 0.1001
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0134",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.3426,
+      "wrong_initialization": 0.0709,
+      "off_by_one_loop": 0.2378,
+      "wrong_operator": 0.08,
+      "wrong_condition": 0.2686
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0135",
+    "family_id": "max_element",
+    "source_template_id": "max_element_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4163,
+      "wrong_initialization": 0.1455,
+      "off_by_one_loop": 0.1193,
+      "wrong_operator": 0.1707,
+      "wrong_condition": 0.1482
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0142",
+    "family_id": "sorting",
+    "source_template_id": "bubble_sort_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4599,
+      "wrong_initialization": 0.1475,
+      "off_by_one_loop": 0.1318,
+      "wrong_operator": 0.137,
+      "wrong_condition": 0.1238
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0143",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5992,
+      "wrong_initialization": 0.1204,
+      "off_by_one_loop": 0.1024,
+      "wrong_operator": 0.1028,
+      "wrong_condition": 0.0752
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0145",
+    "family_id": "gcd",
+    "source_template_id": "gcd_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.6377,
+      "wrong_initialization": 0.123,
+      "off_by_one_loop": 0.073,
+      "wrong_operator": 0.1009,
+      "wrong_condition": 0.0654
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0146",
+    "family_id": "gcd",
+    "source_template_id": "gcd_iter",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.6377,
+      "wrong_initialization": 0.123,
+      "off_by_one_loop": 0.073,
+      "wrong_operator": 0.1009,
+      "wrong_condition": 0.0654
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0147",
+    "family_id": "reverse_list",
+    "source_template_id": "reverse_list_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.585,
+      "wrong_initialization": 0.0819,
+      "off_by_one_loop": 0.1305,
+      "wrong_operator": 0.0799,
+      "wrong_condition": 0.1226
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0148",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5992,
+      "wrong_initialization": 0.1204,
+      "off_by_one_loop": 0.1024,
+      "wrong_operator": 0.1028,
+      "wrong_condition": 0.0752
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0151",
+    "family_id": "find_min",
+    "source_template_id": "find_min_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.4831,
+      "wrong_initialization": 0.0844,
+      "off_by_one_loop": 0.1703,
+      "wrong_operator": 0.0929,
+      "wrong_condition": 0.1692
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0156",
+    "family_id": "count_evens",
+    "source_template_id": "count_evens_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5785,
+      "wrong_initialization": 0.1321,
+      "off_by_one_loop": 0.1125,
+      "wrong_operator": 0.1054,
+      "wrong_condition": 0.0715
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0157",
+    "family_id": "clamp",
+    "source_template_id": "clamp_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5113,
+      "wrong_initialization": 0.143,
+      "off_by_one_loop": 0.1043,
+      "wrong_operator": 0.1335,
+      "wrong_condition": 0.1079
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0162",
+    "family_id": "strip_spaces",
+    "source_template_id": "strip_spaces_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5337,
+      "wrong_initialization": 0.1442,
+      "off_by_one_loop": 0.1073,
+      "wrong_operator": 0.1245,
+      "wrong_condition": 0.0903
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0170",
+    "family_id": "count_positive",
+    "source_template_id": "count_pos_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5246,
+      "wrong_initialization": 0.1014,
+      "off_by_one_loop": 0.1311,
+      "wrong_operator": 0.0987,
+      "wrong_condition": 0.1442
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0182",
+    "family_id": "running_max",
+    "source_template_id": "running_max_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.659,
+      "wrong_initialization": 0.0784,
+      "off_by_one_loop": 0.0855,
+      "wrong_operator": 0.0788,
+      "wrong_condition": 0.0983
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0183",
+    "family_id": "count_words",
+    "source_template_id": "count_words_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5931,
+      "wrong_initialization": 0.1254,
+      "off_by_one_loop": 0.0955,
+      "wrong_operator": 0.1066,
+      "wrong_condition": 0.0795
+    },
+    "model": "tfidf_logreg"
+  },
+  {
+    "sample_id": "S0189",
+    "family_id": "col_sum",
+    "source_template_id": "col_sum_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.5463,
+      "wrong_initialization": 0.1456,
+      "off_by_one_loop": 0.1018,
+      "wrong_operator": 0.1251,
+      "wrong_condition": 0.0812
+    },
+    "model": "tfidf_logreg"
+  }
+]

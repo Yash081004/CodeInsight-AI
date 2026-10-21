@@ -1,0 +1,914 @@
+{
+  "generated_at": "2026-10-19T10:27:40.852205+00:00",
+  "phase": 7,
+  "dataset_version": "benchmark_v3",
+  "dataset_checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+  "codebert_experiment_id": "gpu_3_balanced",
+  "label_quality": "synthetic_unreviewed",
+  "verified_facts": [
+    {
+      "finding": "codebert_near_uniform_softmax_on_val",
+      "evidence": "9 val samples with probability std < 0.015",
+      "example_ids": [
+        "S0025",
+        "S0026",
+        "S0027",
+        "S0028",
+        "S0106",
+        "S0110",
+        "S0119",
+        "S0173"
+      ],
+      "artifact": "artifacts\\metrics\\benchmark_v3\\codebert_experiments\\gpu_3_balanced\\validation_predictions.json",
+      "interpretation": "Verified: logits barely separate classes on these snippets (not proof of lexical-only features, but weak discriminative signal)."
+    },
+    {
+      "finding": "family_factorial_codebert_favors_wrong_initialization",
+      "evidence": {
+        "n_val": 13,
+        "codebert_correct": 7,
+        "true_labels": {
+          "correct": 6,
+          "wrong_initialization": 2,
+          "off_by_one_loop": 2,
+          "wrong_operator": 3
+        },
+        "predicted_labels": {
+          "wrong_operator": 5,
+          "wrong_initialization": 6,
+          "correct": 2
+        }
+      },
+      "example_ids": [
+        "S0001",
+        "S0002",
+        "S0003",
+        "S0004",
+        "S0005",
+        "S0006"
+      ],
+      "artifact": "artifacts/metrics/benchmark_v3/codebert_experiments/gpu_3_balanced/validation_predictions.json"
+    }
+  ],
+  "hypotheses": [
+    {
+      "hypothesis": "balanced_sampler_inflates_wrong_initialization_predictions",
+      "status": "consistent_with_evidence_not_proven_causal",
+      "evidence": "gpu_3_balanced val predicted_label_counts: wrong_initialization=14/30; training uses oversampling of minority fault labels.",
+      "artifact": "artifacts/metrics/benchmark_v3/codebert_experiments/gpu_3_balanced/validation_metrics.json"
+    }
+  ],
+  "unresolved_questions": [
+    "Whether template/family naming tokens correlate with TF-IDF decisions (not measured in this report).",
+    "Whether human adjudication would change off_by_one_loop / wrong_condition labels for factorial-heavy val set."
+  ],
+  "validation": {
+    "codebert": {
+      "per_class": {
+        "correct": {
+          "precision": 1.0,
+          "recall": 0.55,
+          "f1": 0.7097,
+          "support": 20
+        },
+        "wrong_initialization": {
+          "precision": 0.2143,
+          "recall": 1.0,
+          "f1": 0.3529,
+          "support": 3
+        },
+        "off_by_one_loop": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "wrong_operator": {
+          "precision": 0.6,
+          "recall": 0.75,
+          "f1": 0.6667,
+          "support": 4
+        },
+        "wrong_condition": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        }
+      },
+      "macro_f1": 0.3459,
+      "confusion_matrix": {
+        "labels": [
+          "correct",
+          "wrong_initialization",
+          "off_by_one_loop",
+          "wrong_operator",
+          "wrong_condition"
+        ],
+        "matrix": [
+          [
+            11,
+            7,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "predicted_label_counts": {
+        "wrong_operator": 5,
+        "wrong_initialization": 14,
+        "correct": 11
+      },
+      "collapse": {
+        "predicted_label_counts": {
+          "wrong_operator": 5,
+          "wrong_initialization": 14,
+          "correct": 11
+        },
+        "dominant_class": "wrong_initialization",
+        "dominant_fraction": 0.4667,
+        "collapsed": false,
+        "fault_classes_predicted": 2
+      }
+    },
+    "tfidf": {
+      "per_class": {
+        "correct": {
+          "precision": 0.6552,
+          "recall": 0.95,
+          "f1": 0.7755,
+          "support": 20
+        },
+        "wrong_initialization": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "off_by_one_loop": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "wrong_operator": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "wrong_condition": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        }
+      },
+      "macro_f1": 0.1551,
+      "confusion_matrix": {
+        "labels": [
+          "correct",
+          "wrong_initialization",
+          "off_by_one_loop",
+          "wrong_operator",
+          "wrong_condition"
+        ],
+        "matrix": [
+          [
+            19,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "predicted_label_counts": {
+        "correct": 29,
+        "wrong_condition": 1
+      },
+      "collapse": {
+        "predicted_label_counts": {
+          "correct": 29,
+          "wrong_condition": 1
+        },
+        "dominant_class": "correct",
+        "dominant_fraction": 0.9667,
+        "collapsed": true,
+        "fault_classes_predicted": 1
+      }
+    }
+  },
+  "test_historical": {
+    "codebert": {
+      "per_class": {
+        "correct": {
+          "precision": 0.6842,
+          "recall": 0.65,
+          "f1": 0.6667,
+          "support": 40
+        },
+        "wrong_initialization": {
+          "precision": 0.25,
+          "recall": 0.25,
+          "f1": 0.25,
+          "support": 4
+        },
+        "off_by_one_loop": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "wrong_operator": {
+          "precision": 0.1739,
+          "recall": 0.5,
+          "f1": 0.2581,
+          "support": 8
+        },
+        "wrong_condition": {
+          "precision": 1.0,
+          "recall": 0.1,
+          "f1": 0.1818,
+          "support": 10
+        }
+      },
+      "macro_f1": 0.2713,
+      "confusion_matrix": {
+        "labels": [
+          "correct",
+          "wrong_initialization",
+          "off_by_one_loop",
+          "wrong_operator",
+          "wrong_condition"
+        ],
+        "matrix": [
+          [
+            26,
+            1,
+            0,
+            13,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            3,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            3,
+            1,
+            0,
+            5,
+            1
+          ]
+        ]
+      },
+      "predicted_label_counts": {
+        "wrong_initialization": 4,
+        "wrong_operator": 23,
+        "correct": 38,
+        "wrong_condition": 1
+      },
+      "collapse": {
+        "predicted_label_counts": {
+          "wrong_initialization": 4,
+          "wrong_operator": 23,
+          "correct": 38,
+          "wrong_condition": 1
+        },
+        "dominant_class": "correct",
+        "dominant_fraction": 0.5758,
+        "collapsed": false,
+        "fault_classes_predicted": 3
+      }
+    },
+    "tfidf": {
+      "per_class": {
+        "correct": {
+          "precision": 0.65,
+          "recall": 0.975,
+          "f1": 0.78,
+          "support": 40
+        },
+        "wrong_initialization": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "off_by_one_loop": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 4
+        },
+        "wrong_operator": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        "wrong_condition": {
+          "precision": 0.3333,
+          "recall": 0.2,
+          "f1": 0.25,
+          "support": 10
+        }
+      },
+      "macro_f1": 0.206,
+      "confusion_matrix": {
+        "labels": [
+          "correct",
+          "wrong_initialization",
+          "off_by_one_loop",
+          "wrong_operator",
+          "wrong_condition"
+        ],
+        "matrix": [
+          [
+            39,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            7,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            8,
+            0,
+            0,
+            0,
+            2
+          ]
+        ]
+      },
+      "predicted_label_counts": {
+        "correct": 60,
+        "wrong_condition": 6
+      },
+      "collapse": {
+        "predicted_label_counts": {
+          "correct": 60,
+          "wrong_condition": 6
+        },
+        "dominant_class": "correct",
+        "dominant_fraction": 0.9091,
+        "collapsed": true,
+        "fault_classes_predicted": 1
+      }
+    },
+    "policy_note": "Test inspected post Phase 6; not used for tuning in Phase 7."
+  },
+  "family_summary_val_codebert": {
+    "ends_with": {
+      "n_val": 2,
+      "codebert_correct": 2,
+      "true_labels": {
+        "correct": 2
+      },
+      "predicted_labels": {
+        "correct": 2
+      }
+    },
+    "factorial": {
+      "n_val": 13,
+      "codebert_correct": 7,
+      "true_labels": {
+        "correct": 6,
+        "wrong_initialization": 2,
+        "off_by_one_loop": 2,
+        "wrong_operator": 3
+      },
+      "predicted_labels": {
+        "wrong_operator": 5,
+        "wrong_initialization": 6,
+        "correct": 2
+      }
+    },
+    "palindrome": {
+      "n_val": 7,
+      "codebert_correct": 4,
+      "true_labels": {
+        "correct": 4,
+        "wrong_initialization": 1,
+        "wrong_operator": 1,
+        "wrong_condition": 1
+      },
+      "predicted_labels": {
+        "wrong_initialization": 4,
+        "correct": 3
+      }
+    },
+    "second_largest": {
+      "n_val": 2,
+      "codebert_correct": 2,
+      "true_labels": {
+        "correct": 2
+      },
+      "predicted_labels": {
+        "correct": 2
+      }
+    },
+    "string_len": {
+      "n_val": 2,
+      "codebert_correct": 0,
+      "true_labels": {
+        "correct": 2
+      },
+      "predicted_labels": {
+        "wrong_initialization": 2
+      }
+    },
+    "tuple_sum": {
+      "n_val": 2,
+      "codebert_correct": 0,
+      "true_labels": {
+        "correct": 2
+      },
+      "predicted_labels": {
+        "wrong_initialization": 2
+      }
+    },
+    "zip_sum": {
+      "n_val": 2,
+      "codebert_correct": 2,
+      "true_labels": {
+        "correct": 2
+      },
+      "predicted_labels": {
+        "correct": 2
+      }
+    }
+  },
+  "both_models_wrong_val_sample_ids": [
+    "S0003",
+    "S0009",
+    "S0027",
+    "S0028"
+  ],
+  "near_uniform_softmax_val_sample_ids": [
+    "S0025",
+    "S0026",
+    "S0027",
+    "S0028",
+    "S0106",
+    "S0110",
+    "S0119",
+    "S0173",
+    "S0185"
+  ],
+  "ambiguous_or_context_dependent_val": [
+    {
+      "sample_id": "S0001",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0003",
+      "true_label": "off_by_one_loop",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0004",
+      "true_label": "wrong_operator",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0005",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0006",
+      "true_label": "wrong_operator",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0007",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0009",
+      "true_label": "off_by_one_loop",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0010",
+      "true_label": "wrong_operator",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0025",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0027",
+      "true_label": "wrong_operator",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0028",
+      "true_label": "wrong_condition",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0029",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0095",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0104",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0106",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0110",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0119",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0125",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0126",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0127",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0132",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0133",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0164",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0171",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0173",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0176",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    },
+    {
+      "sample_id": "S0185",
+      "true_label": "correct",
+      "reasons": [
+        "no_problem_statement_provided",
+        "no_test_cases_executed"
+      ]
+    }
+  ],
+  "review_batch_preview": [
+    {
+      "sample_id": "S0027",
+      "family_id": "palindrome",
+      "true_label": "wrong_operator",
+      "review_priority_score": 11,
+      "both_models_wrong": true
+    },
+    {
+      "sample_id": "S0028",
+      "family_id": "palindrome",
+      "true_label": "wrong_condition",
+      "review_priority_score": 11,
+      "both_models_wrong": true
+    },
+    {
+      "sample_id": "S0003",
+      "family_id": "factorial",
+      "true_label": "off_by_one_loop",
+      "review_priority_score": 9,
+      "both_models_wrong": true
+    },
+    {
+      "sample_id": "S0009",
+      "family_id": "factorial",
+      "true_label": "off_by_one_loop",
+      "review_priority_score": 9,
+      "both_models_wrong": true
+    },
+    {
+      "sample_id": "S0006",
+      "family_id": "factorial",
+      "true_label": "wrong_operator",
+      "review_priority_score": 7,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0004",
+      "family_id": "factorial",
+      "true_label": "wrong_operator",
+      "review_priority_score": 5,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0010",
+      "family_id": "factorial",
+      "true_label": "wrong_operator",
+      "review_priority_score": 5,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0005",
+      "family_id": "factorial",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0025",
+      "family_id": "palindrome",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0029",
+      "family_id": "palindrome",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0106",
+      "family_id": "ends_with",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0110",
+      "family_id": "second_largest",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0119",
+      "family_id": "zip_sum",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0125",
+      "family_id": "factorial",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0126",
+      "family_id": "factorial",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0132",
+      "family_id": "palindrome",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0133",
+      "family_id": "palindrome",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0173",
+      "family_id": "ends_with",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0176",
+      "family_id": "second_largest",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    },
+    {
+      "sample_id": "S0185",
+      "family_id": "zip_sum",
+      "true_label": "correct",
+      "review_priority_score": 4,
+      "both_models_wrong": false
+    }
+  ]
+}

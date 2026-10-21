@@ -1,0 +1,2388 @@
+{
+  "matched_test_ids": [
+    "S0001",
+    "S0002",
+    "S0003",
+    "S0004",
+    "S0005",
+    "S0006",
+    "S0007",
+    "S0008",
+    "S0009",
+    "S0010",
+    "S0046",
+    "S0047",
+    "S0048",
+    "S0049",
+    "S0050",
+    "S0051",
+    "S0058",
+    "S0059",
+    "S0060",
+    "S0077",
+    "S0083",
+    "S0088",
+    "S0089",
+    "S0090",
+    "S0091",
+    "S0102",
+    "S0103",
+    "S0106",
+    "S0114",
+    "S0117",
+    "S0121"
+  ],
+  "total": 31,
+  "representative": {
+    "false_positives_on_correct_code": [
+      {
+        "sample_id": "S0005",
+        "family_id": "factorial",
+        "true_label": "correct",
+        "baseline": {
+          "predicted_label": "wrong_condition",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2209,
+            "wrong_initialization": 0.195,
+            "off_by_one_loop": 0.1692,
+            "wrong_operator": 0.1164,
+            "wrong_condition": 0.2985
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": true,
+          "probabilities": {
+            "correct": 0.2446,
+            "wrong_initialization": 0.1594,
+            "off_by_one_loop": 0.1873,
+            "wrong_operator": 0.1977,
+            "wrong_condition": 0.211
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": true,
+        "both_wrong": false,
+        "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+        "error_category_baseline": "false_positive_fault",
+        "error_category_codebert": "correct_prediction"
+      },
+      {
+        "sample_id": "S0046",
+        "family_id": "linear_search",
+        "true_label": "correct",
+        "baseline": {
+          "predicted_label": "off_by_one_loop",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.1647,
+            "wrong_initialization": 0.1681,
+            "off_by_one_loop": 0.3143,
+            "wrong_operator": 0.1501,
+            "wrong_condition": 0.2027
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": true,
+          "probabilities": {
+            "correct": 0.2453,
+            "wrong_initialization": 0.1651,
+            "off_by_one_loop": 0.1921,
+            "wrong_operator": 0.1942,
+            "wrong_condition": 0.2033
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": true,
+        "both_wrong": false,
+        "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+        "error_category_baseline": "false_positive_fault",
+        "error_category_codebert": "correct_prediction"
+      },
+      {
+        "sample_id": "S0049",
+        "family_id": "linear_search",
+        "true_label": "correct",
+        "baseline": {
+          "predicted_label": "wrong_condition",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2041,
+            "wrong_initialization": 0.1678,
+            "off_by_one_loop": 0.1681,
+            "wrong_operator": 0.1482,
+            "wrong_condition": 0.3119
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": true,
+          "probabilities": {
+            "correct": 0.2403,
+            "wrong_initialization": 0.1655,
+            "off_by_one_loop": 0.1867,
+            "wrong_operator": 0.1995,
+            "wrong_condition": 0.208
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": true,
+        "both_wrong": false,
+        "code": "def linear_search(lst, target):\n    index = 0\n    while index < len(lst):\n        if lst[index] == target:\n            return index\n        index += 1\n    return -1",
+        "error_category_baseline": "false_positive_fault",
+        "error_category_codebert": "correct_prediction"
+      },
+      {
+        "sample_id": "S0058",
+        "family_id": "sorting",
+        "true_label": "correct",
+        "baseline": {
+          "predicted_label": "off_by_one_loop",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.1925,
+            "wrong_initialization": 0.1879,
+            "off_by_one_loop": 0.2967,
+            "wrong_operator": 0.1333,
+            "wrong_condition": 0.1897
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": true,
+          "probabilities": {
+            "correct": 0.253,
+            "wrong_initialization": 0.1666,
+            "off_by_one_loop": 0.1891,
+            "wrong_operator": 0.1889,
+            "wrong_condition": 0.2024
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": true,
+        "both_wrong": false,
+        "code": "def bubble_sort(lst):\n    arr = lst[:]\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+        "error_category_baseline": "false_positive_fault",
+        "error_category_codebert": "correct_prediction"
+      },
+      {
+        "sample_id": "S0077",
+        "family_id": "is_sorted",
+        "true_label": "correct",
+        "baseline": {
+          "predicted_label": "off_by_one_loop",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.1685,
+            "wrong_initialization": 0.1291,
+            "off_by_one_loop": 0.3267,
+            "wrong_operator": 0.1609,
+            "wrong_condition": 0.2149
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": true,
+          "probabilities": {
+            "correct": 0.2454,
+            "wrong_initialization": 0.1664,
+            "off_by_one_loop": 0.1931,
+            "wrong_operator": 0.1939,
+            "wrong_condition": 0.2013
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": true,
+        "both_wrong": false,
+        "code": "def is_sorted(lst):\n    for i in range(len(lst) - 1):\n        if lst[i] > lst[i + 1]:\n            return False\n    return True",
+        "error_category_baseline": "false_positive_fault",
+        "error_category_codebert": "correct_prediction"
+      },
+      {
+        "sample_id": "S0083",
+        "family_id": "linear_search",
+        "true_label": "correct",
+        "baseline": {
+          "predicted_label": "off_by_one_loop",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.1647,
+            "wrong_initialization": 0.1681,
+            "off_by_one_loop": 0.3143,
+            "wrong_operator": 0.1501,
+            "wrong_condition": 0.2027
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": true,
+          "probabilities": {
+            "correct": 0.2453,
+            "wrong_initialization": 0.1651,
+            "off_by_one_loop": 0.1921,
+            "wrong_operator": 0.1942,
+            "wrong_condition": 0.2033
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": true,
+        "both_wrong": false,
+        "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+        "error_category_baseline": "false_positive_fault",
+        "error_category_codebert": "correct_prediction"
+      },
+      {
+        "sample_id": "S0088",
+        "family_id": "clamp",
+        "true_label": "correct",
+        "baseline": {
+          "predicted_label": "wrong_condition",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2627,
+            "wrong_initialization": 0.17,
+            "off_by_one_loop": 0.1205,
+            "wrong_operator": 0.1792,
+            "wrong_condition": 0.2676
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": true,
+          "probabilities": {
+            "correct": 0.2469,
+            "wrong_initialization": 0.1629,
+            "off_by_one_loop": 0.1829,
+            "wrong_operator": 0.1926,
+            "wrong_condition": 0.2147
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": true,
+        "both_wrong": false,
+        "code": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+        "error_category_baseline": "false_positive_fault",
+        "error_category_codebert": "correct_prediction"
+      },
+      {
+        "sample_id": "S0102",
+        "family_id": "linear_search",
+        "true_label": "correct",
+        "baseline": {
+          "predicted_label": "off_by_one_loop",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2548,
+            "wrong_initialization": 0.1621,
+            "off_by_one_loop": 0.2785,
+            "wrong_operator": 0.1362,
+            "wrong_condition": 0.1684
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": true,
+          "probabilities": {
+            "correct": 0.2497,
+            "wrong_initialization": 0.1656,
+            "off_by_one_loop": 0.1942,
+            "wrong_operator": 0.1933,
+            "wrong_condition": 0.1972
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": true,
+        "both_wrong": false,
+        "code": "def linear_search(lst, target):\n    \"\"\"Compute the result.\"\"\"\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+        "error_category_baseline": "false_positive_fault",
+        "error_category_codebert": "correct_prediction"
+      }
+    ],
+    "false_negatives_missed_faults": [
+      {
+        "sample_id": "S0002",
+        "family_id": "factorial",
+        "true_label": "wrong_initialization",
+        "baseline": {
+          "predicted_label": "wrong_initialization",
+          "correct": true,
+          "probabilities": {
+            "correct": 0.2323,
+            "wrong_initialization": 0.2804,
+            "off_by_one_loop": 0.2263,
+            "wrong_operator": 0.1346,
+            "wrong_condition": 0.1264
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2514,
+            "wrong_initialization": 0.1648,
+            "off_by_one_loop": 0.1895,
+            "wrong_operator": 0.1968,
+            "wrong_condition": 0.1974
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": true,
+        "codebert_only_wrong": false,
+        "both_wrong": false,
+        "code": "def factorial(n):\n    result = 0\n    for i in range(1, n + 1):\n        result = result * i\n    return result",
+        "error_category_baseline": "correct_prediction",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0003",
+        "family_id": "factorial",
+        "true_label": "off_by_one_loop",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2538,
+            "wrong_initialization": 0.2399,
+            "off_by_one_loop": 0.2225,
+            "wrong_operator": 0.1656,
+            "wrong_condition": 0.1181
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2515,
+            "wrong_initialization": 0.1639,
+            "off_by_one_loop": 0.1899,
+            "wrong_operator": 0.1966,
+            "wrong_condition": 0.1982
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    for i in range(1, n):\n        result = result * i\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0004",
+        "family_id": "factorial",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2506,
+            "wrong_initialization": 0.2485,
+            "off_by_one_loop": 0.2269,
+            "wrong_operator": 0.1509,
+            "wrong_condition": 0.1232
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2518,
+            "wrong_initialization": 0.1646,
+            "off_by_one_loop": 0.1892,
+            "wrong_operator": 0.1969,
+            "wrong_condition": 0.1975
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result = result + i\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0006",
+        "family_id": "factorial",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "wrong_condition",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2209,
+            "wrong_initialization": 0.195,
+            "off_by_one_loop": 0.1692,
+            "wrong_operator": 0.1164,
+            "wrong_condition": 0.2985
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.244,
+            "wrong_initialization": 0.1593,
+            "off_by_one_loop": 0.1877,
+            "wrong_operator": 0.1985,
+            "wrong_condition": 0.2105
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n + factorial(n - 1)",
+        "error_category_baseline": "other_misclassification",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0008",
+        "family_id": "factorial",
+        "true_label": "wrong_initialization",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.236,
+            "wrong_initialization": 0.223,
+            "off_by_one_loop": 0.1823,
+            "wrong_operator": 0.1709,
+            "wrong_condition": 0.1878
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2434,
+            "wrong_initialization": 0.1647,
+            "off_by_one_loop": 0.1835,
+            "wrong_operator": 0.1995,
+            "wrong_condition": 0.2089
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 0\n    i = 2\n    while i <= n:\n        result *= i\n        i += 1\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0009",
+        "family_id": "factorial",
+        "true_label": "off_by_one_loop",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2532,
+            "wrong_initialization": 0.19,
+            "off_by_one_loop": 0.1851,
+            "wrong_operator": 0.1891,
+            "wrong_condition": 0.1826
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2443,
+            "wrong_initialization": 0.1646,
+            "off_by_one_loop": 0.1841,
+            "wrong_operator": 0.1994,
+            "wrong_condition": 0.2077
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i < n:\n        result *= i\n        i += 1\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0010",
+        "family_id": "factorial",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2532,
+            "wrong_initialization": 0.19,
+            "off_by_one_loop": 0.1851,
+            "wrong_operator": 0.1891,
+            "wrong_condition": 0.1826
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2422,
+            "wrong_initialization": 0.1641,
+            "off_by_one_loop": 0.1833,
+            "wrong_operator": 0.1999,
+            "wrong_condition": 0.2104
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i <= n:\n        result += i\n        i += 1\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0047",
+        "family_id": "linear_search",
+        "true_label": "off_by_one_loop",
+        "baseline": {
+          "predicted_label": "off_by_one_loop",
+          "correct": true,
+          "probabilities": {
+            "correct": 0.1658,
+            "wrong_initialization": 0.1521,
+            "off_by_one_loop": 0.3666,
+            "wrong_operator": 0.1342,
+            "wrong_condition": 0.1812
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2455,
+            "wrong_initialization": 0.1652,
+            "off_by_one_loop": 0.1929,
+            "wrong_operator": 0.1939,
+            "wrong_condition": 0.2026
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": true,
+        "codebert_only_wrong": false,
+        "both_wrong": false,
+        "code": "def linear_search(lst, target):\n    for i in range(len(lst) - 1):\n        if lst[i] == target:\n            return i\n    return -1",
+        "error_category_baseline": "correct_prediction",
+        "error_category_codebert": "missed_fault"
+      }
+    ],
+    "category_confusions": [
+      {
+        "sample_id": "S0003",
+        "family_id": "factorial",
+        "true_label": "off_by_one_loop",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2538,
+            "wrong_initialization": 0.2399,
+            "off_by_one_loop": 0.2225,
+            "wrong_operator": 0.1656,
+            "wrong_condition": 0.1181
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2515,
+            "wrong_initialization": 0.1639,
+            "off_by_one_loop": 0.1899,
+            "wrong_operator": 0.1966,
+            "wrong_condition": 0.1982
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    for i in range(1, n):\n        result = result * i\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0004",
+        "family_id": "factorial",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2506,
+            "wrong_initialization": 0.2485,
+            "off_by_one_loop": 0.2269,
+            "wrong_operator": 0.1509,
+            "wrong_condition": 0.1232
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2518,
+            "wrong_initialization": 0.1646,
+            "off_by_one_loop": 0.1892,
+            "wrong_operator": 0.1969,
+            "wrong_condition": 0.1975
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result = result + i\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0006",
+        "family_id": "factorial",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "wrong_condition",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2209,
+            "wrong_initialization": 0.195,
+            "off_by_one_loop": 0.1692,
+            "wrong_operator": 0.1164,
+            "wrong_condition": 0.2985
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.244,
+            "wrong_initialization": 0.1593,
+            "off_by_one_loop": 0.1877,
+            "wrong_operator": 0.1985,
+            "wrong_condition": 0.2105
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n + factorial(n - 1)",
+        "error_category_baseline": "other_misclassification",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0009",
+        "family_id": "factorial",
+        "true_label": "off_by_one_loop",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2532,
+            "wrong_initialization": 0.19,
+            "off_by_one_loop": 0.1851,
+            "wrong_operator": 0.1891,
+            "wrong_condition": 0.1826
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2443,
+            "wrong_initialization": 0.1646,
+            "off_by_one_loop": 0.1841,
+            "wrong_operator": 0.1994,
+            "wrong_condition": 0.2077
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i < n:\n        result *= i\n        i += 1\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0010",
+        "family_id": "factorial",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2532,
+            "wrong_initialization": 0.19,
+            "off_by_one_loop": 0.1851,
+            "wrong_operator": 0.1891,
+            "wrong_condition": 0.1826
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2422,
+            "wrong_initialization": 0.1641,
+            "off_by_one_loop": 0.1833,
+            "wrong_operator": 0.1999,
+            "wrong_condition": 0.2104
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i <= n:\n        result += i\n        i += 1\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0048",
+        "family_id": "linear_search",
+        "true_label": "wrong_condition",
+        "baseline": {
+          "predicted_label": "off_by_one_loop",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.1647,
+            "wrong_initialization": 0.1681,
+            "off_by_one_loop": 0.3143,
+            "wrong_operator": 0.1501,
+            "wrong_condition": 0.2027
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2462,
+            "wrong_initialization": 0.1646,
+            "off_by_one_loop": 0.1919,
+            "wrong_operator": 0.1936,
+            "wrong_condition": 0.2037
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] != target:\n            return i\n    return -1",
+        "error_category_baseline": "confusion_off_by_one_loop_vs_wrong_condition",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0050",
+        "family_id": "linear_search",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "wrong_condition",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.1963,
+            "wrong_initialization": 0.1429,
+            "off_by_one_loop": 0.1751,
+            "wrong_operator": 0.1721,
+            "wrong_condition": 0.3135
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.24,
+            "wrong_initialization": 0.1655,
+            "off_by_one_loop": 0.1866,
+            "wrong_operator": 0.1995,
+            "wrong_condition": 0.2083
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def linear_search(lst, target):\n    index = 0\n    while index < len(lst):\n        if lst[index] == target:\n            return index\n        index += 2\n    return -1",
+        "error_category_baseline": "other_misclassification",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0060",
+        "family_id": "sorting",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "off_by_one_loop",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.1925,
+            "wrong_initialization": 0.1879,
+            "off_by_one_loop": 0.2967,
+            "wrong_operator": 0.1333,
+            "wrong_condition": 0.1897
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2531,
+            "wrong_initialization": 0.1665,
+            "off_by_one_loop": 0.1893,
+            "wrong_operator": 0.1891,
+            "wrong_condition": 0.202
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def bubble_sort(lst):\n    arr = lst[:]\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] < arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+        "error_category_baseline": "other_misclassification",
+        "error_category_codebert": "missed_fault"
+      }
+    ],
+    "both_models_wrong": [
+      {
+        "sample_id": "S0003",
+        "family_id": "factorial",
+        "true_label": "off_by_one_loop",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2538,
+            "wrong_initialization": 0.2399,
+            "off_by_one_loop": 0.2225,
+            "wrong_operator": 0.1656,
+            "wrong_condition": 0.1181
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2515,
+            "wrong_initialization": 0.1639,
+            "off_by_one_loop": 0.1899,
+            "wrong_operator": 0.1966,
+            "wrong_condition": 0.1982
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    for i in range(1, n):\n        result = result * i\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0004",
+        "family_id": "factorial",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2506,
+            "wrong_initialization": 0.2485,
+            "off_by_one_loop": 0.2269,
+            "wrong_operator": 0.1509,
+            "wrong_condition": 0.1232
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2518,
+            "wrong_initialization": 0.1646,
+            "off_by_one_loop": 0.1892,
+            "wrong_operator": 0.1969,
+            "wrong_condition": 0.1975
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result = result + i\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0006",
+        "family_id": "factorial",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "wrong_condition",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2209,
+            "wrong_initialization": 0.195,
+            "off_by_one_loop": 0.1692,
+            "wrong_operator": 0.1164,
+            "wrong_condition": 0.2985
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.244,
+            "wrong_initialization": 0.1593,
+            "off_by_one_loop": 0.1877,
+            "wrong_operator": 0.1985,
+            "wrong_condition": 0.2105
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n + factorial(n - 1)",
+        "error_category_baseline": "other_misclassification",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0008",
+        "family_id": "factorial",
+        "true_label": "wrong_initialization",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.236,
+            "wrong_initialization": 0.223,
+            "off_by_one_loop": 0.1823,
+            "wrong_operator": 0.1709,
+            "wrong_condition": 0.1878
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2434,
+            "wrong_initialization": 0.1647,
+            "off_by_one_loop": 0.1835,
+            "wrong_operator": 0.1995,
+            "wrong_condition": 0.2089
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 0\n    i = 2\n    while i <= n:\n        result *= i\n        i += 1\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0009",
+        "family_id": "factorial",
+        "true_label": "off_by_one_loop",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2532,
+            "wrong_initialization": 0.19,
+            "off_by_one_loop": 0.1851,
+            "wrong_operator": 0.1891,
+            "wrong_condition": 0.1826
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2443,
+            "wrong_initialization": 0.1646,
+            "off_by_one_loop": 0.1841,
+            "wrong_operator": 0.1994,
+            "wrong_condition": 0.2077
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i < n:\n        result *= i\n        i += 1\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0010",
+        "family_id": "factorial",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2532,
+            "wrong_initialization": 0.19,
+            "off_by_one_loop": 0.1851,
+            "wrong_operator": 0.1891,
+            "wrong_condition": 0.1826
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2422,
+            "wrong_initialization": 0.1641,
+            "off_by_one_loop": 0.1833,
+            "wrong_operator": 0.1999,
+            "wrong_condition": 0.2104
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i <= n:\n        result += i\n        i += 1\n    return result",
+        "error_category_baseline": "missed_fault",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0048",
+        "family_id": "linear_search",
+        "true_label": "wrong_condition",
+        "baseline": {
+          "predicted_label": "off_by_one_loop",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.1647,
+            "wrong_initialization": 0.1681,
+            "off_by_one_loop": 0.3143,
+            "wrong_operator": 0.1501,
+            "wrong_condition": 0.2027
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.2462,
+            "wrong_initialization": 0.1646,
+            "off_by_one_loop": 0.1919,
+            "wrong_operator": 0.1936,
+            "wrong_condition": 0.2037
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] != target:\n            return i\n    return -1",
+        "error_category_baseline": "confusion_off_by_one_loop_vs_wrong_condition",
+        "error_category_codebert": "missed_fault"
+      },
+      {
+        "sample_id": "S0050",
+        "family_id": "linear_search",
+        "true_label": "wrong_operator",
+        "baseline": {
+          "predicted_label": "wrong_condition",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.1963,
+            "wrong_initialization": 0.1429,
+            "off_by_one_loop": 0.1751,
+            "wrong_operator": 0.1721,
+            "wrong_condition": 0.3135
+          }
+        },
+        "codebert": {
+          "predicted_label": "correct",
+          "correct": false,
+          "probabilities": {
+            "correct": 0.24,
+            "wrong_initialization": 0.1655,
+            "off_by_one_loop": 0.1866,
+            "wrong_operator": 0.1995,
+            "wrong_condition": 0.2083
+          }
+        },
+        "both_correct": false,
+        "baseline_only_wrong": false,
+        "codebert_only_wrong": false,
+        "both_wrong": true,
+        "code": "def linear_search(lst, target):\n    index = 0\n    while index < len(lst):\n        if lst[index] == target:\n            return index\n        index += 2\n    return -1",
+        "error_category_baseline": "other_misclassification",
+        "error_category_codebert": "missed_fault"
+      }
+    ]
+  },
+  "by_family": {
+    "factorial": [
+      {
+        "sample_id": "S0001",
+        "true_label": "correct",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0002",
+        "true_label": "wrong_initialization",
+        "baseline_pred": "wrong_initialization",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0003",
+        "true_label": "off_by_one_loop",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0004",
+        "true_label": "wrong_operator",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0005",
+        "true_label": "correct",
+        "baseline_pred": "wrong_condition",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0006",
+        "true_label": "wrong_operator",
+        "baseline_pred": "wrong_condition",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0007",
+        "true_label": "correct",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0008",
+        "true_label": "wrong_initialization",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0009",
+        "true_label": "off_by_one_loop",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0010",
+        "true_label": "wrong_operator",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0089",
+        "true_label": "correct",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0090",
+        "true_label": "correct",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0091",
+        "true_label": "correct",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      }
+    ],
+    "linear_search": [
+      {
+        "sample_id": "S0046",
+        "true_label": "correct",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0047",
+        "true_label": "off_by_one_loop",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0048",
+        "true_label": "wrong_condition",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0049",
+        "true_label": "correct",
+        "baseline_pred": "wrong_condition",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0050",
+        "true_label": "wrong_operator",
+        "baseline_pred": "wrong_condition",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0051",
+        "true_label": "wrong_condition",
+        "baseline_pred": "wrong_condition",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0083",
+        "true_label": "correct",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0102",
+        "true_label": "correct",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0103",
+        "true_label": "correct",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0117",
+        "true_label": "correct",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      }
+    ],
+    "sorting": [
+      {
+        "sample_id": "S0058",
+        "true_label": "correct",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0059",
+        "true_label": "off_by_one_loop",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0060",
+        "true_label": "wrong_operator",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0106",
+        "true_label": "correct",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      }
+    ],
+    "is_sorted": [
+      {
+        "sample_id": "S0077",
+        "true_label": "correct",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0114",
+        "true_label": "correct",
+        "baseline_pred": "off_by_one_loop",
+        "codebert_pred": "correct"
+      }
+    ],
+    "clamp": [
+      {
+        "sample_id": "S0088",
+        "true_label": "correct",
+        "baseline_pred": "wrong_condition",
+        "codebert_pred": "correct"
+      },
+      {
+        "sample_id": "S0121",
+        "true_label": "correct",
+        "baseline_pred": "correct",
+        "codebert_pred": "correct"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "sample_id": "S0001",
+      "family_id": "factorial",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2506,
+          "wrong_initialization": 0.2485,
+          "off_by_one_loop": 0.2269,
+          "wrong_operator": 0.1509,
+          "wrong_condition": 0.1232
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2525,
+          "wrong_initialization": 0.1644,
+          "off_by_one_loop": 0.1893,
+          "wrong_operator": 0.1969,
+          "wrong_condition": 0.1969
+        }
+      },
+      "both_correct": true,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result = result * i\n    return result",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0002",
+      "family_id": "factorial",
+      "true_label": "wrong_initialization",
+      "baseline": {
+        "predicted_label": "wrong_initialization",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2323,
+          "wrong_initialization": 0.2804,
+          "off_by_one_loop": 0.2263,
+          "wrong_operator": 0.1346,
+          "wrong_condition": 0.1264
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2514,
+          "wrong_initialization": 0.1648,
+          "off_by_one_loop": 0.1895,
+          "wrong_operator": 0.1968,
+          "wrong_condition": 0.1974
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": true,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def factorial(n):\n    result = 0\n    for i in range(1, n + 1):\n        result = result * i\n    return result",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0003",
+      "family_id": "factorial",
+      "true_label": "off_by_one_loop",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2538,
+          "wrong_initialization": 0.2399,
+          "off_by_one_loop": 0.2225,
+          "wrong_operator": 0.1656,
+          "wrong_condition": 0.1181
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2515,
+          "wrong_initialization": 0.1639,
+          "off_by_one_loop": 0.1899,
+          "wrong_operator": 0.1966,
+          "wrong_condition": 0.1982
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": true,
+      "code": "def factorial(n):\n    result = 1\n    for i in range(1, n):\n        result = result * i\n    return result",
+      "error_category_baseline": "missed_fault",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0004",
+      "family_id": "factorial",
+      "true_label": "wrong_operator",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2506,
+          "wrong_initialization": 0.2485,
+          "off_by_one_loop": 0.2269,
+          "wrong_operator": 0.1509,
+          "wrong_condition": 0.1232
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2518,
+          "wrong_initialization": 0.1646,
+          "off_by_one_loop": 0.1892,
+          "wrong_operator": 0.1969,
+          "wrong_condition": 0.1975
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": true,
+      "code": "def factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result = result + i\n    return result",
+      "error_category_baseline": "missed_fault",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0005",
+      "family_id": "factorial",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "wrong_condition",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2209,
+          "wrong_initialization": 0.195,
+          "off_by_one_loop": 0.1692,
+          "wrong_operator": 0.1164,
+          "wrong_condition": 0.2985
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2446,
+          "wrong_initialization": 0.1594,
+          "off_by_one_loop": 0.1873,
+          "wrong_operator": 0.1977,
+          "wrong_condition": 0.211
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": true,
+      "both_wrong": false,
+      "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+      "error_category_baseline": "false_positive_fault",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0006",
+      "family_id": "factorial",
+      "true_label": "wrong_operator",
+      "baseline": {
+        "predicted_label": "wrong_condition",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2209,
+          "wrong_initialization": 0.195,
+          "off_by_one_loop": 0.1692,
+          "wrong_operator": 0.1164,
+          "wrong_condition": 0.2985
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.244,
+          "wrong_initialization": 0.1593,
+          "off_by_one_loop": 0.1877,
+          "wrong_operator": 0.1985,
+          "wrong_condition": 0.2105
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": true,
+      "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n + factorial(n - 1)",
+      "error_category_baseline": "other_misclassification",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0007",
+      "family_id": "factorial",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2532,
+          "wrong_initialization": 0.19,
+          "off_by_one_loop": 0.1851,
+          "wrong_operator": 0.1891,
+          "wrong_condition": 0.1826
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2441,
+          "wrong_initialization": 0.1645,
+          "off_by_one_loop": 0.1838,
+          "wrong_operator": 0.1993,
+          "wrong_condition": 0.2083
+        }
+      },
+      "both_correct": true,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i <= n:\n        result *= i\n        i += 1\n    return result",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0008",
+      "family_id": "factorial",
+      "true_label": "wrong_initialization",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.236,
+          "wrong_initialization": 0.223,
+          "off_by_one_loop": 0.1823,
+          "wrong_operator": 0.1709,
+          "wrong_condition": 0.1878
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2434,
+          "wrong_initialization": 0.1647,
+          "off_by_one_loop": 0.1835,
+          "wrong_operator": 0.1995,
+          "wrong_condition": 0.2089
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": true,
+      "code": "def factorial(n):\n    result = 0\n    i = 2\n    while i <= n:\n        result *= i\n        i += 1\n    return result",
+      "error_category_baseline": "missed_fault",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0009",
+      "family_id": "factorial",
+      "true_label": "off_by_one_loop",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2532,
+          "wrong_initialization": 0.19,
+          "off_by_one_loop": 0.1851,
+          "wrong_operator": 0.1891,
+          "wrong_condition": 0.1826
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2443,
+          "wrong_initialization": 0.1646,
+          "off_by_one_loop": 0.1841,
+          "wrong_operator": 0.1994,
+          "wrong_condition": 0.2077
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": true,
+      "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i < n:\n        result *= i\n        i += 1\n    return result",
+      "error_category_baseline": "missed_fault",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0010",
+      "family_id": "factorial",
+      "true_label": "wrong_operator",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2532,
+          "wrong_initialization": 0.19,
+          "off_by_one_loop": 0.1851,
+          "wrong_operator": 0.1891,
+          "wrong_condition": 0.1826
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2422,
+          "wrong_initialization": 0.1641,
+          "off_by_one_loop": 0.1833,
+          "wrong_operator": 0.1999,
+          "wrong_condition": 0.2104
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": true,
+      "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i <= n:\n        result += i\n        i += 1\n    return result",
+      "error_category_baseline": "missed_fault",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0046",
+      "family_id": "linear_search",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.1647,
+          "wrong_initialization": 0.1681,
+          "off_by_one_loop": 0.3143,
+          "wrong_operator": 0.1501,
+          "wrong_condition": 0.2027
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2453,
+          "wrong_initialization": 0.1651,
+          "off_by_one_loop": 0.1921,
+          "wrong_operator": 0.1942,
+          "wrong_condition": 0.2033
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": true,
+      "both_wrong": false,
+      "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+      "error_category_baseline": "false_positive_fault",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0047",
+      "family_id": "linear_search",
+      "true_label": "off_by_one_loop",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.1658,
+          "wrong_initialization": 0.1521,
+          "off_by_one_loop": 0.3666,
+          "wrong_operator": 0.1342,
+          "wrong_condition": 0.1812
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2455,
+          "wrong_initialization": 0.1652,
+          "off_by_one_loop": 0.1929,
+          "wrong_operator": 0.1939,
+          "wrong_condition": 0.2026
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": true,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def linear_search(lst, target):\n    for i in range(len(lst) - 1):\n        if lst[i] == target:\n            return i\n    return -1",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0048",
+      "family_id": "linear_search",
+      "true_label": "wrong_condition",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.1647,
+          "wrong_initialization": 0.1681,
+          "off_by_one_loop": 0.3143,
+          "wrong_operator": 0.1501,
+          "wrong_condition": 0.2027
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2462,
+          "wrong_initialization": 0.1646,
+          "off_by_one_loop": 0.1919,
+          "wrong_operator": 0.1936,
+          "wrong_condition": 0.2037
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": true,
+      "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] != target:\n            return i\n    return -1",
+      "error_category_baseline": "confusion_off_by_one_loop_vs_wrong_condition",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0049",
+      "family_id": "linear_search",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "wrong_condition",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2041,
+          "wrong_initialization": 0.1678,
+          "off_by_one_loop": 0.1681,
+          "wrong_operator": 0.1482,
+          "wrong_condition": 0.3119
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2403,
+          "wrong_initialization": 0.1655,
+          "off_by_one_loop": 0.1867,
+          "wrong_operator": 0.1995,
+          "wrong_condition": 0.208
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": true,
+      "both_wrong": false,
+      "code": "def linear_search(lst, target):\n    index = 0\n    while index < len(lst):\n        if lst[index] == target:\n            return index\n        index += 1\n    return -1",
+      "error_category_baseline": "false_positive_fault",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0050",
+      "family_id": "linear_search",
+      "true_label": "wrong_operator",
+      "baseline": {
+        "predicted_label": "wrong_condition",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.1963,
+          "wrong_initialization": 0.1429,
+          "off_by_one_loop": 0.1751,
+          "wrong_operator": 0.1721,
+          "wrong_condition": 0.3135
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.24,
+          "wrong_initialization": 0.1655,
+          "off_by_one_loop": 0.1866,
+          "wrong_operator": 0.1995,
+          "wrong_condition": 0.2083
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": true,
+      "code": "def linear_search(lst, target):\n    index = 0\n    while index < len(lst):\n        if lst[index] == target:\n            return index\n        index += 2\n    return -1",
+      "error_category_baseline": "other_misclassification",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0051",
+      "family_id": "linear_search",
+      "true_label": "wrong_condition",
+      "baseline": {
+        "predicted_label": "wrong_condition",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2041,
+          "wrong_initialization": 0.1678,
+          "off_by_one_loop": 0.1681,
+          "wrong_operator": 0.1482,
+          "wrong_condition": 0.3119
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2406,
+          "wrong_initialization": 0.1654,
+          "off_by_one_loop": 0.1867,
+          "wrong_operator": 0.1991,
+          "wrong_condition": 0.2082
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": true,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def linear_search(lst, target):\n    index = 0\n    while index < len(lst):\n        if lst[index] != target:\n            return index\n        index += 1\n    return -1",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0058",
+      "family_id": "sorting",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.1925,
+          "wrong_initialization": 0.1879,
+          "off_by_one_loop": 0.2967,
+          "wrong_operator": 0.1333,
+          "wrong_condition": 0.1897
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.253,
+          "wrong_initialization": 0.1666,
+          "off_by_one_loop": 0.1891,
+          "wrong_operator": 0.1889,
+          "wrong_condition": 0.2024
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": true,
+      "both_wrong": false,
+      "code": "def bubble_sort(lst):\n    arr = lst[:]\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+      "error_category_baseline": "false_positive_fault",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0059",
+      "family_id": "sorting",
+      "true_label": "off_by_one_loop",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.1902,
+          "wrong_initialization": 0.1876,
+          "off_by_one_loop": 0.298,
+          "wrong_operator": 0.1344,
+          "wrong_condition": 0.1898
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2524,
+          "wrong_initialization": 0.167,
+          "off_by_one_loop": 0.1889,
+          "wrong_operator": 0.1892,
+          "wrong_condition": 0.2026
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": true,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def bubble_sort(lst):\n    arr = lst[:]\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0060",
+      "family_id": "sorting",
+      "true_label": "wrong_operator",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.1925,
+          "wrong_initialization": 0.1879,
+          "off_by_one_loop": 0.2967,
+          "wrong_operator": 0.1333,
+          "wrong_condition": 0.1897
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2531,
+          "wrong_initialization": 0.1665,
+          "off_by_one_loop": 0.1893,
+          "wrong_operator": 0.1891,
+          "wrong_condition": 0.202
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": true,
+      "code": "def bubble_sort(lst):\n    arr = lst[:]\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] < arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+      "error_category_baseline": "other_misclassification",
+      "error_category_codebert": "missed_fault"
+    },
+    {
+      "sample_id": "S0077",
+      "family_id": "is_sorted",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.1685,
+          "wrong_initialization": 0.1291,
+          "off_by_one_loop": 0.3267,
+          "wrong_operator": 0.1609,
+          "wrong_condition": 0.2149
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2454,
+          "wrong_initialization": 0.1664,
+          "off_by_one_loop": 0.1931,
+          "wrong_operator": 0.1939,
+          "wrong_condition": 0.2013
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": true,
+      "both_wrong": false,
+      "code": "def is_sorted(lst):\n    for i in range(len(lst) - 1):\n        if lst[i] > lst[i + 1]:\n            return False\n    return True",
+      "error_category_baseline": "false_positive_fault",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0083",
+      "family_id": "linear_search",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.1647,
+          "wrong_initialization": 0.1681,
+          "off_by_one_loop": 0.3143,
+          "wrong_operator": 0.1501,
+          "wrong_condition": 0.2027
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2453,
+          "wrong_initialization": 0.1651,
+          "off_by_one_loop": 0.1921,
+          "wrong_operator": 0.1942,
+          "wrong_condition": 0.2033
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": true,
+      "both_wrong": false,
+      "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+      "error_category_baseline": "false_positive_fault",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0088",
+      "family_id": "clamp",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "wrong_condition",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2627,
+          "wrong_initialization": 0.17,
+          "off_by_one_loop": 0.1205,
+          "wrong_operator": 0.1792,
+          "wrong_condition": 0.2676
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2469,
+          "wrong_initialization": 0.1629,
+          "off_by_one_loop": 0.1829,
+          "wrong_operator": 0.1926,
+          "wrong_condition": 0.2147
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": true,
+      "both_wrong": false,
+      "code": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+      "error_category_baseline": "false_positive_fault",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0089",
+      "family_id": "factorial",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.3474,
+          "wrong_initialization": 0.2154,
+          "off_by_one_loop": 0.1842,
+          "wrong_operator": 0.1408,
+          "wrong_condition": 0.1122
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2615,
+          "wrong_initialization": 0.1647,
+          "off_by_one_loop": 0.1898,
+          "wrong_operator": 0.191,
+          "wrong_condition": 0.193
+        }
+      },
+      "both_correct": true,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def factorial(n):\n    \"\"\"Compute the result.\"\"\"\n    result = 1\n    for i in range(1, n + 1):\n        result = result * i\n    return result",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0090",
+      "family_id": "factorial",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.3513,
+          "wrong_initialization": 0.177,
+          "off_by_one_loop": 0.1419,
+          "wrong_operator": 0.106,
+          "wrong_condition": 0.2238
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2542,
+          "wrong_initialization": 0.1611,
+          "off_by_one_loop": 0.1851,
+          "wrong_operator": 0.1939,
+          "wrong_condition": 0.2056
+        }
+      },
+      "both_correct": true,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def factorial(n):\n    \"\"\"Compute the result.\"\"\"\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0091",
+      "family_id": "factorial",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.3624,
+          "wrong_initialization": 0.1685,
+          "off_by_one_loop": 0.1539,
+          "wrong_operator": 0.1646,
+          "wrong_condition": 0.1506
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2528,
+          "wrong_initialization": 0.1654,
+          "off_by_one_loop": 0.1833,
+          "wrong_operator": 0.1949,
+          "wrong_condition": 0.2036
+        }
+      },
+      "both_correct": true,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def factorial(n):\n    \"\"\"Compute the result.\"\"\"\n    result = 1\n    i = 2\n    while i <= n:\n        result *= i\n        i += 1\n    return result",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0102",
+      "family_id": "linear_search",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2548,
+          "wrong_initialization": 0.1621,
+          "off_by_one_loop": 0.2785,
+          "wrong_operator": 0.1362,
+          "wrong_condition": 0.1684
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2497,
+          "wrong_initialization": 0.1656,
+          "off_by_one_loop": 0.1942,
+          "wrong_operator": 0.1933,
+          "wrong_condition": 0.1972
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": true,
+      "both_wrong": false,
+      "code": "def linear_search(lst, target):\n    \"\"\"Compute the result.\"\"\"\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+      "error_category_baseline": "false_positive_fault",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0103",
+      "family_id": "linear_search",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.3302,
+          "wrong_initialization": 0.1533,
+          "off_by_one_loop": 0.1449,
+          "wrong_operator": 0.1321,
+          "wrong_condition": 0.2395
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2485,
+          "wrong_initialization": 0.1661,
+          "off_by_one_loop": 0.1857,
+          "wrong_operator": 0.1954,
+          "wrong_condition": 0.2042
+        }
+      },
+      "both_correct": true,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def linear_search(lst, target):\n    \"\"\"Compute the result.\"\"\"\n    index = 0\n    while index < len(lst):\n        if lst[index] == target:\n            return index\n        index += 1\n    return -1",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0106",
+      "family_id": "sorting",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2929,
+          "wrong_initialization": 0.1722,
+          "off_by_one_loop": 0.2519,
+          "wrong_operator": 0.1221,
+          "wrong_condition": 0.1608
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2558,
+          "wrong_initialization": 0.1665,
+          "off_by_one_loop": 0.1901,
+          "wrong_operator": 0.1885,
+          "wrong_condition": 0.199
+        }
+      },
+      "both_correct": true,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def bubble_sort(lst):\n    \"\"\"Compute the result.\"\"\"\n    arr = lst[:]\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0114",
+      "family_id": "is_sorted",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2502,
+          "wrong_initialization": 0.1267,
+          "off_by_one_loop": 0.2937,
+          "wrong_operator": 0.1464,
+          "wrong_condition": 0.1831
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2535,
+          "wrong_initialization": 0.1673,
+          "off_by_one_loop": 0.1918,
+          "wrong_operator": 0.191,
+          "wrong_condition": 0.1963
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": true,
+      "both_wrong": false,
+      "code": "def is_sorted(lst):\n    \"\"\"Compute the result.\"\"\"\n    for i in range(len(lst) - 1):\n        if lst[i] > lst[i + 1]:\n            return False\n    return True",
+      "error_category_baseline": "false_positive_fault",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0117",
+      "family_id": "linear_search",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "off_by_one_loop",
+        "correct": false,
+        "probabilities": {
+          "correct": 0.2548,
+          "wrong_initialization": 0.1621,
+          "off_by_one_loop": 0.2785,
+          "wrong_operator": 0.1362,
+          "wrong_condition": 0.1684
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2497,
+          "wrong_initialization": 0.1656,
+          "off_by_one_loop": 0.1942,
+          "wrong_operator": 0.1933,
+          "wrong_condition": 0.1972
+        }
+      },
+      "both_correct": false,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": true,
+      "both_wrong": false,
+      "code": "def linear_search(lst, target):\n    \"\"\"Compute the result.\"\"\"\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+      "error_category_baseline": "false_positive_fault",
+      "error_category_codebert": "correct_prediction"
+    },
+    {
+      "sample_id": "S0121",
+      "family_id": "clamp",
+      "true_label": "correct",
+      "baseline": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.3519,
+          "wrong_initialization": 0.1557,
+          "off_by_one_loop": 0.1089,
+          "wrong_operator": 0.1599,
+          "wrong_condition": 0.2237
+        }
+      },
+      "codebert": {
+        "predicted_label": "correct",
+        "correct": true,
+        "probabilities": {
+          "correct": 0.2523,
+          "wrong_initialization": 0.1636,
+          "off_by_one_loop": 0.1831,
+          "wrong_operator": 0.1924,
+          "wrong_condition": 0.2085
+        }
+      },
+      "both_correct": true,
+      "baseline_only_wrong": false,
+      "codebert_only_wrong": false,
+      "both_wrong": false,
+      "code": "def clamp(x, lo, hi):\n    \"\"\"Compute the result.\"\"\"\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+      "error_category_baseline": "correct_prediction",
+      "error_category_codebert": "correct_prediction"
+    }
+  ]
+}

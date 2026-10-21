@@ -1,0 +1,135 @@
+{
+  "dataset_version": "benchmark_v3",
+  "total_accepted": 190,
+  "total_rejected": 4,
+  "review_queue_count": 10,
+  "human_reviewed": false,
+  "class_distribution": {
+    "correct": 132,
+    "wrong_initialization": 14,
+    "off_by_one_loop": 10,
+    "wrong_operator": 18,
+    "wrong_condition": 16
+  },
+  "split_sample_counts": {
+    "val": 30,
+    "test": 66,
+    "train": 94
+  },
+  "independent_program_families": 53,
+  "families_per_split": {
+    "val": [
+      "ends_with",
+      "factorial",
+      "palindrome",
+      "second_largest",
+      "string_len",
+      "tuple_sum",
+      "zip_sum"
+    ],
+    "test": [
+      "clamp",
+      "col_sum",
+      "count_evens",
+      "count_positive",
+      "count_vowels",
+      "count_words",
+      "fibonacci",
+      "find_min",
+      "gcd",
+      "max_element",
+      "prime",
+      "reverse_list",
+      "running_max",
+      "sorting",
+      "strip_spaces"
+    ],
+    "train": [
+      "binary_search",
+      "copy_matrix",
+      "count_char",
+      "cumulative_sum",
+      "digit_count",
+      "double_list",
+      "flatten_once",
+      "insertion_sort",
+      "is_ascending",
+      "is_even",
+      "is_palindrome_num",
+      "is_sorted",
+      "last_index",
+      "linear_search",
+      "list_max_index",
+      "matrix_trace",
+      "mean_list",
+      "merge_sorted_lists",
+      "mod_list",
+      "pair_sum_target",
+      "power",
+      "remove_negatives",
+      "replace_char",
+      "reverse_string",
+      "rotate_left",
+      "sign_list",
+      "stack_ops",
+      "starts_with",
+      "sum_digits",
+      "sum_list",
+      "unique_count"
+    ]
+  },
+  "syntax_validity_rate": 1.0,
+  "behavioral_validation": "template unit tests in subprocess; finite tests \u2014 not universal proof",
+  "duplicate_rejection_count": 4,
+  "similarity_total_pairs": 4219,
+  "similarity_cross_split_excluded": 2346,
+  "similarity_evaluable_pairs": 1873,
+  "similarity_evaluable_by_split": {
+    "val": 87,
+    "test": 352,
+    "train": 1434
+  },
+  "similarity_label_balance_evaluable": {
+    "similar": 48,
+    "dissimilar": 1825
+  },
+  "pair_type_counts": {
+    "equivalent_family_correct": 48,
+    "hard_negative_same_family": 59,
+    "cross_family_dissimilar": 4112
+  },
+  "pair_leakage_check_passed": true,
+  "pair_leakage_errors": [],
+  "seed": 42,
+  "checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+  "limitations": [
+    "Automated labels \u2014 not human-reviewed unless listed in review_queue.",
+    "Behavioral tests are finite; passing does not prove full correctness.",
+    "Similarity label 1 means same-family correct pairs or typed relation \u2014 not proven equivalence."
+  ],
+  "class_coverage_by_split": {
+    "train": {
+      "correct": 72,
+      "wrong_initialization": 7,
+      "wrong_operator": 6,
+      "off_by_one_loop": 4,
+      "wrong_condition": 5
+    },
+    "val": {
+      "correct": 20,
+      "wrong_initialization": 3,
+      "off_by_one_loop": 2,
+      "wrong_operator": 4,
+      "wrong_condition": 1
+    },
+    "test": {
+      "correct": 40,
+      "wrong_initialization": 4,
+      "off_by_one_loop": 4,
+      "wrong_condition": 10,
+      "wrong_operator": 8
+    }
+  },
+  "split_coverage_notes": [],
+  "synthetic_unreviewed": true
+}

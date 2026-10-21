@@ -1,0 +1,404 @@
+{
+  "generated_at": "2026-10-19T09:05:31.909627+00:00",
+  "dataset_version": "benchmark_v2",
+  "checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+  "label_mapping": {
+    "label_to_id": {
+      "correct": 0,
+      "wrong_initialization": 1,
+      "off_by_one_loop": 2,
+      "wrong_operator": 3,
+      "wrong_condition": 4
+    },
+    "id_to_label": {
+      "0": "correct",
+      "1": "wrong_initialization",
+      "2": "off_by_one_loop",
+      "3": "wrong_operator",
+      "4": "wrong_condition"
+    }
+  },
+  "splits": {
+    "train": {
+      "n": 74,
+      "families": 12,
+      "labels": {
+        "correct": 38,
+        "wrong_operator": 11,
+        "wrong_initialization": 10,
+        "wrong_condition": 10,
+        "off_by_one_loop": 5
+      }
+    },
+    "val": {
+      "n": 16,
+      "families": 3,
+      "labels": {
+        "correct": 10,
+        "wrong_initialization": 2,
+        "wrong_operator": 2,
+        "wrong_condition": 2
+      }
+    },
+    "test": {
+      "n": 31,
+      "families": 5,
+      "labels": {
+        "correct": 18,
+        "wrong_operator": 5,
+        "off_by_one_loop": 4,
+        "wrong_initialization": 2,
+        "wrong_condition": 2
+      },
+      "note": "Previously inspected benchmark — not an unseen holdout."
+    }
+  },
+  "family_label_matrix": {
+    "train": {
+      "fibonacci": {
+        "correct": 4,
+        "wrong_condition": 2,
+        "wrong_initialization": 1,
+        "off_by_one_loop": 1
+      },
+      "find_min": {
+        "correct": 2,
+        "wrong_condition": 1
+      },
+      "gcd": {
+        "correct": 4,
+        "wrong_operator": 2,
+        "wrong_condition": 1
+      },
+      "max_element": {
+        "correct": 4,
+        "wrong_initialization": 2,
+        "wrong_operator": 2,
+        "wrong_condition": 2,
+        "off_by_one_loop": 1
+      },
+      "mean_list": {
+        "correct": 2,
+        "wrong_condition": 1
+      },
+      "power": {
+        "correct": 4,
+        "wrong_initialization": 2,
+        "wrong_operator": 2
+      },
+      "prime": {
+        "correct": 4,
+        "wrong_condition": 3,
+        "wrong_operator": 2,
+        "off_by_one_loop": 1
+      },
+      "reverse_list": {
+        "correct": 2
+      },
+      "reverse_string": {
+        "correct": 4,
+        "wrong_initialization": 2,
+        "off_by_one_loop": 1,
+        "wrong_operator": 1
+      },
+      "stack_ops": {
+        "correct": 2
+      },
+      "sum_digits": {
+        "correct": 2,
+        "wrong_initialization": 1
+      },
+      "sum_list": {
+        "correct": 4,
+        "wrong_initialization": 2,
+        "wrong_operator": 2,
+        "off_by_one_loop": 1
+      }
+    },
+    "val": {
+      "count_evens": {
+        "correct": 2
+      },
+      "count_vowels": {
+        "correct": 4,
+        "wrong_initialization": 1,
+        "wrong_operator": 1,
+        "wrong_condition": 1
+      },
+      "palindrome": {
+        "correct": 4,
+        "wrong_initialization": 1,
+        "wrong_operator": 1,
+        "wrong_condition": 1
+      }
+    },
+    "test": {
+      "clamp": {
+        "correct": 2
+      },
+      "factorial": {
+        "correct": 6,
+        "wrong_operator": 3,
+        "wrong_initialization": 2,
+        "off_by_one_loop": 2
+      },
+      "is_sorted": {
+        "correct": 2
+      },
+      "linear_search": {
+        "correct": 6,
+        "wrong_condition": 2,
+        "off_by_one_loop": 1,
+        "wrong_operator": 1
+      },
+      "sorting": {
+        "correct": 2,
+        "off_by_one_loop": 1,
+        "wrong_operator": 1
+      }
+    }
+  },
+  "validation_status_counts": {
+    "test|validated": 31,
+    "train|validated": 74,
+    "val|validated": 16
+  },
+  "review_queue_count": 10,
+  "review_queue_summary": [
+    {
+      "template_id": "factorial_2",
+      "intended_label": "wrong_condition",
+      "reason": "mutation_still_passes_tests",
+      "mutation_type": "base_case"
+    },
+    {
+      "template_id": "fibonacci_1",
+      "intended_label": "wrong_operator",
+      "reason": "mutation_still_passes_tests",
+      "mutation_type": "arithmetic_op"
+    },
+    {
+      "template_id": "fibonacci_1",
+      "intended_label": "wrong_condition",
+      "reason": "mutation_still_passes_tests",
+      "mutation_type": "boundary_condition"
+    },
+    {
+      "template_id": "fibonacci_2",
+      "intended_label": "wrong_condition",
+      "reason": "mutation_still_passes_tests",
+      "mutation_type": "boundary_condition"
+    },
+    {
+      "template_id": "is_prime_2",
+      "intended_label": "wrong_condition",
+      "reason": "mutation_still_passes_tests",
+      "mutation_type": "boundary_condition"
+    },
+    {
+      "template_id": "palindrome_1",
+      "intended_label": "off_by_one_loop",
+      "reason": "mutation_still_passes_tests",
+      "mutation_type": "loop_boundary"
+    },
+    {
+      "template_id": "linear_search_2",
+      "intended_label": "wrong_initialization",
+      "reason": "mutation_still_passes_tests",
+      "mutation_type": "index_init"
+    },
+    {
+      "template_id": "linear_search_2",
+      "intended_label": "off_by_one_loop",
+      "reason": "mutation_still_passes_tests",
+      "mutation_type": "loop_boundary"
+    },
+    {
+      "template_id": "bubble_sort_1",
+      "intended_label": "off_by_one_loop",
+      "reason": "mutation_still_passes_tests",
+      "mutation_type": "range_endpoint"
+    },
+    {
+      "template_id": "linear_search_1",
+      "intended_label": "off_by_one_loop",
+      "reason": "mutation_still_passes_tests",
+      "mutation_type": "range_endpoint"
+    }
+  ],
+  "rejected_count": 4,
+  "training_loss_class_weights_from_train_only": {
+    "correct": 0.3895,
+    "wrong_initialization": 1.48,
+    "off_by_one_loop": 2.96,
+    "wrong_operator": 1.3455,
+    "wrong_condition": 1.48
+  },
+  "data_quality_notes": [
+    "Train split is majority 'correct' (observed count, not assumed root cause of collapse)."
+  ],
+  "phase3_reference": {
+    "checkpoint": "models\\benchmark_v2\\codebert_20261019_082413",
+    "test_macro_f1": 0.1469
+  },
+  "checkpoint_label_config": {
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1",
+      "2": "LABEL_2",
+      "3": "LABEL_3",
+      "4": "LABEL_4"
+    },
+    "matches_ERROR_LABELS_index_order": true,
+    "explanation": "Training uses label_id from LABEL_TO_ID; argmax index maps to ID_TO_LABEL."
+  },
+  "diagnostics_phase3_checkpoint": {
+    "val": {
+      "n": 16,
+      "true_label_counts": {
+        "correct": 10,
+        "wrong_initialization": 2,
+        "wrong_operator": 2,
+        "wrong_condition": 2
+      },
+      "predicted_label_counts": {
+        "correct": 16
+      },
+      "per_class_recall": {
+        "correct": 1.0,
+        "wrong_initialization": 0.0,
+        "off_by_one_loop": 0.0,
+        "wrong_operator": 0.0,
+        "wrong_condition": 0.0
+      },
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "macro_f1": 0.1923,
+      "accuracy": 0.625,
+      "mean_softmax_entropy": 1.6011,
+      "max_predicted_class_fraction": 1.0,
+      "collapse_warning": true,
+      "probability_note": "Softmax over logits; HF config id2label is generic LABEL_0..4 — indices match ERROR_LABELS order."
+    },
+    "test_historical": {
+      "n": 31,
+      "true_label_counts": {
+        "correct": 18,
+        "wrong_initialization": 2,
+        "off_by_one_loop": 4,
+        "wrong_operator": 5,
+        "wrong_condition": 2
+      },
+      "predicted_label_counts": {
+        "correct": 31
+      },
+      "per_class_recall": {
+        "correct": 1.0,
+        "wrong_initialization": 0.0,
+        "off_by_one_loop": 0.0,
+        "wrong_operator": 0.0,
+        "wrong_condition": 0.0
+      },
+      "confusion_matrix": [
+        [
+          18,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "macro_f1": 0.1469,
+      "accuracy": 0.5806,
+      "mean_softmax_entropy": 1.6,
+      "max_predicted_class_fraction": 1.0,
+      "collapse_warning": true,
+      "probability_note": "Softmax over logits; HF config id2label is generic LABEL_0..4 — indices match ERROR_LABELS order."
+    }
+  },
+  "tfidf_baseline_val": {
+    "macro_f1": 0.2222,
+    "predicted_label_counts": {
+      "wrong_initialization": 7,
+      "off_by_one_loop": 3,
+      "wrong_condition": 1,
+      "correct": 5
+    }
+  },
+  "collapse_diagnosis": {
+    "observed_facts": [
+      "Phase-3 test predictions: 100% one class (correct).",
+      "Mean softmax entropy on test ≈ 1.60 (high ≈ uncertain/uniform)."
+    ],
+    "hypotheses_not_proven": [
+      {
+        "hypothesis": "Label ID mismatch",
+        "reason": "Unless checkpoint diagnostics show impossible accuracy with random labels, mapping appears consistent.",
+        "smallest_test": "Compare per-class val recall with manual label spot-check on 5 samples."
+      }
+    ]
+  }
+}

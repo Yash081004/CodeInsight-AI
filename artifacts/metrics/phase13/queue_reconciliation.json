@@ -1,0 +1,477 @@
+{
+  "generated_at": "2026-10-21T09:31:55.213812+00:00",
+  "human_reviewed": false,
+  "source_queue_path": "data\\benchmark_v3\\classification\\review_queue.json",
+  "source_csv_path": "data\\benchmark_v3\\classification\\dataset.csv",
+  "summary_by_mismatch_class": {
+    "queue_only_excluded_mutation": 5,
+    "taxonomy_collision_multiple_mutations": 4,
+    "stale_queue_reason_vs_csv_sample": 1
+  },
+  "items": [
+    {
+      "queue_item": {
+        "template_id": "factorial_2",
+        "intended_label": "wrong_condition",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "base_case"
+      },
+      "mismatch_class": "queue_only_excluded_mutation",
+      "evidence": [
+        "Generator produced mutation(s) that still pass bundled tests; generate_benchmark.py skips adding them to dataset.csv and appends review_queue instead.",
+        "Matched 1 passing mutation variant(s); 0 CSV rows with same taxonomy key."
+      ],
+      "csv_strict_match_count": 0,
+      "csv_strict_sample_ids": [],
+      "csv_template_row_count": 3,
+      "csv_template_labels": [
+        "correct:none",
+        "correct:style_variant",
+        "wrong_operator:arithmetic_op"
+      ],
+      "generator_match_count": 1,
+      "generator_passing_variant_count": 1,
+      "generator_failing_variant_count": 0,
+      "generator_matches": [
+        {
+          "error_label": "wrong_condition",
+          "mutation_type": "base_case",
+          "mutation_description": "Changed base case from n<=1 to n<=0, causing extra recursion",
+          "code_hash_sha256": "e36b39c0decf5a2de5b75e5c88115bd327bc2fb74bb27599e99bd7833c933fa0",
+          "bundled_tests_pass": true,
+          "bundled_test_error": null
+        }
+      ],
+      "csv_code_hash_links": [],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "fibonacci_1",
+        "intended_label": "wrong_operator",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "arithmetic_op"
+      },
+      "mismatch_class": "queue_only_excluded_mutation",
+      "evidence": [
+        "Generator produced mutation(s) that still pass bundled tests; generate_benchmark.py skips adding them to dataset.csv and appends review_queue instead.",
+        "Matched 1 passing mutation variant(s); 0 CSV rows with same taxonomy key."
+      ],
+      "csv_strict_match_count": 0,
+      "csv_strict_sample_ids": [],
+      "csv_template_row_count": 5,
+      "csv_template_labels": [
+        "correct:none",
+        "correct:style_variant",
+        "off_by_one_loop:range_endpoint",
+        "wrong_condition:boundary_condition",
+        "wrong_initialization:variable_init"
+      ],
+      "generator_match_count": 1,
+      "generator_passing_variant_count": 1,
+      "generator_failing_variant_count": 0,
+      "generator_matches": [
+        {
+          "error_label": "wrong_operator",
+          "mutation_type": "arithmetic_op",
+          "mutation_description": "Changed + to - in Fibonacci recurrence",
+          "code_hash_sha256": "7ea7d75835fd3791953d42bc400dee7bf17d1f5f3f3113ee2037acd3a8610be2",
+          "bundled_tests_pass": true,
+          "bundled_test_error": null
+        }
+      ],
+      "csv_code_hash_links": [],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "fibonacci_1",
+        "intended_label": "wrong_condition",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "boundary_condition"
+      },
+      "mismatch_class": "taxonomy_collision_multiple_mutations",
+      "evidence": [
+        "Multiple distinct mutations share the same error_label + mutation_type; CSV may contain one variant while queue flags another.",
+        "CSV row hash-linked to generator: S0014 (tests_pass=False)."
+      ],
+      "csv_strict_match_count": 1,
+      "csv_strict_sample_ids": [
+        "S0014"
+      ],
+      "csv_template_row_count": 5,
+      "csv_template_labels": [
+        "correct:none",
+        "correct:style_variant",
+        "off_by_one_loop:range_endpoint",
+        "wrong_condition:boundary_condition",
+        "wrong_initialization:variable_init"
+      ],
+      "generator_match_count": 2,
+      "generator_passing_variant_count": 1,
+      "generator_failing_variant_count": 1,
+      "generator_matches": [
+        {
+          "error_label": "wrong_condition",
+          "mutation_type": "boundary_condition",
+          "mutation_description": "Changed n <= 0 to n < 0, fails for fib(0)",
+          "code_hash_sha256": "933769c2d6fdb70f8a630ee086c91cfcf236c60f7c8f69e899685b523ff2992d",
+          "bundled_tests_pass": false,
+          "bundled_test_error": "AssertionError"
+        },
+        {
+          "error_label": "wrong_condition",
+          "mutation_type": "boundary_condition",
+          "mutation_description": "Changed fibonacci base case from n==1 to n==0",
+          "code_hash_sha256": "173056a2132e07fe1f84c35a3b39d12bc749523c000d4a7e1953bd051a3cc1d6",
+          "bundled_tests_pass": true,
+          "bundled_test_error": null
+        }
+      ],
+      "csv_code_hash_links": [
+        {
+          "sample_id": "S0014",
+          "split": "test",
+          "code_hash_sha256": "933769c2d6fdb70f8a630ee086c91cfcf236c60f7c8f69e899685b523ff2992d",
+          "generator_tests_pass": false,
+          "mutation_description": "Changed n <= 0 to n < 0, fails for fib(0)"
+        }
+      ],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "fibonacci_2",
+        "intended_label": "wrong_condition",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "boundary_condition"
+      },
+      "mismatch_class": "taxonomy_collision_multiple_mutations",
+      "evidence": [
+        "Multiple distinct mutations share the same error_label + mutation_type; CSV may contain one variant while queue flags another.",
+        "CSV row hash-linked to generator: S0016 (tests_pass=False)."
+      ],
+      "csv_strict_match_count": 1,
+      "csv_strict_sample_ids": [
+        "S0016"
+      ],
+      "csv_template_row_count": 3,
+      "csv_template_labels": [
+        "correct:none",
+        "correct:style_variant",
+        "wrong_condition:boundary_condition"
+      ],
+      "generator_match_count": 2,
+      "generator_passing_variant_count": 1,
+      "generator_failing_variant_count": 1,
+      "generator_matches": [
+        {
+          "error_label": "wrong_condition",
+          "mutation_type": "boundary_condition",
+          "mutation_description": "Changed n <= 0 to n < 0, fails for fib(0)",
+          "code_hash_sha256": "ed0b40f2518b7a69cfe6a37875a99e0b2b352f6f72ba0a6195a3f91b4a077cfe",
+          "bundled_tests_pass": true,
+          "bundled_test_error": null
+        },
+        {
+          "error_label": "wrong_condition",
+          "mutation_type": "boundary_condition",
+          "mutation_description": "Changed fibonacci base case from n==1 to n==0",
+          "code_hash_sha256": "68f5cc040c5a6d612ccbc8b94a3e6cf34a176de2aa4f91d62fab2b9d8fe04820",
+          "bundled_tests_pass": false,
+          "bundled_test_error": "AssertionError"
+        }
+      ],
+      "csv_code_hash_links": [
+        {
+          "sample_id": "S0016",
+          "split": "test",
+          "code_hash_sha256": "68f5cc040c5a6d612ccbc8b94a3e6cf34a176de2aa4f91d62fab2b9d8fe04820",
+          "generator_tests_pass": false,
+          "mutation_description": "Changed fibonacci base case from n==1 to n==0"
+        }
+      ],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "is_prime_2",
+        "intended_label": "wrong_condition",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "boundary_condition"
+      },
+      "mismatch_class": "taxonomy_collision_multiple_mutations",
+      "evidence": [
+        "Multiple distinct mutations share the same error_label + mutation_type; CSV may contain one variant while queue flags another.",
+        "CSV row hash-linked to generator: S0024 (tests_pass=False)."
+      ],
+      "csv_strict_match_count": 1,
+      "csv_strict_sample_ids": [
+        "S0024"
+      ],
+      "csv_template_row_count": 5,
+      "csv_template_labels": [
+        "correct:none",
+        "correct:style_variant",
+        "wrong_condition:boundary_condition",
+        "wrong_condition:logic_inversion",
+        "wrong_operator:arithmetic_op"
+      ],
+      "generator_match_count": 2,
+      "generator_passing_variant_count": 1,
+      "generator_failing_variant_count": 1,
+      "generator_matches": [
+        {
+          "error_label": "wrong_condition",
+          "mutation_type": "boundary_condition",
+          "mutation_description": "Changed n < 2 to n < 1, incorrectly treating 1 as prime",
+          "code_hash_sha256": "3a7ac5e2d6b80119190974f0cb606125b0d5ee8f45ab5e62208a88662f5b612c",
+          "bundled_tests_pass": true,
+          "bundled_test_error": null
+        },
+        {
+          "error_label": "wrong_condition",
+          "mutation_type": "boundary_condition",
+          "mutation_description": "Changed special case from n==2 to n==3",
+          "code_hash_sha256": "d37f24b404e3dec3c2296a5cb64873a6bcacb4a9c1200f2c1b7e81a5ab95d29b",
+          "bundled_tests_pass": false,
+          "bundled_test_error": "AssertionError"
+        }
+      ],
+      "csv_code_hash_links": [
+        {
+          "sample_id": "S0024",
+          "split": "test",
+          "code_hash_sha256": "d37f24b404e3dec3c2296a5cb64873a6bcacb4a9c1200f2c1b7e81a5ab95d29b",
+          "generator_tests_pass": false,
+          "mutation_description": "Changed special case from n==2 to n==3"
+        }
+      ],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "palindrome_1",
+        "intended_label": "off_by_one_loop",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "loop_boundary"
+      },
+      "mismatch_class": "queue_only_excluded_mutation",
+      "evidence": [
+        "Generator produced mutation(s) that still pass bundled tests; generate_benchmark.py skips adding them to dataset.csv and appends review_queue instead.",
+        "Matched 1 passing mutation variant(s); 0 CSV rows with same taxonomy key."
+      ],
+      "csv_strict_match_count": 0,
+      "csv_strict_sample_ids": [],
+      "csv_template_row_count": 5,
+      "csv_template_labels": [
+        "correct:none",
+        "correct:style_variant",
+        "wrong_condition:logic_inversion",
+        "wrong_initialization:pointer_init",
+        "wrong_operator:increment_op"
+      ],
+      "generator_match_count": 1,
+      "generator_passing_variant_count": 1,
+      "generator_failing_variant_count": 0,
+      "generator_matches": [
+        {
+          "error_label": "off_by_one_loop",
+          "mutation_type": "loop_boundary",
+          "mutation_description": "Changed < to <= in pointer comparison, causes index issues",
+          "code_hash_sha256": "d2984cb61cb70d193bfdcbe0bc098df75ab3a41a6fe5c3e2cf579ddee9406c52",
+          "bundled_tests_pass": true,
+          "bundled_test_error": null
+        }
+      ],
+      "csv_code_hash_links": [],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "linear_search_2",
+        "intended_label": "wrong_initialization",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "index_init"
+      },
+      "mismatch_class": "queue_only_excluded_mutation",
+      "evidence": [
+        "Generator produced mutation(s) that still pass bundled tests; generate_benchmark.py skips adding them to dataset.csv and appends review_queue instead.",
+        "Matched 1 passing mutation variant(s); 0 CSV rows with same taxonomy key."
+      ],
+      "csv_strict_match_count": 0,
+      "csv_strict_sample_ids": [],
+      "csv_template_row_count": 4,
+      "csv_template_labels": [
+        "correct:none",
+        "correct:style_variant",
+        "wrong_condition:logic_inversion",
+        "wrong_operator:step_op"
+      ],
+      "generator_match_count": 1,
+      "generator_passing_variant_count": 1,
+      "generator_failing_variant_count": 0,
+      "generator_matches": [
+        {
+          "error_label": "wrong_initialization",
+          "mutation_type": "index_init",
+          "mutation_description": "Changed starting index from 0 to 1",
+          "code_hash_sha256": "acf4d697c5d1a1ca8c23f87a7bdd4706686ce85b866e11b72a1c59b018ba0f79",
+          "bundled_tests_pass": true,
+          "bundled_test_error": null
+        }
+      ],
+      "csv_code_hash_links": [],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "linear_search_2",
+        "intended_label": "off_by_one_loop",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "loop_boundary"
+      },
+      "mismatch_class": "queue_only_excluded_mutation",
+      "evidence": [
+        "Generator produced mutation(s) that still pass bundled tests; generate_benchmark.py skips adding them to dataset.csv and appends review_queue instead.",
+        "Matched 1 passing mutation variant(s); 0 CSV rows with same taxonomy key."
+      ],
+      "csv_strict_match_count": 0,
+      "csv_strict_sample_ids": [],
+      "csv_template_row_count": 4,
+      "csv_template_labels": [
+        "correct:none",
+        "correct:style_variant",
+        "wrong_condition:logic_inversion",
+        "wrong_operator:step_op"
+      ],
+      "generator_match_count": 1,
+      "generator_passing_variant_count": 1,
+      "generator_failing_variant_count": 0,
+      "generator_matches": [
+        {
+          "error_label": "off_by_one_loop",
+          "mutation_type": "loop_boundary",
+          "mutation_description": "Changed loop boundary to skip last element",
+          "code_hash_sha256": "d8852bb78c61317af77a88862b3e2ef1d4b2d6532d791e3273c18e87e6f58d33",
+          "bundled_tests_pass": true,
+          "bundled_test_error": null
+        }
+      ],
+      "csv_code_hash_links": [],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "bubble_sort_1",
+        "intended_label": "off_by_one_loop",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "range_endpoint"
+      },
+      "mismatch_class": "taxonomy_collision_multiple_mutations",
+      "evidence": [
+        "Multiple distinct mutations share the same error_label + mutation_type; CSV may contain one variant while queue flags another.",
+        "CSV row hash-linked to generator: S0059 (tests_pass=False)."
+      ],
+      "csv_strict_match_count": 1,
+      "csv_strict_sample_ids": [
+        "S0059"
+      ],
+      "csv_template_row_count": 4,
+      "csv_template_labels": [
+        "correct:none",
+        "correct:style_variant",
+        "off_by_one_loop:range_endpoint",
+        "wrong_operator:comparison_op"
+      ],
+      "generator_match_count": 2,
+      "generator_passing_variant_count": 1,
+      "generator_failing_variant_count": 1,
+      "generator_matches": [
+        {
+          "error_label": "off_by_one_loop",
+          "mutation_type": "range_endpoint",
+          "mutation_description": "Changed bubble sort inner loop boundary, causes index out of range",
+          "code_hash_sha256": "b989d0aa701c4bd1cccf48a2feffb7c6d800269f08aef3de356de00765b74903",
+          "bundled_tests_pass": false,
+          "bundled_test_error": "IndexError: list index out of range"
+        },
+        {
+          "error_label": "off_by_one_loop",
+          "mutation_type": "range_endpoint",
+          "mutation_description": "Reduced bubble sort passes by 1",
+          "code_hash_sha256": "afaa6e74922aa81887a1904e35a64abe29ee11cf93b7dad4cba243e445df69bc",
+          "bundled_tests_pass": true,
+          "bundled_test_error": null
+        }
+      ],
+      "csv_code_hash_links": [
+        {
+          "sample_id": "S0059",
+          "split": "test",
+          "code_hash_sha256": "b989d0aa701c4bd1cccf48a2feffb7c6d800269f08aef3de356de00765b74903",
+          "generator_tests_pass": false,
+          "mutation_description": "Changed bubble sort inner loop boundary, causes index out of range"
+        }
+      ],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "human_reviewed": false
+    },
+    {
+      "queue_item": {
+        "template_id": "linear_search_1",
+        "intended_label": "off_by_one_loop",
+        "reason": "mutation_still_passes_tests",
+        "mutation_type": "range_endpoint"
+      },
+      "mismatch_class": "stale_queue_reason_vs_csv_sample",
+      "evidence": [
+        "Queue reason mutation_still_passes_tests but hash-linked CSV sample fails bundled tests today.",
+        "Linked sample S0047 (train): Shortened range by 1, missing last element"
+      ],
+      "csv_strict_match_count": 1,
+      "csv_strict_sample_ids": [
+        "S0047"
+      ],
+      "csv_template_row_count": 6,
+      "csv_template_labels": [
+        "correct:none",
+        "correct:style_variant",
+        "off_by_one_loop:range_endpoint",
+        "wrong_condition:logic_inversion"
+      ],
+      "generator_match_count": 1,
+      "generator_passing_variant_count": 0,
+      "generator_failing_variant_count": 1,
+      "generator_matches": [
+        {
+          "error_label": "off_by_one_loop",
+          "mutation_type": "range_endpoint",
+          "mutation_description": "Shortened range by 1, missing last element",
+          "code_hash_sha256": "1913eb77450700fae7aab49263baa14bceb83b05261780faaff1b1e33c9df14a",
+          "bundled_tests_pass": false,
+          "bundled_test_error": "AssertionError"
+        }
+      ],
+      "csv_code_hash_links": [
+        {
+          "sample_id": "S0047",
+          "split": "train",
+          "code_hash_sha256": "1913eb77450700fae7aab49263baa14bceb83b05261780faaff1b1e33c9df14a",
+          "generator_tests_pass": false,
+          "mutation_description": "Shortened range by 1, missing last element"
+        }
+      ],
+      "recommended_next_action": "requires_reviewer_intended_behavior",
+      "human_reviewed": false
+    }
+  ]
+}
