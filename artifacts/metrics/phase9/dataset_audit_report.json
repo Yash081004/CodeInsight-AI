@@ -1,0 +1,3905 @@
+{
+  "generated_at": "2026-10-21T09:32:17.887225+00:00",
+  "datasets": {
+    "legacy_v1": {
+      "dataset_name": "legacy_v1",
+      "path": "data\\classification\\dataset.csv",
+      "exists": true,
+      "checksum_sha256": "c7ae7a8d836b64c9aa139e9c1fe77724329840a5629f87a08b3a2d1e993aff37",
+      "total_samples": 91,
+      "invalid_label_values": [],
+      "class_counts": {
+        "correct": 42,
+        "wrong_operator": 16,
+        "wrong_initialization": 12,
+        "wrong_condition": 12,
+        "off_by_one_loop": 9
+      },
+      "split_counts": {
+        "train": 61,
+        "test": 16,
+        "val": 14
+      },
+      "class_counts_per_split": {
+        "test": {
+          "correct": 8,
+          "wrong_initialization": 2,
+          "off_by_one_loop": 2,
+          "wrong_operator": 2,
+          "wrong_condition": 2
+        },
+        "train": {
+          "correct": 28,
+          "wrong_operator": 11,
+          "wrong_condition": 9,
+          "wrong_initialization": 7,
+          "off_by_one_loop": 6
+        },
+        "val": {
+          "correct": 6,
+          "wrong_initialization": 3,
+          "wrong_operator": 3,
+          "off_by_one_loop": 1,
+          "wrong_condition": 1
+        }
+      },
+      "independent_families": 21,
+      "independent_problem_types": 12,
+      "problem_type_overlap_across_splits": [
+        {
+          "splits": [
+            "test",
+            "train"
+          ],
+          "problem_types": [
+            "factorial",
+            "fibonacci"
+          ]
+        },
+        {
+          "splits": [
+            "test",
+            "val"
+          ],
+          "problem_types": [
+            "factorial",
+            "palindrome"
+          ]
+        },
+        {
+          "splits": [
+            "train",
+            "val"
+          ],
+          "problem_types": [
+            "factorial",
+            "reverse_string"
+          ]
+        }
+      ],
+      "families_per_split": {
+        "test": [
+          "factorial_1",
+          "fibonacci_1",
+          "gcd_1",
+          "palindrome_2"
+        ],
+        "train": [
+          "bubble_sort_1",
+          "count_vowels_1",
+          "factorial_2",
+          "fibonacci_2",
+          "is_prime_1",
+          "is_prime_2",
+          "linear_search_1",
+          "linear_search_2",
+          "max_element_1",
+          "max_element_2",
+          "power_1",
+          "reverse_string_1",
+          "sum_list_1",
+          "sum_list_2"
+        ],
+        "val": [
+          "factorial_3",
+          "palindrome_1",
+          "reverse_string_2"
+        ]
+      },
+      "families_per_split_counts": {
+        "test": 4,
+        "train": 14,
+        "val": 3
+      },
+      "split_overlap": {
+        "template_leakage": false,
+        "family_leakage": false,
+        "overlapping_families": []
+      },
+      "template_id_split_leakage": {},
+      "duplicate_sample_ids": 0,
+      "duplicate_normalized_code_bodies": 0,
+      "near_duplicate_same_label_pairs": [
+        {
+          "sample_a": "S0007",
+          "sample_b": "S0077",
+          "label": "correct",
+          "similarity": 0.925
+        },
+        {
+          "sample_a": "S0017",
+          "sample_b": "S0087",
+          "label": "correct",
+          "similarity": 0.935
+        },
+        {
+          "sample_a": "S0018",
+          "sample_b": "S0088",
+          "label": "correct",
+          "similarity": 0.929
+        },
+        {
+          "sample_a": "S0037",
+          "sample_b": "S0038",
+          "label": "wrong_condition",
+          "similarity": 0.988
+        }
+      ],
+      "near_duplicate_scan_capped": false,
+      "syntax_invalid_samples": [],
+      "empty_expected_behavior_count": 0,
+      "verified_findings": [
+        {
+          "type": "no_family_id_overlap_across_splits",
+          "confidence": "verified"
+        },
+        {
+          "type": "labels_and_syntax_schema_ok",
+          "confidence": "verified"
+        }
+      ],
+      "concerns": [
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0001",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0002",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0003",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0004",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0005",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0006",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0007",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0008",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0009",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0010",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0011",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0012",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0013",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0014",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0015",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0016",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0017",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0018",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0019",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0020",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0021",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0022",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0023",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0024",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0025",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0026",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0027",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0028",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0029",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0030",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0031",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0032",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0033",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0034",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0035",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0036",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0037",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0038",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0039",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0040",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0041",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0042",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0043",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0044",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0045",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0046",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0047",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0048",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0049",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0050",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0051",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0052",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0053",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0054",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0055",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0056",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0057",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0058",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0059",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0060",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0061",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0062",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0063",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0064",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0065",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0066",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0067",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0068",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0069",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0070",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0071",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0072",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0073",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0074",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0075",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0076",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0077",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0078",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0079",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0080",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0081",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0082",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0083",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0084",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0085",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0086",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0087",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0088",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0089",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0090",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0091",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        }
+      ]
+    },
+    "benchmark_v2": {
+      "dataset_name": "benchmark_v2",
+      "path": "data\\benchmark_v2\\classification\\dataset.csv",
+      "exists": true,
+      "checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+      "total_samples": 121,
+      "invalid_label_values": [],
+      "class_counts": {
+        "correct": 66,
+        "wrong_operator": 18,
+        "wrong_initialization": 14,
+        "wrong_condition": 14,
+        "off_by_one_loop": 9
+      },
+      "split_counts": {
+        "train": 74,
+        "test": 31,
+        "val": 16
+      },
+      "class_counts_per_split": {
+        "test": {
+          "correct": 18,
+          "wrong_operator": 5,
+          "off_by_one_loop": 4,
+          "wrong_initialization": 2,
+          "wrong_condition": 2
+        },
+        "train": {
+          "correct": 38,
+          "wrong_operator": 11,
+          "wrong_initialization": 10,
+          "wrong_condition": 10,
+          "off_by_one_loop": 5
+        },
+        "val": {
+          "correct": 10,
+          "wrong_initialization": 2,
+          "wrong_operator": 2,
+          "wrong_condition": 2
+        }
+      },
+      "independent_families": 20,
+      "independent_problem_types": 20,
+      "problem_type_overlap_across_splits": [],
+      "families_per_split": {
+        "test": [
+          "clamp",
+          "factorial",
+          "is_sorted",
+          "linear_search",
+          "sorting"
+        ],
+        "train": [
+          "fibonacci",
+          "find_min",
+          "gcd",
+          "max_element",
+          "mean_list",
+          "power",
+          "prime",
+          "reverse_list",
+          "reverse_string",
+          "stack_ops",
+          "sum_digits",
+          "sum_list"
+        ],
+        "val": [
+          "count_evens",
+          "count_vowels",
+          "palindrome"
+        ]
+      },
+      "families_per_split_counts": {
+        "test": 5,
+        "train": 12,
+        "val": 3
+      },
+      "split_overlap": {
+        "template_leakage": false,
+        "family_leakage": false,
+        "overlapping_families": []
+      },
+      "template_id_split_leakage": {},
+      "duplicate_sample_ids": 0,
+      "duplicate_normalized_code_bodies": 4,
+      "duplicate_code_groups_sample": {},
+      "near_duplicate_same_label_pairs": [
+        {
+          "sample_a": "S0021",
+          "sample_b": "S0095",
+          "label": "correct",
+          "similarity": 0.925
+        },
+        {
+          "sample_a": "S0023",
+          "sample_b": "S0024",
+          "label": "wrong_condition",
+          "similarity": 0.988
+        },
+        {
+          "sample_a": "S0055",
+          "sample_b": "S0105",
+          "label": "correct",
+          "similarity": 0.935
+        },
+        {
+          "sample_a": "S0058",
+          "sample_b": "S0106",
+          "label": "correct",
+          "similarity": 0.929
+        },
+        {
+          "sample_a": "S0065",
+          "sample_b": "S0080",
+          "label": "correct",
+          "similarity": 0.988
+        },
+        {
+          "sample_a": "S0066",
+          "sample_b": "S0081",
+          "label": "wrong_initialization",
+          "similarity": 0.988
+        },
+        {
+          "sample_a": "S0067",
+          "sample_b": "S0082",
+          "label": "wrong_operator",
+          "similarity": 0.988
+        },
+        {
+          "sample_a": "S0068",
+          "sample_b": "S0071",
+          "label": "correct",
+          "similarity": 0.95
+        },
+        {
+          "sample_a": "S0069",
+          "sample_b": "S0072",
+          "label": "wrong_operator",
+          "similarity": 0.951
+        },
+        {
+          "sample_a": "S0108",
+          "sample_b": "S0116",
+          "label": "correct",
+          "similarity": 0.991
+        },
+        {
+          "sample_a": "S0109",
+          "sample_b": "S0110",
+          "label": "correct",
+          "similarity": 0.967
+        }
+      ],
+      "near_duplicate_scan_capped": false,
+      "syntax_invalid_samples": [],
+      "empty_expected_behavior_count": 0,
+      "manifest_checksum": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+      "verified_findings": [
+        {
+          "type": "no_family_id_overlap_across_splits",
+          "confidence": "verified"
+        },
+        {
+          "type": "labels_and_syntax_schema_ok",
+          "confidence": "verified"
+        }
+      ],
+      "concerns": [
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0001",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0002",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0003",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0004",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0005",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0006",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0007",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0008",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0009",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0010",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0011",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0012",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0013",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0014",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0015",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0016",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0017",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0018",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0019",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0020",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0021",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0022",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0023",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0024",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0025",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0026",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0027",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0028",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0029",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0030",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0031",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0032",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0033",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0034",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0035",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0036",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0037",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0038",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0039",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0040",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0041",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0042",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0043",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0044",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0045",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0046",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0047",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0048",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0049",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0050",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0051",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0052",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0053",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0054",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0055",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0056",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0057",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0058",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0059",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0060",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0061",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0062",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0063",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0064",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0065",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0066",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0067",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0068",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0069",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0070",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0071",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0072",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0073",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0074",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0075",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0076",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0077",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0078",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0079",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0080",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0081",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0082",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0083",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0084",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0085",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0086",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0087",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0088",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0089",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0090",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0091",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0092",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0093",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0094",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0095",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0096",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0097",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0098",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0099",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0100",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0101",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0102",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0103",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0104",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0105",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0106",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0107",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0108",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0109",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0110",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0111",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0112",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0113",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0114",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0115",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0116",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0117",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0118",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0119",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0120",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0121",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        }
+      ]
+    },
+    "benchmark_v3": {
+      "dataset_name": "benchmark_v3",
+      "path": "data\\benchmark_v3\\classification\\dataset.csv",
+      "exists": true,
+      "checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+      "total_samples": 190,
+      "invalid_label_values": [],
+      "class_counts": {
+        "correct": 132,
+        "wrong_operator": 18,
+        "wrong_condition": 16,
+        "wrong_initialization": 14,
+        "off_by_one_loop": 10
+      },
+      "split_counts": {
+        "train": 94,
+        "test": 66,
+        "val": 30
+      },
+      "class_counts_per_split": {
+        "test": {
+          "correct": 40,
+          "wrong_condition": 10,
+          "wrong_operator": 8,
+          "wrong_initialization": 4,
+          "off_by_one_loop": 4
+        },
+        "train": {
+          "correct": 72,
+          "wrong_initialization": 7,
+          "wrong_operator": 6,
+          "wrong_condition": 5,
+          "off_by_one_loop": 4
+        },
+        "val": {
+          "correct": 20,
+          "wrong_operator": 4,
+          "wrong_initialization": 3,
+          "off_by_one_loop": 2,
+          "wrong_condition": 1
+        }
+      },
+      "independent_families": 53,
+      "independent_problem_types": 53,
+      "problem_type_overlap_across_splits": [],
+      "families_per_split": {
+        "val": [
+          "ends_with",
+          "factorial",
+          "palindrome",
+          "second_largest",
+          "string_len",
+          "tuple_sum",
+          "zip_sum"
+        ],
+        "test": [
+          "clamp",
+          "col_sum",
+          "count_evens",
+          "count_positive",
+          "count_vowels",
+          "count_words",
+          "fibonacci",
+          "find_min",
+          "gcd",
+          "max_element",
+          "prime",
+          "reverse_list",
+          "running_max",
+          "sorting",
+          "strip_spaces"
+        ],
+        "train": [
+          "binary_search",
+          "copy_matrix",
+          "count_char",
+          "cumulative_sum",
+          "digit_count",
+          "double_list",
+          "flatten_once",
+          "insertion_sort",
+          "is_ascending",
+          "is_even",
+          "is_palindrome_num",
+          "is_sorted",
+          "last_index",
+          "linear_search",
+          "list_max_index",
+          "matrix_trace",
+          "mean_list",
+          "merge_sorted_lists",
+          "mod_list",
+          "pair_sum_target",
+          "power",
+          "remove_negatives",
+          "replace_char",
+          "reverse_string",
+          "rotate_left",
+          "sign_list",
+          "stack_ops",
+          "starts_with",
+          "sum_digits",
+          "sum_list",
+          "unique_count"
+        ]
+      },
+      "families_per_split_counts": {
+        "val": 7,
+        "test": 15,
+        "train": 31
+      },
+      "split_overlap": {
+        "template_leakage": false,
+        "family_leakage": false,
+        "overlapping_families": []
+      },
+      "template_id_split_leakage": {},
+      "duplicate_sample_ids": 0,
+      "duplicate_normalized_code_bodies": 4,
+      "duplicate_code_groups_sample": {},
+      "near_duplicate_same_label_pairs": [
+        {
+          "sample_a": "S0021",
+          "sample_b": "S0131",
+          "label": "correct",
+          "similarity": 0.925
+        },
+        {
+          "sample_a": "S0023",
+          "sample_b": "S0024",
+          "label": "wrong_condition",
+          "similarity": 0.988
+        },
+        {
+          "sample_a": "S0055",
+          "sample_b": "S0141",
+          "label": "correct",
+          "similarity": 0.935
+        },
+        {
+          "sample_a": "S0058",
+          "sample_b": "S0142",
+          "label": "correct",
+          "similarity": 0.929
+        },
+        {
+          "sample_a": "S0065",
+          "sample_b": "S0080",
+          "label": "correct",
+          "similarity": 0.988
+        },
+        {
+          "sample_a": "S0066",
+          "sample_b": "S0081",
+          "label": "wrong_initialization",
+          "similarity": 0.988
+        },
+        {
+          "sample_a": "S0067",
+          "sample_b": "S0082",
+          "label": "wrong_operator",
+          "similarity": 0.988
+        },
+        {
+          "sample_a": "S0068",
+          "sample_b": "S0071",
+          "label": "correct",
+          "similarity": 0.95
+        },
+        {
+          "sample_a": "S0069",
+          "sample_b": "S0072",
+          "label": "wrong_operator",
+          "similarity": 0.951
+        },
+        {
+          "sample_a": "S0077",
+          "sample_b": "S0112",
+          "label": "correct",
+          "similarity": 0.955
+        },
+        {
+          "sample_a": "S0089",
+          "sample_b": "S0158",
+          "label": "correct",
+          "similarity": 0.936
+        },
+        {
+          "sample_a": "S0091",
+          "sample_b": "S0160",
+          "label": "correct",
+          "similarity": 0.935
+        },
+        {
+          "sample_a": "S0106",
+          "sample_b": "S0173",
+          "label": "correct",
+          "similarity": 0.931
+        },
+        {
+          "sample_a": "S0144",
+          "sample_b": "S0152",
+          "label": "correct",
+          "similarity": 0.991
+        }
+      ],
+      "near_duplicate_scan_capped": true,
+      "syntax_invalid_samples": [],
+      "empty_expected_behavior_count": 0,
+      "manifest_checksum": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+      "review_queue_count": 10,
+      "review_queue_reasons": [
+        [
+          "mutation_still_passes_tests",
+          10
+        ]
+      ],
+      "verified_findings": [
+        {
+          "type": "no_family_id_overlap_across_splits",
+          "confidence": "verified"
+        },
+        {
+          "type": "labels_and_syntax_schema_ok",
+          "confidence": "verified"
+        }
+      ],
+      "concerns": [
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0001",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0002",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0003",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0004",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0005",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0006",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0007",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0008",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0009",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0010",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0011",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0012",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0013",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0014",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0015",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0016",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0017",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0018",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0019",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0020",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0021",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0022",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0023",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0024",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0025",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0026",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0027",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0028",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0029",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0030",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0031",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0032",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0033",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0034",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0035",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0036",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0037",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0038",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0039",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0040",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0041",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0042",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0043",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0044",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0045",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0046",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0047",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0048",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0049",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0050",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0051",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0052",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0053",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0054",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0055",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0056",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0057",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0058",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0059",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0060",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0061",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0062",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0063",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0064",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0065",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0066",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0067",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0068",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0069",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0070",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0071",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0072",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0073",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0074",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0075",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0076",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0077",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0078",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0079",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0080",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0081",
+          "status": "validated",
+          "label": "wrong_initialization",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0082",
+          "status": "validated",
+          "label": "wrong_operator",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0083",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0084",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0085",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0086",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0087",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0088",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0089",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0090",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0091",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0092",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0093",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0094",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0095",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0096",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0097",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0098",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0099",
+          "status": "validated",
+          "label": "off_by_one_loop",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0100",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0101",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0102",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0103",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0104",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0105",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0106",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0107",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0108",
+          "status": "validated",
+          "label": "wrong_condition",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0109",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0110",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0111",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0112",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0113",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0114",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0115",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0116",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0117",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0118",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0119",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0120",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0121",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0122",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0123",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0124",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0125",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0126",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0127",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0128",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0129",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0130",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0131",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0132",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0133",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0134",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0135",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0136",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0137",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0138",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0139",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0140",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0141",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0142",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0143",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0144",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0145",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0146",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0147",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0148",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0149",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0150",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0151",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0152",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0153",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0154",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0155",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0156",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0157",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0158",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0159",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0160",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0161",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0162",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0163",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0164",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0165",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0166",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0167",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0168",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0169",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0170",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0171",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0172",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0173",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0174",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0175",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0176",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0177",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0178",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0179",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0180",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0181",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0182",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0183",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0184",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0185",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0186",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0187",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0188",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0189",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "validation_status_not_valid",
+          "sample_id": "S0190",
+          "status": "validated",
+          "label": "correct",
+          "confidence": "verified"
+        },
+        {
+          "type": "mutation_still_passes_tests",
+          "template_id": "factorial_2",
+          "intended_label": "wrong_condition",
+          "confidence": "verified",
+          "note": "Synthetic label may not match observable behavior under bundled tests."
+        },
+        {
+          "type": "mutation_still_passes_tests",
+          "template_id": "fibonacci_1",
+          "intended_label": "wrong_operator",
+          "confidence": "verified",
+          "note": "Synthetic label may not match observable behavior under bundled tests."
+        },
+        {
+          "type": "mutation_still_passes_tests",
+          "template_id": "fibonacci_1",
+          "intended_label": "wrong_condition",
+          "confidence": "verified",
+          "note": "Synthetic label may not match observable behavior under bundled tests."
+        },
+        {
+          "type": "mutation_still_passes_tests",
+          "template_id": "fibonacci_2",
+          "intended_label": "wrong_condition",
+          "confidence": "verified",
+          "note": "Synthetic label may not match observable behavior under bundled tests."
+        },
+        {
+          "type": "mutation_still_passes_tests",
+          "template_id": "is_prime_2",
+          "intended_label": "wrong_condition",
+          "confidence": "verified",
+          "note": "Synthetic label may not match observable behavior under bundled tests."
+        },
+        {
+          "type": "mutation_still_passes_tests",
+          "template_id": "palindrome_1",
+          "intended_label": "off_by_one_loop",
+          "confidence": "verified",
+          "note": "Synthetic label may not match observable behavior under bundled tests."
+        },
+        {
+          "type": "mutation_still_passes_tests",
+          "template_id": "linear_search_2",
+          "intended_label": "wrong_initialization",
+          "confidence": "verified",
+          "note": "Synthetic label may not match observable behavior under bundled tests."
+        },
+        {
+          "type": "mutation_still_passes_tests",
+          "template_id": "linear_search_2",
+          "intended_label": "off_by_one_loop",
+          "confidence": "verified",
+          "note": "Synthetic label may not match observable behavior under bundled tests."
+        },
+        {
+          "type": "mutation_still_passes_tests",
+          "template_id": "bubble_sort_1",
+          "intended_label": "off_by_one_loop",
+          "confidence": "verified",
+          "note": "Synthetic label may not match observable behavior under bundled tests."
+        },
+        {
+          "type": "mutation_still_passes_tests",
+          "template_id": "linear_search_1",
+          "intended_label": "off_by_one_loop",
+          "confidence": "verified",
+          "note": "Synthetic label may not match observable behavior under bundled tests."
+        }
+      ]
+    }
+  },
+  "metrics_snapshot": {
+    "legacy_v1_test": {
+      "codebert": {
+        "model_type": "codebert_finetuned",
+        "accuracy": 0.5,
+        "macro_precision": 0.1,
+        "macro_recall": 0.2,
+        "macro_f1": 0.1333,
+        "per_class_metrics": {
+          "correct": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667,
+            "support": 8
+          },
+          "wrong_initialization": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          },
+          "off_by_one_loop": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          },
+          "wrong_operator": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          },
+          "wrong_condition": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          }
+        },
+        "sample_count": 16,
+        "best_epoch": 1,
+        "evaluated_at": "2026-10-19T10:34:16.794580"
+      },
+      "tfidf": {
+        "model_type": "baseline_logreg",
+        "eval_split": "test",
+        "preprocessing_fit_split": "train",
+        "accuracy": 0.4375,
+        "macro_precision": 0.2417,
+        "macro_recall": 0.325,
+        "macro_f1": 0.2717,
+        "per_class_metrics": {
+          "correct": {
+            "precision": 0.625,
+            "recall": 0.625,
+            "f1": 0.625,
+            "support": 8
+          },
+          "wrong_initialization": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          },
+          "off_by_one_loop": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          },
+          "wrong_operator": {
+            "precision": 0.3333,
+            "recall": 0.5,
+            "f1": 0.4,
+            "support": 2
+          },
+          "wrong_condition": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1": 0.3333,
+            "support": 2
+          }
+        },
+        "sample_count": 16,
+        "evaluated_at": "2026-10-19T11:19:18.221029",
+        "dataset_checksum_sha256": "c7ae7a8d836b64c9aa139e9c1fe77724329840a5629f87a08b3a2d1e993aff37"
+      },
+      "confusion_codebert": {
+        "labels": [
+          "correct",
+          "wrong_initialization",
+          "off_by_one_loop",
+          "wrong_operator",
+          "wrong_condition"
+        ],
+        "matrix": [
+          [
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "model_type": "codebert"
+      }
+    },
+    "benchmark_v2_test": {
+      "codebert": {
+        "model_type": "codebert_finetuned",
+        "dataset_version": "benchmark_v2",
+        "eval_split": "test",
+        "accuracy": 0.5806,
+        "macro_precision": 0.1161,
+        "macro_recall": 0.2,
+        "macro_f1": 0.1469,
+        "weighted_f1": 0.4266,
+        "per_class_metrics": {
+          "correct": {
+            "precision": 0.5806,
+            "recall": 1.0,
+            "f1": 0.7347,
+            "support": 18
+          },
+          "wrong_initialization": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          },
+          "off_by_one_loop": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 4
+          },
+          "wrong_operator": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 5
+          },
+          "wrong_condition": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          }
+        },
+        "sample_count": 31,
+        "test_family_count": 5,
+        "best_epoch": 1,
+        "best_val_macro_f1": 0.1923,
+        "dataset_checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+        "inference_ms_per_sample_test_cpu": 374.62,
+        "probability_note": "Softmax scores \u2014 not calibrated confidence.",
+        "evaluated_at": "2026-10-19T14:00:58.050263"
+      },
+      "tfidf": {
+        "model_type": "tfidf_logreg_baseline",
+        "dataset_version": "benchmark_v2",
+        "dataset_checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+        "eval_split": "test",
+        "train_n": 74,
+        "val_n": 16,
+        "test_n": 31,
+        "sample_count": 31,
+        "accuracy": 0.3871,
+        "macro_precision": 0.3928,
+        "macro_recall": 0.3889,
+        "macro_f1": 0.3399,
+        "weighted_f1": 0.3932,
+        "per_class_metrics": {
+          "correct": {
+            "precision": 0.6154,
+            "recall": 0.4444,
+            "f1": 0.5161
+          },
+          "wrong_initialization": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          "off_by_one_loop": {
+            "precision": 0.1818,
+            "recall": 0.5,
+            "f1": 0.2667
+          },
+          "wrong_operator": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "wrong_condition": {
+            "precision": 0.1667,
+            "recall": 0.5,
+            "f1": 0.25
+          }
+        },
+        "evaluated_at": "2026-10-19T06:28:41.716229+00:00"
+      }
+    },
+    "similarity_v1_test": {
+      "evaluated_at": "2026-10-20T04:52:28.252598+00:00",
+      "methodology": "hybrid_midband_v1; tf_low/tf_confirm grid on val; test reported once",
+      "api_threshold": 0.8,
+      "tf_low": 0.4,
+      "tf_confirm": 0.55,
+      "validation_hybrid_f1_grid": -1.0,
+      "validation": {
+        "positive_count": 3,
+        "negative_count": 1,
+        "codebert_only_at_threshold": {
+          "accuracy": 0.75,
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "threshold": 0.8,
+          "sample_count": 4,
+          "roc_auc": 1.0
+        },
+        "hybrid": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "sample_count": 4,
+          "false_positives": 0,
+          "false_negatives": 0
+        }
+      },
+      "test": {
+        "positive_count": 4,
+        "negative_count": 3,
+        "codebert_only_at_threshold": {
+          "accuracy": 0.5714285714285714,
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "f1": 0.7272727272727273,
+          "threshold": 0.8,
+          "sample_count": 7,
+          "roc_auc": 0.9166666666666667
+        },
+        "tfidf_only_at_0.55": {
+          "accuracy": 0.7142857142857143,
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "threshold": 0.55,
+          "sample_count": 7,
+          "roc_auc": 1.0
+        },
+        "hybrid": {
+          "accuracy": 0.5714285714285714,
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "f1": 0.7272727272727273,
+          "sample_count": 7,
+          "false_positives": 3,
+          "false_negatives": 0
+        }
+      },
+      "diagnostic_by_relationship": {
+        "identical": {
+          "count": 1,
+          "positive_labels": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "rename_equivalent": {
+          "count": 1,
+          "positive_labels": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "syntax_equivalent": {
+          "count": 1,
+          "positive_labels": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "different_algorithm": {
+          "count": 1,
+          "positive_labels": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "operator_change": {
+          "count": 1,
+          "positive_labels": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "off_by_one": {
+          "count": 1,
+          "positive_labels": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "condition_inverted": {
+          "count": 1,
+          "positive_labels": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "diagnostic_pairs": [
+        {
+          "id": "diag_identical_1",
+          "family_id": "add_two",
+          "relationship": "identical",
+          "label": 1,
+          "code_a": "def add(a, b):\n    return a + b",
+          "code_b": "def add(a, b):\n    return a + b",
+          "codebert_score": 1.0,
+          "tfidf_score": 1.0,
+          "pred": 1,
+          "decision_model": "hybrid_confirmed"
+        },
+        {
+          "id": "diag_rename_1",
+          "family_id": "sum_list",
+          "relationship": "rename_equivalent",
+          "label": 1,
+          "code_a": "def calculate_sum(numbers_list):\n    total_value = 0\n    for number in numbers_list:\n        total_value += number\n    return total_value",
+          "code_b": "def calculate_sum(arr):\n    s = 0\n    for x in arr:\n        s += x\n    return s",
+          "codebert_score": 0.9854,
+          "tfidf_score": 0.3166,
+          "pred": 1,
+          "decision_model": "hybrid_codebert_rename_tolerance"
+        },
+        {
+          "id": "diag_syntax_equiv_1",
+          "family_id": "filter_evens",
+          "relationship": "syntax_equivalent",
+          "label": 1,
+          "code_a": "def filter_evens(nums):\n    result = []\n    for n in nums:\n        if n % 2 == 0:\n            result.append(n)\n    return result",
+          "code_b": "def filter_evens(nums):\n    return [n for n in nums if n % 2 == 0]",
+          "codebert_score": 0.973,
+          "tfidf_score": 0.6842,
+          "pred": 1,
+          "decision_model": "hybrid_confirmed"
+        },
+        {
+          "id": "diag_diff_algo_1",
+          "family_id": "algo_mix",
+          "relationship": "different_algorithm",
+          "label": 0,
+          "code_a": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+          "code_b": "def binary_search(arr, target):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1",
+          "codebert_score": 0.9905,
+          "tfidf_score": 0.4995,
+          "pred": 0,
+          "decision_model": "hybrid_rejected_mid_tfidf"
+        },
+        {
+          "id": "diag_wrong_op_1",
+          "family_id": "square",
+          "relationship": "operator_change",
+          "label": 0,
+          "code_a": "def square(n):\n    return n * n",
+          "code_b": "def square(n):\n    return n + n",
+          "codebert_score": 0.9986,
+          "tfidf_score": 1.0,
+          "pred": 1,
+          "decision_model": "hybrid_confirmed"
+        },
+        {
+          "id": "diag_off_by_one_1",
+          "family_id": "sum_range",
+          "relationship": "off_by_one",
+          "label": 0,
+          "code_a": "def sum_to_n(n):\n    total = 0\n    for i in range(1, n + 1):\n        total += i\n    return total",
+          "code_b": "def sum_to_n(n):\n    total = 0\n    for i in range(1, n):\n        total += i\n    return total",
+          "codebert_score": 0.9995,
+          "tfidf_score": 0.9008,
+          "pred": 1,
+          "decision_model": "hybrid_confirmed"
+        },
+        {
+          "id": "diag_condition_1",
+          "family_id": "adult",
+          "relationship": "condition_inverted",
+          "label": 0,
+          "code_a": "def is_adult(age):\n    if age >= 18:\n        return True\n    return False",
+          "code_b": "def is_adult(age):\n    if age < 18:\n        return True\n    return False",
+          "codebert_score": 0.9997,
+          "tfidf_score": 1.0,
+          "pred": 1,
+          "decision_model": "hybrid_confirmed"
+        }
+      ],
+      "pairs_csv_sha256": "920f5abb101cf241396c1bfabd56960418c3adec8b6c8911cfc0eb839acc6767",
+      "diagnostic_json_sha256": "02e5a53d733a5779ef0cd548019193366d851c85edb0c63f9469289c267a1b82",
+      "embedding_note": "CodeBERT mean-pooled L2-normalized; cosine = dot product; not semantic equivalence."
+    },
+    "production_training_config": {
+      "model_name": "microsoft/codebert-base",
+      "epochs": 5,
+      "batch_size": 4,
+      "learning_rate": 2e-05,
+      "max_length": 128,
+      "seed": 42,
+      "best_epoch": 1,
+      "best_val_f1": 0.12
+    },
+    "holdout_contamination_notes": {
+      "legacy_v1_test": "Used for production checkpoint selection (best_val_f1) and repeated QA \u2014 contaminated for fresh model selection.",
+      "benchmark_v2_test": "Documented in collapse_audit.json as previously inspected.",
+      "benchmark_v3_test": "Preferred forward holdout if not used for tuning; verify experiment logs before selection."
+    }
+  },
+  "label_definitions": [
+    "correct",
+    "wrong_initialization",
+    "off_by_one_loop",
+    "wrong_operator",
+    "wrong_condition"
+  ]
+}

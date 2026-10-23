@@ -151,3 +151,8 @@ $RECYCLE.BIN/
 *.log
 logs/
 scratch/
+test-results/
+backups/
+
+# Local training logs (metrics JSON remains tracked)
+artifacts/metrics/*.txt

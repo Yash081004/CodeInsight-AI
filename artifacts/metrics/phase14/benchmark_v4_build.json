@@ -1,0 +1,30 @@
+{
+  "dataset_version": "benchmark_v4",
+  "generated_at": "2026-10-21T09:32:16.432299+00:00",
+  "source_benchmark_v3_csv_checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+  "human_reviewed": false,
+  "eligibility_rules": [
+    "family has human_reviewed spec in catalog",
+    "source_template_id not on review_queue template list",
+    "row not synthetic style_variant",
+    "correct rows quarantined until spec context policy defined"
+  ],
+  "eligible_row_count": 0,
+  "quarantine_row_count": 190,
+  "quarantine_reason_counts": {
+    "family_spec_not_human_reviewed": 190,
+    "correct_baseline_requires_spec_context": 132,
+    "review_queue_template": 35,
+    "synthetic_style_variant": 66
+  },
+  "class_counts_by_split_eligible": {},
+  "family_split_isolation_eligible": {
+    "ok": true,
+    "errors": []
+  },
+  "cross_split_duplicate_code_hashes_eligible": [],
+  "test_split_frozen_ref": "classification/test_split_frozen.json",
+  "labels_unchanged_from_v3": true,
+  "v3_files_unmodified": true,
+  "eligible_csv_checksum_sha256": null
+}

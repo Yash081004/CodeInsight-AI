@@ -45,6 +45,10 @@ class SimilarityResult(BaseModel):
     threshold: float
     is_similar: Optional[bool] = None
     decision_model: str  # which model made the decision
+    decision_score: Optional[float] = None
+    decision_policy: Optional[str] = None
+    review_recommended: bool = False
+    score_gap: Optional[float] = None
     explanation: str
     model_info: str
     code_a_valid: bool
@@ -55,9 +59,33 @@ class SimilarityResult(BaseModel):
 
 # ─── Classification ─────────────────────────────────────────────────────────
 
+class ClassificationTestCase(BaseModel):
+    input: str = Field(..., description="Serialized input or call expression")
+    expected_output: Optional[str] = None
+    note: Optional[str] = None
+
+
 class ClassificationRequest(BaseModel):
     code: str = Field(..., min_length=1, max_length=10000)
-    
+    problem_statement: Optional[str] = Field(
+        None,
+        max_length=8000,
+        description="Intended behavior or problem spec (optional; improves interpretability)",
+    )
+    function_context: Optional[str] = Field(
+        None,
+        max_length=2000,
+        description="Function name, language, or role context",
+    )
+    test_cases: Optional[List[ClassificationTestCase]] = Field(
+        None,
+        description="Optional tests — not executed unless run_tests=true",
+    )
+    run_tests: bool = Field(
+        False,
+        description="If true, attempt sandboxed execution of test_cases (disabled by default)",
+    )
+
     @field_validator("code")
     @classmethod
     def code_not_blank(cls, v: str) -> str:
@@ -80,6 +108,10 @@ class ClassificationResult(BaseModel):
         "Confidence represents the model's relative prediction scores. "
         "It is not a guarantee that the predicted category is correct."
     )
+    diagnostics: Optional[Dict] = None
+    task_context: Optional[Dict] = None
+    tests_executed: bool = False
+    test_results: Optional[List[Dict]] = None
 
 
 # ─── Dataset ────────────────────────────────────────────────────────────────
@@ -118,6 +150,8 @@ class DatasetSamplesResponse(BaseModel):
 # ─── Evaluation ──────────────────────────────────────────────────────────────
 
 class EvaluationMetrics(BaseModel):
+    model_config = {"extra": "ignore"}
+
     model_type: str
     accuracy: float
     macro_precision: float

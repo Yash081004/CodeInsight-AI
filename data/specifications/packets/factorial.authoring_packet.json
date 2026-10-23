@@ -1,0 +1,27 @@
+{
+  "packet_version": "v1",
+  "family_id": "factorial",
+  "source_template_ids": ["factorial_1", "factorial_2", "factorial_3"],
+  "status": "draft_requires_human_review",
+  "problem_statement": "Compute n! (factorial) for non-negative integer n, with 0! = 1 and n! = 1×2×…×n for n ≥ 1.",
+  "input_assumptions": [
+    "n is a non-negative integer",
+    "Return type is numeric (int) suitable for template test values"
+  ],
+  "expected_output_summary": "Return n! as defined above.",
+  "boundary_cases": [
+    "n = 0 and n = 1",
+    "Small n used in tests (3, 4, 5)",
+    "Recursive vs iterative templates must agree on base-case handling for n=0 and n=1"
+  ],
+  "provenance": {
+    "source": "machine_suggested",
+    "author": "phase13_authoring_packet",
+    "created_at": "2026-10-21T09:00:00+00:00",
+    "review_status": "draft",
+    "reviewer_id": null,
+    "notes": "Standard factorial definition; reviewer confirms each template's base case and loop/recursion bounds."
+  },
+  "associated_sample_ids": [],
+  "human_reviewed": false
+}

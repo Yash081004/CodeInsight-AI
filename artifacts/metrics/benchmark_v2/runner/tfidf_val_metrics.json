@@ -1,0 +1,118 @@
+{
+  "model": "tfidf_logreg",
+  "eval_split": "val",
+  "sample_count": 16,
+  "accuracy": 0.4375,
+  "macro_f1": 0.2222,
+  "weighted_f1": 0.4722,
+  "per_class_metrics": {
+    "correct": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "support": 10
+    },
+    "wrong_initialization": {
+      "precision": 0.2857,
+      "recall": 1.0,
+      "f1": 0.4444,
+      "support": 2
+    },
+    "off_by_one_loop": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "wrong_operator": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "wrong_condition": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "correct",
+      "wrong_initialization",
+      "off_by_one_loop",
+      "wrong_operator",
+      "wrong_condition"
+    ],
+    "matrix": [
+      [
+        5,
+        2,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "collapse": {
+    "predicted_label_counts": {
+      "wrong_initialization": 7,
+      "off_by_one_loop": 3,
+      "wrong_condition": 1,
+      "correct": 5
+    },
+    "dominant_class": "wrong_initialization",
+    "dominant_fraction": 0.4375,
+    "collapsed": false,
+    "fault_classes_predicted": 3
+  },
+  "fault_only_macro_f1_proxy": 0.14285714285714285,
+  "correct_code_false_positive_count": 0,
+  "per_family": {
+    "count_evens": {
+      "n": 2,
+      "accuracy": 0.5
+    },
+    "count_vowels": {
+      "n": 7,
+      "accuracy": 0.42857142857142855
+    },
+    "palindrome": {
+      "n": 7,
+      "accuracy": 0.42857142857142855
+    }
+  },
+  "probability_note": "Logistic probabilities not calibrated.",
+  "dataset": "benchmark_v2",
+  "eval_label": "validation_or_holdout",
+  "evaluated_at": "2026-10-19T09:11:50.753751+00:00"
+}

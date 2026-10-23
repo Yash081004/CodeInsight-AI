@@ -1,0 +1,50 @@
+{
+  "model_type": "codebert_finetuned",
+  "dataset_version": "benchmark_v3",
+  "eval_split": "test",
+  "accuracy": 0.6061,
+  "macro_precision": 0.1212,
+  "macro_recall": 0.2,
+  "macro_f1": 0.1509,
+  "weighted_f1": 0.4574,
+  "per_class_metrics": {
+    "correct": {
+      "precision": 0.6061,
+      "recall": 1.0,
+      "f1": 0.7547,
+      "support": 40
+    },
+    "wrong_initialization": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "off_by_one_loop": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "wrong_operator": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 8
+    },
+    "wrong_condition": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 10
+    }
+  },
+  "sample_count": 66,
+  "test_family_count": 15,
+  "best_epoch": 1,
+  "best_val_macro_f1": 0.2105,
+  "dataset_checksum_sha256": "39b21118a1d86e6b2d2cd8e4f4c64551351f2de1598067c0e57aeee314013090",
+  "inference_ms_per_sample_test_cpu": 174.91,
+  "probability_note": "Softmax scores \u2014 not calibrated confidence.",
+  "evaluated_at": "2026-10-20T12:13:22.116246"
+}

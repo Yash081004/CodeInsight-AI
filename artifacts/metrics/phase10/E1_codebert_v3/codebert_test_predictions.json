@@ -1,0 +1,926 @@
+[
+  {
+    "sample_id": "S0011",
+    "family_id": "fibonacci",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4117,
+      "wrong_initialization": 0.1621,
+      "off_by_one_loop": 0.1328,
+      "wrong_operator": 0.1548,
+      "wrong_condition": 0.1385
+    }
+  },
+  {
+    "sample_id": "S0012",
+    "family_id": "fibonacci",
+    "true_label": "wrong_initialization",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4122,
+      "wrong_initialization": 0.1621,
+      "off_by_one_loop": 0.1329,
+      "wrong_operator": 0.1546,
+      "wrong_condition": 0.1382
+    }
+  },
+  {
+    "sample_id": "S0013",
+    "family_id": "fibonacci",
+    "true_label": "off_by_one_loop",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4095,
+      "wrong_initialization": 0.1626,
+      "off_by_one_loop": 0.1332,
+      "wrong_operator": 0.1551,
+      "wrong_condition": 0.1396
+    }
+  },
+  {
+    "sample_id": "S0014",
+    "family_id": "fibonacci",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4124,
+      "wrong_initialization": 0.1618,
+      "off_by_one_loop": 0.1328,
+      "wrong_operator": 0.1546,
+      "wrong_condition": 0.1384
+    }
+  },
+  {
+    "sample_id": "S0015",
+    "family_id": "fibonacci",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4119,
+      "wrong_initialization": 0.1592,
+      "off_by_one_loop": 0.1326,
+      "wrong_operator": 0.1539,
+      "wrong_condition": 0.1425
+    }
+  },
+  {
+    "sample_id": "S0016",
+    "family_id": "fibonacci",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4112,
+      "wrong_initialization": 0.159,
+      "off_by_one_loop": 0.1327,
+      "wrong_operator": 0.1542,
+      "wrong_condition": 0.1429
+    }
+  },
+  {
+    "sample_id": "S0017",
+    "family_id": "prime",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4134,
+      "wrong_initialization": 0.1621,
+      "off_by_one_loop": 0.1305,
+      "wrong_operator": 0.1528,
+      "wrong_condition": 0.1412
+    }
+  },
+  {
+    "sample_id": "S0018",
+    "family_id": "prime",
+    "true_label": "off_by_one_loop",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4169,
+      "wrong_initialization": 0.1608,
+      "off_by_one_loop": 0.1305,
+      "wrong_operator": 0.1516,
+      "wrong_condition": 0.1403
+    }
+  },
+  {
+    "sample_id": "S0019",
+    "family_id": "prime",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4142,
+      "wrong_initialization": 0.1619,
+      "off_by_one_loop": 0.1302,
+      "wrong_operator": 0.1526,
+      "wrong_condition": 0.1411
+    }
+  },
+  {
+    "sample_id": "S0020",
+    "family_id": "prime",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4138,
+      "wrong_initialization": 0.1621,
+      "off_by_one_loop": 0.1302,
+      "wrong_operator": 0.153,
+      "wrong_condition": 0.1409
+    }
+  },
+  {
+    "sample_id": "S0021",
+    "family_id": "prime",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4403,
+      "wrong_initialization": 0.1603,
+      "off_by_one_loop": 0.1216,
+      "wrong_operator": 0.1454,
+      "wrong_condition": 0.1325
+    }
+  },
+  {
+    "sample_id": "S0022",
+    "family_id": "prime",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4417,
+      "wrong_initialization": 0.1596,
+      "off_by_one_loop": 0.1211,
+      "wrong_operator": 0.1452,
+      "wrong_condition": 0.1325
+    }
+  },
+  {
+    "sample_id": "S0023",
+    "family_id": "prime",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4403,
+      "wrong_initialization": 0.1603,
+      "off_by_one_loop": 0.1213,
+      "wrong_operator": 0.1454,
+      "wrong_condition": 0.1327
+    }
+  },
+  {
+    "sample_id": "S0024",
+    "family_id": "prime",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4408,
+      "wrong_initialization": 0.1602,
+      "off_by_one_loop": 0.1211,
+      "wrong_operator": 0.1453,
+      "wrong_condition": 0.1325
+    }
+  },
+  {
+    "sample_id": "S0030",
+    "family_id": "max_element",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.438,
+      "wrong_initialization": 0.1551,
+      "off_by_one_loop": 0.127,
+      "wrong_operator": 0.1461,
+      "wrong_condition": 0.1338
+    }
+  },
+  {
+    "sample_id": "S0031",
+    "family_id": "max_element",
+    "true_label": "wrong_initialization",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.438,
+      "wrong_initialization": 0.1546,
+      "off_by_one_loop": 0.1271,
+      "wrong_operator": 0.1464,
+      "wrong_condition": 0.134
+    }
+  },
+  {
+    "sample_id": "S0032",
+    "family_id": "max_element",
+    "true_label": "off_by_one_loop",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4295,
+      "wrong_initialization": 0.158,
+      "off_by_one_loop": 0.1287,
+      "wrong_operator": 0.149,
+      "wrong_condition": 0.1348
+    }
+  },
+  {
+    "sample_id": "S0033",
+    "family_id": "max_element",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4382,
+      "wrong_initialization": 0.155,
+      "off_by_one_loop": 0.127,
+      "wrong_operator": 0.146,
+      "wrong_condition": 0.1339
+    }
+  },
+  {
+    "sample_id": "S0034",
+    "family_id": "max_element",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4374,
+      "wrong_initialization": 0.1553,
+      "off_by_one_loop": 0.1265,
+      "wrong_operator": 0.1463,
+      "wrong_condition": 0.1346
+    }
+  },
+  {
+    "sample_id": "S0035",
+    "family_id": "max_element",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.416,
+      "wrong_initialization": 0.16,
+      "off_by_one_loop": 0.1312,
+      "wrong_operator": 0.154,
+      "wrong_condition": 0.1388
+    }
+  },
+  {
+    "sample_id": "S0036",
+    "family_id": "max_element",
+    "true_label": "wrong_initialization",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4125,
+      "wrong_initialization": 0.1608,
+      "off_by_one_loop": 0.1318,
+      "wrong_operator": 0.1551,
+      "wrong_condition": 0.1398
+    }
+  },
+  {
+    "sample_id": "S0037",
+    "family_id": "max_element",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4163,
+      "wrong_initialization": 0.1599,
+      "off_by_one_loop": 0.1312,
+      "wrong_operator": 0.1538,
+      "wrong_condition": 0.1388
+    }
+  },
+  {
+    "sample_id": "S0038",
+    "family_id": "max_element",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4135,
+      "wrong_initialization": 0.1608,
+      "off_by_one_loop": 0.1309,
+      "wrong_operator": 0.1546,
+      "wrong_condition": 0.1402
+    }
+  },
+  {
+    "sample_id": "S0058",
+    "family_id": "sorting",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4304,
+      "wrong_initialization": 0.1594,
+      "off_by_one_loop": 0.1294,
+      "wrong_operator": 0.1453,
+      "wrong_condition": 0.1355
+    }
+  },
+  {
+    "sample_id": "S0059",
+    "family_id": "sorting",
+    "true_label": "off_by_one_loop",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4443,
+      "wrong_initialization": 0.1573,
+      "off_by_one_loop": 0.126,
+      "wrong_operator": 0.1414,
+      "wrong_condition": 0.131
+    }
+  },
+  {
+    "sample_id": "S0060",
+    "family_id": "sorting",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4302,
+      "wrong_initialization": 0.1593,
+      "off_by_one_loop": 0.1296,
+      "wrong_operator": 0.1454,
+      "wrong_condition": 0.1355
+    }
+  },
+  {
+    "sample_id": "S0061",
+    "family_id": "count_vowels",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4024,
+      "wrong_initialization": 0.1644,
+      "off_by_one_loop": 0.132,
+      "wrong_operator": 0.1608,
+      "wrong_condition": 0.1404
+    }
+  },
+  {
+    "sample_id": "S0062",
+    "family_id": "count_vowels",
+    "true_label": "wrong_initialization",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4023,
+      "wrong_initialization": 0.1647,
+      "off_by_one_loop": 0.1321,
+      "wrong_operator": 0.1607,
+      "wrong_condition": 0.14
+    }
+  },
+  {
+    "sample_id": "S0063",
+    "family_id": "count_vowels",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4032,
+      "wrong_initialization": 0.1643,
+      "off_by_one_loop": 0.1316,
+      "wrong_operator": 0.1608,
+      "wrong_condition": 0.1402
+    }
+  },
+  {
+    "sample_id": "S0064",
+    "family_id": "count_vowels",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4042,
+      "wrong_initialization": 0.1638,
+      "off_by_one_loop": 0.1318,
+      "wrong_operator": 0.1602,
+      "wrong_condition": 0.14
+    }
+  },
+  {
+    "sample_id": "S0068",
+    "family_id": "gcd",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.384,
+      "wrong_initialization": 0.1669,
+      "off_by_one_loop": 0.1388,
+      "wrong_operator": 0.1624,
+      "wrong_condition": 0.1478
+    }
+  },
+  {
+    "sample_id": "S0069",
+    "family_id": "gcd",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.385,
+      "wrong_initialization": 0.1664,
+      "off_by_one_loop": 0.1389,
+      "wrong_operator": 0.1622,
+      "wrong_condition": 0.1475
+    }
+  },
+  {
+    "sample_id": "S0070",
+    "family_id": "gcd",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.3836,
+      "wrong_initialization": 0.167,
+      "off_by_one_loop": 0.1387,
+      "wrong_operator": 0.1628,
+      "wrong_condition": 0.148
+    }
+  },
+  {
+    "sample_id": "S0071",
+    "family_id": "gcd",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.3797,
+      "wrong_initialization": 0.1678,
+      "off_by_one_loop": 0.14,
+      "wrong_operator": 0.1634,
+      "wrong_condition": 0.1491
+    }
+  },
+  {
+    "sample_id": "S0072",
+    "family_id": "gcd",
+    "true_label": "wrong_operator",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.3808,
+      "wrong_initialization": 0.1673,
+      "off_by_one_loop": 0.1401,
+      "wrong_operator": 0.1632,
+      "wrong_condition": 0.1486
+    }
+  },
+  {
+    "sample_id": "S0073",
+    "family_id": "reverse_list",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.3935,
+      "wrong_initialization": 0.1652,
+      "off_by_one_loop": 0.1379,
+      "wrong_operator": 0.1568,
+      "wrong_condition": 0.1466
+    }
+  },
+  {
+    "sample_id": "S0074",
+    "family_id": "count_vowels",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4024,
+      "wrong_initialization": 0.1644,
+      "off_by_one_loop": 0.132,
+      "wrong_operator": 0.1608,
+      "wrong_condition": 0.1404
+    }
+  },
+  {
+    "sample_id": "S0078",
+    "family_id": "find_min",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4227,
+      "wrong_initialization": 0.1599,
+      "off_by_one_loop": 0.1292,
+      "wrong_operator": 0.1513,
+      "wrong_condition": 0.137
+    }
+  },
+  {
+    "sample_id": "S0079",
+    "family_id": "find_min",
+    "true_label": "wrong_condition",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4198,
+      "wrong_initialization": 0.1607,
+      "off_by_one_loop": 0.129,
+      "wrong_operator": 0.1519,
+      "wrong_condition": 0.1385
+    }
+  },
+  {
+    "sample_id": "S0087",
+    "family_id": "count_evens",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.3921,
+      "wrong_initialization": 0.1663,
+      "off_by_one_loop": 0.1345,
+      "wrong_operator": 0.1612,
+      "wrong_condition": 0.1459
+    }
+  },
+  {
+    "sample_id": "S0088",
+    "family_id": "clamp",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4153,
+      "wrong_initialization": 0.1624,
+      "off_by_one_loop": 0.1374,
+      "wrong_operator": 0.1495,
+      "wrong_condition": 0.1353
+    }
+  },
+  {
+    "sample_id": "S0093",
+    "family_id": "strip_spaces",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.3811,
+      "wrong_initialization": 0.166,
+      "off_by_one_loop": 0.1422,
+      "wrong_operator": 0.1636,
+      "wrong_condition": 0.1471
+    }
+  },
+  {
+    "sample_id": "S0103",
+    "family_id": "count_positive",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.3915,
+      "wrong_initialization": 0.1661,
+      "off_by_one_loop": 0.1355,
+      "wrong_operator": 0.1612,
+      "wrong_condition": 0.1458
+    }
+  },
+  {
+    "sample_id": "S0116",
+    "family_id": "running_max",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4286,
+      "wrong_initialization": 0.1607,
+      "off_by_one_loop": 0.1308,
+      "wrong_operator": 0.1492,
+      "wrong_condition": 0.1307
+    }
+  },
+  {
+    "sample_id": "S0117",
+    "family_id": "count_words",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4159,
+      "wrong_initialization": 0.1625,
+      "off_by_one_loop": 0.1309,
+      "wrong_operator": 0.1533,
+      "wrong_condition": 0.1374
+    }
+  },
+  {
+    "sample_id": "S0123",
+    "family_id": "col_sum",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.3882,
+      "wrong_initialization": 0.1672,
+      "off_by_one_loop": 0.137,
+      "wrong_operator": 0.1616,
+      "wrong_condition": 0.146
+    }
+  },
+  {
+    "sample_id": "S0128",
+    "family_id": "fibonacci",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4173,
+      "wrong_initialization": 0.1603,
+      "off_by_one_loop": 0.1312,
+      "wrong_operator": 0.1548,
+      "wrong_condition": 0.1363
+    }
+  },
+  {
+    "sample_id": "S0129",
+    "family_id": "fibonacci",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4168,
+      "wrong_initialization": 0.1582,
+      "off_by_one_loop": 0.1313,
+      "wrong_operator": 0.1544,
+      "wrong_condition": 0.1394
+    }
+  },
+  {
+    "sample_id": "S0130",
+    "family_id": "prime",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.425,
+      "wrong_initialization": 0.1604,
+      "off_by_one_loop": 0.1273,
+      "wrong_operator": 0.1516,
+      "wrong_condition": 0.1358
+    }
+  },
+  {
+    "sample_id": "S0131",
+    "family_id": "prime",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4424,
+      "wrong_initialization": 0.1582,
+      "off_by_one_loop": 0.1215,
+      "wrong_operator": 0.1469,
+      "wrong_condition": 0.1309
+    }
+  },
+  {
+    "sample_id": "S0134",
+    "family_id": "max_element",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4559,
+      "wrong_initialization": 0.1523,
+      "off_by_one_loop": 0.1231,
+      "wrong_operator": 0.1423,
+      "wrong_condition": 0.1263
+    }
+  },
+  {
+    "sample_id": "S0135",
+    "family_id": "max_element",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4441,
+      "wrong_initialization": 0.155,
+      "off_by_one_loop": 0.1244,
+      "wrong_operator": 0.1472,
+      "wrong_condition": 0.1293
+    }
+  },
+  {
+    "sample_id": "S0142",
+    "family_id": "sorting",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.447,
+      "wrong_initialization": 0.1566,
+      "off_by_one_loop": 0.1256,
+      "wrong_operator": 0.1415,
+      "wrong_condition": 0.1294
+    }
+  },
+  {
+    "sample_id": "S0143",
+    "family_id": "count_vowels",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4327,
+      "wrong_initialization": 0.1589,
+      "off_by_one_loop": 0.1248,
+      "wrong_operator": 0.1536,
+      "wrong_condition": 0.1301
+    }
+  },
+  {
+    "sample_id": "S0145",
+    "family_id": "gcd",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4186,
+      "wrong_initialization": 0.1628,
+      "off_by_one_loop": 0.1294,
+      "wrong_operator": 0.1541,
+      "wrong_condition": 0.1351
+    }
+  },
+  {
+    "sample_id": "S0146",
+    "family_id": "gcd",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.418,
+      "wrong_initialization": 0.1618,
+      "off_by_one_loop": 0.1289,
+      "wrong_operator": 0.1546,
+      "wrong_condition": 0.1366
+    }
+  },
+  {
+    "sample_id": "S0147",
+    "family_id": "reverse_list",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4288,
+      "wrong_initialization": 0.1592,
+      "off_by_one_loop": 0.128,
+      "wrong_operator": 0.1484,
+      "wrong_condition": 0.1355
+    }
+  },
+  {
+    "sample_id": "S0148",
+    "family_id": "count_vowels",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4327,
+      "wrong_initialization": 0.1589,
+      "off_by_one_loop": 0.1248,
+      "wrong_operator": 0.1536,
+      "wrong_condition": 0.1301
+    }
+  },
+  {
+    "sample_id": "S0151",
+    "family_id": "find_min",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4502,
+      "wrong_initialization": 0.155,
+      "off_by_one_loop": 0.1222,
+      "wrong_operator": 0.145,
+      "wrong_condition": 0.1277
+    }
+  },
+  {
+    "sample_id": "S0156",
+    "family_id": "count_evens",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4451,
+      "wrong_initialization": 0.1578,
+      "off_by_one_loop": 0.1217,
+      "wrong_operator": 0.1482,
+      "wrong_condition": 0.1271
+    }
+  },
+  {
+    "sample_id": "S0157",
+    "family_id": "clamp",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4341,
+      "wrong_initialization": 0.1572,
+      "off_by_one_loop": 0.1273,
+      "wrong_operator": 0.1497,
+      "wrong_condition": 0.1317
+    }
+  },
+  {
+    "sample_id": "S0162",
+    "family_id": "strip_spaces",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4111,
+      "wrong_initialization": 0.162,
+      "off_by_one_loop": 0.1352,
+      "wrong_operator": 0.1569,
+      "wrong_condition": 0.1348
+    }
+  },
+  {
+    "sample_id": "S0170",
+    "family_id": "count_positive",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.427,
+      "wrong_initialization": 0.1596,
+      "off_by_one_loop": 0.1264,
+      "wrong_operator": 0.1529,
+      "wrong_condition": 0.1342
+    }
+  },
+  {
+    "sample_id": "S0182",
+    "family_id": "running_max",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.444,
+      "wrong_initialization": 0.1557,
+      "off_by_one_loop": 0.1286,
+      "wrong_operator": 0.1449,
+      "wrong_condition": 0.1267
+    }
+  },
+  {
+    "sample_id": "S0183",
+    "family_id": "count_words",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4071,
+      "wrong_initialization": 0.1619,
+      "off_by_one_loop": 0.1345,
+      "wrong_operator": 0.1572,
+      "wrong_condition": 0.1393
+    }
+  },
+  {
+    "sample_id": "S0189",
+    "family_id": "col_sum",
+    "true_label": "correct",
+    "predicted_id": 0,
+    "predicted_label": "correct",
+    "probabilities": {
+      "correct": 0.4218,
+      "wrong_initialization": 0.1606,
+      "off_by_one_loop": 0.1283,
+      "wrong_operator": 0.154,
+      "wrong_condition": 0.1353
+    }
+  }
+]

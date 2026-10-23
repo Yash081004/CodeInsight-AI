@@ -1,0 +1,254 @@
+{
+  "generated_at": "2026-10-19T09:45:09.721706+00:00",
+  "device_policy": "cuda_preferred",
+  "any_gpu_run": false,
+  "runs": [
+    {
+      "experiment_id": "gpu_1_baseline",
+      "gpu_run": false,
+      "device_used": "cpu"
+    },
+    {
+      "experiment_id": "gpu_2_lr3e5",
+      "exit_code": 0,
+      "device_used": "cpu",
+      "gpu_run": false,
+      "elapsed_seconds": 482.4,
+      "checkpoint_dir": "models\\benchmark_v3\\codebert_experiments\\gpu_2_lr3e5",
+      "metrics_dir": "artifacts\\metrics\\benchmark_v3\\codebert_experiments\\gpu_2_lr3e5",
+      "configuration": {
+        "lr": "3e-5",
+        "class_weights": true,
+        "balanced_sampler": false,
+        "epochs_requested": 4,
+        "patience": 1,
+        "seed": 42
+      },
+      "validation_metrics": {
+        "eval_split": "val",
+        "dataset_version": "benchmark_v3",
+        "best_epoch": 1,
+        "macro_f1": 0.16,
+        "weighted_f1": 0.5333,
+        "accuracy": 0.6667,
+        "per_class_metrics": {
+          "correct": {
+            "precision": 0.6667,
+            "recall": 1.0,
+            "f1": 0.8,
+            "support": 20
+          },
+          "wrong_initialization": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
+          },
+          "off_by_one_loop": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          },
+          "wrong_operator": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 4
+          },
+          "wrong_condition": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          }
+        },
+        "predicted_label_counts": {
+          "correct": 30
+        },
+        "sample_count": 30,
+        "collapse_warning": true,
+        "fault_only_macro_f1_proxy": 0.0,
+        "correct_code_false_positive_count": 10,
+        "label_quality": "synthetic_unreviewed"
+      },
+      "training_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.6318,
+          "train_accuracy": 0.7447,
+          "val_accuracy": 0.6667,
+          "val_macro_precision": 0.1333,
+          "val_macro_recall": 0.2,
+          "val_macro_f1": 0.16,
+          "val_loss": 1.3443
+        }
+      ]
+    },
+    {
+      "experiment_id": "gpu_3_balanced",
+      "exit_code": 0,
+      "device_used": "cpu",
+      "gpu_run": false,
+      "elapsed_seconds": 735.7,
+      "checkpoint_dir": "models\\benchmark_v3\\codebert_experiments\\gpu_3_balanced",
+      "metrics_dir": "artifacts\\metrics\\benchmark_v3\\codebert_experiments\\gpu_3_balanced",
+      "configuration": {
+        "lr": "2e-5",
+        "class_weights": false,
+        "balanced_sampler": true,
+        "epochs_requested": 4,
+        "patience": 1,
+        "seed": 42
+      },
+      "validation_metrics": {
+        "eval_split": "val",
+        "dataset_version": "benchmark_v3",
+        "best_epoch": 2,
+        "macro_f1": 0.3459,
+        "weighted_f1": 0.5973,
+        "accuracy": 0.5667,
+        "per_class_metrics": {
+          "correct": {
+            "precision": 1.0,
+            "recall": 0.55,
+            "f1": 0.7097,
+            "support": 20
+          },
+          "wrong_initialization": {
+            "precision": 0.2143,
+            "recall": 1.0,
+            "f1": 0.3529,
+            "support": 3
+          },
+          "off_by_one_loop": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          },
+          "wrong_operator": {
+            "precision": 0.6,
+            "recall": 0.75,
+            "f1": 0.6667,
+            "support": 4
+          },
+          "wrong_condition": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          }
+        },
+        "predicted_label_counts": {
+          "wrong_operator": 5,
+          "wrong_initialization": 14,
+          "correct": 11
+        },
+        "sample_count": 30,
+        "collapse_warning": false,
+        "fault_only_macro_f1_proxy": 0.3643,
+        "correct_code_false_positive_count": 0,
+        "label_quality": "synthetic_unreviewed"
+      },
+      "training_history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.6107,
+          "train_accuracy": 0.2766,
+          "val_accuracy": 0.1333,
+          "val_macro_precision": 0.0267,
+          "val_macro_recall": 0.2,
+          "val_macro_f1": 0.0471,
+          "val_loss": 1.6646
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.5583,
+          "train_accuracy": 0.234,
+          "val_accuracy": 0.5667,
+          "val_macro_precision": 0.3629,
+          "val_macro_recall": 0.46,
+          "val_macro_f1": 0.3459,
+          "val_loss": 1.5608
+        }
+      ]
+    }
+  ],
+  "selection": {
+    "selected_experiment_id": "gpu_3_balanced",
+    "validation_macro_f1": 0.3459,
+    "validation_collapse_warning": false,
+    "predicted_label_counts_val": {
+      "wrong_operator": 5,
+      "wrong_initialization": 14,
+      "correct": 11
+    },
+    "per_class_recall_val": {
+      "correct": 0.55,
+      "wrong_initialization": 1.0,
+      "off_by_one_loop": 0.0,
+      "wrong_operator": 0.75,
+      "wrong_condition": 0.0
+    },
+    "beats_tfidf_val_macro_f1": true,
+    "tfidf_val_macro_f1": 0.2689,
+    "selection_rule": "validation_macro_f1 then fault recall sum then non-collapse",
+    "note": "Test split not used for selection."
+  },
+  "label_quality_warning": "synthetic_unreviewed",
+  "final_test": {
+    "eval_split": "test",
+    "dataset_version": "benchmark_v3",
+    "label_quality": "synthetic_unreviewed_not_human_verified",
+    "experiment_id": "gpu_3_balanced",
+    "policy": "single_post_selection_historical_style_eval_do_not_retune",
+    "macro_f1": 0.2713,
+    "accuracy": 0.4848,
+    "per_class_metrics": {
+      "correct": {
+        "precision": 0.6842,
+        "recall": 0.65,
+        "f1": 0.6667,
+        "support": 40
+      },
+      "wrong_initialization": {
+        "precision": 0.25,
+        "recall": 0.25,
+        "f1": 0.25,
+        "support": 4
+      },
+      "off_by_one_loop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "wrong_operator": {
+        "precision": 0.1739,
+        "recall": 0.5,
+        "f1": 0.2581,
+        "support": 8
+      },
+      "wrong_condition": {
+        "precision": 1.0,
+        "recall": 0.1,
+        "f1": 0.1818,
+        "support": 10
+      }
+    },
+    "collapse": {
+      "predicted_label_counts": {
+        "wrong_initialization": 4,
+        "wrong_operator": 23,
+        "correct": 38,
+        "wrong_condition": 1
+      },
+      "dominant_class": "correct",
+      "dominant_fraction": 0.5758,
+      "collapsed": false,
+      "fault_classes_predicted": 3
+    },
+    "evaluated_at": "2026-10-19T09:45:39.516599+00:00"
+  }
+}

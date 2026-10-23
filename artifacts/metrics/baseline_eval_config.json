@@ -1,0 +1,8 @@
+{
+  "model": "tfidf_logistic_regression",
+  "vectorizer_fit": "train_only",
+  "classifier_fit": "train_only",
+  "evaluation_split": "test",
+  "random_state": 42,
+  "class_weight": "balanced"
+}

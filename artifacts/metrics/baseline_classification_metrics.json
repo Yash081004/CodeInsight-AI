@@ -1,5 +1,7 @@
 {
   "model_type": "baseline_logreg",
+  "eval_split": "test",
+  "preprocessing_fit_split": "train",
   "accuracy": 0.4375,
   "macro_precision": 0.2417,
   "macro_recall": 0.325,
@@ -37,5 +39,6 @@
     }
   },
   "sample_count": 16,
-  "evaluated_at": "2026-10-12T11:17:02.866699"
+  "evaluated_at": "2026-10-19T11:19:18.221029",
+  "dataset_checksum_sha256": "c7ae7a8d836b64c9aa139e9c1fe77724329840a5629f87a08b3a2d1e993aff37"
 }

@@ -1,0 +1,37 @@
+{
+  "dataset_version": "benchmark_v2",
+  "generated_at": "2026-10-19T06:27:16.970533+00:00",
+  "seed": 42,
+  "checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+  "grouping_key": "family_id (problem_type)",
+  "independent_families": 20,
+  "families_per_split": {
+    "test": [
+      "clamp",
+      "factorial",
+      "is_sorted",
+      "linear_search",
+      "sorting"
+    ],
+    "train": [
+      "fibonacci",
+      "find_min",
+      "gcd",
+      "max_element",
+      "mean_list",
+      "power",
+      "prime",
+      "reverse_list",
+      "reverse_string",
+      "stack_ops",
+      "sum_digits",
+      "sum_list"
+    ],
+    "val": [
+      "count_evens",
+      "count_vowels",
+      "palindrome"
+    ]
+  },
+  "note": "v1 test set was used in prior dev; this benchmark uses fresh family-level holdout."
+}

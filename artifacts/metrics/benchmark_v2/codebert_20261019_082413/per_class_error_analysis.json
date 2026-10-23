@@ -1,0 +1,123 @@
+{
+  "baseline": {
+    "correct": {
+      "support": 18,
+      "errors": 10,
+      "error_rate": 0.5556,
+      "top_confusions": [
+        {
+          "predicted_as": "off_by_one_loop",
+          "count": 7
+        },
+        {
+          "predicted_as": "wrong_condition",
+          "count": 3
+        }
+      ]
+    },
+    "wrong_initialization": {
+      "support": 2,
+      "errors": 1,
+      "error_rate": 0.5,
+      "top_confusions": [
+        {
+          "predicted_as": "correct",
+          "count": 1
+        }
+      ]
+    },
+    "off_by_one_loop": {
+      "support": 4,
+      "errors": 2,
+      "error_rate": 0.5,
+      "top_confusions": [
+        {
+          "predicted_as": "correct",
+          "count": 2
+        }
+      ]
+    },
+    "wrong_operator": {
+      "support": 5,
+      "errors": 5,
+      "error_rate": 1.0,
+      "top_confusions": [
+        {
+          "predicted_as": "correct",
+          "count": 2
+        },
+        {
+          "predicted_as": "wrong_condition",
+          "count": 2
+        },
+        {
+          "predicted_as": "off_by_one_loop",
+          "count": 1
+        }
+      ]
+    },
+    "wrong_condition": {
+      "support": 2,
+      "errors": 1,
+      "error_rate": 0.5,
+      "top_confusions": [
+        {
+          "predicted_as": "off_by_one_loop",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "codebert": {
+    "correct": {
+      "support": 18,
+      "errors": 0,
+      "error_rate": 0.0,
+      "top_confusions": []
+    },
+    "wrong_initialization": {
+      "support": 2,
+      "errors": 2,
+      "error_rate": 1.0,
+      "top_confusions": [
+        {
+          "predicted_as": "correct",
+          "count": 2
+        }
+      ]
+    },
+    "off_by_one_loop": {
+      "support": 4,
+      "errors": 4,
+      "error_rate": 1.0,
+      "top_confusions": [
+        {
+          "predicted_as": "correct",
+          "count": 4
+        }
+      ]
+    },
+    "wrong_operator": {
+      "support": 5,
+      "errors": 5,
+      "error_rate": 1.0,
+      "top_confusions": [
+        {
+          "predicted_as": "correct",
+          "count": 5
+        }
+      ]
+    },
+    "wrong_condition": {
+      "support": 2,
+      "errors": 2,
+      "error_rate": 1.0,
+      "top_confusions": [
+        {
+          "predicted_as": "correct",
+          "count": 2
+        }
+      ]
+    }
+  }
+}

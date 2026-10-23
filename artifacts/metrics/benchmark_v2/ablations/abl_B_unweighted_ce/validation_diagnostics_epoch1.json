@@ -1,0 +1,52 @@
+{
+  "epoch": 1,
+  "predicted_label_distribution": {
+    "correct": 16
+  },
+  "max_predicted_class_fraction": 1.0,
+  "collapse_warning": true,
+  "per_class_recall": {
+    "correct": 1.0,
+    "wrong_initialization": 0.0,
+    "off_by_one_loop": 0.0,
+    "wrong_operator": 0.0,
+    "wrong_condition": 0.0
+  },
+  "confusion_matrix": [
+    [
+      10,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0
+    ]
+  ]
+}

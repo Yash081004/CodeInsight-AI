@@ -1,0 +1,1124 @@
+[
+  {
+    "sample_id": "S0011",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_1",
+    "true_label": "correct",
+    "predicted_label": "wrong_initialization",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.1882,
+      "wrong_initialization": 0.2284,
+      "off_by_one_loop": 0.1785,
+      "wrong_operator": 0.2248,
+      "wrong_condition": 0.1801
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0012",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_1",
+    "true_label": "wrong_initialization",
+    "predicted_label": "wrong_initialization",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.1894,
+      "wrong_initialization": 0.2278,
+      "off_by_one_loop": 0.1787,
+      "wrong_operator": 0.2245,
+      "wrong_condition": 0.1796
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0013",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_1",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "wrong_initialization",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.1855,
+      "wrong_initialization": 0.2319,
+      "off_by_one_loop": 0.177,
+      "wrong_operator": 0.2259,
+      "wrong_condition": 0.1796
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0014",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "wrong_initialization",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.1896,
+      "wrong_initialization": 0.2271,
+      "off_by_one_loop": 0.1786,
+      "wrong_operator": 0.2239,
+      "wrong_condition": 0.1809
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0015",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_2",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2118,
+      "wrong_initialization": 0.1915,
+      "off_by_one_loop": 0.1772,
+      "wrong_operator": 0.2146,
+      "wrong_condition": 0.2049
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0016",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_2",
+    "true_label": "wrong_condition",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.213,
+      "wrong_initialization": 0.1895,
+      "off_by_one_loop": 0.1773,
+      "wrong_operator": 0.2146,
+      "wrong_condition": 0.2056
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0017",
+    "family_id": "prime",
+    "source_template_id": "is_prime_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2147,
+      "wrong_initialization": 0.1891,
+      "off_by_one_loop": 0.1861,
+      "wrong_operator": 0.2046,
+      "wrong_condition": 0.2054
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0018",
+    "family_id": "prime",
+    "source_template_id": "is_prime_1",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2145,
+      "wrong_initialization": 0.1895,
+      "off_by_one_loop": 0.1851,
+      "wrong_operator": 0.2046,
+      "wrong_condition": 0.2063
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0019",
+    "family_id": "prime",
+    "source_template_id": "is_prime_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.216,
+      "wrong_initialization": 0.1897,
+      "off_by_one_loop": 0.1858,
+      "wrong_operator": 0.2039,
+      "wrong_condition": 0.2046
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0020",
+    "family_id": "prime",
+    "source_template_id": "is_prime_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2148,
+      "wrong_initialization": 0.1891,
+      "off_by_one_loop": 0.1854,
+      "wrong_operator": 0.2059,
+      "wrong_condition": 0.2048
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0021",
+    "family_id": "prime",
+    "source_template_id": "is_prime_2",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.1956,
+      "wrong_initialization": 0.2174,
+      "off_by_one_loop": 0.1701,
+      "wrong_operator": 0.2228,
+      "wrong_condition": 0.1941
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0022",
+    "family_id": "prime",
+    "source_template_id": "is_prime_2",
+    "true_label": "wrong_operator",
+    "predicted_label": "wrong_operator",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.197,
+      "wrong_initialization": 0.2154,
+      "off_by_one_loop": 0.1692,
+      "wrong_operator": 0.2227,
+      "wrong_condition": 0.1957
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0023",
+    "family_id": "prime",
+    "source_template_id": "is_prime_2",
+    "true_label": "wrong_condition",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.1958,
+      "wrong_initialization": 0.217,
+      "off_by_one_loop": 0.1693,
+      "wrong_operator": 0.223,
+      "wrong_condition": 0.1949
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0024",
+    "family_id": "prime",
+    "source_template_id": "is_prime_2",
+    "true_label": "wrong_condition",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.1957,
+      "wrong_initialization": 0.2174,
+      "off_by_one_loop": 0.1695,
+      "wrong_operator": 0.2226,
+      "wrong_condition": 0.1948
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0030",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2158,
+      "wrong_initialization": 0.1897,
+      "off_by_one_loop": 0.2015,
+      "wrong_operator": 0.1914,
+      "wrong_condition": 0.2016
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0031",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.215,
+      "wrong_initialization": 0.1854,
+      "off_by_one_loop": 0.2014,
+      "wrong_operator": 0.1911,
+      "wrong_condition": 0.2071
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0032",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2167,
+      "wrong_initialization": 0.1891,
+      "off_by_one_loop": 0.2022,
+      "wrong_operator": 0.1907,
+      "wrong_condition": 0.2013
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0033",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2165,
+      "wrong_initialization": 0.1891,
+      "off_by_one_loop": 0.2008,
+      "wrong_operator": 0.1913,
+      "wrong_condition": 0.2023
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0034",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.213,
+      "wrong_initialization": 0.188,
+      "off_by_one_loop": 0.1939,
+      "wrong_operator": 0.195,
+      "wrong_condition": 0.2101
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0035",
+    "family_id": "max_element",
+    "source_template_id": "max_element_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2144,
+      "wrong_initialization": 0.1937,
+      "off_by_one_loop": 0.1914,
+      "wrong_operator": 0.1993,
+      "wrong_condition": 0.2013
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0036",
+    "family_id": "max_element",
+    "source_template_id": "max_element_2",
+    "true_label": "wrong_initialization",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2122,
+      "wrong_initialization": 0.1913,
+      "off_by_one_loop": 0.1899,
+      "wrong_operator": 0.2017,
+      "wrong_condition": 0.2048
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0037",
+    "family_id": "max_element",
+    "source_template_id": "max_element_2",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.215,
+      "wrong_initialization": 0.193,
+      "off_by_one_loop": 0.1909,
+      "wrong_operator": 0.1994,
+      "wrong_condition": 0.2018
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0038",
+    "family_id": "max_element",
+    "source_template_id": "max_element_2",
+    "true_label": "wrong_condition",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2125,
+      "wrong_initialization": 0.1904,
+      "off_by_one_loop": 0.1844,
+      "wrong_operator": 0.2021,
+      "wrong_condition": 0.2106
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0058",
+    "family_id": "sorting",
+    "source_template_id": "bubble_sort_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2264,
+      "wrong_initialization": 0.2006,
+      "off_by_one_loop": 0.2008,
+      "wrong_operator": 0.1885,
+      "wrong_condition": 0.1837
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0059",
+    "family_id": "sorting",
+    "source_template_id": "bubble_sort_1",
+    "true_label": "off_by_one_loop",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2264,
+      "wrong_initialization": 0.1997,
+      "off_by_one_loop": 0.1996,
+      "wrong_operator": 0.1895,
+      "wrong_condition": 0.1848
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0060",
+    "family_id": "sorting",
+    "source_template_id": "bubble_sort_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "correct",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2266,
+      "wrong_initialization": 0.2008,
+      "off_by_one_loop": 0.1998,
+      "wrong_operator": 0.1887,
+      "wrong_condition": 0.1841
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0061",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2181,
+      "wrong_initialization": 0.198,
+      "off_by_one_loop": 0.177,
+      "wrong_operator": 0.2227,
+      "wrong_condition": 0.1842
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0062",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "wrong_initialization",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2185,
+      "wrong_initialization": 0.1988,
+      "off_by_one_loop": 0.1766,
+      "wrong_operator": 0.223,
+      "wrong_condition": 0.183
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0063",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "wrong_operator",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2178,
+      "wrong_initialization": 0.1986,
+      "off_by_one_loop": 0.1756,
+      "wrong_operator": 0.2243,
+      "wrong_condition": 0.1836
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0064",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2195,
+      "wrong_initialization": 0.1988,
+      "off_by_one_loop": 0.1767,
+      "wrong_operator": 0.2224,
+      "wrong_condition": 0.1826
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0068",
+    "family_id": "gcd",
+    "source_template_id": "gcd_1",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2111,
+      "wrong_initialization": 0.1959,
+      "off_by_one_loop": 0.1719,
+      "wrong_operator": 0.2266,
+      "wrong_condition": 0.1945
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0069",
+    "family_id": "gcd",
+    "source_template_id": "gcd_1",
+    "true_label": "wrong_operator",
+    "predicted_label": "wrong_operator",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2098,
+      "wrong_initialization": 0.1977,
+      "off_by_one_loop": 0.1714,
+      "wrong_operator": 0.2275,
+      "wrong_condition": 0.1935
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0070",
+    "family_id": "gcd",
+    "source_template_id": "gcd_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2107,
+      "wrong_initialization": 0.1937,
+      "off_by_one_loop": 0.173,
+      "wrong_operator": 0.2259,
+      "wrong_condition": 0.1966
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0071",
+    "family_id": "gcd",
+    "source_template_id": "gcd_iter",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2125,
+      "wrong_initialization": 0.1955,
+      "off_by_one_loop": 0.173,
+      "wrong_operator": 0.2207,
+      "wrong_condition": 0.1984
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0072",
+    "family_id": "gcd",
+    "source_template_id": "gcd_iter",
+    "true_label": "wrong_operator",
+    "predicted_label": "wrong_operator",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2117,
+      "wrong_initialization": 0.196,
+      "off_by_one_loop": 0.1725,
+      "wrong_operator": 0.2217,
+      "wrong_condition": 0.1981
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0073",
+    "family_id": "reverse_list",
+    "source_template_id": "reverse_list_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2178,
+      "wrong_initialization": 0.1944,
+      "off_by_one_loop": 0.2047,
+      "wrong_operator": 0.1878,
+      "wrong_condition": 0.1953
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0074",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2181,
+      "wrong_initialization": 0.198,
+      "off_by_one_loop": 0.177,
+      "wrong_operator": 0.2227,
+      "wrong_condition": 0.1842
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0078",
+    "family_id": "find_min",
+    "source_template_id": "find_min_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.215,
+      "wrong_initialization": 0.1936,
+      "off_by_one_loop": 0.1941,
+      "wrong_operator": 0.1948,
+      "wrong_condition": 0.2024
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0079",
+    "family_id": "find_min",
+    "source_template_id": "find_min_1",
+    "true_label": "wrong_condition",
+    "predicted_label": "wrong_condition",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2119,
+      "wrong_initialization": 0.1893,
+      "off_by_one_loop": 0.1874,
+      "wrong_operator": 0.1981,
+      "wrong_condition": 0.2133
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0087",
+    "family_id": "count_evens",
+    "source_template_id": "count_evens_1",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2066,
+      "wrong_initialization": 0.1987,
+      "off_by_one_loop": 0.178,
+      "wrong_operator": 0.224,
+      "wrong_condition": 0.1927
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0088",
+    "family_id": "clamp",
+    "source_template_id": "clamp_1",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2122,
+      "wrong_initialization": 0.196,
+      "off_by_one_loop": 0.1807,
+      "wrong_operator": 0.2134,
+      "wrong_condition": 0.1977
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0093",
+    "family_id": "strip_spaces",
+    "source_template_id": "strip_spaces_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2241,
+      "wrong_initialization": 0.1871,
+      "off_by_one_loop": 0.1851,
+      "wrong_operator": 0.2127,
+      "wrong_condition": 0.191
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0103",
+    "family_id": "count_positive",
+    "source_template_id": "count_pos_v3",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2075,
+      "wrong_initialization": 0.1977,
+      "off_by_one_loop": 0.1807,
+      "wrong_operator": 0.2211,
+      "wrong_condition": 0.193
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0116",
+    "family_id": "running_max",
+    "source_template_id": "running_max_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2158,
+      "wrong_initialization": 0.2121,
+      "off_by_one_loop": 0.1854,
+      "wrong_operator": 0.2073,
+      "wrong_condition": 0.1795
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0117",
+    "family_id": "count_words",
+    "source_template_id": "count_words_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2201,
+      "wrong_initialization": 0.1913,
+      "off_by_one_loop": 0.1792,
+      "wrong_operator": 0.215,
+      "wrong_condition": 0.1943
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0123",
+    "family_id": "col_sum",
+    "source_template_id": "col_sum_v3",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2082,
+      "wrong_initialization": 0.2125,
+      "off_by_one_loop": 0.188,
+      "wrong_operator": 0.2151,
+      "wrong_condition": 0.1762
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0128",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_1",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2108,
+      "wrong_initialization": 0.218,
+      "off_by_one_loop": 0.1763,
+      "wrong_operator": 0.2186,
+      "wrong_condition": 0.1764
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0129",
+    "family_id": "fibonacci",
+    "source_template_id": "fibonacci_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2251,
+      "wrong_initialization": 0.1949,
+      "off_by_one_loop": 0.175,
+      "wrong_operator": 0.2122,
+      "wrong_condition": 0.1928
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0130",
+    "family_id": "prime",
+    "source_template_id": "is_prime_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2279,
+      "wrong_initialization": 0.1932,
+      "off_by_one_loop": 0.1821,
+      "wrong_operator": 0.2011,
+      "wrong_condition": 0.1957
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0131",
+    "family_id": "prime",
+    "source_template_id": "is_prime_2",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2098,
+      "wrong_initialization": 0.2189,
+      "off_by_one_loop": 0.1677,
+      "wrong_operator": 0.2207,
+      "wrong_condition": 0.1828
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0134",
+    "family_id": "max_element",
+    "source_template_id": "max_element_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2274,
+      "wrong_initialization": 0.192,
+      "off_by_one_loop": 0.1965,
+      "wrong_operator": 0.1925,
+      "wrong_condition": 0.1916
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0135",
+    "family_id": "max_element",
+    "source_template_id": "max_element_2",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2267,
+      "wrong_initialization": 0.1957,
+      "off_by_one_loop": 0.1913,
+      "wrong_operator": 0.1969,
+      "wrong_condition": 0.1894
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0142",
+    "family_id": "sorting",
+    "source_template_id": "bubble_sort_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2346,
+      "wrong_initialization": 0.1987,
+      "off_by_one_loop": 0.1983,
+      "wrong_operator": 0.1834,
+      "wrong_condition": 0.185
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0143",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2267,
+      "wrong_initialization": 0.2033,
+      "off_by_one_loop": 0.1721,
+      "wrong_operator": 0.2186,
+      "wrong_condition": 0.1793
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0145",
+    "family_id": "gcd",
+    "source_template_id": "gcd_1",
+    "true_label": "correct",
+    "predicted_label": "wrong_operator",
+    "correct": false,
+    "probabilities": {
+      "correct": 0.2188,
+      "wrong_initialization": 0.207,
+      "off_by_one_loop": 0.1678,
+      "wrong_operator": 0.222,
+      "wrong_condition": 0.1844
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0146",
+    "family_id": "gcd",
+    "source_template_id": "gcd_iter",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2208,
+      "wrong_initialization": 0.2056,
+      "off_by_one_loop": 0.1701,
+      "wrong_operator": 0.2162,
+      "wrong_condition": 0.1873
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0147",
+    "family_id": "reverse_list",
+    "source_template_id": "reverse_list_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2299,
+      "wrong_initialization": 0.1963,
+      "off_by_one_loop": 0.199,
+      "wrong_operator": 0.1833,
+      "wrong_condition": 0.1915
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0148",
+    "family_id": "count_vowels",
+    "source_template_id": "count_vowels_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2267,
+      "wrong_initialization": 0.2033,
+      "off_by_one_loop": 0.1721,
+      "wrong_operator": 0.2186,
+      "wrong_condition": 0.1793
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0151",
+    "family_id": "find_min",
+    "source_template_id": "find_min_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2295,
+      "wrong_initialization": 0.1935,
+      "off_by_one_loop": 0.1892,
+      "wrong_operator": 0.1934,
+      "wrong_condition": 0.1945
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0156",
+    "family_id": "count_evens",
+    "source_template_id": "count_evens_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.217,
+      "wrong_initialization": 0.2044,
+      "off_by_one_loop": 0.1753,
+      "wrong_operator": 0.2168,
+      "wrong_condition": 0.1865
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0157",
+    "family_id": "clamp",
+    "source_template_id": "clamp_1",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2243,
+      "wrong_initialization": 0.1984,
+      "off_by_one_loop": 0.1771,
+      "wrong_operator": 0.2094,
+      "wrong_condition": 0.1908
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0162",
+    "family_id": "strip_spaces",
+    "source_template_id": "strip_spaces_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2382,
+      "wrong_initialization": 0.1913,
+      "off_by_one_loop": 0.1818,
+      "wrong_operator": 0.2054,
+      "wrong_condition": 0.1833
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0170",
+    "family_id": "count_positive",
+    "source_template_id": "count_pos_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2174,
+      "wrong_initialization": 0.2039,
+      "off_by_one_loop": 0.1778,
+      "wrong_operator": 0.2122,
+      "wrong_condition": 0.1887
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0182",
+    "family_id": "running_max",
+    "source_template_id": "running_max_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2303,
+      "wrong_initialization": 0.2093,
+      "off_by_one_loop": 0.1819,
+      "wrong_operator": 0.2006,
+      "wrong_condition": 0.1779
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0183",
+    "family_id": "count_words",
+    "source_template_id": "count_words_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2311,
+      "wrong_initialization": 0.1939,
+      "off_by_one_loop": 0.1774,
+      "wrong_operator": 0.2098,
+      "wrong_condition": 0.1878
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  },
+  {
+    "sample_id": "S0189",
+    "family_id": "col_sum",
+    "source_template_id": "col_sum_v3",
+    "true_label": "correct",
+    "predicted_label": "correct",
+    "correct": true,
+    "probabilities": {
+      "correct": 0.2266,
+      "wrong_initialization": 0.2037,
+      "off_by_one_loop": 0.183,
+      "wrong_operator": 0.2059,
+      "wrong_condition": 0.1809
+    },
+    "model": "codebert_research",
+    "experiment_id": "gpu_3_balanced"
+  }
+]

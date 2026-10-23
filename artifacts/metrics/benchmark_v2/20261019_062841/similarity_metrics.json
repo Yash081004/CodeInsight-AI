@@ -1,0 +1,14 @@
+{
+  "dataset_version": "benchmark_v2",
+  "method": "tfidf_cosine",
+  "val_pairs": 20,
+  "test_pairs": 58,
+  "threshold_val": 0.15000000000000002,
+  "test_accuracy": 0.7413793103448276,
+  "test_precision": 0.5161290322580645,
+  "test_recall": 1.0,
+  "test_f1": 0.6808510638297872,
+  "test_threshold": 0.15000000000000002,
+  "test_sample_count": 58,
+  "test_roc_auc": 0.7641369047619049
+}

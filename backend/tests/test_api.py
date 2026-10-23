@@ -111,6 +111,9 @@ class TestClassification:
         assert "predicted_label" in data
         assert "feedback" in data
         assert "model_type" in data
+        if data.get("code_valid"):
+            assert "diagnostics" in data
+            assert data["diagnostics"]["uncertainty_band"] in ("low", "medium", "high")
     
     def test_classification_empty_code(self):
         response = client.post("/api/classification/analyze", json={
@@ -168,6 +171,40 @@ class TestEvaluation:
     def test_confusion_matrix(self):
         response = client.get("/api/evaluation/confusion-matrix")
         assert response.status_code == 200
+
+    def test_experiment_runs_list(self):
+        response = client.get("/api/evaluation/experiments")
+        assert response.status_code == 200
+        data = response.json()
+        assert "runs" in data
+        assert any(r["run_id"] == "production" for r in data["runs"])
+
+    def test_summary_experiment_run(self):
+        response = client.get("/api/evaluation/summary?run_id=production")
+        assert response.status_code == 200
+
+    def test_benchmark_v2_run_in_experiments_if_present(self):
+        response = client.get("/api/evaluation/experiments")
+        assert response.status_code == 200
+        runs = response.json()["runs"]
+        bench = [r for r in runs if r.get("role") == "benchmark_v2"]
+        if not bench:
+            return
+        run_id = bench[-1]["run_id"]
+        summary = client.get(f"/api/evaluation/summary?run_id={run_id}")
+        assert summary.status_code == 200
+        assert summary.json().get("classification_available") is True
+
+
+# ─── Readiness ──────────────────────────────────────────────────────────────
+
+class TestReadiness:
+    def test_ready_endpoint(self):
+        response = client.get("/api/ready")
+        assert response.status_code == 200
+        data = response.json()
+        assert "ready" in data
+        assert isinstance(data["ready"], bool)
 
 
 # ─── History Endpoint ───────────────────────────────────────────────────────

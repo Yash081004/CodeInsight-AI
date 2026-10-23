@@ -1,0 +1,62 @@
+[
+  {
+    "template_id": "factorial_2",
+    "intended_label": "wrong_condition",
+    "reason": "mutation_still_passes_tests",
+    "mutation_type": "base_case"
+  },
+  {
+    "template_id": "fibonacci_1",
+    "intended_label": "wrong_operator",
+    "reason": "mutation_still_passes_tests",
+    "mutation_type": "arithmetic_op"
+  },
+  {
+    "template_id": "fibonacci_1",
+    "intended_label": "wrong_condition",
+    "reason": "mutation_still_passes_tests",
+    "mutation_type": "boundary_condition"
+  },
+  {
+    "template_id": "fibonacci_2",
+    "intended_label": "wrong_condition",
+    "reason": "mutation_still_passes_tests",
+    "mutation_type": "boundary_condition"
+  },
+  {
+    "template_id": "is_prime_2",
+    "intended_label": "wrong_condition",
+    "reason": "mutation_still_passes_tests",
+    "mutation_type": "boundary_condition"
+  },
+  {
+    "template_id": "palindrome_1",
+    "intended_label": "off_by_one_loop",
+    "reason": "mutation_still_passes_tests",
+    "mutation_type": "loop_boundary"
+  },
+  {
+    "template_id": "linear_search_2",
+    "intended_label": "wrong_initialization",
+    "reason": "mutation_still_passes_tests",
+    "mutation_type": "index_init"
+  },
+  {
+    "template_id": "linear_search_2",
+    "intended_label": "off_by_one_loop",
+    "reason": "mutation_still_passes_tests",
+    "mutation_type": "loop_boundary"
+  },
+  {
+    "template_id": "bubble_sort_1",
+    "intended_label": "off_by_one_loop",
+    "reason": "mutation_still_passes_tests",
+    "mutation_type": "range_endpoint"
+  },
+  {
+    "template_id": "linear_search_1",
+    "intended_label": "off_by_one_loop",
+    "reason": "mutation_still_passes_tests",
+    "mutation_type": "range_endpoint"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "label_to_id": {
+    "correct": 0,
+    "wrong_initialization": 1,
+    "off_by_one_loop": 2,
+    "wrong_operator": 3,
+    "wrong_condition": 4
+  },
+  "id_to_label": {
+    "0": "correct",
+    "1": "wrong_initialization",
+    "2": "off_by_one_loop",
+    "3": "wrong_operator",
+    "4": "wrong_condition"
+  },
+  "labels": [
+    "correct",
+    "wrong_initialization",
+    "off_by_one_loop",
+    "wrong_operator",
+    "wrong_condition"
+  ]
+}

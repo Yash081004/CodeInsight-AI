@@ -1,0 +1,54 @@
+{
+  "epoch": 2,
+  "predicted_label_distribution": {
+    "wrong_initialization": 14,
+    "correct": 11,
+    "wrong_operator": 5
+  },
+  "max_predicted_class_fraction": 0.4667,
+  "collapse_warning": false,
+  "per_class_recall": {
+    "correct": 0.55,
+    "wrong_initialization": 1.0,
+    "off_by_one_loop": 0.0,
+    "wrong_operator": 0.75,
+    "wrong_condition": 0.0
+  },
+  "confusion_matrix": [
+    [
+      11,
+      7,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0
+    ]
+  ]
+}

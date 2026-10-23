@@ -1,0 +1,7 @@
+{
+  "checkpoint_dir": "C:\\Users\\tarun\\Downloads\\CodeInsight-AI\\CodeInsight-AI\\models\\experiments\\phase11_e3_spec_code",
+  "metrics_dir": "C:\\Users\\tarun\\Downloads\\CodeInsight-AI\\CodeInsight-AI\\artifacts\\metrics\\phase11\\E3_spec_code",
+  "dataset_checksum_sha256": "39b21118a1d86e6b2d2cd8e4f4c64551351f2de1598067c0e57aeee314013090",
+  "checkpoint_selection": "validation_macro_f1",
+  "production_checkpoint_touched": false
+}

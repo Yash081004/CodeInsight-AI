@@ -1,0 +1,647 @@
+{
+  "baseline_wrong": [
+    {
+      "sample_id": "S0003",
+      "family_id": "factorial",
+      "source_template_id": "factorial_1",
+      "true_label": "off_by_one_loop",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2538,
+        "wrong_initialization": 0.2399,
+        "off_by_one_loop": 0.2225,
+        "wrong_operator": 0.1656,
+        "wrong_condition": 0.1181
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def factorial(n):\n    result = 1\n    for i in range(1, n):\n        result = result * i\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0004",
+      "family_id": "factorial",
+      "source_template_id": "factorial_1",
+      "true_label": "wrong_operator",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2506,
+        "wrong_initialization": 0.2485,
+        "off_by_one_loop": 0.2269,
+        "wrong_operator": 0.1509,
+        "wrong_condition": 0.1232
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result = result + i\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0005",
+      "family_id": "factorial",
+      "source_template_id": "factorial_2",
+      "true_label": "correct",
+      "predicted_label": "wrong_condition",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2209,
+        "wrong_initialization": 0.195,
+        "off_by_one_loop": 0.1692,
+        "wrong_operator": 0.1164,
+        "wrong_condition": 0.2985
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n * factorial(n - 1)",
+      "error_category": "false_positive_fault"
+    },
+    {
+      "sample_id": "S0006",
+      "family_id": "factorial",
+      "source_template_id": "factorial_2",
+      "true_label": "wrong_operator",
+      "predicted_label": "wrong_condition",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2209,
+        "wrong_initialization": 0.195,
+        "off_by_one_loop": 0.1692,
+        "wrong_operator": 0.1164,
+        "wrong_condition": 0.2985
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n + factorial(n - 1)",
+      "error_category": "other_misclassification"
+    },
+    {
+      "sample_id": "S0008",
+      "family_id": "factorial",
+      "source_template_id": "factorial_3",
+      "true_label": "wrong_initialization",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.236,
+        "wrong_initialization": 0.223,
+        "off_by_one_loop": 0.1823,
+        "wrong_operator": 0.1709,
+        "wrong_condition": 0.1878
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def factorial(n):\n    result = 0\n    i = 2\n    while i <= n:\n        result *= i\n        i += 1\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0009",
+      "family_id": "factorial",
+      "source_template_id": "factorial_3",
+      "true_label": "off_by_one_loop",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2532,
+        "wrong_initialization": 0.19,
+        "off_by_one_loop": 0.1851,
+        "wrong_operator": 0.1891,
+        "wrong_condition": 0.1826
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i < n:\n        result *= i\n        i += 1\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0010",
+      "family_id": "factorial",
+      "source_template_id": "factorial_3",
+      "true_label": "wrong_operator",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2532,
+        "wrong_initialization": 0.19,
+        "off_by_one_loop": 0.1851,
+        "wrong_operator": 0.1891,
+        "wrong_condition": 0.1826
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i <= n:\n        result += i\n        i += 1\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0046",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_1",
+      "true_label": "correct",
+      "predicted_label": "off_by_one_loop",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.1647,
+        "wrong_initialization": 0.1681,
+        "off_by_one_loop": 0.3143,
+        "wrong_operator": 0.1501,
+        "wrong_condition": 0.2027
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+      "error_category": "false_positive_fault"
+    },
+    {
+      "sample_id": "S0048",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_1",
+      "true_label": "wrong_condition",
+      "predicted_label": "off_by_one_loop",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.1647,
+        "wrong_initialization": 0.1681,
+        "off_by_one_loop": 0.3143,
+        "wrong_operator": 0.1501,
+        "wrong_condition": 0.2027
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] != target:\n            return i\n    return -1",
+      "error_category": "confusion_off_by_one_loop_vs_wrong_condition"
+    },
+    {
+      "sample_id": "S0049",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_2",
+      "true_label": "correct",
+      "predicted_label": "wrong_condition",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2041,
+        "wrong_initialization": 0.1678,
+        "off_by_one_loop": 0.1681,
+        "wrong_operator": 0.1482,
+        "wrong_condition": 0.3119
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def linear_search(lst, target):\n    index = 0\n    while index < len(lst):\n        if lst[index] == target:\n            return index\n        index += 1\n    return -1",
+      "error_category": "false_positive_fault"
+    },
+    {
+      "sample_id": "S0050",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_2",
+      "true_label": "wrong_operator",
+      "predicted_label": "wrong_condition",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.1963,
+        "wrong_initialization": 0.1429,
+        "off_by_one_loop": 0.1751,
+        "wrong_operator": 0.1721,
+        "wrong_condition": 0.3135
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def linear_search(lst, target):\n    index = 0\n    while index < len(lst):\n        if lst[index] == target:\n            return index\n        index += 2\n    return -1",
+      "error_category": "other_misclassification"
+    },
+    {
+      "sample_id": "S0058",
+      "family_id": "sorting",
+      "source_template_id": "bubble_sort_1",
+      "true_label": "correct",
+      "predicted_label": "off_by_one_loop",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.1925,
+        "wrong_initialization": 0.1879,
+        "off_by_one_loop": 0.2967,
+        "wrong_operator": 0.1333,
+        "wrong_condition": 0.1897
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def bubble_sort(lst):\n    arr = lst[:]\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+      "error_category": "false_positive_fault"
+    },
+    {
+      "sample_id": "S0060",
+      "family_id": "sorting",
+      "source_template_id": "bubble_sort_1",
+      "true_label": "wrong_operator",
+      "predicted_label": "off_by_one_loop",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.1925,
+        "wrong_initialization": 0.1879,
+        "off_by_one_loop": 0.2967,
+        "wrong_operator": 0.1333,
+        "wrong_condition": 0.1897
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def bubble_sort(lst):\n    arr = lst[:]\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] < arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+      "error_category": "other_misclassification"
+    },
+    {
+      "sample_id": "S0077",
+      "family_id": "is_sorted",
+      "source_template_id": "is_sorted_1",
+      "true_label": "correct",
+      "predicted_label": "off_by_one_loop",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.1685,
+        "wrong_initialization": 0.1291,
+        "off_by_one_loop": 0.3267,
+        "wrong_operator": 0.1609,
+        "wrong_condition": 0.2149
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def is_sorted(lst):\n    for i in range(len(lst) - 1):\n        if lst[i] > lst[i + 1]:\n            return False\n    return True",
+      "error_category": "false_positive_fault"
+    },
+    {
+      "sample_id": "S0083",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_1",
+      "true_label": "correct",
+      "predicted_label": "off_by_one_loop",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.1647,
+        "wrong_initialization": 0.1681,
+        "off_by_one_loop": 0.3143,
+        "wrong_operator": 0.1501,
+        "wrong_condition": 0.2027
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+      "error_category": "false_positive_fault"
+    },
+    {
+      "sample_id": "S0088",
+      "family_id": "clamp",
+      "source_template_id": "clamp_1",
+      "true_label": "correct",
+      "predicted_label": "wrong_condition",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2627,
+        "wrong_initialization": 0.17,
+        "off_by_one_loop": 0.1205,
+        "wrong_operator": 0.1792,
+        "wrong_condition": 0.2676
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n    if x > hi:\n        return hi\n    return x",
+      "error_category": "false_positive_fault"
+    },
+    {
+      "sample_id": "S0102",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_1",
+      "true_label": "correct",
+      "predicted_label": "off_by_one_loop",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2548,
+        "wrong_initialization": 0.1621,
+        "off_by_one_loop": 0.2785,
+        "wrong_operator": 0.1362,
+        "wrong_condition": 0.1684
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def linear_search(lst, target):\n    \"\"\"Compute the result.\"\"\"\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+      "error_category": "false_positive_fault"
+    },
+    {
+      "sample_id": "S0114",
+      "family_id": "is_sorted",
+      "source_template_id": "is_sorted_1",
+      "true_label": "correct",
+      "predicted_label": "off_by_one_loop",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2502,
+        "wrong_initialization": 0.1267,
+        "off_by_one_loop": 0.2937,
+        "wrong_operator": 0.1464,
+        "wrong_condition": 0.1831
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def is_sorted(lst):\n    \"\"\"Compute the result.\"\"\"\n    for i in range(len(lst) - 1):\n        if lst[i] > lst[i + 1]:\n            return False\n    return True",
+      "error_category": "false_positive_fault"
+    },
+    {
+      "sample_id": "S0117",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_1",
+      "true_label": "correct",
+      "predicted_label": "off_by_one_loop",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2548,
+        "wrong_initialization": 0.1621,
+        "off_by_one_loop": 0.2785,
+        "wrong_operator": 0.1362,
+        "wrong_condition": 0.1684
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "tfidf_logreg_baseline",
+      "experiment_id": "20261019_062841",
+      "code": "def linear_search(lst, target):\n    \"\"\"Compute the result.\"\"\"\n    for i in range(len(lst)):\n        if lst[i] == target:\n            return i\n    return -1",
+      "error_category": "false_positive_fault"
+    }
+  ],
+  "codebert_wrong": [
+    {
+      "sample_id": "S0002",
+      "family_id": "factorial",
+      "source_template_id": "factorial_1",
+      "true_label": "wrong_initialization",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2514,
+        "wrong_initialization": 0.1648,
+        "off_by_one_loop": 0.1895,
+        "wrong_operator": 0.1968,
+        "wrong_condition": 0.1974
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def factorial(n):\n    result = 0\n    for i in range(1, n + 1):\n        result = result * i\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0003",
+      "family_id": "factorial",
+      "source_template_id": "factorial_1",
+      "true_label": "off_by_one_loop",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2515,
+        "wrong_initialization": 0.1639,
+        "off_by_one_loop": 0.1899,
+        "wrong_operator": 0.1966,
+        "wrong_condition": 0.1982
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def factorial(n):\n    result = 1\n    for i in range(1, n):\n        result = result * i\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0004",
+      "family_id": "factorial",
+      "source_template_id": "factorial_1",
+      "true_label": "wrong_operator",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2518,
+        "wrong_initialization": 0.1646,
+        "off_by_one_loop": 0.1892,
+        "wrong_operator": 0.1969,
+        "wrong_condition": 0.1975
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result = result + i\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0006",
+      "family_id": "factorial",
+      "source_template_id": "factorial_2",
+      "true_label": "wrong_operator",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.244,
+        "wrong_initialization": 0.1593,
+        "off_by_one_loop": 0.1877,
+        "wrong_operator": 0.1985,
+        "wrong_condition": 0.2105
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def factorial(n):\n    if n <= 1:\n        return 1\n    return n + factorial(n - 1)",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0008",
+      "family_id": "factorial",
+      "source_template_id": "factorial_3",
+      "true_label": "wrong_initialization",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2434,
+        "wrong_initialization": 0.1647,
+        "off_by_one_loop": 0.1835,
+        "wrong_operator": 0.1995,
+        "wrong_condition": 0.2089
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def factorial(n):\n    result = 0\n    i = 2\n    while i <= n:\n        result *= i\n        i += 1\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0009",
+      "family_id": "factorial",
+      "source_template_id": "factorial_3",
+      "true_label": "off_by_one_loop",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2443,
+        "wrong_initialization": 0.1646,
+        "off_by_one_loop": 0.1841,
+        "wrong_operator": 0.1994,
+        "wrong_condition": 0.2077
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i < n:\n        result *= i\n        i += 1\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0010",
+      "family_id": "factorial",
+      "source_template_id": "factorial_3",
+      "true_label": "wrong_operator",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2422,
+        "wrong_initialization": 0.1641,
+        "off_by_one_loop": 0.1833,
+        "wrong_operator": 0.1999,
+        "wrong_condition": 0.2104
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def factorial(n):\n    result = 1\n    i = 2\n    while i <= n:\n        result += i\n        i += 1\n    return result",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0047",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_1",
+      "true_label": "off_by_one_loop",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2455,
+        "wrong_initialization": 0.1652,
+        "off_by_one_loop": 0.1929,
+        "wrong_operator": 0.1939,
+        "wrong_condition": 0.2026
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def linear_search(lst, target):\n    for i in range(len(lst) - 1):\n        if lst[i] == target:\n            return i\n    return -1",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0048",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_1",
+      "true_label": "wrong_condition",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2462,
+        "wrong_initialization": 0.1646,
+        "off_by_one_loop": 0.1919,
+        "wrong_operator": 0.1936,
+        "wrong_condition": 0.2037
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def linear_search(lst, target):\n    for i in range(len(lst)):\n        if lst[i] != target:\n            return i\n    return -1",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0050",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_2",
+      "true_label": "wrong_operator",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.24,
+        "wrong_initialization": 0.1655,
+        "off_by_one_loop": 0.1866,
+        "wrong_operator": 0.1995,
+        "wrong_condition": 0.2083
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def linear_search(lst, target):\n    index = 0\n    while index < len(lst):\n        if lst[index] == target:\n            return index\n        index += 2\n    return -1",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0051",
+      "family_id": "linear_search",
+      "source_template_id": "linear_search_2",
+      "true_label": "wrong_condition",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2406,
+        "wrong_initialization": 0.1654,
+        "off_by_one_loop": 0.1867,
+        "wrong_operator": 0.1991,
+        "wrong_condition": 0.2082
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def linear_search(lst, target):\n    index = 0\n    while index < len(lst):\n        if lst[index] != target:\n            return index\n        index += 1\n    return -1",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0059",
+      "family_id": "sorting",
+      "source_template_id": "bubble_sort_1",
+      "true_label": "off_by_one_loop",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2524,
+        "wrong_initialization": 0.167,
+        "off_by_one_loop": 0.1889,
+        "wrong_operator": 0.1892,
+        "wrong_condition": 0.2026
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def bubble_sort(lst):\n    arr = lst[:]\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+      "error_category": "missed_fault"
+    },
+    {
+      "sample_id": "S0060",
+      "family_id": "sorting",
+      "source_template_id": "bubble_sort_1",
+      "true_label": "wrong_operator",
+      "predicted_label": "correct",
+      "correct": false,
+      "probabilities": {
+        "correct": 0.2531,
+        "wrong_initialization": 0.1665,
+        "off_by_one_loop": 0.1893,
+        "wrong_operator": 0.1891,
+        "wrong_condition": 0.202
+      },
+      "probability_note": "Softmax scores from model head — not calibrated probabilities.",
+      "model_id": "codebert_finetuned",
+      "experiment_id": "codebert_20261019_082413",
+      "code": "def bubble_sort(lst):\n    arr = lst[:]\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] < arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+      "error_category": "missed_fault"
+    }
+  ],
+  "review_queue_note": "10 templates in review_queue.json are NOT in training CSV as accepted labels."
+}

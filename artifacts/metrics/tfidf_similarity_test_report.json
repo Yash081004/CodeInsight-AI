@@ -1,0 +1,13 @@
+{
+  "model": "tfidf",
+  "evaluated_at": "2026-10-19T05:49:45.351668+00:00",
+  "threshold_selection": "validation_max_f1_grid_0.05",
+  "validation_threshold_f1": 1.0,
+  "test_threshold": 0.5500000000000002,
+  "test_sample_count": 7,
+  "accuracy": 0.7142857142857143,
+  "precision": 0.6666666666666666,
+  "recall": 1.0,
+  "f1": 0.8,
+  "roc_auc": 1.0
+}

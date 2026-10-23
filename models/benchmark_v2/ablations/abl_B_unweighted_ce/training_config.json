@@ -1,0 +1,21 @@
+{
+  "model_name": "microsoft/codebert-base",
+  "num_labels": 5,
+  "epochs": 2,
+  "batch_size": 4,
+  "learning_rate": 2e-05,
+  "max_length": 512,
+  "seed": 42,
+  "best_epoch": 1,
+  "best_val_macro_f1": 0.1923,
+  "dataset_checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+  "train_samples": 74,
+  "val_samples": 16,
+  "test_samples": 31,
+  "checkpoint_selection": "validation_macro_f1",
+  "class_weights": false,
+  "balanced_sampler": false,
+  "experiment_id": "abl_B_unweighted_ce",
+  "skip_test_eval": true,
+  "patience": 0
+}

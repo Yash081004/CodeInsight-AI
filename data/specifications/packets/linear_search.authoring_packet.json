@@ -1,0 +1,29 @@
+{
+  "packet_version": "v1",
+  "family_id": "linear_search",
+  "source_template_ids": ["linear_search_1", "linear_search_2", "linear_search_3"],
+  "status": "draft_requires_human_review",
+  "problem_statement": "Given a sequence lst and a target value, return the index of the first occurrence of target in lst, or -1 if target is not present.",
+  "input_assumptions": [
+    "lst is a finite indexable sequence (typically a Python list)",
+    "Comparison uses standard equality (==) on elements",
+    "Return type is int index or -1"
+  ],
+  "expected_output_summary": "First index i with lst[i] == target, else -1.",
+  "boundary_cases": [
+    "Empty list (expect -1 unless target matches empty-list convention — confirm per template)",
+    "Target at index 0 and at len(lst)-1",
+    "Target absent",
+    "Duplicate values (first occurrence wins)"
+  ],
+  "provenance": {
+    "source": "machine_suggested",
+    "author": "phase13_authoring_packet",
+    "created_at": "2026-10-21T09:00:00+00:00",
+    "review_status": "draft",
+    "reviewer_id": null,
+    "notes": "Standard linear search semantics; reviewer must align with each template's parameter names and empty-list tests."
+  },
+  "associated_sample_ids": [],
+  "human_reviewed": false
+}

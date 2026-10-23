@@ -1,0 +1,15 @@
+{
+  "sample_id": "S0027",
+  "spec_source": "training/generate_dataset.py palindrome_1",
+  "review_only_tests": [
+    {"id": "T1", "description": "Palindrome true", "code": "assert is_palindrome('racecar') == True"},
+    {"id": "T2", "description": "Non-palindrome", "code": "assert is_palindrome('hello') == False"},
+    {"id": "T3", "description": "Single char", "code": "assert is_palindrome('a') == True"},
+    {"id": "T4", "description": "Empty string", "code": "assert is_palindrome('') == True"}
+  ],
+  "limitations": [
+    "Label wrong_operator vs off_by_one_loop may be debatable for pointer update bug; reviewer assesses taxonomy.",
+    "Finite string tests do not cover Unicode or case sensitivity."
+  ],
+  "execution_note": "Subprocess runner with 2s timeout; allowlisted sample IDs only."
+}

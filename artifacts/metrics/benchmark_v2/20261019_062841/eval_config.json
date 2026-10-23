@@ -1,0 +1,7 @@
+{
+  "dataset_version": "benchmark_v2",
+  "checksum": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+  "seed": 42,
+  "run_id": "20261019_062841",
+  "production_checkpoint_touched": false
+}

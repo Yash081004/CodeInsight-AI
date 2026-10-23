@@ -1,0 +1,48 @@
+{
+  "eval_split": "val",
+  "dataset_version": "benchmark_v3",
+  "best_epoch": 1,
+  "macro_f1": 0.16,
+  "weighted_f1": 0.5333,
+  "accuracy": 0.6667,
+  "per_class_metrics": {
+    "correct": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "support": 20
+    },
+    "wrong_initialization": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 3
+    },
+    "off_by_one_loop": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "wrong_operator": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 4
+    },
+    "wrong_condition": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 1
+    }
+  },
+  "predicted_label_counts": {
+    "correct": 30
+  },
+  "sample_count": 30,
+  "collapse_warning": true,
+  "fault_only_macro_f1_proxy": 0.0,
+  "correct_code_false_positive_count": 10,
+  "label_quality": "synthetic_unreviewed"
+}

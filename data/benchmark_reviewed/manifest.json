@@ -1,0 +1,8 @@
+{
+  "status": "blocked_pending_human_review",
+  "human_reviewed_sample_count": 0,
+  "eval_slice_path": null,
+  "blocked_reason": "zero_adjudicated_samples",
+  "next_action": "Record accepted or relabeled decisions via label_review_cli decide, then re-run this script.",
+  "updated_at": "2026-10-21T09:32:16.995950+00:00"
+}

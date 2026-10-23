@@ -1,0 +1,43 @@
+{
+  "eval_split": "val",
+  "best_epoch": 1,
+  "macro_f1": 0.1923,
+  "accuracy": 0.625,
+  "per_class_metrics": {
+    "correct": {
+      "precision": 0.625,
+      "recall": 1.0,
+      "f1": 0.7692,
+      "support": 10
+    },
+    "wrong_initialization": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "off_by_one_loop": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 0
+    },
+    "wrong_operator": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    },
+    "wrong_condition": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2
+    }
+  },
+  "predicted_label_counts": {
+    "correct": 16
+  },
+  "sample_count": 16,
+  "collapse_warning": true
+}

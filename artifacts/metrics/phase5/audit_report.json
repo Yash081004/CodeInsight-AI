@@ -1,0 +1,866 @@
+{
+  "generated_at": "2026-10-19T09:12:18.243504+00:00",
+  "label_mapping": {
+    "label_to_id": {
+      "correct": 0,
+      "wrong_initialization": 1,
+      "off_by_one_loop": 2,
+      "wrong_operator": 3,
+      "wrong_condition": 4
+    }
+  },
+  "datasets": {
+    "benchmark_v2": {
+      "version": "benchmark_v2",
+      "present": true,
+      "checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+      "schema_columns": [
+        "sample_id",
+        "source_template_id",
+        "family_id",
+        "problem_type",
+        "code",
+        "error_label",
+        "mutation_type",
+        "mutation_description",
+        "expected_behavior",
+        "validation_status",
+        "split",
+        "dataset_version"
+      ],
+      "sample_count": 121,
+      "label_counts_overall": {
+        "correct": 66,
+        "wrong_operator": 18,
+        "wrong_initialization": 14,
+        "wrong_condition": 14,
+        "off_by_one_loop": 9
+      },
+      "label_counts_by_split": {
+        "train": {
+          "correct": 38,
+          "wrong_operator": 11,
+          "wrong_initialization": 10,
+          "wrong_condition": 10,
+          "off_by_one_loop": 5
+        },
+        "val": {
+          "correct": 10,
+          "wrong_initialization": 2,
+          "wrong_operator": 2,
+          "wrong_condition": 2
+        },
+        "test": {
+          "correct": 18,
+          "wrong_operator": 5,
+          "off_by_one_loop": 4,
+          "wrong_initialization": 2,
+          "wrong_condition": 2
+        }
+      },
+      "families_per_split": {
+        "train": [
+          "fibonacci",
+          "find_min",
+          "gcd",
+          "max_element",
+          "mean_list",
+          "power",
+          "prime",
+          "reverse_list",
+          "reverse_string",
+          "stack_ops",
+          "sum_digits",
+          "sum_list"
+        ],
+        "val": [
+          "count_evens",
+          "count_vowels",
+          "palindrome"
+        ],
+        "test": [
+          "clamp",
+          "factorial",
+          "is_sorted",
+          "linear_search",
+          "sorting"
+        ]
+      },
+      "family_count_by_split": {
+        "train": 12,
+        "val": 3,
+        "test": 5
+      },
+      "class_coverage_by_split": {
+        "train": {
+          "correct": 38,
+          "wrong_initialization": 10,
+          "off_by_one_loop": 5,
+          "wrong_condition": 10,
+          "wrong_operator": 11
+        },
+        "val": {
+          "correct": 10,
+          "wrong_initialization": 2,
+          "wrong_operator": 2,
+          "wrong_condition": 2
+        },
+        "test": {
+          "correct": 18,
+          "wrong_initialization": 2,
+          "off_by_one_loop": 4,
+          "wrong_operator": 5,
+          "wrong_condition": 2
+        }
+      },
+      "review_queue_count": 10,
+      "errors": [],
+      "integrity_ok": true
+    },
+    "benchmark_v3": {
+      "version": "benchmark_v3",
+      "present": true,
+      "checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+      "schema_columns": [
+        "sample_id",
+        "source_template_id",
+        "family_id",
+        "problem_type",
+        "code",
+        "error_label",
+        "mutation_type",
+        "mutation_description",
+        "expected_behavior",
+        "validation_status",
+        "split",
+        "dataset_version"
+      ],
+      "sample_count": 190,
+      "label_counts_overall": {
+        "correct": 132,
+        "wrong_operator": 18,
+        "wrong_condition": 16,
+        "wrong_initialization": 14,
+        "off_by_one_loop": 10
+      },
+      "label_counts_by_split": {
+        "train": {
+          "correct": 72,
+          "wrong_initialization": 7,
+          "wrong_operator": 6,
+          "wrong_condition": 5,
+          "off_by_one_loop": 4
+        },
+        "val": {
+          "correct": 20,
+          "wrong_operator": 4,
+          "wrong_initialization": 3,
+          "off_by_one_loop": 2,
+          "wrong_condition": 1
+        },
+        "test": {
+          "correct": 40,
+          "wrong_condition": 10,
+          "wrong_operator": 8,
+          "off_by_one_loop": 4,
+          "wrong_initialization": 4
+        }
+      },
+      "families_per_split": {
+        "train": [
+          "binary_search",
+          "copy_matrix",
+          "count_char",
+          "cumulative_sum",
+          "digit_count",
+          "double_list",
+          "flatten_once",
+          "insertion_sort",
+          "is_ascending",
+          "is_even",
+          "is_palindrome_num",
+          "is_sorted",
+          "last_index",
+          "linear_search",
+          "list_max_index",
+          "matrix_trace",
+          "mean_list",
+          "merge_sorted_lists",
+          "mod_list",
+          "pair_sum_target",
+          "power",
+          "remove_negatives",
+          "replace_char",
+          "reverse_string",
+          "rotate_left",
+          "sign_list",
+          "stack_ops",
+          "starts_with",
+          "sum_digits",
+          "sum_list",
+          "unique_count"
+        ],
+        "val": [
+          "ends_with",
+          "factorial",
+          "palindrome",
+          "second_largest",
+          "string_len",
+          "tuple_sum",
+          "zip_sum"
+        ],
+        "test": [
+          "clamp",
+          "col_sum",
+          "count_evens",
+          "count_positive",
+          "count_vowels",
+          "count_words",
+          "fibonacci",
+          "find_min",
+          "gcd",
+          "max_element",
+          "prime",
+          "reverse_list",
+          "running_max",
+          "sorting",
+          "strip_spaces"
+        ]
+      },
+      "family_count_by_split": {
+        "train": 31,
+        "val": 7,
+        "test": 15
+      },
+      "class_coverage_by_split": {
+        "train": {
+          "correct": 72,
+          "wrong_initialization": 7,
+          "wrong_operator": 6,
+          "off_by_one_loop": 4,
+          "wrong_condition": 5
+        },
+        "val": {
+          "correct": 20,
+          "wrong_initialization": 3,
+          "off_by_one_loop": 2,
+          "wrong_operator": 4,
+          "wrong_condition": 1
+        },
+        "test": {
+          "correct": 40,
+          "wrong_initialization": 4,
+          "off_by_one_loop": 4,
+          "wrong_condition": 10,
+          "wrong_operator": 8
+        }
+      },
+      "review_queue_count": 10,
+      "errors": [],
+      "integrity_ok": true
+    }
+  },
+  "artifact_lineage": {
+    "v2_tfidf_baseline": {
+      "path": "artifacts\\metrics\\benchmark_v2\\20261019_062841\\classification_metrics.json",
+      "summary": {
+        "model_type": "tfidf_logreg_baseline",
+        "dataset_version": "benchmark_v2",
+        "dataset_checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+        "eval_split": "test",
+        "train_n": 74,
+        "val_n": 16,
+        "test_n": 31,
+        "sample_count": 31,
+        "accuracy": 0.3871,
+        "macro_precision": 0.3928,
+        "macro_recall": 0.3889,
+        "macro_f1": 0.3399,
+        "weighted_f1": 0.3932,
+        "per_class_metrics": {
+          "correct": {
+            "precision": 0.6154,
+            "recall": 0.4444,
+            "f1": 0.5161
+          },
+          "wrong_initialization": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667
+          },
+          "off_by_one_loop": {
+            "precision": 0.1818,
+            "recall": 0.5,
+            "f1": 0.2667
+          },
+          "wrong_operator": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "wrong_condition": {
+            "precision": 0.1667,
+            "recall": 0.5,
+            "f1": 0.25
+          }
+        },
+        "evaluated_at": "2026-10-19T06:28:41.716229+00:00"
+      }
+    },
+    "v2_codebert_phase3": {
+      "path": "artifacts\\metrics\\benchmark_v2\\codebert_20261019_082413\\codebert_classification_metrics.json",
+      "summary": {
+        "model_type": "codebert_finetuned",
+        "dataset_version": "benchmark_v2",
+        "eval_split": "test",
+        "accuracy": 0.5806,
+        "macro_precision": 0.1161,
+        "macro_recall": 0.2,
+        "macro_f1": 0.1469,
+        "weighted_f1": 0.4266,
+        "per_class_metrics": {
+          "correct": {
+            "precision": 0.5806,
+            "recall": 1.0,
+            "f1": 0.7347,
+            "support": 18
+          },
+          "wrong_initialization": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          },
+          "off_by_one_loop": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 4
+          },
+          "wrong_operator": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 5
+          },
+          "wrong_condition": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          }
+        },
+        "sample_count": 31,
+        "test_family_count": 5,
+        "best_epoch": 1,
+        "best_val_macro_f1": 0.1923,
+        "dataset_checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+        "inference_ms_per_sample_test_cpu": 374.62,
+        "probability_note": "Softmax scores \u2014 not calibrated confidence.",
+        "evaluated_at": "2026-10-19T14:00:58.050263"
+      }
+    },
+    "phase4_audit": {
+      "path": "artifacts\\metrics\\benchmark_v2\\phase4\\collapse_audit.json",
+      "summary": {
+        "generated_at": "2026-10-19T09:05:31.909627+00:00",
+        "dataset_version": "benchmark_v2",
+        "checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+        "label_mapping": {
+          "label_to_id": {
+            "correct": 0,
+            "wrong_initialization": 1,
+            "off_by_one_loop": 2,
+            "wrong_operator": 3,
+            "wrong_condition": 4
+          },
+          "id_to_label": {
+            "0": "correct",
+            "1": "wrong_initialization",
+            "2": "off_by_one_loop",
+            "3": "wrong_operator",
+            "4": "wrong_condition"
+          }
+        },
+        "splits": {
+          "train": {
+            "n": 74,
+            "families": 12,
+            "labels": {
+              "correct": 38,
+              "wrong_operator": 11,
+              "wrong_initialization": 10,
+              "wrong_condition": 10,
+              "off_by_one_loop": 5
+            }
+          },
+          "val": {
+            "n": 16,
+            "families": 3,
+            "labels": {
+              "correct": 10,
+              "wrong_initialization": 2,
+              "wrong_operator": 2,
+              "wrong_condition": 2
+            }
+          },
+          "test": {
+            "n": 31,
+            "families": 5,
+            "labels": {
+              "correct": 18,
+              "wrong_operator": 5,
+              "off_by_one_loop": 4,
+              "wrong_initialization": 2,
+              "wrong_condition": 2
+            },
+            "note": "Previously inspected benchmark \u00e2\u20ac\u201d not an unseen holdout."
+          }
+        },
+        "family_label_matrix": {
+          "train": {
+            "fibonacci": {
+              "correct": 4,
+              "wrong_condition": 2,
+              "wrong_initialization": 1,
+              "off_by_one_loop": 1
+            },
+            "find_min": {
+              "correct": 2,
+              "wrong_condition": 1
+            },
+            "gcd": {
+              "correct": 4,
+              "wrong_operator": 2,
+              "wrong_condition": 1
+            },
+            "max_element": {
+              "correct": 4,
+              "wrong_initialization": 2,
+              "wrong_operator": 2,
+              "wrong_condition": 2,
+              "off_by_one_loop": 1
+            },
+            "mean_list": {
+              "correct": 2,
+              "wrong_condition": 1
+            },
+            "power": {
+              "correct": 4,
+              "wrong_initialization": 2,
+              "wrong_operator": 2
+            },
+            "prime": {
+              "correct": 4,
+              "wrong_condition": 3,
+              "wrong_operator": 2,
+              "off_by_one_loop": 1
+            },
+            "reverse_list": {
+              "correct": 2
+            },
+            "reverse_string": {
+              "correct": 4,
+              "wrong_initialization": 2,
+              "off_by_one_loop": 1,
+              "wrong_operator": 1
+            },
+            "stack_ops": {
+              "correct": 2
+            },
+            "sum_digits": {
+              "correct": 2,
+              "wrong_initialization": 1
+            },
+            "sum_list": {
+              "correct": 4,
+              "wrong_initialization": 2,
+              "wrong_operator": 2,
+              "off_by_one_loop": 1
+            }
+          },
+          "val": {
+            "count_evens": {
+              "correct": 2
+            },
+            "count_vowels": {
+              "correct": 4,
+              "wrong_initialization": 1,
+              "wrong_operator": 1,
+              "wrong_condition": 1
+            },
+            "palindrome": {
+              "correct": 4,
+              "wrong_initialization": 1,
+              "wrong_operator": 1,
+              "wrong_condition": 1
+            }
+          },
+          "test": {
+            "clamp": {
+              "correct": 2
+            },
+            "factorial": {
+              "correct": 6,
+              "wrong_operator": 3,
+              "wrong_initialization": 2,
+              "off_by_one_loop": 2
+            },
+            "is_sorted": {
+              "correct": 2
+            },
+            "linear_search": {
+              "correct": 6,
+              "wrong_condition": 2,
+              "off_by_one_loop": 1,
+              "wrong_operator": 1
+            },
+            "sorting": {
+              "correct": 2,
+              "off_by_one_loop": 1,
+              "wrong_operator": 1
+            }
+          }
+        },
+        "validation_status_counts": {
+          "test|validated": 31,
+          "train|validated": 74,
+          "val|validated": 16
+        },
+        "review_queue_count": 10,
+        "review_queue_summary": [
+          {
+            "template_id": "factorial_2",
+            "intended_label": "wrong_condition",
+            "reason": "mutation_still_passes_tests",
+            "mutation_type": "base_case"
+          },
+          {
+            "template_id": "fibonacci_1",
+            "intended_label": "wrong_operator",
+            "reason": "mutation_still_passes_tests",
+            "mutation_type": "arithmetic_op"
+          },
+          {
+            "template_id": "fibonacci_1",
+            "intended_label": "wrong_condition",
+            "reason": "mutation_still_passes_tests",
+            "mutation_type": "boundary_condition"
+          },
+          {
+            "template_id": "fibonacci_2",
+            "intended_label": "wrong_condition",
+            "reason": "mutation_still_passes_tests",
+            "mutation_type": "boundary_condition"
+          },
+          {
+            "template_id": "is_prime_2",
+            "intended_label": "wrong_condition",
+            "reason": "mutation_still_passes_tests",
+            "mutation_type": "boundary_condition"
+          },
+          {
+            "template_id": "palindrome_1",
+            "intended_label": "off_by_one_loop",
+            "reason": "mutation_still_passes_tests",
+            "mutation_type": "loop_boundary"
+          },
+          {
+            "template_id": "linear_search_2",
+            "intended_label": "wrong_initialization",
+            "reason": "mutation_still_passes_tests",
+            "mutation_type": "index_init"
+          },
+          {
+            "template_id": "linear_search_2",
+            "intended_label": "off_by_one_loop",
+            "reason": "mutation_still_passes_tests",
+            "mutation_type": "loop_boundary"
+          },
+          {
+            "template_id": "bubble_sort_1",
+            "intended_label": "off_by_one_loop",
+            "reason": "mutation_still_passes_tests",
+            "mutation_type": "range_endpoint"
+          },
+          {
+            "template_id": "linear_search_1",
+            "intended_label": "off_by_one_loop",
+            "reason": "mutation_still_passes_tests",
+            "mutation_type": "range_endpoint"
+          }
+        ],
+        "rejected_count": 4,
+        "training_loss_class_weights_from_train_only": {
+          "correct": 0.3895,
+          "wrong_initialization": 1.48,
+          "off_by_one_loop": 2.96,
+          "wrong_operator": 1.3455,
+          "wrong_condition": 1.48
+        },
+        "data_quality_notes": [
+          "Train split is majority 'correct' (observed count, not assumed root cause of collapse)."
+        ],
+        "phase3_reference": {
+          "checkpoint": "models\\benchmark_v2\\codebert_20261019_082413",
+          "test_macro_f1": 0.1469
+        },
+        "checkpoint_label_config": {
+          "id2label": {
+            "0": "LABEL_0",
+            "1": "LABEL_1",
+            "2": "LABEL_2",
+            "3": "LABEL_3",
+            "4": "LABEL_4"
+          },
+          "matches_ERROR_LABELS_index_order": true,
+          "explanation": "Training uses label_id from LABEL_TO_ID; argmax index maps to ID_TO_LABEL."
+        },
+        "diagnostics_phase3_checkpoint": {
+          "val": {
+            "n": 16,
+            "true_label_counts": {
+              "correct": 10,
+              "wrong_initialization": 2,
+              "wrong_operator": 2,
+              "wrong_condition": 2
+            },
+            "predicted_label_counts": {
+              "correct": 16
+            },
+            "per_class_recall": {
+              "correct": 1.0,
+              "wrong_initialization": 0.0,
+              "off_by_one_loop": 0.0,
+              "wrong_operator": 0.0,
+              "wrong_condition": 0.0
+            },
+            "confusion_matrix": [
+              [
+                10,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "macro_f1": 0.1923,
+            "accuracy": 0.625,
+            "mean_softmax_entropy": 1.6011,
+            "max_predicted_class_fraction": 1.0,
+            "collapse_warning": true,
+            "probability_note": "Softmax over logits; HF config id2label is generic LABEL_0..4 \u00e2\u20ac\u201d indices match ERROR_LABELS order."
+          },
+          "test_historical": {
+            "n": 31,
+            "true_label_counts": {
+              "correct": 18,
+              "wrong_initialization": 2,
+              "off_by_one_loop": 4,
+              "wrong_operator": 5,
+              "wrong_condition": 2
+            },
+            "predicted_label_counts": {
+              "correct": 31
+            },
+            "per_class_recall": {
+              "correct": 1.0,
+              "wrong_initialization": 0.0,
+              "off_by_one_loop": 0.0,
+              "wrong_operator": 0.0,
+              "wrong_condition": 0.0
+            },
+            "confusion_matrix": [
+              [
+                18,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                4,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                2,
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "macro_f1": 0.1469,
+            "accuracy": 0.5806,
+            "mean_softmax_entropy": 1.6,
+            "max_predicted_class_fraction": 1.0,
+            "collapse_warning": true,
+            "probability_note": "Softmax over logits; HF config id2label is generic LABEL_0..4 \u00e2\u20ac\u201d indices match ERROR_LABELS order."
+          }
+        },
+        "tfidf_baseline_val": {
+          "macro_f1": 0.2222,
+          "predicted_label_counts": {
+            "wrong_initialization": 7,
+            "off_by_one_loop": 3,
+            "wrong_condition": 1,
+            "correct": 5
+          }
+        },
+        "collapse_diagnosis": {
+          "observed_facts": [
+            "Phase-3 test predictions: 100% one class (correct).",
+            "Mean softmax entropy on test \u00e2\u2030\u02c6 1.60 (high \u00e2\u2030\u02c6 uncertain/uniform)."
+          ],
+          "hypotheses_not_proven": [
+            {
+              "hypothesis": "Label ID mismatch",
+              "reason": "Unless checkpoint diagnostics show impossible accuracy with random labels, mapping appears consistent.",
+              "smallest_test": "Compare per-class val recall with manual label spot-check on 5 samples."
+            }
+          ]
+        }
+      }
+    },
+    "ablation_summary": {
+      "path": "artifacts\\metrics\\benchmark_v2\\ablations\\ablation_summary.json",
+      "summary": {
+        "generated_at": "2026-10-19T09:06:28.408222+00:00",
+        "experiments": [
+          {
+            "experiment_id": "abl_A_repro_phase3",
+            "val_macro_f1": 0.1923,
+            "collapse_warning": null
+          },
+          {
+            "experiment_id": "abl_B_unweighted_ce",
+            "val_macro_f1": 0.1923,
+            "collapse_warning": true
+          },
+          {
+            "experiment_id": "abl_C_balanced_sampler",
+            "val_macro_f1": null,
+            "collapse_warning": null
+          },
+          {
+            "experiment_id": "abl_D_lr3e5_weighted",
+            "val_macro_f1": 0.1923,
+            "collapse_warning": true
+          },
+          {
+            "experiment_id": "abl_E_earlystop4",
+            "val_macro_f1": null,
+            "collapse_warning": null
+          }
+        ],
+        "selected_by_val_macro_f1": "abl_A_repro_phase3",
+        "selection_note": "Test split not used for selection. Ties broken by lower collapse_warning when present.",
+        "tfidf_baseline_val_macro_f1": 0.2222,
+        "codebert_beats_tfidf_on_val": false
+      }
+    },
+    "production_checkpoint": {
+      "path": "models\\codebert_classifier\\config.json",
+      "summary": {
+        "add_cross_attention": false,
+        "architectures": [
+          "RobertaForSequenceClassification"
+        ],
+        "attention_probs_dropout_prob": 0.1,
+        "bos_token_id": 0,
+        "classifier_dropout": null,
+        "dtype": "float32",
+        "eos_token_id": 2,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0.1,
+        "hidden_size": 768,
+        "id2label": {
+          "0": "LABEL_0",
+          "1": "LABEL_1",
+          "2": "LABEL_2",
+          "3": "LABEL_3",
+          "4": "LABEL_4"
+        },
+        "initializer_range": 0.02,
+        "intermediate_size": 3072,
+        "is_decoder": false,
+        "label2id": {
+          "LABEL_0": 0,
+          "LABEL_1": 1,
+          "LABEL_2": 2,
+          "LABEL_3": 3,
+          "LABEL_4": 4
+        },
+        "layer_norm_eps": 1e-05,
+        "max_position_embeddings": 514,
+        "model_type": "roberta",
+        "num_attention_heads": 12,
+        "num_hidden_layers": 12,
+        "output_past": true,
+        "pad_token_id": 1,
+        "tie_word_embeddings": true,
+        "transformers_version": "5.20.1",
+        "type_vocab_size": 1,
+        "use_cache": true,
+        "vocab_size": 50265
+      }
+    }
+  },
+  "predicted_label_distributions": {
+    "v2_codebert_test": {
+      "correct": 31
+    },
+    "v2_tfidf_test": {
+      "correct": 13,
+      "wrong_initialization": 1,
+      "wrong_condition": 6,
+      "off_by_one_loop": 11
+    }
+  },
+  "historical_test_disclaimer": "benchmark_v2 test split was previously inspected; not an untouched holdout."
+}

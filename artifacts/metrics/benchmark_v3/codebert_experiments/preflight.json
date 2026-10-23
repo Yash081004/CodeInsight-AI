@@ -1,0 +1,225 @@
+{
+  "dataset": "benchmark_v3",
+  "timestamp": "2026-10-19T09:45:09.713554+00:00",
+  "pytorch_cuda_available": false,
+  "pytorch_cuda_device_count": 0,
+  "errors": [],
+  "checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+  "split_manifest": {
+    "val": [
+      "ends_with",
+      "factorial",
+      "palindrome",
+      "second_largest",
+      "string_len",
+      "tuple_sum",
+      "zip_sum"
+    ],
+    "test": [
+      "clamp",
+      "col_sum",
+      "count_evens",
+      "count_positive",
+      "count_vowels",
+      "count_words",
+      "fibonacci",
+      "find_min",
+      "gcd",
+      "max_element",
+      "prime",
+      "reverse_list",
+      "running_max",
+      "sorting",
+      "strip_spaces"
+    ],
+    "train": [
+      "binary_search",
+      "copy_matrix",
+      "count_char",
+      "cumulative_sum",
+      "digit_count",
+      "double_list",
+      "flatten_once",
+      "insertion_sort",
+      "is_ascending",
+      "is_even",
+      "is_palindrome_num",
+      "is_sorted",
+      "last_index",
+      "linear_search",
+      "list_max_index",
+      "matrix_trace",
+      "mean_list",
+      "merge_sorted_lists",
+      "mod_list",
+      "pair_sum_target",
+      "power",
+      "remove_negatives",
+      "replace_char",
+      "reverse_string",
+      "rotate_left",
+      "sign_list",
+      "stack_ops",
+      "starts_with",
+      "sum_digits",
+      "sum_list",
+      "unique_count"
+    ]
+  },
+  "class_coverage": {
+    "train": {
+      "correct": 72,
+      "wrong_initialization": 7,
+      "wrong_operator": 6,
+      "off_by_one_loop": 4,
+      "wrong_condition": 5
+    },
+    "val": {
+      "correct": 20,
+      "wrong_initialization": 3,
+      "off_by_one_loop": 2,
+      "wrong_operator": 4,
+      "wrong_condition": 1
+    },
+    "test": {
+      "correct": 40,
+      "wrong_initialization": 4,
+      "off_by_one_loop": 4,
+      "wrong_condition": 10,
+      "wrong_operator": 8
+    }
+  },
+  "tfidf_baseline_val": {
+    "model": "tfidf_logreg",
+    "eval_split": "val",
+    "sample_count": 30,
+    "accuracy": 0.7,
+    "macro_f1": 0.2689,
+    "weighted_f1": 0.613,
+    "per_class_metrics": {
+      "correct": {
+        "precision": 0.76,
+        "recall": 0.95,
+        "f1": 0.8444,
+        "support": 20
+      },
+      "wrong_initialization": {
+        "precision": 0.4,
+        "recall": 0.6667,
+        "f1": 0.5,
+        "support": 3
+      },
+      "off_by_one_loop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      },
+      "wrong_operator": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "wrong_condition": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      }
+    },
+    "confusion_matrix": {
+      "labels": [
+        "correct",
+        "wrong_initialization",
+        "off_by_one_loop",
+        "wrong_operator",
+        "wrong_condition"
+      ],
+      "matrix": [
+        [
+          19,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "collapse": {
+      "predicted_label_counts": {
+        "correct": 25,
+        "wrong_initialization": 5
+      },
+      "dominant_class": "correct",
+      "dominant_fraction": 0.8333,
+      "collapsed": true,
+      "fault_classes_predicted": 1
+    },
+    "fault_only_macro_f1_proxy": 0.11428571428571428,
+    "correct_code_false_positive_count": 6,
+    "per_family": {
+      "ends_with": {
+        "n": 2,
+        "accuracy": 1.0
+      },
+      "factorial": {
+        "n": 13,
+        "accuracy": 0.5384615384615384
+      },
+      "palindrome": {
+        "n": 7,
+        "accuracy": 0.5714285714285714
+      },
+      "second_largest": {
+        "n": 2,
+        "accuracy": 1.0
+      },
+      "string_len": {
+        "n": 2,
+        "accuracy": 1.0
+      },
+      "tuple_sum": {
+        "n": 2,
+        "accuracy": 1.0
+      },
+      "zip_sum": {
+        "n": 2,
+        "accuracy": 1.0
+      }
+    },
+    "probability_note": "Logistic probabilities not calibrated.",
+    "dataset": "benchmark_v3",
+    "eval_label": "validation_or_holdout",
+    "evaluated_at": "2026-10-19T09:11:48.372807+00:00"
+  },
+  "label_quality": "synthetic_unreviewed"
+}

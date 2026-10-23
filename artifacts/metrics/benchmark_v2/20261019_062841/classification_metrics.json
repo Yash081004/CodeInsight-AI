@@ -1,0 +1,43 @@
+{
+  "model_type": "tfidf_logreg_baseline",
+  "dataset_version": "benchmark_v2",
+  "dataset_checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+  "eval_split": "test",
+  "train_n": 74,
+  "val_n": 16,
+  "test_n": 31,
+  "sample_count": 31,
+  "accuracy": 0.3871,
+  "macro_precision": 0.3928,
+  "macro_recall": 0.3889,
+  "macro_f1": 0.3399,
+  "weighted_f1": 0.3932,
+  "per_class_metrics": {
+    "correct": {
+      "precision": 0.6154,
+      "recall": 0.4444,
+      "f1": 0.5161
+    },
+    "wrong_initialization": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+    },
+    "off_by_one_loop": {
+      "precision": 0.1818,
+      "recall": 0.5,
+      "f1": 0.2667
+    },
+    "wrong_operator": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "wrong_condition": {
+      "precision": 0.1667,
+      "recall": 0.5,
+      "f1": 0.25
+    }
+  },
+  "evaluated_at": "2026-10-19T06:28:41.716229+00:00"
+}

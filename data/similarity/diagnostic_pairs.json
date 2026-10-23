@@ -1,0 +1,62 @@
+{
+  "methodology": "synthetic_controlled_pairs_not_human_reviewed",
+  "checksum_note": "Append-only diagnostic set; grouped by family_id to avoid split leakage if merged into training CSVs.",
+  "pairs": [
+    {
+      "id": "diag_identical_1",
+      "family_id": "add_two",
+      "relationship": "identical",
+      "label": 1,
+      "code_a": "def add(a, b):\n    return a + b",
+      "code_b": "def add(a, b):\n    return a + b"
+    },
+    {
+      "id": "diag_rename_1",
+      "family_id": "sum_list",
+      "relationship": "rename_equivalent",
+      "label": 1,
+      "code_a": "def calculate_sum(numbers_list):\n    total_value = 0\n    for number in numbers_list:\n        total_value += number\n    return total_value",
+      "code_b": "def calculate_sum(arr):\n    s = 0\n    for x in arr:\n        s += x\n    return s"
+    },
+    {
+      "id": "diag_syntax_equiv_1",
+      "family_id": "filter_evens",
+      "relationship": "syntax_equivalent",
+      "label": 1,
+      "code_a": "def filter_evens(nums):\n    result = []\n    for n in nums:\n        if n % 2 == 0:\n            result.append(n)\n    return result",
+      "code_b": "def filter_evens(nums):\n    return [n for n in nums if n % 2 == 0]"
+    },
+    {
+      "id": "diag_diff_algo_1",
+      "family_id": "algo_mix",
+      "relationship": "different_algorithm",
+      "label": 0,
+      "code_a": "def bubble_sort(arr):\n    n = len(arr)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if arr[j] > arr[j + 1]:\n                arr[j], arr[j + 1] = arr[j + 1], arr[j]\n    return arr",
+      "code_b": "def binary_search(arr, target):\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1"
+    },
+    {
+      "id": "diag_wrong_op_1",
+      "family_id": "square",
+      "relationship": "operator_change",
+      "label": 0,
+      "code_a": "def square(n):\n    return n * n",
+      "code_b": "def square(n):\n    return n + n"
+    },
+    {
+      "id": "diag_off_by_one_1",
+      "family_id": "sum_range",
+      "relationship": "off_by_one",
+      "label": 0,
+      "code_a": "def sum_to_n(n):\n    total = 0\n    for i in range(1, n + 1):\n        total += i\n    return total",
+      "code_b": "def sum_to_n(n):\n    total = 0\n    for i in range(1, n):\n        total += i\n    return total"
+    },
+    {
+      "id": "diag_condition_1",
+      "family_id": "adult",
+      "relationship": "condition_inverted",
+      "label": 0,
+      "code_a": "def is_adult(age):\n    if age >= 18:\n        return True\n    return False",
+      "code_b": "def is_adult(age):\n    if age < 18:\n        return True\n    return False"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "dataset_version": "benchmark_v2",
+  "purpose": "Proposed label review only — does NOT modify dataset.csv or test labels.",
+  "human_reviewed": false,
+  "sources": ["classification/review_queue.json", "classification/rejected.json"],
+  "proposals": [
+    {
+          "action": "exclude_from_training_until_reviewed",
+          "source": "review_queue",
+          "reason": "mutation_still_passes_tests — intended fault label not supported by finite behavioral tests"
+        }
+  ],
+  "accepted_dataset_checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+  "note": "Improving scores by relabeling test data is explicitly out of scope."
+}

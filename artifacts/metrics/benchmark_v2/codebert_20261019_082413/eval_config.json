@@ -1,0 +1,7 @@
+{
+  "checkpoint_dir": "C:\\Users\\tarun\\Downloads\\CodeInsight-AI\\CodeInsight-AI\\models\\benchmark_v2\\codebert_20261019_082413",
+  "metrics_dir": "C:\\Users\\tarun\\Downloads\\CodeInsight-AI\\CodeInsight-AI\\artifacts\\metrics\\benchmark_v2\\codebert_20261019_082413",
+  "dataset_checksum_sha256": "6d2d6ab93918ef86ebbb36d46b0ced5f109dbc0983f2229a067fe72ef194ba55",
+  "checkpoint_selection": "validation_macro_f1",
+  "production_checkpoint_touched": false
+}

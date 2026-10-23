@@ -1,0 +1,21 @@
+{
+  "model_name": "microsoft/codebert-base",
+  "num_labels": 5,
+  "epochs": 4,
+  "batch_size": 4,
+  "learning_rate": 2e-05,
+  "max_length": 512,
+  "seed": 42,
+  "best_epoch": 1,
+  "best_val_macro_f1": 0.16,
+  "dataset_checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+  "train_samples": 94,
+  "val_samples": 30,
+  "test_samples": 66,
+  "checkpoint_selection": "validation_macro_f1",
+  "class_weights": true,
+  "balanced_sampler": false,
+  "experiment_id": "gpu_1_baseline",
+  "skip_test_eval": true,
+  "patience": 1
+}

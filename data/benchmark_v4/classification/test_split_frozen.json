@@ -1,0 +1,12 @@
+{
+  "frozen_at": "2026-10-21T09:32:16.432238+00:00",
+  "dataset_version": "benchmark_v4",
+  "source_v3_checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+  "test_row_count": 0,
+  "test_sample_ids": [],
+  "test_family_ids": [],
+  "test_inspected": true,
+  "pristine_claim": false,
+  "pristine_claim_note": "v3-derived; human specs and queue adjudication incomplete at freeze time.",
+  "checksum_sha256": "e2f8ffaa6135a2b40011c48335c6612aeb0037c02531c27678580fecdd4e7449"
+}

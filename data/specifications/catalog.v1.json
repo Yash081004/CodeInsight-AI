@@ -1,0 +1,158 @@
+{
+  "spec_catalog_version": "v1.0",
+  "generated_at": "2026-10-21T09:31:55.216488+00:00",
+  "human_reviewed": false,
+  "note": "Includes Phase 13 authoring packets (draft / machine_suggested). Not verified by human reviewers.",
+  "entries": [
+    {
+      "spec_id": "spec.factorial.phase13_draft",
+      "family_id": "factorial",
+      "source_template_ids": [
+        "factorial_1",
+        "factorial_2",
+        "factorial_3"
+      ],
+      "problem_statement": "Compute n! (factorial) for non-negative integer n, with 0! = 1 and n! = 1\u00d72\u00d7\u2026\u00d7n for n \u2265 1.",
+      "input_assumptions": [
+        "n is a non-negative integer",
+        "Return type is numeric (int) suitable for template test values"
+      ],
+      "expected_output_summary": "Return n! as defined above.",
+      "boundary_cases": [
+        "n = 0 and n = 1",
+        "Small n used in tests (3, 4, 5)",
+        "Recursive vs iterative templates must agree on base-case handling for n=0 and n=1"
+      ],
+      "provenance": {
+        "source": "machine_suggested",
+        "author": "phase13_authoring_packet",
+        "created_at": "2026-10-21T09:00:00+00:00",
+        "review_status": "draft",
+        "reviewer_id": null,
+        "notes": "Standard factorial definition; reviewer confirms each template's base case and loop/recursion bounds."
+      },
+      "associated_sample_ids": []
+    },
+    {
+      "spec_id": "spec.fibonacci.phase13_draft",
+      "family_id": "fibonacci",
+      "source_template_ids": [
+        "fibonacci_1",
+        "fibonacci_2",
+        "fibonacci_3"
+      ],
+      "problem_statement": "Compute the n-th Fibonacci number F(n) for integer n \u2265 0, with F(0)=0 and F(1)=1, and F(n)=F(n-1)+F(n-2) for n\u22652.",
+      "input_assumptions": [
+        "n is a non-negative integer within practical recursion/iteration limits for template tests",
+        "Indexing is 0-based: fibonacci(0) returns 0, fibonacci(1) returns 1"
+      ],
+      "expected_output_summary": "Return F(n) as defined above.",
+      "boundary_cases": [
+        "n = 0 and n = 1 (base cases)",
+        "Small n used in bundled tests (e.g. 2, 5, 10)",
+        "Clarify behavior for negative n if any template accepts it (default: out of scope / undefined for this family)"
+      ],
+      "provenance": {
+        "source": "machine_suggested",
+        "author": "phase13_authoring_packet",
+        "created_at": "2026-10-21T09:00:00+00:00",
+        "review_status": "draft",
+        "reviewer_id": null,
+        "notes": "Standard Fibonacci definition for reviewer confirmation against each template's function name and base-case policy."
+      },
+      "associated_sample_ids": []
+    },
+    {
+      "spec_id": "spec.gcd.phase13_draft",
+      "family_id": "gcd",
+      "source_template_ids": [
+        "gcd_1",
+        "gcd_iter"
+      ],
+      "problem_statement": "Given two integers a and b, return their greatest common divisor (GCD) using the usual mathematical definition for integers (typically non-negative inputs in beginner templates).",
+      "input_assumptions": [
+        "Inputs are integers; templates may assume a,b \u2265 0 unless stated otherwise",
+        "gcd(0, b) and gcd(a, 0) follow template conventions (reviewer to confirm against bundled tests)",
+        "Return type is int"
+      ],
+      "expected_output_summary": "Return gcd(a, b).",
+      "boundary_cases": [
+        "One argument zero",
+        "Equal positive integers",
+        "Coprime pair",
+        "Euclidean vs iterative subtraction variants must match template tests"
+      ],
+      "provenance": {
+        "source": "machine_suggested",
+        "author": "phase13_authoring_packet",
+        "created_at": "2026-10-21T09:00:00+00:00",
+        "review_status": "draft",
+        "reviewer_id": null,
+        "notes": "Standard GCD family description; reviewer must read each template's tests for zero-handling and sign policy."
+      },
+      "associated_sample_ids": []
+    },
+    {
+      "spec_id": "spec.linear_search.phase13_draft",
+      "family_id": "linear_search",
+      "source_template_ids": [
+        "linear_search_1",
+        "linear_search_2",
+        "linear_search_3"
+      ],
+      "problem_statement": "Given a sequence lst and a target value, return the index of the first occurrence of target in lst, or -1 if target is not present.",
+      "input_assumptions": [
+        "lst is a finite indexable sequence (typically a Python list)",
+        "Comparison uses standard equality (==) on elements",
+        "Return type is int index or -1"
+      ],
+      "expected_output_summary": "First index i with lst[i] == target, else -1.",
+      "boundary_cases": [
+        "Empty list (expect -1 unless target matches empty-list convention \u2014 confirm per template)",
+        "Target at index 0 and at len(lst)-1",
+        "Target absent",
+        "Duplicate values (first occurrence wins)"
+      ],
+      "provenance": {
+        "source": "machine_suggested",
+        "author": "phase13_authoring_packet",
+        "created_at": "2026-10-21T09:00:00+00:00",
+        "review_status": "draft",
+        "reviewer_id": null,
+        "notes": "Standard linear search semantics; reviewer must align with each template's parameter names and empty-list tests."
+      },
+      "associated_sample_ids": []
+    },
+    {
+      "spec_id": "spec.palindrome.phase13_draft",
+      "family_id": "palindrome",
+      "source_template_ids": [
+        "palindrome_1",
+        "palindrome_2",
+        "palindrome_3"
+      ],
+      "problem_statement": "Given a string s, determine whether s reads the same forward and backward (a palindrome). Comparison is case-sensitive unless a problem variant explicitly states otherwise.",
+      "input_assumptions": [
+        "s is a Python str (Unicode code points compared in order)",
+        "For this benchmark family, empty string is treated as a palindrome",
+        "Single-character strings are palindromes"
+      ],
+      "expected_output_summary": "Return True if s is a palindrome, else False.",
+      "boundary_cases": [
+        "Empty string \"\"",
+        "Single character",
+        "Even-length vs odd-length strings",
+        "Non-palindrome with shared prefix/suffix (e.g. aba vs abba)"
+      ],
+      "provenance": {
+        "source": "machine_suggested",
+        "author": "phase13_authoring_packet",
+        "created_at": "2026-10-21T09:00:00+00:00",
+        "review_status": "draft",
+        "reviewer_id": null,
+        "notes": "Authored from standard palindrome definition for human review. Not derived from faulty student mutations or generator pass/fail outcomes."
+      },
+      "associated_sample_ids": []
+    }
+  ]
+}

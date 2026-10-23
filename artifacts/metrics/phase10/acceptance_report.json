@@ -1,0 +1,80 @@
+{
+  "e0": null,
+  "e1": {
+    "experiment_id": "E1_codebert_v3",
+    "exclusion_manifest": {
+      "source_dataset_checksum_sha256": "9c3220f9a16575c5cfef17d5622d94676a31759c10cef555b9934ee85c90d383",
+      "review_queue_path": "C:\\Users\\tarun\\Downloads\\CodeInsight-AI\\CodeInsight-AI\\data\\benchmark_v3\\classification\\review_queue.json",
+      "excluded_template_ids": [
+        "bubble_sort_1",
+        "factorial_2",
+        "fibonacci_1",
+        "fibonacci_2",
+        "is_prime_2",
+        "linear_search_1",
+        "linear_search_2",
+        "palindrome_1"
+      ],
+      "excluded_row_count": 18,
+      "excluded_sample_ids": [
+        "S0005",
+        "S0006",
+        "S0025",
+        "S0026",
+        "S0027",
+        "S0028",
+        "S0046",
+        "S0047",
+        "S0048",
+        "S0049",
+        "S0050",
+        "S0051",
+        "S0083",
+        "S0126",
+        "S0132",
+        "S0138",
+        "S0139",
+        "S0153"
+      ],
+      "excluded_families": [
+        "factorial",
+        "linear_search",
+        "palindrome"
+      ],
+      "remaining_train_val_count": 106,
+      "remaining_test_count": 66,
+      "labels_unchanged": true,
+      "filtered_view_path": "artifacts\\metrics\\phase10\\E1_filtered_dataset_view.csv",
+      "filtered_view_checksum_sha256": "39b21118a1d86e6b2d2cd8e4f4c64551351f2de1598067c0e57aeee314013090"
+    },
+    "runtime_seconds": 294.47,
+    "validation_metrics_file": "artifacts\\metrics\\phase10\\E1_codebert_v3\\validation_metrics.json",
+    "test_metrics_file": "artifacts\\metrics\\phase10\\E1_codebert_v3\\codebert_classification_metrics.json",
+    "acceptance_gate": {
+      "passed": false,
+      "checks": {
+        "macro_f1": false,
+        "correct_recall": true,
+        "max_class_fraction": false,
+        "review_queue_excluded_from_train_val": true,
+        "recall_wrong_initialization": false,
+        "recall_off_by_one_loop": false,
+        "recall_wrong_operator": false,
+        "recall_wrong_condition": false
+      },
+      "thresholds": {
+        "macro_f1_min": 0.35,
+        "fault_recall_min": 0.25,
+        "correct_recall_min": 0.5,
+        "max_single_class_pred_fraction": 0.7
+      }
+    },
+    "test_set_caveat": "benchmark_v3 test used once for final reporting; not used for checkpoint selection."
+  },
+  "gate": {
+    "macro_f1_min": 0.35,
+    "fault_recall_min": 0.25,
+    "correct_recall_min": 0.5,
+    "max_single_class_pred_fraction": 0.7
+  }
+}

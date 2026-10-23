@@ -1,0 +1,13 @@
+{
+  "model": "codebert",
+  "evaluated_at": "2026-10-19T05:49:45.349419+00:00",
+  "threshold_selection": "validation_max_f1_grid_0.05",
+  "validation_threshold_f1": 0.8571428571428571,
+  "test_threshold": 0.1,
+  "test_sample_count": 7,
+  "accuracy": 0.5714285714285714,
+  "precision": 0.5714285714285714,
+  "recall": 1.0,
+  "f1": 0.7272727272727273,
+  "roc_auc": 0.9166666666666667
+}
